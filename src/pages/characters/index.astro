@@ -1,0 +1,190 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+import '../../styles/global.css';
+
+const characters = (await getCollection('characters')).sort((a, b) => {
+	const rarityOrder = { S: 0, A: 1, B: 2 };
+	const rarityDiff = rarityOrder[a.data.rarity || 'B'] - rarityOrder[b.data.rarity || 'B'];
+	if (rarityDiff !== 0) return rarityDiff;
+	return a.data.name.localeCompare(b.data.name, 'zh-CN');
+});
+
+const dangers = ['坚韧', '狂暴', '诡秘', '精准', '异能', '启迪'];
+const rarities = ['S', 'A', 'B'];
+---
+
+<BaseLayout title={`角色图鉴 - ${SITE_TITLE}`} description="无期迷途全角色图鉴、定位与基础资料。">
+	<main>
+		<h1 class="page-title">角色图鉴</h1>
+		<p class="page-desc">共 {characters.length} 名角色</p>
+
+		<div class="filters">
+			<div class="filter-group">
+				<label>搜索</label>
+				<input type="text" id="char-search" placeholder="输入角色名、定位或标签..." />
+			</div>
+			<div class="filter-group">
+				<label>稀有度</label>
+				<div class="filter-buttons" data-filter="rarity">
+					<button class="active" data-value="all">全部</button>
+					{rarities.map((r) => <button data-value={r}>{r}级</button>)}
+				</div>
+			</div>
+			<div class="filter-group">
+				<label>职业</label>
+				<div class="filter-buttons" data-filter="danger">
+					<button class="active" data-value="all">全部</button>
+					{dangers.map((d) => <button data-value={d}>{d}</button>)}
+				</div>
+			</div>
+		</div>
+
+		<p id="result-count" class="page-desc" style="margin-top: 0;"></p>
+
+		<div class="card-grid" id="char-grid">
+			{characters.map((c) => (
+				<a
+					href={`/characters/${c.id}/`}
+					class="card"
+					data-rarity={c.data.rarity || 'B'}
+					data-danger={c.data.danger || ''}
+					data-search={`${c.data.name} ${c.data.title || ''} ${c.data.role || ''} ${(c.data.tags || []).join(' ')}`}
+				>
+					<div style="margin-bottom: 0.5em;">
+						{c.data.rarity && (
+							<span class:list={['badge', `rarity-${c.data.rarity.toLowerCase()}`]}>{c.data.rarity}级</span>
+						)}
+						{c.data.danger && <span class="badge">{c.data.danger}</span>}
+						{c.data.role && <span class="badge">{c.data.role}</span>}
+					</div>
+					<h3>{c.data.name}</h3>
+					{c.data.title && <p class="card-subtitle">{c.data.title}</p>}
+					<p>{c.data.description.slice(0, 60)}...</p>
+					{c.data.tags && c.data.tags.length > 0 && (
+						<div class="card-tags">
+							{c.data.tags.slice(0, 4).map((tag) => (
+								<span class="badge badge-tag">{tag}</span>
+							))}
+						</div>
+					)}
+				</a>
+			))}
+		</div>
+	</main>
+</BaseLayout>
+
+<script>
+	const searchInput = document.getElementById('char-search') as HTMLInputElement;
+	const resultCount = document.getElementById('result-count') as HTMLParagraphElement;
+	const cards = Array.from(document.querySelectorAll<HTMLElement>('#char-grid .card'));
+
+	let activeRarity = 'all';
+	let activeDanger = 'all';
+
+	function update() {
+		const query = searchInput.value.trim().toLowerCase();
+		let visible = 0;
+
+		cards.forEach((card) => {
+			const rarity = card.dataset.rarity || '';
+			const danger = card.dataset.danger || '';
+			const searchText = (card.dataset.search || '').toLowerCase();
+
+			const matchesRarity = activeRarity === 'all' || rarity === activeRarity;
+			const matchesDanger = activeDanger === 'all' || danger === activeDanger;
+			const matchesSearch = !query || searchText.includes(query);
+
+			const show = matchesRarity && matchesDanger && matchesSearch;
+			card.style.display = show ? '' : 'none';
+			if (show) visible++;
+		});
+
+		resultCount.textContent = `显示 ${visible} 名角色`;
+	}
+
+	document.querySelectorAll<HTMLButtonElement>('[data-filter="rarity"] button').forEach((btn) => {
+		btn.addEventListener('click', () => {
+			document.querySelectorAll('[data-filter="rarity"] button').forEach((b) => b.classList.remove('active'));
+			btn.classList.add('active');
+			activeRarity = btn.dataset.value || 'all';
+			update();
+		});
+	});
+
+	document.querySelectorAll<HTMLButtonElement>('[data-filter="danger"] button').forEach((btn) => {
+		btn.addEventListener('click', () => {
+			document.querySelectorAll('[data-filter="danger"] button').forEach((b) => b.classList.remove('active'));
+			btn.classList.add('active');
+			activeDanger = btn.dataset.value || 'all';
+			update();
+		});
+	});
+
+	searchInput.addEventListener('input', update);
+	update();
+</script>
+
+<style>
+	.filters {
+		margin-bottom: 1.5em;
+		padding: 1em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 12px;
+		background: var(--bg-card);
+	}
+	.filter-group {
+		margin-bottom: 1em;
+	}
+	.filter-group:last-child {
+		margin-bottom: 0;
+	}
+	.filter-group label {
+		display: block;
+		font-weight: 600;
+		margin-bottom: 0.4em;
+		color: rgb(var(--black));
+	}
+	.filter-group input {
+		width: 100%;
+		padding: 0.5em 0.75em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 8px;
+		font-size: 1em;
+		font-family: inherit;
+	}
+	.filter-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+	}
+	.filter-buttons button {
+		padding: 0.35em 0.8em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 6px;
+		background: var(--bg-body);
+		color: rgb(var(--gray-dark));
+		cursor: pointer;
+		font-size: 0.9em;
+	}
+	.filter-buttons button.active,
+	.filter-buttons button:hover {
+		background: var(--accent);
+		color: #fff;
+		border-color: var(--accent);
+	}
+	.card-subtitle {
+		margin: -0.2em 0 0.5em;
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+	}
+	.card-tags {
+		margin-top: 0.6em;
+	}
+	.badge-tag {
+		font-size: 0.7em;
+		background: #eef2ff;
+		color: var(--accent-dark);
+	}
+</style>

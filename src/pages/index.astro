@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import '../styles/global.css';
+
+const characters = await getCollection('characters');
+const stages = await getCollection('stages');
+---
+
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	<main>
+		<h1 class="page-title">{SITE_TITLE}</h1>
+		<p class="page-desc">{SITE_DESCRIPTION}</p>
+
+		<section style="margin-bottom: 2.5em;">
+			<h2>角色图鉴</h2>
+			<p>共 {characters.length} 名角色</p>
+			<div class="card-grid">
+				{characters.slice(0, 6).map((c) => (
+					<a href={`/characters/${c.id}/`} class="card">
+						<h3>{c.data.name}</h3>
+						<p>{c.data.description.slice(0, 60)}...</p>
+					</a>
+				))}
+			</div>
+			<p style="margin-top: 1em;"><a href="/characters">查看全部角色 →</a></p>
+		</section>
+
+		<section>
+			<h2>关卡攻略</h2>
+			<p>共 {stages.length} 个关卡</p>
+			<div class="card-grid">
+				{stages.slice(0, 6).map((s) => (
+					<a href={`/stages/${s.id}/`} class="card">
+						<h3>{s.data.name}</h3>
+						<p>{s.data.description.slice(0, 60)}...</p>
+					</a>
+				))}
+			</div>
+			<p style="margin-top: 1em;"><a href="/stages">查看全部关卡 →</a></p>
+		</section>
+	</main>
+</BaseLayout>

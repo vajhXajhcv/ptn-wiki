@@ -1,0 +1,35 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+import '../../styles/global.css';
+
+export async function getStaticPaths() {
+	const stages = await getCollection('stages');
+	return stages.map((stage) => ({
+		params: { id: stage.id },
+		props: { stage },
+	}));
+}
+
+const { stage } = Astro.props;
+const { Content } = await render(stage);
+const title = `${stage.data.name} - ${SITE_TITLE}`;
+---
+
+<BaseLayout title={title} description={stage.data.description}>
+	<main>
+		<a href="/stages" style="color: rgb(var(--gray)); text-decoration: none;">← 返回关卡攻略</a>
+		<h1 class="page-title" style="margin-top: 0.5em;">{stage.data.name}</h1>
+
+		<div style="margin: 1em 0;">
+			<span class="badge">{stage.data.chapter}-{stage.data.stageNumber}</span>
+			{stage.data.difficulty && <span class="badge">{stage.data.difficulty}</span>}
+			{stage.data.recommendedLevel && <span class="badge">推荐等级 {stage.data.recommendedLevel}</span>}
+		</div>
+
+		<div class="prose">
+			<Content />
+		</div>
+	</main>
+</BaseLayout>
