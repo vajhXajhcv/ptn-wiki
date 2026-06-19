@@ -6,7 +6,7 @@ danger: 启迪
 role: 治疗辅助
 faction: ''
 description: 安是一名A级启迪禁闭者，主要负责治疗与增益辅助。在队伍中常担任治疗辅助位置。
-tags: ['治疗辅助', '致死免疫<!-- 多个TAG用', '分隔 -->']
+tags: ['治疗辅助', '致死免疫']
 image: /characters/an.jpg
 ---
 

@@ -6,7 +6,7 @@ danger: 精准
 role: 召唤物增幅
 faction: ''
 description: 夏音是一名S级精准禁闭者，主要负责远程物理输出与打击关键目标。在队伍中常担任召唤物增幅位置。
-tags: ['召唤物增幅', '暴击增幅<!-- 多个TAG用', '分隔 -->']
+tags: ['召唤物增幅', '暴击增幅']
 image: /characters/xiayin.jpg
 ---
 

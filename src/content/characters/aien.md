@@ -6,7 +6,7 @@ danger: 诡秘
 role: 物伤辅助
 faction: ''
 description: 艾恩是一名A级诡秘禁闭者，主要负责破核与切入后排。在队伍中常担任物伤辅助位置。
-tags: ['物伤辅助', '物伤增幅<!-- 多个TAG用', '分隔 -->']
+tags: ['物伤辅助', '物伤增幅']
 image: /characters/aien.jpg
 ---
 

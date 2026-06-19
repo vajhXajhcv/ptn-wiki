@@ -6,7 +6,7 @@ danger: 诡秘
 role: 暴击辅助
 faction: ''
 description: 泰特拉是一名A级诡秘禁闭者，主要负责破核与切入后排。在队伍中常担任暴击辅助位置。
-tags: ['暴击辅助', '暴击增幅', '眩晕<!-- 多个TAG用', '分隔 -->']
+tags: ['暴击辅助', '暴击增幅', '眩晕']
 image: /characters/taitela.jpg
 ---
 

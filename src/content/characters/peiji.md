@@ -6,7 +6,7 @@ danger: 坚韧
 role: 防守辅助<!-- 多个TAG用
 faction: ''
 description: 佩姬是一名B级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任防守辅助<!-- 多个TAG用位置。
-tags: ['防守辅助<!-- 多个TAG用', '分隔 -->']
+tags: ['防守辅助']
 image: /characters/peiji.jpg
 ---
 

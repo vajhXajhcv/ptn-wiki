@@ -6,7 +6,7 @@ danger: 精准
 role: 眩晕<!-- 多个TAG用
 faction: ''
 description: 芙洛拉是一名B级精准禁闭者，主要负责远程物理输出与打击关键目标。在队伍中常担任眩晕<!-- 多个TAG用位置。
-tags: ['眩晕<!-- 多个TAG用', '分隔 -->']
+tags: ['眩晕']
 image: /characters/fuluola.jpg
 ---
 

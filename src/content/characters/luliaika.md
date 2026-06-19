@@ -6,7 +6,7 @@ danger: 精准
 role: <!-- 多个TAG用
 faction: ''
 description: 露莉艾卡是一名A级精准禁闭者，主要负责远程物理输出与打击关键目标。在队伍中常担任<!-- 多个TAG用位置。
-tags: ['<!-- 多个TAG用', '分隔 -->']
+tags: []
 image: /characters/luliaika.jpg
 ---
 

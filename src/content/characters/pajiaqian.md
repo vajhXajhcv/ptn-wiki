@@ -6,7 +6,7 @@ danger: 狂暴
 role: 减速
 faction: ''
 description: 帕加茜是一名A级狂暴禁闭者，主要负责近战物理输出与清理敌人。在队伍中常担任减速位置。
-tags: ['减速', '进攻增幅<!-- 多个TAG用', '分隔 -->']
+tags: ['减速', '进攻增幅']
 image: /characters/pajiaqian.jpg
 ---
 

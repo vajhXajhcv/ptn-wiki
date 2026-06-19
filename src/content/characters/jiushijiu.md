@@ -6,7 +6,7 @@ danger: 狂暴
 role: 吸血
 faction: ''
 description: 九十九是一名A级狂暴禁闭者，主要负责近战物理输出与清理敌人。在队伍中常担任吸血位置。
-tags: ['吸血', '攻速增幅', '进攻增幅', '致死免疫<!-- 多个TAG用']
+tags: ['吸血', '攻速增幅', '进攻增幅', '致死免疫']
 image: /characters/jiushijiu.jpg
 ---
 

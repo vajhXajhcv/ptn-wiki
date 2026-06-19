@@ -77,8 +77,9 @@ function cleanTitle(title) {
 function cleanTags(tagText) {
 	if (!tagText) return [];
 	return tagText
+		.replace(/<!--[\s\S]*?-->/g, '')
 		.split(/[,，、]/)
-		.map((t) => t.replace(/<!--.*?-->/g, '').trim())
+		.map((t) => t.trim())
 		.filter(Boolean)
 		.slice(0, 4);
 }

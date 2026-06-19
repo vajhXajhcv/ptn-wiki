@@ -6,7 +6,7 @@ danger: 坚韧
 role: 防守增幅
 faction: ''
 description: 罗睺是一名S级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任防守增幅位置。
-tags: ['防守增幅', '自我治疗', '物伤辅助', '致死免疫<!-- 多个TAG用']
+tags: ['防守增幅', '自我治疗', '物伤辅助', '致死免疫']
 image: /characters/luohou.jpg
 ---
 

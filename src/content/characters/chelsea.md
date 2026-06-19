@@ -6,7 +6,7 @@ danger: 坚韧
 role: 防守增幅
 faction: ''
 description: 切尔西伯爵是一名A级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任防守增幅位置。
-tags: ['防守增幅', '石化<!-- 多个TAG用', '分隔 -->']
+tags: ['防守增幅', '石化']
 image: /characters/chelsea.jpg
 ---
 

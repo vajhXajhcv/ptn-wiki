@@ -6,7 +6,7 @@ danger: 异能
 role: 召唤物辅助<!-- 多个TAG用
 faction: ''
 description: 观星者是一名S级异能禁闭者，主要负责法术伤害与控场。在队伍中常担任召唤物辅助<!-- 多个TAG用位置。
-tags: ['召唤物辅助<!-- 多个TAG用', '分隔 -->']
+tags: ['召唤物辅助']
 image: /characters/guanxingzhe.jpg
 ---
 
