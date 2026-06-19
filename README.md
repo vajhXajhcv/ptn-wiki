@@ -2,6 +2,8 @@
 
 无期迷途玩家攻略站点，基于 Astro 构建的静态 wiki。
 
+线上地址：https://5732.wiki
+
 ## 技术栈
 
 - **框架**: Astro 6.x
@@ -14,6 +16,23 @@
 npm install
 npm run dev
 ```
+
+## 获取角色图片
+
+角色立绘来自《无期迷途》官方网站公开接口。出于版权合规考虑，这些图片**不会提交到 GitHub**，需要本地生成：
+
+```sh
+node scripts/fetch-official-resources.mjs
+```
+
+脚本会：
+
+1. 读取官网 `/api/news` 接口。
+2. 按 `禁闭者档案 → 影像捕获 → 装束 → MBCC生日会 → 壁纸` 的优先级匹配角色。
+3. 将图片压缩到 480px 宽后保存到 `public/characters/{slug}.jpg`。
+4. 自动更新 `src/content/characters/*.md` 中的 `image` 字段。
+
+> 这些图片版权归自意网络所有。本站仅作展示，若官方要求请立即下架。
 
 ## 添加角色
 
@@ -29,6 +48,7 @@ role: 物理输出
 faction: 所属阵营
 description: 角色简介
 tags: ['狂暴', '输出']
+image: /characters/role-name.jpg
 ---
 
 ## 技能介绍
@@ -55,10 +75,17 @@ description: 关卡简介
 正文内容...
 ```
 
-## 部署
+## 构建与部署
 
 ```sh
 npm run build
+npm run deploy
 ```
 
-将 `dist/` 目录部署到 Cloudflare Pages 并绑定域名。
+`npm run deploy` 会先执行 `astro build`，再通过 Wrangler 部署到 Cloudflare Pages。
+
+## 开源说明
+
+- 本站代码与原创攻略文本可开源。
+- 角色图片素材来自官网，**不包含在本仓库中**，请运行上方脚本本地生成。
+- 更多合规细节见 [`docs/official-assets.md`](./docs/official-assets.md)。
