@@ -2,7 +2,8 @@
 
 无期迷途玩家攻略站点，基于 Astro 构建的静态 wiki。
 
-线上地址：https://5732.wiki
+线上地址：https://5732.wiki  
+GitHub 仓库：https://github.com/vajhXajhcv/ptn-wiki
 
 ## 技术栈
 
