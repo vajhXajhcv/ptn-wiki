@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { SITE_TITLE } from '../../consts';
 import '../../styles/global.css';
 
@@ -16,15 +17,38 @@ const { character } = Astro.props;
 const { Content } = await render(character);
 const title = `${character.data.name} - ${SITE_TITLE}`;
 const ogImage = character.data.image || undefined;
+
+const breadcrumbItems = [
+	{ label: '首页', href: '/' },
+	{ label: '角色图鉴', href: '/characters' },
+	{ label: character.data.name },
+];
+
+const breadcrumbJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: breadcrumbItems.map((item, index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		name: item.label,
+		item: item.href ? new URL(item.href, Astro.site).toString() : undefined,
+	})),
+};
 ---
 
 <BaseLayout title={title} description={character.data.description} image={ogImage}>
 	<main>
-		<a href="/characters" class="back-link">← 返回角色图鉴</a>
+		<Breadcrumbs items={breadcrumbItems} />
 
 		<article class="character-header">
 			{character.data.image && (
-				<img src={character.data.image} alt={character.data.name} class="character-image" />
+				<img
+					src={character.data.image}
+					alt={character.data.name}
+					class="character-image"
+					loading="eager"
+					decoding="async"
+				/>
 			)}
 			<div class="character-info">
 				<h1 class="page-title">{character.data.name}</h1>
@@ -65,17 +89,9 @@ const ogImage = character.data.image || undefined;
 	</main>
 </BaseLayout>
 
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+
 <style>
-	.back-link {
-		display: inline-block;
-		color: rgb(var(--gray));
-		text-decoration: none;
-		margin-bottom: 1em;
-		font-size: 0.9em;
-	}
-	.back-link:hover {
-		color: var(--accent-dark);
-	}
 	.character-header {
 		display: grid;
 		grid-template-columns: 260px 1fr;

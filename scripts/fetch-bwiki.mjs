@@ -44,6 +44,11 @@ const SLUG_MAP = {
 	辰砂: 'chensha',
 	卡瓦卡瓦: 'kawakawa',
 	切尔西伯爵: 'chelsea',
+	瑟琳: 'seren',
+	可可莉克: 'kokolic',
+	阿黛拉: 'adela',
+	橡木匣: 'oakcasket',
+	渡鸦: 'raven',
 };
 
 const TARGETS = Object.keys(SLUG_MAP);

@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { SITE_TITLE } from '../../consts';
 import '../../styles/global.css';
 
@@ -15,21 +16,65 @@ export async function getStaticPaths() {
 const { stage } = Astro.props;
 const { Content } = await render(stage);
 const title = `${stage.data.name} - ${SITE_TITLE}`;
+
+const breadcrumbItems = [
+	{ label: '首页', href: '/' },
+	{ label: '关卡攻略', href: '/stages' },
+	{ label: stage.data.name },
+];
+
+const breadcrumbJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: breadcrumbItems.map((item, index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		name: item.label,
+		item: item.href ? new URL(item.href, Astro.site).toString() : undefined,
+	})),
+};
 ---
 
 <BaseLayout title={title} description={stage.data.description}>
 	<main>
-		<a href="/stages" style="color: rgb(var(--gray)); text-decoration: none;">← 返回关卡攻略</a>
-		<h1 class="page-title" style="margin-top: 0.5em;">{stage.data.name}</h1>
+		<Breadcrumbs items={breadcrumbItems} />
 
-		<div style="margin: 1em 0;">
-			<span class="badge">{stage.data.chapter}-{stage.data.stageNumber}</span>
-			{stage.data.difficulty && <span class="badge">{stage.data.difficulty}</span>}
-			{stage.data.recommendedLevel && <span class="badge">推荐等级 {stage.data.recommendedLevel}</span>}
-		</div>
+		<article class="stage-header">
+			<h1 class="page-title">{stage.data.name}</h1>
+			{stage.data.description && <p class="page-desc">{stage.data.description}</p>}
 
-		<div class="prose">
+			<div class="info-badges">
+				<span class="badge">{stage.data.chapter}-{stage.data.stageNumber}</span>
+				{stage.data.difficulty && <span class="badge">{stage.data.difficulty}</span>}
+				{stage.data.recommendedLevel && <span class="badge">推荐等级 {stage.data.recommendedLevel}</span>}
+			</div>
+		</article>
+
+		<div class="prose stage-body">
 			<Content />
 		</div>
 	</main>
 </BaseLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+
+<style>
+	.stage-header {
+		margin-bottom: 1.5em;
+		padding-bottom: 1em;
+		border-bottom: 2px solid rgb(var(--gray-light));
+	}
+	.stage-header h1 {
+		margin-bottom: 0.3em;
+	}
+	.info-badges {
+		margin-top: 1em;
+	}
+	.stage-body h2 {
+		margin-top: 1.5em;
+	}
+	.stage-body h3 {
+		margin-top: 1.2em;
+		color: var(--accent-dark);
+	}
+</style>

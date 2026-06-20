@@ -1,4 +1,6 @@
 ---
+import fs from 'node:fs';
+import path from 'node:path';
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
@@ -6,30 +8,128 @@ import '../styles/global.css';
 
 const characters = await getCollection('characters');
 const stages = await getCollection('stages');
+
+// 按文件修改时间排序，取最近更新的 6 名角色
+const charactersWithMtime = characters.map((character) => {
+	const filePath = path.join(process.cwd(), 'src', 'content', 'characters', `${character.id}.md`);
+	const { mtimeMs } = fs.statSync(filePath);
+	return { ...character, mtimeMs };
+});
+const recentCharacters = [...charactersWithMtime]
+	.sort((a, b) => b.mtimeMs - a.mtimeMs)
+	.slice(0, 6);
+
+// 随机推荐 6 名 S 级角色
+const recommendedCharacters = characters
+	.filter((c) => c.data.rarity === 'S')
+	.sort(() => 0.5 - Math.random())
+	.slice(0, 6);
+
+const quickLinks = [
+	{
+		label: '角色图鉴',
+		href: '/characters',
+		desc: `查看全部 ${characters.length} 名角色`,
+	},
+	{
+		label: '关卡攻略',
+		href: '/stages',
+		desc: `查看全部 ${stages.length} 个关卡`,
+	},
+	{
+		label: '参与贡献',
+		href: 'https://github.com/vajhXajhcv/ptn-wiki',
+		desc: '提交 PR、反馈问题或加入讨论',
+	},
+];
+
+const websiteJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	name: SITE_TITLE,
+	url: Astro.site?.toString(),
+	description: SITE_DESCRIPTION,
+	potentialAction: {
+		'@type': 'SearchAction',
+		target: new URL('/characters?q={search_term_string}', Astro.site).toString(),
+		'query-input': 'required name=search_term_string',
+	},
+};
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<main>
-		<h1 class="page-title">{SITE_TITLE}</h1>
-		<p class="page-desc">{SITE_DESCRIPTION}</p>
+		<section class="hero">
+			<h1 class="hero-title">{SITE_TITLE}</h1>
+			<p class="hero-desc">{SITE_DESCRIPTION}</p>
+			<p class="hero-sub">
+				非官方、非营利、玩家共建的《无期迷途》中文资料站
+			</p>
+			<div class="hero-links">
+				<a href="/characters" class="hero-btn">浏览角色</a>
+				<a href="/stages" class="hero-btn hero-btn-secondary">查看关卡</a>
+			</div>
+		</section>
 
-		<section style="margin-bottom: 2.5em;">
-			<h2>角色图鉴</h2>
-			<p>共 {characters.length} 名角色</p>
+		<section class="section">
+			<h2 class="section-title">快速入口</h2>
+			<div class="card-grid quick-links">
+				{quickLinks.map((link) => (
+					<a href={link.href} class="card quick-link-card">
+						<h3>{link.label}</h3>
+						<p>{link.desc}</p>
+					</a>
+				))}
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="section-header">
+				<h2 class="section-title">最近更新</h2>
+				<a href="/characters" class="section-more">查看全部 →</a>
+			</div>
 			<div class="card-grid">
-				{characters.slice(0, 6).map((c) => (
+				{recentCharacters.map((c) => (
 					<a href={`/characters/${c.id}/`} class="card">
+						<div class="card-meta">
+							{c.data.rarity && (
+								<span class:list={['badge', `rarity-${c.data.rarity.toLowerCase()}`]}>{c.data.rarity}</span>
+							)}
+							{c.data.danger && <span class="badge">{c.data.danger}</span>}
+						</div>
 						<h3>{c.data.name}</h3>
 						<p>{c.data.description.slice(0, 60)}...</p>
 					</a>
 				))}
 			</div>
-			<p style="margin-top: 1em;"><a href="/characters">查看全部角色 →</a></p>
 		</section>
 
-		<section>
-			<h2>关卡攻略</h2>
-			<p>共 {stages.length} 个关卡</p>
+		<section class="section">
+			<div class="section-header">
+				<h2 class="section-title">推荐角色</h2>
+				<a href="/characters" class="section-more">查看全部 →</a>
+			</div>
+			<div class="card-grid">
+				{recommendedCharacters.map((c) => (
+					<a href={`/characters/${c.id}/`} class="card">
+						<div class="card-meta">
+							{c.data.rarity && (
+								<span class:list={['badge', `rarity-${c.data.rarity.toLowerCase()}`]}>{c.data.rarity}</span>
+							)}
+							{c.data.danger && <span class="badge">{c.data.danger}</span>}
+						</div>
+						<h3>{c.data.name}</h3>
+						<p>{c.data.description.slice(0, 60)}...</p>
+					</a>
+				))}
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="section-header">
+				<h2 class="section-title">关卡攻略</h2>
+				<a href="/stages" class="section-more">查看全部 →</a>
+			</div>
 			<div class="card-grid">
 				{stages.slice(0, 6).map((s) => (
 					<a href={`/stages/${s.id}/`} class="card">
@@ -38,7 +138,97 @@ const stages = await getCollection('stages');
 					</a>
 				))}
 			</div>
-			<p style="margin-top: 1em;"><a href="/stages">查看全部关卡 →</a></p>
 		</section>
 	</main>
 </BaseLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
+
+<style>
+	.hero {
+		text-align: center;
+		padding: 3em 1em;
+		margin-bottom: 2em;
+		background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+		border-radius: 16px;
+		border: 1px solid rgb(var(--gray-light));
+	}
+	.hero-title {
+		font-size: 2.6em;
+		margin-bottom: 0.3em;
+	}
+	.hero-desc {
+		font-size: 1.1em;
+		color: rgb(var(--gray));
+		margin-bottom: 0.5em;
+	}
+	.hero-sub {
+		font-size: 0.95em;
+		color: rgb(var(--gray));
+		margin-bottom: 1.5em;
+	}
+	.hero-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		flex-wrap: wrap;
+	}
+	.hero-btn {
+		display: inline-block;
+		padding: 0.6em 1.4em;
+		border-radius: 8px;
+		background: var(--accent);
+		color: #fff;
+		text-decoration: none;
+		font-weight: 500;
+		transition: background 0.2s;
+	}
+	.hero-btn:hover {
+		background: var(--accent-dark);
+	}
+	.hero-btn-secondary {
+		background: #fff;
+		color: var(--accent-dark);
+		border: 1px solid var(--accent);
+	}
+	.hero-btn-secondary:hover {
+		background: #eef2ff;
+	}
+	.section {
+		margin-bottom: 2.5em;
+	}
+	.section-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		margin-bottom: 0.8em;
+	}
+	.section-title {
+		font-size: 1.5em;
+		margin: 0;
+	}
+	.section-more {
+		font-size: 0.85em;
+		color: var(--accent);
+		text-decoration: none;
+	}
+	.section-more:hover {
+		text-decoration: underline;
+	}
+	.quick-links {
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	}
+	.quick-link-card {
+		text-align: center;
+	}
+	.quick-link-card h3 {
+		color: var(--accent-dark);
+	}
+	.card-meta {
+		margin-bottom: 0.5em;
+	}
+	@media (max-width: 720px) {
+		.hero-title { font-size: 2em; }
+		.hero { padding: 2em 1em; }
+	}
+</style>
