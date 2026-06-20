@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../consts';
+import '../styles/global.css';
+---
+
+<BaseLayout title={`页面未找到 - ${SITE_TITLE}`} description="抱歉，你访问的页面不存在。">
+	<main class="not-found">
+		<h1>404</h1>
+		<p>抱歉，这个页面似乎被局长们遗漏了。</p>
+		<div class="actions">
+			<a href="/" class="btn">返回首页</a>
+			<a href="/characters" class="btn btn-secondary">浏览角色</a>
+			<a href="/stages" class="btn btn-secondary">查看关卡</a>
+		</div>
+	</main>
+</BaseLayout>
+
+<style>
+	.not-found {
+		text-align: center;
+		padding: 4em 1em;
+	}
+	.not-found h1 {
+		font-size: 5em;
+		margin: 0;
+		color: var(--accent);
+	}
+	.not-found p {
+		font-size: 1.1em;
+		color: rgb(var(--gray));
+		margin-bottom: 2em;
+	}
+	.actions {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		flex-wrap: wrap;
+	}
+	.btn {
+		display: inline-block;
+		padding: 0.6em 1.4em;
+		border-radius: 8px;
+		background: var(--accent);
+		color: #fff;
+		text-decoration: none;
+		font-weight: 500;
+	}
+	.btn:hover {
+		background: var(--accent-dark);
+	}
+	.btn-secondary {
+		background: #fff;
+		color: var(--accent-dark);
+		border: 1px solid var(--accent);
+	}
+	.btn-secondary:hover {
+		background: #eef2ff;
+	}
+</style>

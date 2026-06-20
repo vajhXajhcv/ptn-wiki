@@ -9,6 +9,9 @@ const stages = (await getCollection('stages')).sort((a, b) => {
 	if (chapterDiff !== 0) return chapterDiff;
 	return a.data.stageNumber.localeCompare(b.data.stageNumber, undefined, { numeric: true });
 });
+
+const chapters = [...new Set(stages.map((s) => s.data.chapter))].sort();
+const difficulties = [...new Set(stages.map((s) => s.data.difficulty).filter(Boolean))].sort();
 ---
 
 <BaseLayout title={`关卡攻略 - ${SITE_TITLE}`} description="无期迷途主线关卡攻略、推荐等级与通关思路。">
@@ -16,12 +19,34 @@ const stages = (await getCollection('stages')).sort((a, b) => {
 		<h1 class="page-title">关卡攻略</h1>
 		<p class="page-desc">共 {stages.length} 个关卡</p>
 
-		<div class="card-grid">
+		<div class="filters">
+			<input type="text" id="search" placeholder="搜索关卡名、章节或描述..." />
+			<select id="chapter-filter">
+				<option value="">全部章节</option>
+				{chapters.map((c) => <option value={c}>{c}</option>)}
+			</select>
+			<select id="difficulty-filter">
+				<option value="">全部难度</option>
+				{difficulties.map((d) => <option value={d}>{d}</option>)}
+			</select>
+			<span id="count">显示 {stages.length} 个关卡</span>
+		</div>
+
+		<div class="card-grid" id="stage-grid">
 			{stages.map((s) => (
-				<a href={`/stages/${s.id}/`} class="card">
+				<a
+					href={`/stages/${s.id}/`}
+					class="card"
+					data-name={s.data.name}
+					data-chapter={s.data.chapter}
+					data-stage={s.data.stageNumber}
+					data-difficulty={s.data.difficulty || ''}
+					data-desc={s.data.description}
+				>
 					<div style="margin-bottom: 0.5em;">
 						<span class="badge">{s.data.chapter}-{s.data.stageNumber}</span>
 						{s.data.difficulty && <span class="badge">{s.data.difficulty}</span>}
+						{s.data.recommendedLevel && <span class="badge">推荐 {s.data.recommendedLevel}</span>}
 					</div>
 					<h3>{s.data.name}</h3>
 					<p>{s.data.description.slice(0, 60)}...</p>
@@ -30,3 +55,69 @@ const stages = (await getCollection('stages')).sort((a, b) => {
 		</div>
 	</main>
 </BaseLayout>
+
+<script is:inline>
+	(function () {
+		const search = document.getElementById('search');
+		const chapterFilter = document.getElementById('chapter-filter');
+		const difficultyFilter = document.getElementById('difficulty-filter');
+		const count = document.getElementById('count');
+		const cards = Array.from(document.querySelectorAll('#stage-grid .card'));
+
+		function filter() {
+			const term = search.value.trim().toLowerCase();
+			const chapter = chapterFilter.value;
+			const difficulty = difficultyFilter.value;
+			let visible = 0;
+
+			cards.forEach((card) => {
+				const name = card.dataset.name.toLowerCase();
+				const chapterMatch = !chapter || card.dataset.chapter === chapter;
+				const difficultyMatch = !difficulty || card.dataset.difficulty === difficulty;
+				const textMatch =
+					!term ||
+					name.includes(term) ||
+					card.dataset.chapter.toLowerCase().includes(term) ||
+					(card.dataset.desc && card.dataset.desc.toLowerCase().includes(term)) ||
+					(card.dataset.stage && card.dataset.stage.toLowerCase().includes(term));
+
+				const show = chapterMatch && difficultyMatch && textMatch;
+				card.style.display = show ? '' : 'none';
+				if (show) visible++;
+			});
+
+			count.textContent = `显示 ${visible} 个关卡`;
+		}
+
+		search.addEventListener('input', filter);
+		chapterFilter.addEventListener('change', filter);
+		difficultyFilter.addEventListener('change', filter);
+	})();
+</script>
+
+<style>
+	.filters {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75em;
+		align-items: center;
+		margin-bottom: 1.5em;
+	}
+	.filters input,
+	.filters select {
+		padding: 0.5em 0.75em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 6px;
+		font-size: 0.95em;
+		background: #fff;
+	}
+	.filters input {
+		flex: 1 1 240px;
+		min-width: 200px;
+	}
+	#count {
+		margin-left: auto;
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+	}
+</style>

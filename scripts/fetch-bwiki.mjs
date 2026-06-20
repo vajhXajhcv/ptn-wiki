@@ -49,6 +49,16 @@ const SLUG_MAP = {
 	阿黛拉: 'adela',
 	橡木匣: 'oakcasket',
 	渡鸦: 'raven',
+	恩菲尔: 'enfer',
+	伊芙: 'eve',
+	爱缇: 'aitee',
+	毕安卡: 'bianca',
+	安吉尔: 'angell',
+	雷温: 'lamia',
+	萦萦: 'yingying',
+	赫斯提亚: 'hestia',
+	曜: 'yao',
+	杜若: 'duruo',
 };
 
 const TARGETS = Object.keys(SLUG_MAP);
