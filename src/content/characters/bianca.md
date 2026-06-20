@@ -3,7 +3,7 @@ name: 毕安卡
 title: 新闻记者
 rarity: S
 danger: 精准
-role: 
+role: 物理输出
 faction: ''
 description: 毕安卡是S级精准禁闭者，擅长造成物理伤害的禁闭者。伤害提升{{禁闭者数值
 tags: []
