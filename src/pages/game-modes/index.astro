@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+import '../../styles/global.css';
+
+const modes = (await getCollection('gameModes')).sort((a, b) => a.data.name.localeCompare(b.data.name));
+---
+
+<BaseLayout title={`玩法攻略 - ${SITE_TITLE}`} description="无期迷途各类玩法攻略：暗域、公会战、数据间隙等。">
+	<main>
+		<h1 class="page-title">玩法攻略</h1>
+		<p class="page-desc">共 {modes.length} 个玩法模块，涵盖周常、协力与活动挑战。</p>
+
+		<div class="card-grid">
+			{modes.map((m) => (
+				<a href={`/game-modes/${m.id}/`} class="card">
+					<div style="margin-bottom: 0.5em;">
+						{m.data.type && <span class="badge">{m.data.type}</span>}
+						{m.data.tags?.map((tag) => <span class="badge badge-tag">{tag}</span>)}
+					</div>
+					<h3>{m.data.name}</h3>
+					<p>{m.data.description.slice(0, 80)}...</p>
+				</a>
+			))}
+		</div>
+	</main>
+</BaseLayout>
+
+<style>
+	.badge-tag {
+		font-size: 0.75em;
+		background: #eef2ff;
+		color: var(--accent-dark);
+	}
+</style>

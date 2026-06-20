@@ -8,6 +8,7 @@ import '../styles/global.css';
 
 const characters = await getCollection('characters');
 const stages = await getCollection('stages');
+const gameModes = await getCollection('gameModes');
 
 // 按文件修改时间排序，取最近更新的 6 名角色
 const charactersWithMtime = characters.map((character) => {
@@ -35,6 +36,11 @@ const quickLinks = [
 		label: '关卡攻略',
 		href: '/stages',
 		desc: `查看全部 ${stages.length} 个关卡`,
+	},
+	{
+		label: '玩法攻略',
+		href: '/game-modes',
+		desc: `暗域、公会战、数据间隙等玩法`,
 	},
 	{
 		label: '参与贡献',
@@ -135,6 +141,24 @@ const websiteJsonLd = {
 					<a href={`/stages/${s.id}/`} class="card">
 						<h3>{s.data.name}</h3>
 						<p>{s.data.description.slice(0, 60)}...</p>
+					</a>
+				))}
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="section-header">
+				<h2 class="section-title">玩法攻略</h2>
+				<a href="/game-modes" class="section-more">查看全部 →</a>
+			</div>
+			<div class="card-grid">
+				{gameModes.map((m) => (
+					<a href={`/game-modes/${m.id}/`} class="card">
+						<div class="card-meta">
+							{m.data.type && <span class="badge">{m.data.type}</span>}
+						</div>
+						<h3>{m.data.name}</h3>
+						<p>{m.data.description.slice(0, 60)}...</p>
 					</a>
 				))}
 			</div>

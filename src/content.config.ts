@@ -30,4 +30,17 @@ const stages = defineCollection({
 	}),
 });
 
-export const collections = { characters, stages };
+const gameModes = defineCollection({
+	loader: glob({ base: './src/content/game-modes', pattern: '**/*.{md,mdx}' }),
+	schema: z.object({
+		name: z.string(),
+		type: z.enum(['暗域', '公会战', '数据间隙', '其他']).optional(),
+		description: z.string(),
+		unlock: z.string().optional(),
+		rewards: z.string().optional(),
+		image: z.string().optional(),
+		tags: z.array(z.string()).optional(),
+	}),
+});
+
+export const collections = { characters, stages, gameModes };
