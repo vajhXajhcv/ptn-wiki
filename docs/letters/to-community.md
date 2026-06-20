@@ -58,5 +58,5 @@
 **无期迷途 Wiki 维护团队**  
 **站点**：https://5732.wiki  
 **GitHub**：https://github.com/vajhXajhcv/ptn-wiki  
-**国内联系**：[请填写国内邮箱，如 contact@5732.wiki]  
-**海外联系**：ptnwiki@outlook.com
+**联系邮箱**：ptnwiki@outlook.com  
+

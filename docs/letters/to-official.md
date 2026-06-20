@@ -58,6 +58,5 @@
 敬礼！
 
 **无期迷途 Wiki 维护团队**  
-**国内联系**：[请填写国内邮箱，如 contact@5732.wiki]  
-**海外联系**：ptnwiki@outlook.com  
+**联系邮箱**：ptnwiki@outlook.com  
 **日期**：[请填写日期]
