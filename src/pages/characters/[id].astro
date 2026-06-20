@@ -15,51 +15,148 @@ export async function getStaticPaths() {
 const { character } = Astro.props;
 const { Content } = await render(character);
 const title = `${character.data.name} - ${SITE_TITLE}`;
+const ogImage = character.data.image || undefined;
 ---
 
-<BaseLayout title={title} description={character.data.description}>
+<BaseLayout title={title} description={character.data.description} image={ogImage}>
 	<main>
-		<a href="/characters" style="color: rgb(var(--gray)); text-decoration: none;">← 返回角色图鉴</a>
-		<h1 class="page-title" style="margin-top: 0.5em;">{character.data.name}</h1>
-		{character.data.title && <p class="page-desc" style="margin-top: -0.5em;">{character.data.title}</p>}
+		<a href="/characters" class="back-link">← 返回角色图鉴</a>
 
-		<div class="info-badges">
-			{character.data.rarity && (
-				<span class:list={['badge', `rarity-${character.data.rarity.toLowerCase()}`]}>{character.data.rarity}级</span>
+		<article class="character-header">
+			{character.data.image && (
+				<img src={character.data.image} alt={character.data.name} class="character-image" />
 			)}
-			{character.data.danger && <span class="badge">{character.data.danger}</span>}
-			{character.data.role && <span class="badge">{character.data.role}</span>}
-			{character.data.faction && <span class="badge">{character.data.faction}</span>}
-		</div>
+			<div class="character-info">
+				<h1 class="page-title">{character.data.name}</h1>
+				{character.data.title && <p class="page-desc character-subtitle">{character.data.title}</p>}
 
-		{character.data.tags && character.data.tags.length > 0 && (
-			<div class="tag-list">
-				{character.data.tags.map((tag) => (
-					<span class="badge badge-tag">{tag}</span>
-				))}
+				<div class="info-badges">
+					{character.data.rarity && (
+						<span class:list={['badge', `rarity-${character.data.rarity.toLowerCase()}`]}>
+							{character.data.rarity}级
+						</span>
+					)}
+					{character.data.danger && <span class="badge">{character.data.danger}</span>}
+					{character.data.role && <span class="badge">{character.data.role}</span>}
+					{character.data.faction && <span class="badge">{character.data.faction}</span>}
+				</div>
+
+				{character.data.tags && character.data.tags.length > 0 && (
+					<div class="tag-list">
+						{character.data.tags.map((tag) => (
+							<span class="badge badge-tag">{tag}</span>
+						))}
+					</div>
+				)}
+
+				{character.data.description && (
+					<p class="character-description">{character.data.description}</p>
+				)}
 			</div>
-		)}
+		</article>
 
-		{character.data.image && (
-			<img src={character.data.image} alt={character.data.name} style="max-width: 240px; margin: 1em 0;" />
-		)}
-
-		<div class="prose">
+		<div class="prose character-body">
 			<Content />
 		</div>
+
+		<p class="data-source">
+			角色图片素材来自《无期迷途》官方网站；技能名称、效果等客观数据参考无期迷途 BWiki 整理。
+		</p>
 	</main>
 </BaseLayout>
 
 <style>
+	.back-link {
+		display: inline-block;
+		color: rgb(var(--gray));
+		text-decoration: none;
+		margin-bottom: 1em;
+		font-size: 0.9em;
+	}
+	.back-link:hover {
+		color: var(--accent-dark);
+	}
+	.character-header {
+		display: grid;
+		grid-template-columns: 260px 1fr;
+		gap: 2em;
+		align-items: start;
+		margin-bottom: 2em;
+		padding: 1.5em;
+		background: #fff;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 16px;
+		box-shadow: 0 4px 12px rgba(var(--gray), 12%);
+	}
+	.character-image {
+		width: 100%;
+		max-width: 260px;
+		border-radius: 12px;
+		object-fit: cover;
+		margin: 0;
+	}
+	.character-info {
+		min-width: 0;
+	}
+	.character-subtitle {
+		margin-top: -0.3em;
+		font-size: 1.05em;
+	}
+	.character-description {
+		margin-top: 1em;
+		color: rgb(var(--gray-dark));
+		font-size: 0.95em;
+		line-height: 1.7;
+	}
 	.info-badges {
-		margin: 1em 0;
+		margin: 0.8em 0 0.5em;
 	}
 	.tag-list {
-		margin: 0.5em 0 1em;
+		margin: 0.5em 0;
 	}
 	.badge-tag {
 		font-size: 0.75em;
 		background: #eef2ff;
 		color: var(--accent-dark);
+	}
+	.character-body {
+		margin-top: 1.5em;
+	}
+	.character-body h2 {
+		margin-top: 1.5em;
+		padding-bottom: 0.3em;
+		border-bottom: 2px solid rgb(var(--gray-light));
+	}
+	.character-body h3 {
+		margin-top: 1.2em;
+		font-size: 1.2em;
+		color: var(--accent-dark);
+	}
+	.character-body ul {
+		padding-left: 1.5em;
+	}
+	.character-body li {
+		margin-bottom: 0.5em;
+	}
+	.data-source {
+		margin-top: 3em;
+		padding-top: 1.5em;
+		border-top: 1px solid rgb(var(--gray-light));
+		color: rgb(var(--gray));
+		font-size: 0.8em;
+		text-align: center;
+	}
+	@media (max-width: 720px) {
+		.character-header {
+			grid-template-columns: 1fr;
+			justify-items: center;
+			text-align: center;
+		}
+		.character-image {
+			max-width: 220px;
+		}
+		.character-info {
+			width: 100%;
+		}
 	}
 </style>
