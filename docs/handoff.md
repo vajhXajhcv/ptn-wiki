@@ -15,6 +15,8 @@
 - **GitHub**：https://github.com/vajhXajhcv/ptn-wiki
 
 当前版本构建产物为 `dist/`，共 **1056 个页面**（2026-07-10 构建）。
+- **最新提交**：`e9108e6` refactor: 统一组件与页面、补全角色别名/更新摘要、新增社区页与 AGENTS.md
+- **最新部署**：https://220032c0.ptn-wiki.pages.dev（Git 自动部署，状态 success，已绑定 5732.wiki）
 
 ---
 
@@ -68,7 +70,7 @@
 ## 3. 当前阻塞 / 待处理
 
 - **已给官方发函**，等待回复。后续如需使用官方立绘、数据或获得授权，需根据回复调整声明与素材来源说明。
-- **部署问题**：Cloudflare Pages 项目 `ptn-wiki` 的 Git Provider 当前显示为 `No`，GitHub push 不会自动触发部署。当前需要手动执行 `wrangler pages deploy` 发布；或前往 Cloudflare 控制台重新连接 GitHub 仓库。
+- **GitHub / Cloudflare Pages 关联已恢复**：`vajhXajhcv/ptn-wiki` 已连接，自动部署已启用，构建命令 `npm run build`，输出目录 `dist`。
 
 ---
 
@@ -93,37 +95,33 @@
 
 ### 高优先级
 
-1. **处理 Cloudflare Pages 部署**
-   - 手动执行 `wrangler pages deploy` 发布当前版本
-   - 或在 Cloudflare 控制台重新连接 GitHub 仓库，恢复自动部署
-
-2. **等待并处理官方回复**
+1. **等待并处理官方回复**
    - 根据官方意见更新 `docs/letters/` 与站点声明
    - 如需，调整角色素材使用方式
 
-3. **补全角色阵营数据**
+2. **补全角色阵营数据**
    - 143 名角色 `faction` 为空，可从 BWiki 角色页批量抓取
 
 ### 中优先级
 
-4. **集中常量**
+3. **集中常量**
    - 创建 `src/lib/constants.ts`，统一稀有度、职业、API 地址、映射表
    - 抽取 `scripts/lib/*.mjs` 公共脚本库（BWiki API、HTML 清洗、文件读写）
 
-5. **补充缺失技能数据**
+4. **补充缺失技能数据**
    - 单独为反爬失败角色写手动/慢速抓取脚本
    - 或在 BWiki 手动复制后粘贴到对应 Markdown 文件
 
-6. **完善关卡攻略正文**
+5. **完善关卡攻略正文**
    - 当前关卡正文多为占位
    - 可参照 `scripts/enrich-character-skills.mjs` 思路，从 BWiki 抓取关卡详情
 
 ### 低优先级 / 体验优化
 
-7. 角色详情页增加技能锚点导航
-8. 全站搜索支持拼音/简繁转换
-9. 图片懒加载与 WebP 转换
-10. 增加 PWA / 离线缓存
+6. 角色详情页增加技能锚点导航
+7. 全站搜索支持拼音/简繁转换
+8. 图片懒加载与 WebP 转换
+9. 增加 PWA / 离线缓存
 
 ---
 
@@ -136,7 +134,7 @@ npm run dev
 # 构建
 npm run build
 
-# 部署到 Cloudflare Pages
+# 部署到 Cloudflare Pages（手动兜底）
 npm run deploy
 ```
 
@@ -155,7 +153,7 @@ node scripts/fetch-official-resources.mjs
 # 清洗 tags / role / 正文中的 HTML 注释残留
 node scripts/clean-tags.mjs
 
-# 从官网抓取新闻并生成 updates Markdown
+# 从官网抓取新闻并生成 updates
 node scripts/fetch-official-news.mjs
 
 # 回填 updates 空 description
@@ -179,7 +177,7 @@ src/
   content/         # 角色、关卡、玩法、更新、剧情 Markdown
   lib/             # seo.ts、公共工具
   content.config.ts
-  consts.ts
+  consts.ts        # SITE_TITLE、SITE_DESCRIPTION 等站点常量
   styles/global.css
 
 public/
@@ -216,7 +214,7 @@ docs/
 
 ## 9. 备忘
 
-- 当前部署版本预览：https://e2f6405f.ptn-wiki.pages.dev
+- 当前部署版本预览：https://220032c0.ptn-wiki.pages.dev
 - 生产域名：https://5732.wiki/
 - 若长时间未推进，重新接手时建议先：
   1. `npm install`
