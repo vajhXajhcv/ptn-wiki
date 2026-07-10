@@ -25,7 +25,7 @@ const items: SearchItem[] = [
 		desc:
 			c.data.description.slice(0, 90) + (c.data.description.length > 90 ? '…' : ''),
 		href: `/characters/${c.id}/`,
-		extras: [c.data.rarity, c.data.danger, c.data.role, c.data.faction, ...(c.data.tags || [])]
+		extras: [c.data.rarity, c.data.danger, c.data.role, c.data.faction, ...(c.data.tags || []), ...(c.data.aliases || [])]
 			.filter(Boolean)
 			.join(' '),
 	})),

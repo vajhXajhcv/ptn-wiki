@@ -6,6 +6,7 @@ danger: 诡秘
 role: 进攻增幅
 faction: ''
 description: 安吉尔是S级诡秘禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
+aliases: ['Angell']
 tags: ['进攻增幅', '特殊增幅']
 image: /characters/angell.jpg
 imageSource:

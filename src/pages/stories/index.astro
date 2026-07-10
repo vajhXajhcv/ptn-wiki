@@ -1,6 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Card from '../../components/Card.astro';
+import CardGrid from '../../components/CardGrid.astro';
+import FilterBar from '../../components/FilterBar.astro';
 import { SITE_TITLE } from '../../consts';
 import '../../styles/global.css';
 
@@ -20,7 +23,7 @@ const totalCount = stories.length;
 		<h1 class="page-title">剧情</h1>
 		<p class="page-desc">共 {totalCount} 段剧情文本，来源自无期迷途 BWiki。</p>
 
-		<div class="filters">
+		<FilterBar>
 			<input type="text" id="search" placeholder="搜索标题、章节或角色..." />
 			<select id="type-filter">
 				<option value="">全部类型</option>
@@ -30,31 +33,27 @@ const totalCount = stories.length;
 				<option value="">全部章节</option>
 				{chapters.map((c) => <option value={c}>{c}</option>)}
 			</select>
-			<span id="count">显示 {totalCount} 个</span>
-		</div>
+			<span id="count" class="filter-count">显示 {totalCount} 个</span>
+		</FilterBar>
 
-		<div class="card-grid" id="story-grid">
+		<CardGrid id="story-grid">
 			{stories.map((s) => (
-				<a
+				<Card
 					href={`/stories/${s.id}/`}
-					class="card"
+					title={s.data.title}
+					description={`${s.data.description.slice(0, 60)}...`}
+					badges={[
+						s.data.type && { label: s.data.type },
+						s.data.chapter && { label: s.data.chapter },
+					].filter(Boolean) as { label: string }[]}
+					footer={s.data.characters && s.data.characters.length > 0 ? `出场：${s.data.characters.slice(0, 6).join('、')}${s.data.characters.length > 6 ? '…' : ''}` : undefined}
 					data-title={s.data.title}
 					data-type={s.data.type || ''}
 					data-chapter={s.data.chapter || ''}
 					data-characters={(s.data.characters || []).join(' ')}
-				>
-					<div style="margin-bottom: 0.5em;">
-						{s.data.type && <span class="badge">{s.data.type}</span>}
-						{s.data.chapter && <span class="badge">{s.data.chapter}</span>}
-					</div>
-					<h3>{s.data.title}</h3>
-					<p>{s.data.description.slice(0, 60)}...</p>
-					{s.data.characters && s.data.characters.length > 0 && (
-						<p class="characters">出场：{s.data.characters.slice(0, 6).join('、')}{s.data.characters.length > 6 ? '…' : ''}</p>
-					)}
-				</a>
+				/>
 			))}
-		</div>
+		</CardGrid>
 	</main>
 </BaseLayout>
 
@@ -95,35 +94,3 @@ const totalCount = stories.length;
 		chapterFilter.addEventListener('change', filter);
 	})();
 </script>
-
-<style>
-	.filters {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.75em;
-		align-items: center;
-		margin-bottom: 1.5em;
-	}
-	.filters input,
-	.filters select {
-		padding: 0.5em 0.75em;
-		border: 1px solid rgb(var(--gray-light));
-		border-radius: 6px;
-		font-size: 0.95em;
-		background: #fff;
-	}
-	.filters input {
-		flex: 1 1 240px;
-		min-width: 200px;
-	}
-	#count {
-		margin-left: auto;
-		font-size: 0.85em;
-		color: rgb(var(--gray));
-	}
-	.characters {
-		font-size: 0.85em;
-		color: rgb(var(--gray));
-		margin-top: 0.5em;
-	}
-</style>

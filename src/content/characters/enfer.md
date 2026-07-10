@@ -6,6 +6,7 @@ danger: 启迪
 role: 恐惧
 faction: ''
 description: 恩菲尔是S级启迪禁闭者，擅长干扰的禁闭者。敌人被{{术语查看
+aliases: ['Enfer']
 tags: ['恐惧', '进攻辅助']
 image: /characters/enfer.jpg
 imageSource:

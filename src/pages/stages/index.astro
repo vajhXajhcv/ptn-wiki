@@ -1,6 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Card from '../../components/Card.astro';
+import CardGrid from '../../components/CardGrid.astro';
+import FilterBar from '../../components/FilterBar.astro';
 import { SITE_TITLE } from '../../consts';
 import '../../styles/global.css';
 
@@ -19,7 +22,7 @@ const difficulties = [...new Set(stages.map((s) => s.data.difficulty).filter(Boo
 		<h1 class="page-title">关卡攻略</h1>
 		<p class="page-desc">共 {stages.length} 个关卡</p>
 
-		<div class="filters">
+		<FilterBar>
 			<input type="text" id="search" placeholder="搜索关卡名、章节或描述..." />
 			<select id="chapter-filter">
 				<option value="">全部章节</option>
@@ -29,30 +32,28 @@ const difficulties = [...new Set(stages.map((s) => s.data.difficulty).filter(Boo
 				<option value="">全部难度</option>
 				{difficulties.map((d) => <option value={d}>{d}</option>)}
 			</select>
-			<span id="count">显示 {stages.length} 个关卡</span>
-		</div>
+			<span id="count" class="filter-count">显示 {stages.length} 个关卡</span>
+		</FilterBar>
 
-		<div class="card-grid" id="stage-grid">
+		<CardGrid id="stage-grid">
 			{stages.map((s) => (
-				<a
+				<Card
 					href={`/stages/${s.id}/`}
-					class="card"
+					title={s.data.name}
+					description={`${s.data.description.slice(0, 60)}...`}
+					badges={[
+						{ label: `${s.data.chapter}-${s.data.stageNumber}` },
+						s.data.difficulty && { label: s.data.difficulty },
+						s.data.recommendedLevel && { label: `推荐 ${s.data.recommendedLevel}` },
+					].filter(Boolean) as { label: string }[]}
 					data-name={s.data.name}
 					data-chapter={s.data.chapter}
 					data-stage={s.data.stageNumber}
 					data-difficulty={s.data.difficulty || ''}
 					data-desc={s.data.description}
-				>
-					<div style="margin-bottom: 0.5em;">
-						<span class="badge">{s.data.chapter}-{s.data.stageNumber}</span>
-						{s.data.difficulty && <span class="badge">{s.data.difficulty}</span>}
-						{s.data.recommendedLevel && <span class="badge">推荐 {s.data.recommendedLevel}</span>}
-					</div>
-					<h3>{s.data.name}</h3>
-					<p>{s.data.description.slice(0, 60)}...</p>
-				</a>
+				/>
 			))}
-		</div>
+		</CardGrid>
 	</main>
 </BaseLayout>
 
@@ -94,30 +95,3 @@ const difficulties = [...new Set(stages.map((s) => s.data.difficulty).filter(Boo
 		difficultyFilter.addEventListener('change', filter);
 	})();
 </script>
-
-<style>
-	.filters {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.75em;
-		align-items: center;
-		margin-bottom: 1.5em;
-	}
-	.filters input,
-	.filters select {
-		padding: 0.5em 0.75em;
-		border: 1px solid rgb(var(--gray-light));
-		border-radius: 6px;
-		font-size: 0.95em;
-		background: #fff;
-	}
-	.filters input {
-		flex: 1 1 240px;
-		min-width: 200px;
-	}
-	#count {
-		margin-left: auto;
-		font-size: 0.85em;
-		color: rgb(var(--gray));
-	}
-</style>

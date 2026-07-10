@@ -12,6 +12,7 @@ const characters = defineCollection({
 		faction: z.string().optional(),
 		danger: z.enum(['异能', '精准', '狂暴', '诡秘', '启迪', '坚韧']).optional(),
 		description: z.string(),
+		aliases: z.array(z.string()).optional(),
 		image: z.string().optional(),
 		imageSource: z
 			.object({
@@ -65,7 +66,20 @@ const gameModes = defineCollection({
 	loader: glob({ base: './src/content/game-modes', pattern: '**/*.{md,mdx}' }),
 	schema: z.object({
 		name: z.string(),
-		type: z.enum(['暗域', '公会战', '数据间隙', '其他']).optional(),
+		type: z.enum([
+				'暗域',
+				'公会战',
+				'数据间隙',
+				'破碎防线',
+				'狄斯暗影',
+				'浊暗之阱',
+				'帕尔马废墟',
+				'记忆风暴',
+				'新城特训',
+				'监管与派遣',
+				'无尽梦魇',
+				'其他',
+			]).optional(),
 		description: z.string(),
 		unlock: z.string().optional(),
 		rewards: z.string().optional(),

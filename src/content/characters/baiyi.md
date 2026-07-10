@@ -6,6 +6,7 @@ danger: 诡秘
 role: 爆发/破核
 faction: 无厌
 description: 高机动诡秘禁闭者，必杀可连续位移并触发破核，是处理精英怪与快速破核的核心角色。
+aliases: ['Bai Yi']
 tags: ['诡秘', '破核', '爆发', '位移']
 image: /characters/baiyi.jpg
 imageSource:

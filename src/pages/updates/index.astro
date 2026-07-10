@@ -1,10 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Badge from '../../components/Badge.astro';
 import { SITE_TITLE } from '../../consts';
 import '../../styles/global.css';
 
-const updates = (await getCollection('updates')).sort((a, b) => b.data.date.localeCompare(a.data.date));
+const updates = (await getCollection('updates')).sort(
+	(a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
 ---
 
 <BaseLayout title={`更新日志 - ${SITE_TITLE}`} description="无期迷途版本更新、活动与维护公告汇总。">
@@ -17,7 +20,7 @@ const updates = (await getCollection('updates')).sort((a, b) => b.data.date.loca
 				<a href={`/updates/${u.id}/`} class="timeline-item">
 					<div class="timeline-date">{u.data.date}</div>
 					<div class="timeline-content">
-						<span class="badge timeline-type">{u.data.type}</span>
+						<Badge variant="tag" class="timeline-type">{u.data.type}</Badge>
 						<h3>{u.data.title}</h3>
 						<p>{u.data.description}</p>
 					</div>
@@ -62,9 +65,8 @@ const updates = (await getCollection('updates')).sort((a, b) => b.data.date.loca
 		color: rgb(var(--gray));
 		font-size: 0.9em;
 	}
-	.timeline-type {
-		background: #eef2ff;
-		color: var(--accent-dark);
+	:global(.timeline-type) {
+		font-size: 0.75em;
 	}
 	@media (max-width: 720px) {
 		.timeline-item {

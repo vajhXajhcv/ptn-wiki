@@ -2,7 +2,10 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import DetailHeader from '../../components/DetailHeader.astro';
+import JsonLd from '../../components/JsonLd.astro';
 import { SITE_TITLE } from '../../consts';
+import { breadcrumbJsonLd, articleJsonLd } from '../../lib/seo';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
@@ -16,6 +19,7 @@ export async function getStaticPaths() {
 const { mode } = Astro.props;
 const { Content } = await render(mode);
 const title = `${mode.data.name} - ${SITE_TITLE}`;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 
 const breadcrumbItems = [
 	{ label: '首页', href: '/' },
@@ -23,101 +27,41 @@ const breadcrumbItems = [
 	{ label: mode.data.name },
 ];
 
-const breadcrumbJsonLd = {
-	'@context': 'https://schema.org',
-	'@type': 'BreadcrumbList',
-	itemListElement: breadcrumbItems.map((item, index) => ({
-		'@type': 'ListItem',
-		position: index + 1,
-		name: item.label,
-		item: item.href ? new URL(item.href, Astro.site).toString() : undefined,
-	})),
-};
+const badges = [
+	mode.data.type && { label: mode.data.type },
+	...(mode.data.tags || []).map((tag) => ({ label: tag, variant: 'tag' as const })),
+].filter(Boolean) as { label: string; variant?: 'default' | 'tag' }[];
 
-const articleJsonLd = {
-	'@context': 'https://schema.org',
-	'@type': 'Article',
-	headline: title,
-	description: mode.data.description,
-	url: new URL(Astro.url.pathname, Astro.site).toString(),
-	mainEntityOfPage: {
-		'@type': 'WebPage',
-		'@id': new URL(Astro.url.pathname, Astro.site).toString(),
-	},
-	publisher: {
-		'@type': 'Organization',
-		name: SITE_TITLE,
-		url: Astro.site?.toString(),
-	},
-};
+const meta = [
+	mode.data.unlock && { label: '解锁条件', value: mode.data.unlock },
+	mode.data.rewards && { label: '主要奖励', value: mode.data.rewards },
+].filter(Boolean) as { label: string; value: string }[];
 ---
 
-<BaseLayout title={title} description={mode.data.description}>
+<BaseLayout title={title} description={mode.data.description} image={mode.data.image}>
 	<main>
 		<Breadcrumbs items={breadcrumbItems} />
 
-		<article class="mode-header">
-			<h1 class="page-title">{mode.data.name}</h1>
-			{mode.data.type && (
-				<div class="info-badges">
-					<span class="badge">{mode.data.type}</span>
-					{mode.data.tags?.map((tag) => <span class="badge badge-tag">{tag}</span>)}
-				</div>
-			)}
-
-			{mode.data.description && <p class="page-desc">{mode.data.description}</p>}
-
-			<div class="mode-meta">
-				{mode.data.unlock && (
-					<p>
-						<strong>解锁条件：</strong>
-						{mode.data.unlock}
-					</p>
-				)}
-				{mode.data.rewards && (
-					<p>
-						<strong>主要奖励：</strong>
-						{mode.data.rewards}
-					</p>
-				)}
-			</div>
-		</article>
+		<DetailHeader
+			title={mode.data.name}
+			description={mode.data.description}
+			image={mode.data.image}
+			badges={badges}
+			meta={meta}
+		/>
 
 		<div class="prose mode-body">
 			<Content />
 		</div>
 	</main>
+
+	<JsonLd data={breadcrumbJsonLd(breadcrumbItems, Astro.site)} />
+	<JsonLd data={articleJsonLd({ title, description: mode.data.description, url: canonicalUrl, site: Astro.site, image: mode.data.image })} />
 </BaseLayout>
 
-<script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
-<script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
-
 <style>
-	.mode-header {
-		margin-bottom: 1.5em;
-		padding-bottom: 1em;
-		border-bottom: 2px solid rgb(var(--gray-light));
-	}
-	.mode-header h1 {
-		margin-bottom: 0.4em;
-	}
-	.info-badges {
-		margin: 0.8em 0;
-	}
-	.badge-tag {
-		font-size: 0.75em;
-		background: #eef2ff;
-		color: var(--accent-dark);
-	}
-	.mode-meta {
-		margin-top: 1em;
-		padding: 1em;
-		background: #f8fafc;
-		border-radius: 8px;
-		font-size: 0.95em;
-	}
-	.mode-meta p {
-		margin: 0.3em 0;
+	.mode-body {
+		margin-top: 1.5em;
 	}
 	.mode-body h2 {
 		margin-top: 1.5em;

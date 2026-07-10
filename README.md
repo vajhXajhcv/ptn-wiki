@@ -18,7 +18,9 @@ npm install
 npm run dev
 ```
 
-## 获取角色图片
+## 数据维护脚本
+
+### 角色图片与资讯（官网）
 
 角色立绘来自《无期迷途》官方网站公开接口。出于版权合规考虑，这些图片**不会提交到 GitHub**，需要本地生成：
 
@@ -43,9 +45,33 @@ node scripts/fetch-official-news.mjs
 3. 将图片压缩到 480px 宽后保存到 `public/characters/{slug}.jpg`。
 4. 自动更新 `src/content/characters/*.md` 中的 `image` 字段，并在 `imageSource` 中记录图片来源。
 
-官网资讯脚本会读取 `/api/news` 中的公告、预告、活动等非角色资讯，生成 `src/content/updates/*.md`，仅保留标题、日期、类型与原文链接。
+官网资讯脚本会读取 `/api/news` 中的公告、预告、活动等非角色资讯，生成 `src/content/updates/*.md`，并从正文提取摘要作为 `description`。
 
 > 这些图片版权归自意网络所有。本站仅作展示，若官方要求请立即下架。
+
+### BWiki 数据（角色、关卡、剧情）
+
+```sh
+# 抓取/更新 BWiki 角色数据
+node scripts/fetch-bwiki.mjs
+
+# 抓取/更新 BWiki 关卡数据
+node scripts/fetch-bwiki-stages.mjs
+
+# 抓取/更新 BWiki 剧情文本（主线 + 活动）
+node scripts/fetch-bwiki-stories.mjs
+
+# 强制重新生成所有剧情（会覆盖已有文件）
+node scripts/fetch-bwiki-stories.mjs --force
+
+# 回填已有 updates 的空 description（一次性）
+node scripts/backfill-update-descriptions.mjs
+
+# 为角色追加社区别名/英文昵称（可接外部 JSON）
+node scripts/enrich-characters-from-gchar.mjs
+```
+
+BWiki 脚本遵循「断点续传」原则：已存在的文件默认跳过，仅在网络中断或需要全量更新时重新运行。剧情脚本会过滤 BWiki 暂无文本的空剧情页。
 
 ## 添加角色
 
@@ -60,6 +86,7 @@ danger: 狂暴
 role: 物理输出
 faction: 所属阵营
 description: 角色简介
+aliases: ['Alias', '昵称']
 tags: ['狂暴', '输出']
 image: /characters/role-name.jpg
 ---

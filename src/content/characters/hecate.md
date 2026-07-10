@@ -6,6 +6,7 @@ danger: 异能
 role: 法术输出/召唤
 faction: 无厌
 description: 危级异能禁闭者，可召唤梦魇协同作战，兼具法术输出与破核能力，是新手法队的重要成员。
+aliases: ['Hecate']
 tags: ['异能', '法术输出', '召唤', '破核']
 image: /characters/hecate.jpg
 imageSource:

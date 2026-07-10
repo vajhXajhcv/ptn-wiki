@@ -57,6 +57,42 @@ function sanitizeFilename(id) {
 	return String(id);
 }
 
+function stripHtml(html) {
+	return html
+		.replace(/<br\s*\/?>/gi, '\n')
+		.replace(/<\/p>/gi, '\n')
+		.replace(/<[^>]+>/g, '')
+		.replace(/&nbsp;/g, ' ')
+		.replace(/&amp;/g, '&')
+		.replace(/&lt;/g, '<')
+		.replace(/&gt;/g, '>')
+		.replace(/&quot;/g, '"')
+		.replace(/&#39;/g, "'")
+		.replace(/[\n\r]+/g, ' ')
+		.replace(/\s+/g, ' ')
+		.trim();
+}
+
+function truncateDescription(text, maxLength = 120) {
+	if (!text) return '';
+	if (text.length <= maxLength) return text;
+	const truncated = text.slice(0, maxLength);
+	const lastPunct = Math.max(truncated.lastIndexOf('。'), truncated.lastIndexOf('，'), truncated.lastIndexOf(' '));
+	return (lastPunct > maxLength * 0.6 ? truncated.slice(0, lastPunct + 1) : truncated) + '……';
+}
+
+async function fetchDetailDescription(id) {
+	try {
+		const detail = await api(`/news/${id}`);
+		const html = detail?.[0]?.content_html || '';
+		const text = stripHtml(html);
+		return truncateDescription(text);
+	} catch (err) {
+		console.warn(`   获取详情失败 ${id}: ${err.message}`);
+		return '';
+	}
+}
+
 function existingUpdateIds() {
 	try {
 		return readdirSync(UPDATES_DIR)
@@ -111,6 +147,8 @@ async function main() {
 		const url = `https://wqmt.aisnogames.com/#/news/${item.id}`;
 		const coverLine = item.cover ? `cover: ${item.cover}` : '';
 
+		const description = await fetchDetailDescription(id);
+
 		if (existingIds.has(id)) {
 			// 已存在则仅更新元数据，保留可能的人工编辑内容
 			const filePath = join(UPDATES_DIR, `${id}.md`);
@@ -121,6 +159,7 @@ async function main() {
 			newContent = newContent.replace(/^date: .+$/m, `date: '${date}'`);
 			newContent = newContent.replace(/^type: .+$/m, `type: '${type}'`);
 			newContent = newContent.replace(/^source: .+$/m, `source: '${url}'`);
+			newContent = newContent.replace(/^description: .+$/m, `description: ${description.replace(/'/g, "''")}`);
 			if (coverLine) {
 				if (/^cover: .+$/m.test(newContent)) {
 					newContent = newContent.replace(/^cover: .+$/m, coverLine);
@@ -143,7 +182,7 @@ async function main() {
 title: ${item.title.replace(/'/g, "''")}
 date: '${date}'
 type: '${type}'
-description: ''
+description: ${description.replace(/'/g, "''")}
 source: '${url}'${coverLine ? '\n' + coverLine : ''}
 tags: []
 ---

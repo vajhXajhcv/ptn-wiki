@@ -6,6 +6,7 @@ danger: 异能
 role: 恐惧
 faction: ''
 description: 雷温是S级异能禁闭者，擅长召唤的禁闭者，必杀可以造成{{伤害文本
+aliases: ['Luvia Ray']
 tags: ['恐惧']
 image: /characters/lamia.jpg
 imageSource:

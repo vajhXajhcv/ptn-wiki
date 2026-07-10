@@ -6,6 +6,7 @@ danger: 启迪
 role: 治疗辅助
 faction: ''
 description: 可可莉克是S级启迪禁闭者，擅长造成真实伤害的禁闭者。进入战斗时，能量充盈。
+aliases: ['Coco']
 tags: ['治疗辅助']
 image: /characters/kokolic.jpg
 imageSource:

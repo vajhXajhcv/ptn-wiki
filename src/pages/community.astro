@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Card from '../components/Card.astro';
+import CardGrid from '../components/CardGrid.astro';
+import { SITE_TITLE } from '../consts';
+import '../styles/global.css';
+
+const tools = [
+	{
+		category: '数据与 Wiki',
+		items: [
+			{
+				name: '无期迷途 BWiki',
+				desc: '玩家共建的中文 Wiki，覆盖角色、关卡、剧情、活动等内容。本站剧情文本与部分数据参考自此。',
+				link: 'https://wiki.biligame.com/wqmt/',
+				tags: ['中文', 'Wiki', '社区数据'],
+			},
+			{
+				name: 'Path to Nowhere Fandom',
+				desc: '英文社区 Wiki，包含角色背景、设定与攻略，适合参考英文术语与 lore。',
+				link: 'https://pathtonowhere.fandom.com/wiki/Path_to_Nowhere_Wiki',
+				tags: ['英文', 'Wiki', 'Lore'],
+			},
+			{
+				name: 'gchar / game_characters',
+				desc: '开源角色数据聚合工具与 Hugging Face 数据集，支持从 BWiki 等站点抓取结构化角色信息。可用于补全角色别名、标签等元数据。',
+				link: 'https://github.com/narugo1992/gchar',
+				tags: ['开源', '数据集', '角色元数据'],
+			},
+		],
+	},
+	{
+		category: '工具与助手',
+		items: [
+			{
+				name: 'MBCCtools',
+				desc: '基于 MaaFramework 的无期迷途日常助手，可自动完成日常、副本与活动任务。',
+				link: 'https://github.com/quietlysnow/MBCCtools',
+				tags: ['自动化', '日常', 'MaaFramework'],
+			},
+			{
+				name: 'wqmt_assistant',
+				desc: 'Python + OpenCV 实现的日常/材料 farming 自动化脚本。',
+				link: 'https://github.com/DabengBa/wqmt_assistant',
+				tags: ['自动化', ' farming', 'Python'],
+			},
+		],
+	},
+	{
+		category: '资源与参考',
+		items: [
+			{
+				name: 'ark-text-extractor',
+				desc: '明日方舟剧情文本提取器，展示了从游戏数据反解对话文本的通用模式，可作为构建无期迷途剧情提取器的参考。',
+				link: 'https://github.com/etnAtker/ark-text-extractor',
+				tags: ['参考', '剧情提取', '开源'],
+			},
+			{
+				name: 'wqmt-decrypt',
+				desc: '无期迷途游戏资源解密工具。可用于本地研究游戏资源，但分发解密后的版权素材存在风险，请遵守相关法律法规与游戏用户协议。',
+				link: 'https://github.com/HanaHye/wqmt-decrypt',
+				tags: ['解密', '资源', '本地工具'],
+			},
+		],
+	},
+];
+---
+
+<BaseLayout title={`社区工具与资源 - ${SITE_TITLE}`} description="无期迷途相关开源项目、Wiki、自动化工具与资源整理。">
+	<main>
+		<h1 class="page-title">社区工具与资源</h1>
+		<p class="page-desc">
+			整理与《无期迷途》相关的开源项目、社区 Wiki 和实用工具。本站部分内容参考或受益于这些项目。
+		</p>
+
+		{
+			tools.map((section) => (
+				<section class="community-section">
+					<h2 class="section-title">{section.category}</h2>
+					<CardGrid>
+						{section.items.map((item) => (
+							<Card
+								href={item.link}
+								title={item.name}
+								description={item.desc}
+								badges={item.tags.map((tag) => ({ label: tag, variant: 'tag' as const }))}
+							/>
+						))}
+					</CardGrid>
+				</section>
+			))
+		}
+
+		<section class="community-note card">
+			<h2>使用说明</h2>
+			<p>
+				以上链接指向第三方项目与社区站点。Wiki 中直接引用的数据（如剧情文本、角色客观属性）已尽可能标注来源；
+				工具类项目仅供玩家参考，使用时请遵守各项目的许可证与《无期迷途》的用户协议。
+			</p>
+		</section>
+	</main>
+</BaseLayout>
+
+<style>
+	.community-section {
+		margin-bottom: 2.5em;
+	}
+	.community-section h2 {
+		font-size: 1.4em;
+		margin-bottom: 0.8em;
+		padding-bottom: 0.3em;
+		border-bottom: 2px solid rgb(var(--gray-light));
+	}
+	.community-note {
+		padding: 1.2em;
+		background: #f8fafc;
+	}
+	.community-note h2 {
+		font-size: 1.2em;
+		margin-bottom: 0.5em;
+	}
+	.community-note p {
+		margin: 0;
+		color: rgb(var(--gray));
+		font-size: 0.95em;
+	}
+</style>

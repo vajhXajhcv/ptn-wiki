@@ -6,6 +6,7 @@ danger: 异能
 role: 法伤辅助
 faction: ''
 description: 渡鸦是S级异能禁闭者，擅长造成法术伤害的禁闭者，必杀可以造成{{伤害文本
+aliases: ['Raven']
 tags: ['法伤辅助', '解除隐匿']
 image: /characters/raven.jpg
 imageSource:

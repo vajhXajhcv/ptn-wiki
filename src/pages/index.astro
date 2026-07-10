@@ -50,6 +50,11 @@ const quickLinks = [
 		desc: `查看全部 ${stories.length} 段剧情`,
 	},
 	{
+		label: '社区工具',
+		href: '/community',
+		desc: '开源项目、Wiki 与实用工具整理',
+	},
+	{
 		label: '参与贡献',
 		href: 'https://github.com/vajhXajhcv/ptn-wiki',
 		desc: '提交 PR、反馈问题或加入讨论',
@@ -104,7 +109,7 @@ const websiteJsonLd = {
 				</div>
 				<div class="update-list">
 					{updates
-						.sort((a, b) => b.data.date.localeCompare(a.data.date))
+						.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
 						.slice(0, 3)
 						.map((u) => (
 							<a href={`/updates/${u.id}/`} class="update-card">

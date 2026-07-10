@@ -1,0 +1,26 @@
+---
+export interface Props {
+	id?: string;
+	class?: string;
+}
+
+const { id, class: className = '' } = Astro.props;
+---
+
+<div class:list={['card-grid', className]} id={id}>
+	<slot />
+</div>
+
+<style>
+	.card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+		gap: 1.2em;
+	}
+
+	@media (max-width: 720px) {
+		.card-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

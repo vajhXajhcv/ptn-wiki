@@ -6,6 +6,7 @@ danger: 启迪
 role: 治疗辅助
 faction: ''
 description: 杜若是S级启迪禁闭者，擅长支援的禁闭者。进入战斗时，能量充盈。
+aliases: ['Duru']
 tags: ['治疗辅助', '复活']
 image: /characters/duruo.jpg
 imageSource:

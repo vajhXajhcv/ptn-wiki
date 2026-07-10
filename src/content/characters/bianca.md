@@ -6,6 +6,7 @@ danger: 精准
 role: 物理输出
 faction: ''
 description: 毕安卡是S级精准禁闭者，擅长造成物理伤害的禁闭者。伤害提升{{禁闭者数值
+aliases: ['Bianca']
 tags: []
 image: /characters/bianca.jpg
 imageSource:

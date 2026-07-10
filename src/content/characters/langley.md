@@ -6,6 +6,7 @@ danger: 精准
 role: 远程物理/破核
 faction: 第九机关
 description: 第九机关王牌狙击手，普攻与必杀兼具范围伤害与破核能力，是远程物理队的重要拼图。
+aliases: ['Langley']
 tags: ['精准', '远程输出', '破核', '范围伤害']
 image: /characters/langley.jpg
 imageSource:

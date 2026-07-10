@@ -1,0 +1,93 @@
+---
+import Badge from './Badge.astro';
+
+export interface Props {
+	title: string;
+	description?: string;
+	image?: string;
+	imageAlt?: string;
+	badges?: { label: string; variant?: 'default' | 'tag' | 'rarity-s' | 'rarity-a' | 'rarity-b' | 'status-ongoing' | 'status-upcoming' | 'status-past' }[];
+	meta?: { label: string; value: string }[];
+}
+
+const { title, description, image, imageAlt = title, badges = [], meta = [] } = Astro.props;
+---
+
+<article class="detail-header">
+	{image && (
+		<img
+			src={image}
+			alt={imageAlt}
+			class="detail-header-image"
+			loading="eager"
+			decoding="async"
+		/>
+	)}
+	<div class="detail-header-content">
+		<h1 class="page-title">{title}</h1>
+		{description && <p class="page-desc">{description}</p>}
+
+		{badges.length > 0 && (
+			<div class="detail-header-badges">
+				{badges.map((b) => (
+					<Badge variant={b.variant}>{b.label}</Badge>
+				))}
+			</div>
+		)}
+
+		{meta.length > 0 && (
+			<div class="detail-header-meta">
+				{meta.map((m) => (
+					<p><strong>{m.label}：</strong>{m.value}</p>
+				))}
+			</div>
+		)}
+	</div>
+</article>
+
+<style>
+	.detail-header {
+		display: flex;
+		gap: 1.5em;
+		align-items: flex-start;
+		margin-bottom: 1.5em;
+		padding-bottom: 1em;
+		border-bottom: 2px solid rgb(var(--gray-light));
+	}
+	.detail-header-image {
+		width: 180px;
+		max-width: 35%;
+		border-radius: 12px;
+		flex-shrink: 0;
+	}
+	.detail-header-content {
+		flex: 1;
+		min-width: 0;
+	}
+	.detail-header-content h1 {
+		margin-bottom: 0.3em;
+	}
+	.detail-header-badges {
+		margin: 0.75em 0;
+	}
+	.detail-header-meta {
+		margin-top: 1em;
+		padding: 1em;
+		background: #f8fafc;
+		border-radius: 8px;
+		font-size: 0.95em;
+	}
+	.detail-header-meta p {
+		margin: 0.3em 0;
+	}
+
+	@media (max-width: 640px) {
+		.detail-header {
+			flex-direction: column;
+		}
+		.detail-header-image {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+</style>

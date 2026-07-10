@@ -6,6 +6,7 @@ danger: 精准
 role: 进攻增幅
 faction: ''
 description: 瑟琳是S级精准禁闭者，擅长造成法术伤害的禁闭者，必杀可以造成{{伤害文本
+aliases: ['Serpent']
 tags: ['进攻增幅', '普攻伤害增幅']
 image: /characters/seren.jpg
 imageSource:

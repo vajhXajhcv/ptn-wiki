@@ -2,7 +2,10 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import DetailHeader from '../../components/DetailHeader.astro';
+import JsonLd from '../../components/JsonLd.astro';
 import { SITE_TITLE } from '../../consts';
+import { breadcrumbJsonLd, articleJsonLd } from '../../lib/seo';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
@@ -16,59 +19,28 @@ export async function getStaticPaths() {
 const { stage } = Astro.props;
 const { Content } = await render(stage);
 const title = `${stage.data.name} - ${SITE_TITLE}`;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const d = stage.data;
 
 const breadcrumbItems = [
 	{ label: '首页', href: '/' },
 	{ label: '关卡攻略', href: '/stages' },
-	{ label: stage.data.name },
+	{ label: d.name },
 ];
 
-const breadcrumbJsonLd = {
-	'@context': 'https://schema.org',
-	'@type': 'BreadcrumbList',
-	itemListElement: breadcrumbItems.map((item, index) => ({
-		'@type': 'ListItem',
-		position: index + 1,
-		name: item.label,
-		item: item.href ? new URL(item.href, Astro.site).toString() : undefined,
-	})),
-};
-
-const articleJsonLd = {
-	'@context': 'https://schema.org',
-	'@type': 'Article',
-	headline: title,
-	description: stage.data.description,
-	url: new URL(Astro.url.pathname, Astro.site).toString(),
-	mainEntityOfPage: {
-		'@type': 'WebPage',
-		'@id': new URL(Astro.url.pathname, Astro.site).toString(),
-	},
-	publisher: {
-		'@type': 'Organization',
-		name: SITE_TITLE,
-		url: Astro.site?.toString(),
-	},
-};
-
-const d = stage.data;
+const badges = [
+	{ label: `${d.chapter}-${d.stageNumber}` },
+	d.difficulty && { label: d.difficulty },
+	d.recommendedLevel !== undefined && { label: `推荐等级 ${d.recommendedLevel}` },
+	d.cost !== undefined && { label: `消耗体力 ${d.cost}` },
+].filter(Boolean) as { label: string }[];
 ---
 
 <BaseLayout title={title} description={d.description}>
 	<main>
 		<Breadcrumbs items={breadcrumbItems} />
 
-		<article class="stage-header">
-			<h1 class="page-title">{d.name}</h1>
-			{d.description && <p class="page-desc">{d.description}</p>}
-
-			<div class="info-badges">
-				<span class="badge">{d.chapter}-{d.stageNumber}</span>
-				{d.difficulty && <span class="badge">{d.difficulty}</span>}
-				{d.recommendedLevel !== undefined && <span class="badge">推荐等级 {d.recommendedLevel}</span>}
-				{d.cost !== undefined && <span class="badge">消耗体力 {d.cost}</span>}
-			</div>
-		</article>
+		<DetailHeader title={d.name} description={d.description} badges={badges} />
 
 		{
 			(d.sanity !== undefined || d.moves !== undefined || d.enemySummary || d.enemies || d.objectives || d.firstClearReward || d.sRankReward || d.stageReward || d.mechanics || d.strategy) && (
@@ -94,86 +66,76 @@ const d = stage.data;
 										{d.enemySummary.minions !== undefined && <span>小怪 {d.enemySummary.minions}</span>}
 										{d.enemySummary.elites !== undefined && <span>精英 {d.enemySummary.elites}</span>}
 									</p>
-								)}
-								{d.enemies && d.enemies.length > 0 && (
-									<ul class="enemy-list">
-										{d.enemies.map((enemy) => (
-											<li>
-												{enemy.elite && <span class="elite-tag">精英</span>}
-												{enemy.name}
-												{enemy.count !== undefined && <span class="count">×{enemy.count}</span>}
-											</li>
-										))}
+									)}
+									{d.enemies && d.enemies.length > 0 && (
+										<ul class="enemy-list">
+											{d.enemies.map((enemy) => (
+												<li>
+													{enemy.elite && <span class="elite-tag">精英</span>}
+													{enemy.name}
+													{enemy.count !== undefined && <span class="count">×{enemy.count}</span>}
+												</li>
+											))}
+										</ul>
+									)}
+								</div>
+							)}
+
+							{(d.firstClearReward || d.sRankReward || d.stageReward) && (
+								<div class="brief-block">
+									<h3>奖励</h3>
+									<ul>
+										{d.firstClearReward && <li><strong>首通奖励：</strong>{d.firstClearReward}</li>}
+										{d.sRankReward && <li><strong>S级奖励：</strong>{d.sRankReward}</li>}
+										{d.stageReward && <li><strong>关卡奖励：</strong>{d.stageReward}</li>}
 									</ul>
+								</div>
+							)}
+
+							{d.objectives && d.objectives.length > 0 && (
+								<div class="brief-block">
+									<h3>三星 / S级目标</h3>
+									<ul>
+										{d.objectives.map((obj) => <li>{obj}</li>)}
+										</ul>
+									</div>
 								)}
-							</div>
-						)}
 
-						{(d.firstClearReward || d.sRankReward || d.stageReward) && (
-							<div class="brief-block">
-								<h3>奖励</h3>
-								<ul>
-									{d.firstClearReward && <li><strong>首通奖励：</strong>{d.firstClearReward}</li>}
-									{d.sRankReward && <li><strong>S级奖励：</strong>{d.sRankReward}</li>}
-									{d.stageReward && <li><strong>关卡奖励：</strong>{d.stageReward}</li>}
-								</ul>
-							</div>
-						)}
+							{d.mechanics && d.mechanics.length > 0 && (
+								<div class="brief-block">
+									<h3>特殊机制</h3>
+									<ul>
+										{d.mechanics.map((m) => <li>{m}</li>)}
+										</ul>
+									</div>
+								)}
 
-						{d.objectives && d.objectives.length > 0 && (
-							<div class="brief-block">
-								<h3>三星 / S级目标</h3>
-								<ul>
-									{d.objectives.map((obj) => <li>{obj}</li>)}
-								</ul>
-							</div>
-						)}
-
-						{d.mechanics && d.mechanics.length > 0 && (
-							<div class="brief-block">
-								<h3>特殊机制</h3>
-								<ul>
-									{d.mechanics.map((m) => <li>{m}</li>)}
-								</ul>
-							</div>
-						)}
-
-						{d.strategy && d.strategy.length > 0 && (
-							<div class="brief-block full-width">
-								<h3>推荐思路</h3>
-								<ol>
-									{d.strategy.map((s) => <li>{s}</li>)}
-								</ol>
-							</div>
-						)}
-					</div>
-				</section>
-			)
-		}
+							{d.strategy && d.strategy.length > 0 && (
+								<div class="brief-block full-width">
+									<h3>推荐思路</h3>
+									<ol>
+										{d.strategy.map((s) => <li>{s}</li>)}
+										</ol>
+									</div>
+								)}
+						</div>
+					</section>
+				)
+			}
 
 		<div class="prose stage-body">
 			<Content />
 		</div>
 	</main>
+
+	<JsonLd data={breadcrumbJsonLd(breadcrumbItems, Astro.site)} />
+	<JsonLd data={articleJsonLd({ title, description: d.description, url: canonicalUrl, site: Astro.site })} />
 </BaseLayout>
 
-<script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
-<script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
-
 <style>
-	.stage-header {
-		margin-bottom: 1.5em;
-		padding-bottom: 1em;
-		border-bottom: 2px solid rgb(var(--gray-light));
-	}
-	.stage-header h1 {
-		margin-bottom: 0.3em;
-	}
-	.info-badges {
-		margin-top: 1em;
-	}
 	.stage-brief {
 		margin-bottom: 2em;
+		padding: 1.5em;
 	}
 	.stage-brief h2 {
 		margin-top: 0;
@@ -238,6 +200,9 @@ const d = stage.data;
 	.count {
 		color: rgb(var(--gray-dark));
 		font-size: 0.9em;
+	}
+	.stage-body {
+		margin-top: 1.5em;
 	}
 	.stage-body h2 {
 		margin-top: 1.5em;

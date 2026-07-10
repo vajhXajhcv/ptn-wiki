@@ -6,6 +6,7 @@ danger: 狂暴
 role: 近战输出
 faction: 辛迪加
 description: 新手赠送的普级狂暴角色，获取简单、培养成本低，是开荒期的可靠近战输出。
+aliases: ['Hella']
 tags: ['狂暴', '近战输出', '新手', '持续伤害']
 image: /characters/hella.jpg
 imageSource:

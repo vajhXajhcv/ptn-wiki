@@ -6,6 +6,7 @@ danger: 坚韧
 role: 防守增幅
 faction: ''
 description: 蔻蔻是一名B级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任防守增幅<!-- 多个TAG用位置。
+aliases: ['K.K.', 'KK', 'koukou']
 tags: ['防守增幅']
 image: /characters/koukou.jpg
 imageSource:

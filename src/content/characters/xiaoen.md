@@ -6,6 +6,7 @@ danger: 启迪
 role: 治疗辅助
 faction: ''
 description: 肖恩是A级启迪禁闭者，擅长支援的禁闭者。能量恢复速度提升{{禁闭者数值
+aliases: ['Shawn']
 tags: ['治疗辅助', '特殊辅助']
 image: /characters/xiaoen.jpg
 imageSource:

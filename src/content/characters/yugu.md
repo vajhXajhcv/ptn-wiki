@@ -6,6 +6,7 @@ danger: 坚韧
 role: 技能伤害辅助
 faction: ''
 description: 玉骨是S级坚韧禁闭者，擅长防守的禁闭者，可以同时阻挡{{禁闭者数值
+aliases: ['Yugu']
 tags: ['技能伤害辅助', '暴击辅助', '特殊辅助', '护盾辅助']
 image: /characters/yugu.jpg
 imageSource:

@@ -6,6 +6,7 @@ danger: 异能
 role: 法术输出
 faction: 无厌
 description: 奎恩集团总裁，兼具高倍率法术伤害与局长能量恢复能力，必杀可造成核心伤害并根据地块生成不同效果，是法队核心输出。
+aliases: ['Eirene']
 tags: ['异能', '法术输出', '破核', '能量恢复']
 image: /characters/eirene.jpg
 imageSource:

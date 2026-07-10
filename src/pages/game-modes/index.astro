@@ -1,10 +1,14 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Card from '../../components/Card.astro';
+import CardGrid from '../../components/CardGrid.astro';
+import FilterBar from '../../components/FilterBar.astro';
 import { SITE_TITLE } from '../../consts';
 import '../../styles/global.css';
 
 const modes = (await getCollection('gameModes')).sort((a, b) => a.data.name.localeCompare(b.data.name));
+const types = [...new Set(modes.map((m) => m.data.type).filter(Boolean))].sort();
 ---
 
 <BaseLayout title={`玩法攻略 - ${SITE_TITLE}`} description="无期迷途各类玩法攻略：暗域、公会战、数据间隙等。">
@@ -12,25 +16,57 @@ const modes = (await getCollection('gameModes')).sort((a, b) => a.data.name.loca
 		<h1 class="page-title">玩法攻略</h1>
 		<p class="page-desc">共 {modes.length} 个玩法模块，涵盖周常、协力与活动挑战。</p>
 
-		<div class="card-grid">
+		<FilterBar>
+			<input type="text" id="search" placeholder="搜索玩法名称或描述..." />
+			<select id="type-filter">
+				<option value="">全部类型</option>
+				{types.map((t) => <option value={t}>{t}</option>)}
+			</select>
+			<span id="count" class="filter-count">显示 {modes.length} 个</span>
+		</FilterBar>
+
+		<CardGrid id="mode-grid">
 			{modes.map((m) => (
-				<a href={`/game-modes/${m.id}/`} class="card">
-					<div style="margin-bottom: 0.5em;">
-						{m.data.type && <span class="badge">{m.data.type}</span>}
-						{m.data.tags?.map((tag) => <span class="badge badge-tag">{tag}</span>)}
-					</div>
-					<h3>{m.data.name}</h3>
-					<p>{m.data.description.slice(0, 80)}...</p>
-				</a>
+				<Card
+					href={`/game-modes/${m.id}/`}
+					title={m.data.name}
+					description={`${m.data.description.slice(0, 80)}...`}
+					badges={[
+						m.data.type && { label: m.data.type },
+						...(m.data.tags || []).slice(0, 3).map((tag) => ({ label: tag, variant: 'tag' as const })),
+					].filter(Boolean) as { label: string; variant?: 'default' | 'tag' }[]}
+					data-type={m.data.type || ''}
+					data-search={`${m.data.name} ${m.data.description} ${(m.data.tags || []).join(' ')}`}
+				/>
 			))}
-		</div>
+		</CardGrid>
 	</main>
 </BaseLayout>
 
-<style>
-	.badge-tag {
-		font-size: 0.75em;
-		background: #eef2ff;
-		color: var(--accent-dark);
-	}
-</style>
+<script is:inline>
+	(function () {
+		const search = document.getElementById('search');
+		const typeFilter = document.getElementById('type-filter');
+		const count = document.getElementById('count');
+		const cards = Array.from(document.querySelectorAll('#mode-grid .card'));
+
+		function filter() {
+			const term = search.value.trim().toLowerCase();
+			const type = typeFilter.value;
+			let visible = 0;
+
+			cards.forEach((card) => {
+				const typeMatch = !type || card.dataset.type === type;
+				const textMatch = !term || (card.dataset.search || '').toLowerCase().includes(term);
+				const show = typeMatch && textMatch;
+				card.style.display = show ? '' : 'none';
+				if (show) visible++;
+			});
+
+			count.textContent = `显示 ${visible} 个`;
+		}
+
+		search.addEventListener('input', filter);
+		typeFilter.addEventListener('change', filter);
+	})();
+</script>

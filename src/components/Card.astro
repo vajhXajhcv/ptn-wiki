@@ -1,0 +1,81 @@
+---
+import Badge from './Badge.astro';
+
+export interface Props {
+	href: string;
+	title: string;
+	description?: string;
+	image?: string;
+	imageAlt?: string;
+	subtitle?: string;
+	badges?: { label: string; variant?: 'default' | 'tag' | 'rarity-s' | 'rarity-a' | 'rarity-b' | 'status-ongoing' | 'status-upcoming' | 'status-past' }[];
+	footer?: string;
+	class?: string;
+	'data-type'?: string;
+	'data-search'?: string;
+	[key: `data-${string}`]: string | undefined;
+}
+
+const { href, title, description, image, imageAlt = title, subtitle, badges = [], footer, class: className = '', ...dataAttrs } = Astro.props;
+---
+
+<a href={href} class:list={['card', className]} {...dataAttrs}>
+	{image && (
+		<img src={image} alt={imageAlt} class="card-image" loading="lazy" decoding="async" />
+	)}
+	{badges.length > 0 && (
+		<div class="card-badges">
+			{badges.map((b) => <Badge variant={b.variant}>{b.label}</Badge>)}
+		</div>
+	)}
+	<h3>{title}</h3>
+	{subtitle && <p class="card-subtitle">{subtitle}</p>}
+	{description && <p class="card-description">{description}</p>}
+	{footer && <p class="card-footer">{footer}</p>}
+</a>
+
+<style>
+	.card {
+		display: block;
+		padding: 1.2em;
+		border-radius: 12px;
+		background: var(--bg-card);
+		border: 1px solid rgb(var(--gray-light));
+		text-decoration: none;
+		color: inherit;
+		transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+	}
+	.card:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--box-shadow);
+		border-color: var(--accent);
+	}
+	.card-image {
+		width: 100%;
+		border-radius: 8px;
+		margin-bottom: 0.75em;
+	}
+	.card-badges {
+		margin-bottom: 0.5em;
+	}
+	.card h3 {
+		margin: 0 0 0.3em;
+		font-size: 1.1em;
+	}
+	.card-subtitle {
+		margin: 0 0 0.5em;
+		font-size: 0.9em;
+		color: rgb(var(--gray));
+	}
+	.card-description {
+		margin: 0;
+		font-size: 0.9em;
+		color: rgb(var(--gray));
+		line-height: 1.5;
+	}
+	.card-footer {
+		margin: 0.75em 0 0;
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+	}
+</style>

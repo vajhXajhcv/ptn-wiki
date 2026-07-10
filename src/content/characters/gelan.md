@@ -6,6 +6,7 @@ danger: 坚韧
 role: 防守增幅
 faction: ''
 description: 戈蓝是A级坚韧禁闭者，擅长防守的禁闭者，可以阻挡{{禁闭者数值
+aliases: ['Golan']
 tags: ['防守增幅', '自我治疗', '物伤辅助']
 image: /characters/gelan.jpg
 imageSource:

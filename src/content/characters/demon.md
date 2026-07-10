@@ -6,6 +6,7 @@ danger: 坚韧
 role: 护盾坦克
 faction: 暗潮
 description: 强力前排坦克，必杀可为自身及周围友方提供护盾，被动提升防御与法抗，是保护后排的核心。
+aliases: ['Demolition']
 tags: ['坚韧', '护盾', '坦克', '保护']
 image: /characters/demon.jpg
 imageSource:

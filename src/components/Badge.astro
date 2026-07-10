@@ -1,0 +1,32 @@
+---
+export interface Props {
+	variant?: 'default' | 'tag' | 'rarity-s' | 'rarity-a' | 'rarity-b' | 'status-ongoing' | 'status-upcoming' | 'status-past';
+	class?: string;
+}
+
+const { variant = 'default', class: className = '' } = Astro.props;
+---
+
+<span class:list={['badge', variant !== 'default' && `badge-${variant}`, className]}>
+	<slot />
+</span>
+
+<style>
+	.badge {
+		display: inline-block;
+		padding: 0.15em 0.5em;
+		border-radius: 4px;
+		font-size: 0.75em;
+		background: rgb(var(--gray-light));
+		color: rgb(var(--gray-dark));
+		margin-right: 0.4em;
+		line-height: 1.4;
+	}
+	.badge-rarity-s { background: #fde68a; color: #92400e; }
+	.badge-rarity-a { background: #c7d2fe; color: #3730a3; }
+	.badge-rarity-b { background: #d1d5db; color: #374151; }
+	.badge-tag { background: #eef2ff; color: var(--accent-dark); }
+	.badge-status-ongoing { background: #dcfce7; color: #166534; }
+	.badge-status-upcoming { background: #fef3c7; color: #92400e; }
+	.badge-status-past { background: #f3f4f6; color: #6b7280; }
+</style>

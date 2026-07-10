@@ -1,0 +1,64 @@
+---
+export interface Props {
+	class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<div class:list={['filter-bar', className]}>
+	<slot />
+</div>
+
+<style>
+	.filter-bar {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75em;
+		align-items: center;
+		margin-bottom: 1.5em;
+	}
+	.filter-bar :global(input[type="text"]),
+	.filter-bar :global(input[type="search"]),
+	.filter-bar :global(select) {
+		padding: 0.5em 0.75em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 6px;
+		font-size: 0.95em;
+		background: #fff;
+		font-family: inherit;
+	}
+	.filter-bar :global(input[type="text"]),
+	.filter-bar :global(input[type="search"]) {
+		flex: 1 1 240px;
+		min-width: 200px;
+	}
+	.filter-bar :global(select) {
+		min-width: 140px;
+	}
+	.filter-bar :global(.filter-count) {
+		margin-left: auto;
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+	}
+	.filter-bar :global(.filter-group) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		align-items: center;
+	}
+	.filter-bar :global(.filter-group button) {
+		padding: 0.35em 0.75em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 6px;
+		background: #fff;
+		font-size: 0.9em;
+		cursor: pointer;
+		font-family: inherit;
+	}
+	.filter-bar :global(.filter-group button.active) {
+		background: var(--accent);
+		border-color: var(--accent);
+		color: #fff;
+	}
+</style>

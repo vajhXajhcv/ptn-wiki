@@ -6,6 +6,7 @@ danger: 异能
 role: ''
 faction: ''
 description: 露薇娅·蕾是一名A级异能禁闭者，主要负责法术伤害与控场。在队伍中常担任<!-- 多个TAG用位置。
+aliases: ['露薇娅']
 tags: []
 image: /characters/luweiyalei.jpg
 imageSource:

@@ -6,6 +6,7 @@ danger: 异能
 role: 减速
 faction: ''
 description: 萦萦是S级异能禁闭者，擅长造成法术伤害的禁闭者。进入战斗时，能量充盈。萦萦在场期间生效，友方异能禁闭者的{{伤害文本
+aliases: ['Yingying']
 tags: ['减速', '特殊辅助']
 image: /characters/yingying.jpg
 imageSource:

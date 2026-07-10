@@ -6,6 +6,7 @@ danger: 狂暴
 role: 进攻增幅
 faction: ''
 description: 曜是S级狂暴禁闭者，擅长造成法术伤害的禁闭者。能量充盈期间，攻击速度提升{{禁闭者数值
+aliases: ['Yao']
 tags: ['进攻增幅', '特殊辅助']
 image: /characters/yao.jpg
 imageSource:
