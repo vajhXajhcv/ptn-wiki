@@ -10,6 +10,7 @@ const characters = await getCollection('characters');
 const stages = await getCollection('stages');
 const gameModes = await getCollection('gameModes');
 const updates = await getCollection('updates');
+const stories = await getCollection('stories');
 
 // 按文件修改时间排序，取最近更新的 6 名角色
 const charactersWithMtime = characters.map((character) => {
@@ -42,6 +43,11 @@ const quickLinks = [
 		label: '玩法攻略',
 		href: '/game-modes',
 		desc: `暗域、公会战、数据间隙等玩法`,
+	},
+	{
+		label: '剧情文本',
+		href: '/stories',
+		desc: `查看全部 ${stories.length} 段剧情`,
 	},
 	{
 		label: '参与贡献',

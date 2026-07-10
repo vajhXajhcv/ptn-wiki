@@ -1,0 +1,129 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+import '../../styles/global.css';
+
+const stories = (await getCollection('stories')).sort((a, b) => {
+	const typeDiff = (a.data.type || '').localeCompare(b.data.type || '');
+	if (typeDiff !== 0) return typeDiff;
+	return (a.data.title || a.id).localeCompare(b.data.title || b.id, undefined, { numeric: true });
+});
+
+const types = [...new Set(stories.map((s) => s.data.type).filter(Boolean))].sort();
+const chapters = [...new Set(stories.map((s) => s.data.chapter).filter(Boolean))].sort();
+const totalCount = stories.length;
+---
+
+<BaseLayout title={`剧情 - ${SITE_TITLE}`} description="无期迷途主线剧情、活动剧情与支线剧情文本收录。">
+	<main>
+		<h1 class="page-title">剧情</h1>
+		<p class="page-desc">共 {totalCount} 段剧情文本，来源自无期迷途 BWiki。</p>
+
+		<div class="filters">
+			<input type="text" id="search" placeholder="搜索标题、章节或角色..." />
+			<select id="type-filter">
+				<option value="">全部类型</option>
+				{types.map((t) => <option value={t}>{t}</option>)}
+			</select>
+			<select id="chapter-filter">
+				<option value="">全部章节</option>
+				{chapters.map((c) => <option value={c}>{c}</option>)}
+			</select>
+			<span id="count">显示 {totalCount} 个</span>
+		</div>
+
+		<div class="card-grid" id="story-grid">
+			{stories.map((s) => (
+				<a
+					href={`/stories/${s.id}/`}
+					class="card"
+					data-title={s.data.title}
+					data-type={s.data.type || ''}
+					data-chapter={s.data.chapter || ''}
+					data-characters={(s.data.characters || []).join(' ')}
+				>
+					<div style="margin-bottom: 0.5em;">
+						{s.data.type && <span class="badge">{s.data.type}</span>}
+						{s.data.chapter && <span class="badge">{s.data.chapter}</span>}
+					</div>
+					<h3>{s.data.title}</h3>
+					<p>{s.data.description.slice(0, 60)}...</p>
+					{s.data.characters && s.data.characters.length > 0 && (
+						<p class="characters">出场：{s.data.characters.slice(0, 6).join('、')}{s.data.characters.length > 6 ? '…' : ''}</p>
+					)}
+				</a>
+			))}
+		</div>
+	</main>
+</BaseLayout>
+
+<script is:inline>
+	(function () {
+		const search = document.getElementById('search');
+		const typeFilter = document.getElementById('type-filter');
+		const chapterFilter = document.getElementById('chapter-filter');
+		const count = document.getElementById('count');
+		const cards = Array.from(document.querySelectorAll('#story-grid .card'));
+
+		function filter() {
+			const term = search.value.trim().toLowerCase();
+			const type = typeFilter.value;
+			const chapter = chapterFilter.value;
+			let visible = 0;
+
+			cards.forEach((card) => {
+				const title = card.dataset.title.toLowerCase();
+				const typeMatch = !type || card.dataset.type === type;
+				const chapterMatch = !chapter || card.dataset.chapter === chapter;
+				const textMatch =
+					!term ||
+					title.includes(term) ||
+					card.dataset.chapter.toLowerCase().includes(term) ||
+					(card.dataset.characters && card.dataset.characters.toLowerCase().includes(term));
+
+				const show = typeMatch && chapterMatch && textMatch;
+				card.style.display = show ? '' : 'none';
+				if (show) visible++;
+			});
+
+			count.textContent = `显示 ${visible} 个`;
+		}
+
+		search.addEventListener('input', filter);
+		typeFilter.addEventListener('change', filter);
+		chapterFilter.addEventListener('change', filter);
+	})();
+</script>
+
+<style>
+	.filters {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75em;
+		align-items: center;
+		margin-bottom: 1.5em;
+	}
+	.filters input,
+	.filters select {
+		padding: 0.5em 0.75em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 6px;
+		font-size: 0.95em;
+		background: #fff;
+	}
+	.filters input {
+		flex: 1 1 240px;
+		min-width: 200px;
+	}
+	#count {
+		margin-left: auto;
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+	}
+	.characters {
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+		margin-top: 0.5em;
+	}
+</style>

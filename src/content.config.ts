@@ -88,4 +88,18 @@ const updates = defineCollection({
 	}),
 });
 
-export const collections = { characters, stages, gameModes, updates };
+const stories = defineCollection({
+	loader: glob({ base: './src/content/stories', pattern: '**/*.{md,mdx}' }),
+	schema: z.object({
+		title: z.string(),
+		type: z.enum(['主线', '活动', '支线', '角色审查', '其他']).default('其他'),
+		chapter: z.string().optional(),
+		section: z.string().optional(),
+		description: z.string(),
+		characters: z.array(z.string()).optional(),
+		source: z.string().url().optional(),
+		tags: z.array(z.string()).optional(),
+	}),
+});
+
+export const collections = { characters, stages, gameModes, updates, stories };

@@ -1,0 +1,120 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { SITE_TITLE } from '../../consts';
+import '../../styles/global.css';
+
+export async function getStaticPaths() {
+	const stories = await getCollection('stories');
+	return stories.map((story) => ({
+		params: { id: story.id },
+		props: { story },
+	}));
+}
+
+const { story } = Astro.props;
+const { Content } = await render(story);
+const title = `${story.data.title} - ${SITE_TITLE}`;
+
+const breadcrumbItems = [
+	{ label: '首页', href: '/' },
+	{ label: '剧情', href: '/stories' },
+	{ label: story.data.title },
+];
+
+const breadcrumbJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: breadcrumbItems.map((item, index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		name: item.label,
+		item: item.href ? new URL(item.href, Astro.site).toString() : undefined,
+	})),
+};
+
+const articleJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'Article',
+	headline: title,
+	description: story.data.description,
+	url: new URL(Astro.url.pathname, Astro.site).toString(),
+	mainEntityOfPage: {
+		'@type': 'WebPage',
+		'@id': new URL(Astro.url.pathname, Astro.site).toString(),
+	},
+	publisher: {
+		'@type': 'Organization',
+		name: SITE_TITLE,
+		url: Astro.site?.toString(),
+	},
+};
+
+const d = story.data;
+---
+
+<BaseLayout title={title} description={d.description}>
+	<main>
+		<Breadcrumbs items={breadcrumbItems} />
+
+		<article class="story-header">
+			<h1 class="page-title">{d.title}</h1>
+			{d.description && <p class="page-desc">{d.description}</p>}
+
+			<div class="info-badges">
+				<span class="badge">{d.type}</span>
+				{d.chapter && <span class="badge">{d.chapter}</span>}
+				{d.section && <span class="badge">{d.section}</span>}
+			</div>
+
+			{
+				d.characters && d.characters.length > 0 && (
+					<div class="story-characters">
+						<strong>出场角色：</strong>
+						{d.characters.join('、')}
+					</div>
+				)
+			}
+
+			{
+				d.source && (
+					<div class="story-source">
+						<strong>来源：</strong>
+						<a href={d.source} target="_blank" rel="noopener noreferrer">
+							无期迷途 BWiki
+						</a>
+					</div>
+				)
+			}
+		</article>
+
+		<section class="story-content card">
+			<Content />
+		</section>
+	</main>
+
+	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+	<script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+</BaseLayout>
+
+<style>
+	.story-header {
+		margin-bottom: 1.5em;
+	}
+	.info-badges {
+		margin: 0.75em 0;
+	}
+	.story-characters,
+	.story-source {
+		font-size: 0.9em;
+		color: rgb(var(--gray));
+		margin-top: 0.5em;
+	}
+	.story-content {
+		padding: 1.5em;
+	}
+	.story-content :global(p) {
+		margin-bottom: 1em;
+	}
+</style>

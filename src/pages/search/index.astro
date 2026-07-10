@@ -8,6 +8,7 @@ const characters = await getCollection('characters');
 const stages = await getCollection('stages');
 const gameModes = await getCollection('gameModes');
 const updates = await getCollection('updates');
+const stories = await getCollection('stories');
 
 type SearchItem = {
 	category: string;
@@ -57,18 +58,25 @@ const items: SearchItem[] = [
 			.filter(Boolean)
 			.join(' '),
 	})),
+	...stories.map((s) => ({
+		category: '剧情',
+		title: s.data.title,
+		desc: s.data.description.slice(0, 90) + '…',
+		href: `/stories/${s.id}/`,
+		extras: [s.data.type, s.data.chapter, ...(s.data.tags || [])].filter(Boolean).join(' '),
+	})),
 ];
 
-const categories = ['全部', '角色', '关卡', '玩法', '更新'];
+const categories = ['全部', '角色', '关卡', '玩法', '更新', '剧情'];
 ---
 
 <BaseLayout
 	title={`全站搜索 - ${SITE_TITLE}`}
-	description="搜索无期迷途 Wiki 的角色、关卡、玩法与更新内容。"
+	description="搜索无期迷途 Wiki 的角色、关卡、玩法、更新与剧情内容。"
 >
 	<main>
 		<h1 class="page-title">全站搜索</h1>
-		<p class="page-desc">在 {items.length} 条内容中查找角色、关卡、玩法与更新</p>
+		<p class="page-desc">在 {items.length} 条内容中查找角色、关卡、玩法、更新与剧情</p>
 
 		<div class="search-box">
 			<input
