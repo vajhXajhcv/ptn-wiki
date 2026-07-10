@@ -3,11 +3,15 @@ name: 观星者
 title: 探寻之人
 rarity: S
 danger: 异能
-role: 召唤物辅助<!-- 多个TAG用
+role: 召唤物辅助
 faction: ''
 description: 观星者是一名S级异能禁闭者，主要负责法术伤害与控场。在队伍中常担任召唤物辅助<!-- 多个TAG用位置。
 tags: ['召唤物辅助']
 image: /characters/guanxingzhe.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「观星者」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1721
 ---
 
 ## 基础信息
@@ -46,7 +50,6 @@ image: /characters/guanxingzhe.jpg
 ### 被动2：真实之境
 
 【胜利明星】消失时，对周围九宫地格内所有敌人造成自身攻击200%的法术伤害。
-
 
 ## 使用建议
 

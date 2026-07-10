@@ -22,10 +22,19 @@ const TMP_DIR = join(__dirname, 'tmp');
 const API_BASE = 'https://wqmt.aisnogames.com/api';
 const CONCURRENCY = 5;
 
+const NO_DOWNLOAD = process.argv.includes('--no-download');
+
 mkdirSync(PUBLIC_CHAR_DIR, { recursive: true });
 mkdirSync(TMP_DIR, { recursive: true });
 
 const CATEGORY_PRIORITY = ['禁闭者档案', '禁闭者影像捕获', '禁闭者装束', 'MBCC生日会', '壁纸'];
+
+// 部分角色在玩家社区中常用代称，官网资讯使用正式名，需做映射
+const NICKNAME_MAP = {
+	'EMP': '艾米潘',
+	'K.K.': '蔻蔻',
+	'KK': '蔻蔻',
+};
 
 // ---------- helpers ----------
 
@@ -162,7 +171,8 @@ async function main() {
 	const unmatchedSlugs = [];
 	for (const c of chars) {
 		const key = normalizeName(c.name);
-		const candidates = byName.get(key);
+		const matchKey = NICKNAME_MAP[c.name] ? normalizeName(NICKNAME_MAP[c.name]) : key;
+		const candidates = byName.get(matchKey);
 		if (candidates && candidates.length > 0) {
 			matched.push({ char: c, item: candidates[0] });
 		} else {
@@ -175,7 +185,7 @@ async function main() {
 	for (const { item } of matched) dist[item.category] = (dist[item.category] || 0) + 1;
 	for (const [cat, n] of Object.entries(dist)) console.log(`     ${cat}: ${n}`);
 
-	console.log('2. 下载匹配角色的立绘...');
+	console.log(NO_DOWNLOAD ? '2. 同步角色图片来源标注（不下载图片）...' : '2. 下载匹配角色的立绘...');
 	const report = [];
 	await runInChunks(
 		matched,
@@ -194,21 +204,47 @@ async function main() {
 					});
 					return;
 				}
-				const buf = await fetchWithRetry(imageUrl);
-				// 下载后用 Jimp 压缩为适合 Wiki 卡片/详情页的宽度
-				const jimg = await Jimp.read(buf);
-				jimg.resize(480, Jimp.AUTO).quality(85);
-				const filename = `${char.slug}.jpg`;
-				const localPath = join(PUBLIC_CHAR_DIR, filename);
-				await jimg.writeAsync(localPath);
 
+				let buf = null;
+				if (!NO_DOWNLOAD) {
+					buf = await fetchWithRetry(imageUrl);
+					// 下载后用 Jimp 压缩为适合 Wiki 卡片/详情页的宽度
+					const jimg = await Jimp.read(buf);
+					jimg.resize(480, Jimp.AUTO).quality(85);
+					const filename = `${char.slug}.jpg`;
+					const localPath = join(PUBLIC_CHAR_DIR, filename);
+					await jimg.writeAsync(localPath);
+				}
+
+				const filename = `${char.slug}.jpg`;
 				const newImage = `/characters/${filename}`;
+				const newsUrl = `https://wqmt.aisnogames.com/#/news/${item.id}`;
+				const sourceYaml = `imageSource:\n  category: ${item.category}\n  title: ${item.title}\n  url: ${newsUrl}`;
+
+				let newContent = char.content;
+
+				// 更新 image 字段
 				const oldImageLine = char.content.match(/^image:\s*.+$/m)?.[0];
 				if (oldImageLine) {
-					const newContent = char.content.replace(oldImageLine, `image: ${newImage}`);
-					if (newContent !== char.content) {
-						writeFileSync(join(CHAR_DIR, `${char.slug}.md`), newContent, 'utf8');
-					}
+					newContent = newContent.replace(oldImageLine, `image: ${newImage}`);
+				}
+
+				// 更新或追加 imageSource 字段
+				const oldSourceBlock = char.content.match(/^imageSource:\n(?:[ \t]+[^\n]*\n)+/m)?.[0];
+				if (oldSourceBlock) {
+					newContent = newContent.replace(oldSourceBlock, sourceYaml + '\n');
+				} else if (oldImageLine) {
+					newContent = newContent.replace(`image: ${newImage}`, `image: ${newImage}\n${sourceYaml}`);
+				} else {
+					// 没有 image 字段时，在 frontmatter 结束符前追加
+					newContent = newContent.replace(
+						/^(---\n[\s\S]*?)(\n---)/m,
+						`$1\nimage: ${newImage}\n${sourceYaml}\n---`
+					);
+				}
+
+				if (newContent !== char.content) {
+					writeFileSync(join(CHAR_DIR, `${char.slug}.md`), newContent, 'utf8');
 				}
 
 				report.push({
@@ -220,9 +256,13 @@ async function main() {
 					newsId: item.id,
 					imageUrl,
 					localPath: `/characters/${filename}`,
-					size: buf.length,
+					size: buf ? buf.length : 0,
 				});
-				console.log(`   ✓ ${char.name} (${item.category}) -> ${filename} (${(buf.length / 1024).toFixed(1)} KB)`);
+				if (NO_DOWNLOAD) {
+					console.log(`   ✓ ${char.name} (${item.category})`);
+				} else {
+					console.log(`   ✓ ${char.name} (${item.category}) -> ${filename} (${(buf.length / 1024).toFixed(1)} KB)`);
+				}
 			} catch (e) {
 				report.push({
 					slug: char.slug,

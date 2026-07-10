@@ -8,6 +8,10 @@ faction: ''
 description: 辰砂是一名A级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任护盾辅助位置。
 tags: ['护盾辅助', '防守辅助']
 image: /characters/chensha.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「辰砂」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1764
 ---
 
 ## 基础信息
@@ -47,7 +51,6 @@ image: /characters/chensha.jpg
 ### 被动2：全域力场
 
 进入战斗时，友方单位受到护盾效果提升10%。
-
 
 ## 使用建议
 

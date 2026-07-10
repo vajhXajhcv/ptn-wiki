@@ -8,6 +8,10 @@ faction: ''
 description: 娜恰是一名S级异能禁闭者，主要负责法术伤害与控场。在队伍中常担任法术输出位置。
 tags: ['异能', '法术输出', '群攻', '破核']
 image: /characters/naqia.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「娜恰」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1410
 ---
 
 ## 基础信息
@@ -46,7 +50,6 @@ image: /characters/naqia.jpg
 ### 被动2：蛇豕横行
 
 被动【热感效应】触发6次后，娜恰触发特殊攻击，对技能范围内所有敌人造成自身攻击300%的法术伤害，并且附加【蛇牙】标记，该技能释放速度受攻击速度影响。
-
 
 ## 使用建议
 

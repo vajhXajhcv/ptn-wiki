@@ -8,6 +8,10 @@ faction: 第九机关
 description: 第九机关王牌狙击手，普攻与必杀兼具范围伤害与破核能力，是远程物理队的重要拼图。
 tags: ['精准', '远程输出', '破核', '范围伤害']
 image: /characters/langley.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「兰利」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1524
 ---
 
 ## 基础信息
@@ -46,7 +50,6 @@ image: /characters/langley.jpg
 ### 被动2：代偿
 
 【因果律】标记携带者死亡时，兰利对该地格内所有敌人造成自身攻击200%的物理伤害。
-
 
 ## 使用建议
 

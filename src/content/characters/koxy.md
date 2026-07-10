@@ -8,6 +8,10 @@ faction: 异质
 description: 长手狙击手，对单爆发极高，被动叠加暴击后大招可瞬间融化高危目标，是破碎防线的常客。
 tags: ['精准', '单体爆发', '破核', '暴击']
 image: /characters/koxy.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「科希」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1970
 ---
 
 ## 基础信息
@@ -44,7 +48,6 @@ image: /characters/koxy.jpg
 ### 被动2：聚影为夜
 
 每消失过1个【影子】，科希技能伤害提升10%，最多叠加2层。
-
 
 ## 使用建议
 

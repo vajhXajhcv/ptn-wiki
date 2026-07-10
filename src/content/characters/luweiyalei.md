@@ -3,11 +3,15 @@ name: 露薇娅·蕾
 title: 新城演员 / 双重人格
 rarity: A
 danger: 异能
-role: <!-- 多个TAG用
+role: ''
 faction: ''
 description: 露薇娅·蕾是一名A级异能禁闭者，主要负责法术伤害与控场。在队伍中常担任<!-- 多个TAG用位置。
 tags: []
 image: /characters/luweiyalei.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「露薇娅·蕾」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1327
 ---
 
 ## 基础信息
@@ -19,7 +23,7 @@ image: /characters/luweiyalei.jpg
 - **特性**：擅长造成法术伤害的禁闭者，伤害提升5%，对破核敌人伤害提升5%。
 - **狂厄深化 · 克敌制胜**：伤害提升10%，对破核敌人伤害提升10%。
 - **梦魇天赋**：战斗过程中，所有敌人会被附加15层【感电】标记。
-- **破碎防线加成**：<!-- 攻速+100%。 -->
+- **破碎防线加成**：
 
 ## 技能
 
@@ -46,7 +50,6 @@ image: /characters/luweiyalei.jpg
 ### 被动2：急速电火
 
 每进入1次【过载-露薇娅·蕾】状态，露薇娅与蕾攻击速度提升5%，最多叠加3层。
-
 
 ## 使用建议
 

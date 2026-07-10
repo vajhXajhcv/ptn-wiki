@@ -8,6 +8,10 @@ faction: 暗潮
 description: 强力前排坦克，必杀可为自身及周围友方提供护盾，被动提升防御与法抗，是保护后排的核心。
 tags: ['坚韧', '护盾', '坦克', '保护']
 image: /characters/demon.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「迪蒙」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1369
 ---
 
 ## 基础信息
@@ -46,7 +50,6 @@ image: /characters/demon.jpg
 ### 被动2：誓不罢休
 
 生命每降低20%，迪蒙护盾效果提升7%，该效果在自身生命降低至20%时达到最大，最多叠加4层。
-
 
 ## 使用建议
 

@@ -8,6 +8,10 @@ faction: ''
 description: 卡米利安是一名A级启迪禁闭者，主要负责治疗与增益辅助。在队伍中常担任攻速辅助位置。
 tags: ['攻速辅助', '普攻辅助']
 image: /characters/kamilian.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「卡米利安」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1728
 ---
 
 ## 基础信息
@@ -45,7 +49,6 @@ image: /characters/kamilian.jpg
 ### 被动2：移情
 
 释放必杀时，卡米利安额外使该禁闭者攻击速度提升10%，持续10秒。
-
 
 ## 使用建议
 

@@ -3,11 +3,15 @@ name: 德莫莉
 title: 拾荒者
 rarity: B
 danger: 坚韧
-role: 防守增幅<!-- 多个TAG用
+role: 防守增幅
 faction: ''
 description: 德莫莉是一名B级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任防守增幅<!-- 多个TAG用位置。
 tags: ['防守增幅']
 image: /characters/demoli.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「德莫莉」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1863
 ---
 
 ## 基础信息
@@ -43,7 +47,6 @@ image: /characters/demoli.jpg
 ### 被动2：众志成城
 
 其他友方禁闭者释放必杀时，德莫莉恢复4%生命值。该效果触发后有3秒冷却时间。
-
 
 ## 使用建议
 

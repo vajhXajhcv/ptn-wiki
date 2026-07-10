@@ -8,6 +8,10 @@ faction: ''
 description: 恩菲尔是S级启迪禁闭者，擅长干扰的禁闭者。敌人被{{术语查看
 tags: ['恐惧', '进攻辅助']
 image: /characters/enfer.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「恩菲尔」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1528
 ---
 
 ## 基础信息
@@ -46,7 +50,6 @@ image: /characters/enfer.jpg
 ### 被动2：失心
 
 敌人被【恐惧】时，恩菲尔对该敌人造成自身攻击200%的法术伤害。
-
 
 ## 使用建议
 

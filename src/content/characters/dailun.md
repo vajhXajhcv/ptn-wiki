@@ -8,6 +8,10 @@ faction: ''
 description: 黛伦是一名S级狂暴禁闭者，主要负责近战物理输出与清理敌人。在队伍中常担任物理输出位置。
 tags: ['狂暴', '物理输出', '爆发', '群攻']
 image: /characters/dailun.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「黛伦」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1835
 ---
 
 ## 基础信息
@@ -49,7 +53,6 @@ image: /characters/dailun.jpg
 ### 被动2：降格镜头
 
 黛伦每携带1层【干涉】，暴击率提升5%，暴击伤害提升7%。
-
 
 ## 使用建议
 

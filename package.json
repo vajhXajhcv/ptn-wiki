@@ -18,6 +18,7 @@
     "astro": "^6.2.2"
   },
   "devDependencies": {
-    "jimp": "^0.22.12"
+    "jimp": "^0.22.12",
+    "pinyin": "^4.0.0"
   }
 }

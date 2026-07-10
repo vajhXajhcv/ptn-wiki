@@ -8,6 +8,10 @@ faction: 辛迪加
 description: 普级破核能手，必杀可造成范围破核并降低敌人防御，是性价比极高的功能位。
 tags: ['诡秘', '破核', '减防', '性价比']
 image: /characters/che.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「澈」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1553
 ---
 
 ## 基础信息
@@ -47,7 +51,6 @@ image: /characters/che.jpg
 ### 被动2：斧头阿强
 
 澈使用手斧对【追踪】标记携带者造成普攻伤害时，有20%概率获得1点能量。
-
 
 ## 使用建议
 

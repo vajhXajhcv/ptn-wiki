@@ -3,11 +3,15 @@ name: 佩姬
 title: rapper
 rarity: B
 danger: 坚韧
-role: 防守辅助<!-- 多个TAG用
+role: 防守辅助
 faction: ''
 description: 佩姬是一名B级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任防守辅助<!-- 多个TAG用位置。
 tags: ['防守辅助']
 image: /characters/peiji.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「佩姬」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1826
 ---
 
 ## 基础信息
@@ -45,7 +49,6 @@ image: /characters/peiji.jpg
 ### 被动2：绝妙唱词
 
 普攻造成伤害后，佩姬有20%概率获得【护盾】，数值为自身生命的10%，持续5秒。该效果触发后有15秒冷却时间。
-
 
 ## 使用建议
 

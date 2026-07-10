@@ -3,11 +3,15 @@ name: 普希拉
 title: “狐兔”侠盗成员
 rarity: A
 danger: 精准
-role: <!-- 多个TAG用
+role: ''
 faction: ''
 description: 普希拉是一名A级精准禁闭者，主要负责远程物理输出与打击关键目标。在队伍中常担任<!-- 多个TAG用位置。
 tags: []
 image: /characters/puxila.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「普希拉」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1603
 ---
 
 ## 基础信息
@@ -43,7 +47,6 @@ image: /characters/puxila.jpg
 ### 被动2：专属舞台
 
 【完美谢幕】持续时间内，普希拉获得100%的攻击速度加成，同时普攻伤害降低45%。
-
 
 ## 使用建议
 

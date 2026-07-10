@@ -8,6 +8,10 @@ faction: 彼岸诊所
 description: 擅长范围物理伤害的狂级禁闭者，技能可以对多个敌人造成持续伤害，是推图和破碎防线中的常用输出。
 tags: ['狂暴', '物理输出', '群攻']
 image: /characters/nox.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「诺克斯」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1588
 ---
 
 ## 基础信息
@@ -47,7 +51,6 @@ image: /characters/nox.jpg
 ### 被动2：幽冥战栗
 
 诺克斯在场期间生效，所有敌人防御降低15%。
-
 
 ## 使用建议
 

@@ -8,6 +8,10 @@ faction: ''
 description: 帕加茜是一名A级狂暴禁闭者，主要负责近战物理输出与清理敌人。在队伍中常担任减速位置。
 tags: ['减速', '进攻增幅']
 image: /characters/pajiaqian.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「帕加茜」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1851
 ---
 
 ## 基础信息
@@ -19,7 +23,7 @@ image: /characters/pajiaqian.jpg
 - **特性**：擅长造成法术伤害的禁闭者，必杀可以造成核心伤害。
 - **狂厄深化 · 辐射损伤**：处于【辐射场】内的敌人移动速度降低20%。
 - **梦魇天赋**：所有敌人降低8%的最大生命值。
-- **破碎防线加成**：<!-- 【辐射场】内敌人受到法术伤害+40%。 -->
+- **破碎防线加成**：
 
 ## 技能
 
@@ -48,7 +52,6 @@ image: /characters/pajiaqian.jpg
 ### 被动2：场域干涉
 
 敌人每受到1次【辐射场】伤害，【辐射场】对该敌人造成的伤害提升5%，最多提升30%。
-
 
 ## 使用建议
 

@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../consts';
+import '../styles/global.css';
+---
+
+<BaseLayout title={`关于本站 - ${SITE_TITLE}`} description="关于无期迷途 Wiki 的性质、资源来源与使用规范。">
+	<main>
+		<h1 class="page-title">关于本站</h1>
+
+		<section class="about-section">
+			<h2>站点性质</h2>
+			<p>
+				本站（<strong>5732.wiki</strong>）是《无期迷途》玩家自发建立的中文资料站，
+				<strong>非官方、非营利、完全开源</strong>。
+				我们的目标是为局长们提供一个清晰、准确、长期可用的角色、关卡与玩法资料库。
+			</p>
+		</section>
+
+		<section class="about-section">
+			<h2>图片来源与授权</h2>
+			<p>
+				角色立绘、生日贺图、装束宣传图等视觉素材来自
+				<a href="https://wqmt.aisnogames.com/" target="_blank" rel="noopener noreferrer">《无期迷途》国服官方网站</a>
+				的公开 API（<code>/api/news</code>），无需登录即可读取。
+			</p>
+			<p>
+				这些素材的著作权归
+				<strong>上海自意网络科技有限公司 / 自意网络</strong>
+				所有。本站仅作展示与归档，若官方提出异议，将立即下架相关内容。
+			</p>
+			<p>
+				每个角色详情页已标注当前图片的具体来源（如「禁闭者档案」「MBCC生日会」等）及官网原文链接，方便追溯。
+			</p>
+		</section>
+
+		<section class="about-section">
+			<h2>游戏数据来源</h2>
+			<p>
+				角色技能名称、效果、范围等客观游戏数值参考
+				<a href="https://wiki.biligame.com/wqmt" target="_blank" rel="noopener noreferrer">无期迷途 BWiki</a>
+				的公开 Wikitext 数据进行格式转换与精简。BWiki 内容由玩家社区维护，原始数据亦来自游戏本身。
+			</p>
+		</section>
+
+		<section class="about-section">
+			<h2>参与共建</h2>
+			<p>
+				本站代码与原创攻略文本以 MIT License 开源，欢迎通过
+				<a href="https://github.com/vajhXajhcv/ptn-wiki" target="_blank" rel="noopener noreferrer">GitHub</a>
+				提交 Pull Request 或 Issue。
+			</p>
+			<ul>
+				<li>角色资料补充、攻略撰写：修改 <code>src/content/characters/</code></li>
+				<li>关卡攻略：修改 <code>src/content/stages/</code></li>
+				<li>功能改进、Bug 反馈：在 GitHub Issues 中留言</li>
+			</ul>
+		</section>
+	</main>
+</BaseLayout>
+
+<style>
+	.about-section {
+		margin-bottom: 2em;
+	}
+	.about-section h2 {
+		font-size: 1.3em;
+		margin-bottom: 0.5em;
+		color: var(--accent-dark);
+	}
+	.about-section p {
+		line-height: 1.8;
+		margin-bottom: 0.8em;
+	}
+	.about-section ul {
+		padding-left: 1.5em;
+		line-height: 1.8;
+	}
+	.about-section code {
+		background: #f1f5f9;
+		padding: 0.15em 0.4em;
+		border-radius: 4px;
+		font-size: 0.9em;
+	}
+</style>

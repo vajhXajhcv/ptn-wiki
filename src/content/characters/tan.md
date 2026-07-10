@@ -3,11 +3,15 @@ name: 昙
 title: 花园杀手
 rarity: B
 danger: 诡秘
-role: 攻速增幅<!-- 多个TAG用
+role: 攻速增幅
 faction: ''
 description: 昙是一名B级诡秘禁闭者，主要负责破核与切入后排。在队伍中常担任攻速增幅<!-- 多个TAG用位置。
 tags: ['攻速增幅']
 image: /characters/tan.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「昙」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1470
 ---
 
 ## 基础信息
@@ -45,7 +49,6 @@ image: /characters/tan.jpg
 ### 被动2：目标锁定
 
 县普攻对【刺杀目标】标记携带者造成伤害时，攻击速度提升10%，持续2秒。
-
 
 ## 使用建议
 

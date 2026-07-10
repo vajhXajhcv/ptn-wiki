@@ -8,6 +8,10 @@ faction: ''
 description: 橡木匣是S级精准禁闭者，擅长造成物理伤害的禁闭者。进入战斗时，能量充盈。
 tags: []
 image: /characters/oakcasket.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「橡木匣」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1545
 ---
 
 ## 基础信息
@@ -46,7 +50,6 @@ image: /characters/oakcasket.jpg
 ### 被动2：密语汲取
 
 进入战斗15秒后，橡木匣进行普攻时，普攻伤害系数提升105%，并且获得6点能量，该效果触发后有15秒冷却时间。
-
 
 ## 使用建议
 

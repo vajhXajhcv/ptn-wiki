@@ -7,6 +7,11 @@ role: 远程物理
 faction: 辛迪加
 description: 普级精准角色，拥有极远的射程和对单爆发，是新手期优秀的远程输出与破核手。
 tags: ['精准', '远程输出', '破核', '新手']
+image: /characters/emp.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「艾米潘」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1941
 ---
 
 ## 基础信息

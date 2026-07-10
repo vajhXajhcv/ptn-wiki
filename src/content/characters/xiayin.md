@@ -8,6 +8,10 @@ faction: ''
 description: 夏音是一名S级精准禁闭者，主要负责远程物理输出与打击关键目标。在队伍中常担任召唤物增幅位置。
 tags: ['召唤物增幅', '暴击增幅']
 image: /characters/xiayin.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「夏音」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1324
 ---
 
 ## 基础信息
@@ -44,7 +48,6 @@ image: /characters/xiayin.jpg
 ### 被动2：战斗统计插件
 
 每存在1个【浮游炮】，夏音暴击率提升4%。
-
 
 ## 使用建议
 

@@ -8,6 +8,10 @@ faction: ''
 description: 切尔西伯爵是一名A级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任防守增幅位置。
 tags: ['防守增幅', '石化']
 image: /characters/chelsea.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「切尔西伯爵」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1674
 ---
 
 ## 基础信息
@@ -19,7 +23,7 @@ image: /characters/chelsea.jpg
 - **特性**：擅长召唤的禁闭者。生命提升10%。
 - **狂厄深化 · 不息**：生命提升15%。
 - **梦魇天赋**：招募入队时，获得200枚幻月币。
-- **破碎防线加成**：<!-- 【不听话就石化】的石化概率提升30%。 -->
+- **破碎防线加成**：
 
 ## 技能
 
@@ -46,7 +50,6 @@ image: /characters/chelsea.jpg
 ### 被动2：命运共享
 
 【西迪】受到伤害降低10%。切尔西伯爵每4秒，平衡自身与【西迪】的生命百分比。
-
 
 ## 使用建议
 

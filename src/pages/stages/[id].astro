@@ -50,22 +50,106 @@ const articleJsonLd = {
 		url: Astro.site?.toString(),
 	},
 };
+
+const d = stage.data;
 ---
 
-<BaseLayout title={title} description={stage.data.description}>
+<BaseLayout title={title} description={d.description}>
 	<main>
 		<Breadcrumbs items={breadcrumbItems} />
 
 		<article class="stage-header">
-			<h1 class="page-title">{stage.data.name}</h1>
-			{stage.data.description && <p class="page-desc">{stage.data.description}</p>}
+			<h1 class="page-title">{d.name}</h1>
+			{d.description && <p class="page-desc">{d.description}</p>}
 
 			<div class="info-badges">
-				<span class="badge">{stage.data.chapter}-{stage.data.stageNumber}</span>
-				{stage.data.difficulty && <span class="badge">{stage.data.difficulty}</span>}
-				{stage.data.recommendedLevel && <span class="badge">推荐等级 {stage.data.recommendedLevel}</span>}
+				<span class="badge">{d.chapter}-{d.stageNumber}</span>
+				{d.difficulty && <span class="badge">{d.difficulty}</span>}
+				{d.recommendedLevel !== undefined && <span class="badge">推荐等级 {d.recommendedLevel}</span>}
+				{d.cost !== undefined && <span class="badge">消耗体力 {d.cost}</span>}
 			</div>
 		</article>
+
+		{
+			(d.sanity !== undefined || d.moves !== undefined || d.enemySummary || d.enemies || d.objectives || d.firstClearReward || d.sRankReward || d.stageReward || d.mechanics || d.strategy) && (
+				<section class="stage-brief card">
+					<h2>关卡情报</h2>
+
+					<div class="brief-grid">
+						{(d.sanity !== undefined || d.moves !== undefined) && (
+							<div class="brief-block">
+								<h3>基础信息</h3>
+								<ul>
+									{d.sanity !== undefined && <li><strong>神智值：</strong>{d.sanity}</li>}
+									{d.moves !== undefined && <li><strong>移动次数：</strong>{d.moves}</li>}
+								</ul>
+							</div>
+						)}
+
+						{(d.enemySummary || d.enemies) && (
+							<div class="brief-block">
+								<h3>敌人配置</h3>
+								{d.enemySummary && (
+									<p class="enemy-summary">
+										{d.enemySummary.minions !== undefined && <span>小怪 {d.enemySummary.minions}</span>}
+										{d.enemySummary.elites !== undefined && <span>精英 {d.enemySummary.elites}</span>}
+									</p>
+								)}
+								{d.enemies && d.enemies.length > 0 && (
+									<ul class="enemy-list">
+										{d.enemies.map((enemy) => (
+											<li>
+												{enemy.elite && <span class="elite-tag">精英</span>}
+												{enemy.name}
+												{enemy.count !== undefined && <span class="count">×{enemy.count}</span>}
+											</li>
+										))}
+									</ul>
+								)}
+							</div>
+						)}
+
+						{(d.firstClearReward || d.sRankReward || d.stageReward) && (
+							<div class="brief-block">
+								<h3>奖励</h3>
+								<ul>
+									{d.firstClearReward && <li><strong>首通奖励：</strong>{d.firstClearReward}</li>}
+									{d.sRankReward && <li><strong>S级奖励：</strong>{d.sRankReward}</li>}
+									{d.stageReward && <li><strong>关卡奖励：</strong>{d.stageReward}</li>}
+								</ul>
+							</div>
+						)}
+
+						{d.objectives && d.objectives.length > 0 && (
+							<div class="brief-block">
+								<h3>三星 / S级目标</h3>
+								<ul>
+									{d.objectives.map((obj) => <li>{obj}</li>)}
+								</ul>
+							</div>
+						)}
+
+						{d.mechanics && d.mechanics.length > 0 && (
+							<div class="brief-block">
+								<h3>特殊机制</h3>
+								<ul>
+									{d.mechanics.map((m) => <li>{m}</li>)}
+								</ul>
+							</div>
+						)}
+
+						{d.strategy && d.strategy.length > 0 && (
+							<div class="brief-block full-width">
+								<h3>推荐思路</h3>
+								<ol>
+									{d.strategy.map((s) => <li>{s}</li>)}
+								</ol>
+							</div>
+						)}
+					</div>
+				</section>
+			)
+		}
 
 		<div class="prose stage-body">
 			<Content />
@@ -88,11 +172,84 @@ const articleJsonLd = {
 	.info-badges {
 		margin-top: 1em;
 	}
+	.stage-brief {
+		margin-bottom: 2em;
+	}
+	.stage-brief h2 {
+		margin-top: 0;
+		margin-bottom: 1em;
+		font-size: 1.35em;
+	}
+	.brief-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 1.25em;
+	}
+	.brief-block {
+		background: rgb(var(--gray-light));
+		padding: 1em;
+		border-radius: 8px;
+	}
+	.brief-block.full-width {
+		grid-column: 1 / -1;
+	}
+	.brief-block h3 {
+		margin-top: 0;
+		margin-bottom: 0.6em;
+		font-size: 1.05em;
+		color: var(--accent-dark);
+	}
+	.brief-block ul,
+	.brief-block ol {
+		margin: 0;
+		padding-left: 1.2em;
+	}
+	.brief-block li {
+		margin-bottom: 0.35em;
+	}
+	.enemy-summary {
+		margin: 0 0 0.6em;
+		font-size: 0.95em;
+	}
+	.enemy-summary span {
+		display: inline-block;
+		margin-right: 1em;
+		padding: 0.15em 0.5em;
+		background: rgba(var(--accent), 0.12);
+		border-radius: 4px;
+	}
+	.enemy-list {
+		list-style: none;
+		padding-left: 0;
+	}
+	.enemy-list li {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+		margin-bottom: 0.4em;
+	}
+	.elite-tag {
+		font-size: 0.75em;
+		padding: 0.1em 0.4em;
+		background: var(--accent);
+		color: #fff;
+		border-radius: 4px;
+	}
+	.count {
+		color: rgb(var(--gray-dark));
+		font-size: 0.9em;
+	}
 	.stage-body h2 {
 		margin-top: 1.5em;
 	}
 	.stage-body h3 {
 		margin-top: 1.2em;
 		color: var(--accent-dark);
+	}
+
+	@media (max-width: 640px) {
+		.brief-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

@@ -8,6 +8,10 @@ faction: ''
 description: 雷比尼斯是一名B级诡秘禁闭者，主要负责破核与切入后排。在队伍中常担任刷新充能位置。
 tags: ['刷新充能', '进攻增幅']
 image: /characters/leibinisi.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「雷比尼斯」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/853
 ---
 
 ## 基础信息
@@ -45,7 +49,6 @@ image: /characters/leibinisi.jpg
 ### 被动2：战斗形态
 
 释放必杀时，雷比尼斯攻击提升8%，持续5秒。最多叠加2层。
-
 
 ## 使用建议
 

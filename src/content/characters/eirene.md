@@ -8,6 +8,10 @@ faction: 无厌
 description: 奎恩集团总裁，兼具高倍率法术伤害与局长能量恢复能力，必杀可造成核心伤害并根据地块生成不同效果，是法队核心输出。
 tags: ['异能', '法术输出', '破核', '能量恢复']
 image: /characters/eirene.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「伊琳娜」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/907
 ---
 
 ## 基础信息
@@ -46,7 +50,6 @@ image: /characters/eirene.jpg
 ### 被动2：合谋
 
 若伊琳娜处于局长周围十字地格内，则每30秒获得5点能量与1点局长能量。
-
 
 ## 使用建议
 

@@ -8,6 +8,10 @@ faction: ''
 description: 毕安卡是S级精准禁闭者，擅长造成物理伤害的禁闭者。伤害提升{{禁闭者数值
 tags: []
 image: /characters/bianca.jpg
+imageSource:
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-301「毕安卡」
+  url: https://wqmt.aisnogames.com/#/news/663
 ---
 
 ## 基础信息
@@ -47,7 +51,6 @@ image: /characters/bianca.jpg
 ### 被动2：定格特写
 
 毕安卡【聚焦】对敌人造成伤害后，附加1层【特写】标记。
-
 
 ## 使用建议
 

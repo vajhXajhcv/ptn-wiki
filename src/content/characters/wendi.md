@@ -3,11 +3,15 @@ name: 温蒂
 title: 锈河沿岸电锯狂人
 rarity: A
 danger: 狂暴
-role: 进攻增幅<!-- 多个TAG用
+role: 进攻增幅
 faction: ''
 description: 温蒂是一名A级狂暴禁闭者，主要负责近战物理输出与清理敌人。在队伍中常担任进攻增幅<!-- 多个TAG用位置。
 tags: ['进攻增幅']
 image: /characters/wendi.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「温蒂」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1815
 ---
 
 ## 基础信息
@@ -19,7 +23,7 @@ image: /characters/wendi.jpg
 - **特性**：擅长造成物理伤害的禁闭者。生命提升10%，伤害提升5%。
 - **狂厄深化 · 灵异传说**：对无核敌人伤害提升20%。
 - **梦魇天赋**：战斗过程中，场上每有一个敌人，全体友方单位获得1%的伤害提升。
-- **破碎防线加成**：<!-- 对核心击破单位伤害提高+200%。 -->
+- **破碎防线加成**：
 
 ## 技能
 
@@ -46,7 +50,6 @@ image: /characters/wendi.jpg
 ### 被动2：癫狂
 
 每存在1名敌人，温蒂伤害提升5%，最多叠加6层。
-
 
 ## 使用建议
 

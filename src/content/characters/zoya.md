@@ -8,6 +8,10 @@ faction: 军团
 description: 近战物理输出，必杀提供范围伤害与攻速提升，被动可叠加攻速并触发真实伤害，是推图与破碎防线的稳定主C。
 tags: ['狂暴', '物理输出', '群攻', '真实伤害']
 image: /characters/zoya.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「卓娅」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/852
 ---
 
 ## 基础信息
@@ -49,7 +53,6 @@ image: /characters/zoya.jpg
 ### 被动2：侵略如火
 
 卓娅普攻连续造成伤害后，攻击速度提升1%，持续4秒，最多叠加15层。
-
 
 ## 使用建议
 

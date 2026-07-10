@@ -8,6 +8,10 @@ faction: 嘉年华剧团
 description: 强力的群体治疗禁闭者，必杀可为范围内友方持续回复生命值，是高压关卡中的核心生存保障。
 tags: ['启迪', '治疗', '辅助']
 image: /characters/hamel.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「哈梅尔」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1966
 ---
 
 ## 基础信息
@@ -47,7 +51,6 @@ image: /characters/hamel.jpg
 ### 被动2：生命之触
 
 【舞蹈】范围内的友方单位受到伤害降低6%。
-
 
 ## 使用建议
 

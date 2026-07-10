@@ -8,6 +8,10 @@ faction: 辛迪加
 description: 新手赠送的普级狂暴角色，获取简单、培养成本低，是开荒期的可靠近战输出。
 tags: ['狂暴', '近战输出', '新手', '持续伤害']
 image: /characters/hella.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「海拉」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1032
 ---
 
 ## 基础信息
@@ -44,7 +48,6 @@ image: /characters/hella.jpg
 ### 被动2：极限自愈
 
 海拉生命低于20%时，恢复20%生命值，该效果每场战斗最多触发1次。
-
 
 ## 使用建议
 

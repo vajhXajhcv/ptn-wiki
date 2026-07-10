@@ -8,6 +8,10 @@ faction: ''
 description: 渡鸦是S级异能禁闭者，擅长造成法术伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['法伤辅助', '解除隐匿']
 image: /characters/raven.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「渡鸦」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/933
 ---
 
 ## 基础信息
@@ -47,7 +51,6 @@ image: /characters/raven.jpg
 ### 被动2：哀歌
 
 渡鸦移除【羽毛】标记时，敌人每携带1层【羽毛】标记受到法术伤害提升6%，持续12秒。
-
 
 ## 使用建议
 

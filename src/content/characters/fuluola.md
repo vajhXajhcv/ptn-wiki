@@ -3,11 +3,15 @@ name: 芙洛拉
 title: 消防员
 rarity: B
 danger: 精准
-role: 眩晕<!-- 多个TAG用
+role: 眩晕
 faction: ''
 description: 芙洛拉是一名B级精准禁闭者，主要负责远程物理输出与打击关键目标。在队伍中常担任眩晕<!-- 多个TAG用位置。
 tags: ['眩晕']
 image: /characters/fuluola.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「芙洛拉」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1934
 ---
 
 ## 基础信息
@@ -44,7 +48,6 @@ image: /characters/fuluola.jpg
 ### 被动2：强效阻燃
 
 必杀持续期间，芙洛拉暴击率提升15%。
-
 
 ## 使用建议
 

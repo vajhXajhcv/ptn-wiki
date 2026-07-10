@@ -3,11 +3,15 @@ name: 露莉艾卡
 title: 四叶草帮主 / 天生赢家
 rarity: A
 danger: 精准
-role: <!-- 多个TAG用
+role: ''
 faction: ''
 description: 露莉艾卡是一名A级精准禁闭者，主要负责远程物理输出与打击关键目标。在队伍中常担任<!-- 多个TAG用位置。
 tags: []
 image: /characters/luliaika.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「露莉艾卡」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1041
 ---
 
 ## 基础信息
@@ -43,7 +47,6 @@ image: /characters/luliaika.jpg
 ### 被动2：你打不中我
 
 每累计发射6颗【幸运子弹】，露莉艾卡受到伤害降低30%，受到伤害后移除。
-
 
 ## 使用建议
 

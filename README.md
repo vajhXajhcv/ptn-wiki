@@ -23,15 +23,27 @@ npm run dev
 角色立绘来自《无期迷途》官方网站公开接口。出于版权合规考虑，这些图片**不会提交到 GitHub**，需要本地生成：
 
 ```sh
+# 重新拉取并生成官网图片
 node scripts/fetch-official-resources.mjs
+
+# 仅同步角色 frontmatter 中的 image / imageSource，不下载图片
+node scripts/fetch-official-resources.mjs --no-download
+
+# 基于匹配报告补全 imageSource 字段（推荐在 fetch-official-resources 后执行）
+node scripts/apply-image-sources.mjs
+
+# 抓取最新官方资讯生成 updates
+node scripts/fetch-official-news.mjs
 ```
 
-脚本会：
+角色图片脚本会：
 
 1. 读取官网 `/api/news` 接口。
 2. 按 `禁闭者档案 → 影像捕获 → 装束 → MBCC生日会 → 壁纸` 的优先级匹配角色。
 3. 将图片压缩到 480px 宽后保存到 `public/characters/{slug}.jpg`。
-4. 自动更新 `src/content/characters/*.md` 中的 `image` 字段。
+4. 自动更新 `src/content/characters/*.md` 中的 `image` 字段，并在 `imageSource` 中记录图片来源。
+
+官网资讯脚本会读取 `/api/news` 中的公告、预告、活动等非角色资讯，生成 `src/content/updates/*.md`，仅保留标题、日期、类型与原文链接。
 
 > 这些图片版权归自意网络所有。本站仅作展示，若官方要求请立即下架。
 

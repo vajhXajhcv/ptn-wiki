@@ -8,6 +8,10 @@ faction: ''
 description: 九十九是一名A级狂暴禁闭者，主要负责近战物理输出与清理敌人。在队伍中常担任吸血位置。
 tags: ['吸血', '攻速增幅', '进攻增幅', '致死免疫']
 image: /characters/jiushijiu.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「九十九」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1824
 ---
 
 ## 基础信息
@@ -19,7 +23,7 @@ image: /characters/jiushijiu.jpg
 - **特性**：擅长造成物理伤害的禁闭者。【吸血】提升5%。
 - **狂厄深化 · 炽烈燃烧**：【吸血】提升10%。
 - **梦魇天赋**：全体友方单位获得3%的吸血。
-- **破碎防线加成**：<!-- 每损失10%最大生命值，获得15%的普攻伤害加成。 -->
+- **破碎防线加成**：
 
 ## 技能
 
@@ -44,7 +48,6 @@ image: /characters/jiushijiu.jpg
 ### 被动2：狂暴
 
 九十九普攻连续造成伤害后，伤害提升4%，最多叠加5层。
-
 
 ## 使用建议
 

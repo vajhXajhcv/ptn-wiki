@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+import '../../styles/global.css';
+
+const updates = (await getCollection('updates')).sort((a, b) => b.data.date.localeCompare(a.data.date));
+---
+
+<BaseLayout title={`更新日志 - ${SITE_TITLE}`} description="无期迷途版本更新、活动与维护公告汇总。">
+	<main>
+		<h1 class="page-title">更新日志</h1>
+		<p class="page-desc">共 {updates.length} 条记录，涵盖版本更新、活动与维护公告。</p>
+
+		<div class="timeline">
+			{updates.map((u) => (
+				<a href={`/updates/${u.id}/`} class="timeline-item">
+					<div class="timeline-date">{u.data.date}</div>
+					<div class="timeline-content">
+						<span class="badge timeline-type">{u.data.type}</span>
+						<h3>{u.data.title}</h3>
+						<p>{u.data.description}</p>
+					</div>
+				</a>
+			))}
+		</div>
+	</main>
+</BaseLayout>
+
+<style>
+	.timeline {
+		display: grid;
+		gap: 1em;
+	}
+	.timeline-item {
+		display: grid;
+		grid-template-columns: 120px 1fr;
+		gap: 1.2em;
+		padding: 1.2em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 12px;
+		background: #fff;
+		text-decoration: none;
+		color: inherit;
+		transition: border-color 0.2s, box-shadow 0.2s;
+	}
+	.timeline-item:hover {
+		border-color: var(--accent);
+		box-shadow: 0 4px 12px rgba(var(--gray), 12%);
+	}
+	.timeline-date {
+		font-size: 0.9em;
+		color: rgb(var(--gray));
+		font-weight: 500;
+	}
+	.timeline-content h3 {
+		margin: 0.3em 0;
+		font-size: 1.15em;
+	}
+	.timeline-content p {
+		margin: 0;
+		color: rgb(var(--gray));
+		font-size: 0.9em;
+	}
+	.timeline-type {
+		background: #eef2ff;
+		color: var(--accent-dark);
+	}
+	@media (max-width: 720px) {
+		.timeline-item {
+			grid-template-columns: 1fr;
+			gap: 0.5em;
+		}
+	}
+</style>

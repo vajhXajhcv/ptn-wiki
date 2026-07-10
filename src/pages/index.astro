@@ -9,6 +9,7 @@ import '../styles/global.css';
 const characters = await getCollection('characters');
 const stages = await getCollection('stages');
 const gameModes = await getCollection('gameModes');
+const updates = await getCollection('updates');
 
 // 按文件修改时间排序，取最近更新的 6 名角色
 const charactersWithMtime = characters.map((character) => {
@@ -57,7 +58,7 @@ const websiteJsonLd = {
 	description: SITE_DESCRIPTION,
 	potentialAction: {
 		'@type': 'SearchAction',
-		target: new URL('/characters?q={search_term_string}', Astro.site).toString(),
+		target: new URL('/search?q={search_term_string}', Astro.site).toString(),
 		'query-input': 'required name=search_term_string',
 	},
 };
@@ -89,6 +90,27 @@ const websiteJsonLd = {
 			</div>
 		</section>
 
+		{updates.length > 0 && (
+			<section class="section">
+				<div class="section-header">
+					<h2 class="section-title">最新动态</h2>
+					<a href="/updates" class="section-more">查看全部 →</a>
+				</div>
+				<div class="update-list">
+					{updates
+						.sort((a, b) => b.data.date.localeCompare(a.data.date))
+						.slice(0, 3)
+						.map((u) => (
+							<a href={`/updates/${u.id}/`} class="update-card">
+								<span class="update-date">{u.data.date}</span>
+								<span class="update-type">{u.data.type}</span>
+								<strong>{u.data.title}</strong>
+							</a>
+						))}
+				</div>
+			</section>
+		)}
+
 		<section class="section">
 			<div class="section-header">
 				<h2 class="section-title">最近更新</h2>
@@ -96,7 +118,16 @@ const websiteJsonLd = {
 			</div>
 			<div class="card-grid">
 				{recentCharacters.map((c) => (
-					<a href={`/characters/${c.id}/`} class="card">
+					<a href={`/characters/${c.id}/`} class="card char-card">
+						{c.data.image && (
+							<img
+								src={c.data.image}
+								alt={c.data.name}
+								class="char-thumb"
+								loading="lazy"
+								decoding="async"
+							/>
+						)}
 						<div class="card-meta">
 							{c.data.rarity && (
 								<span class:list={['badge', `rarity-${c.data.rarity.toLowerCase()}`]}>{c.data.rarity}</span>
@@ -117,7 +148,16 @@ const websiteJsonLd = {
 			</div>
 			<div class="card-grid">
 				{recommendedCharacters.map((c) => (
-					<a href={`/characters/${c.id}/`} class="card">
+					<a href={`/characters/${c.id}/`} class="card char-card">
+						{c.data.image && (
+							<img
+								src={c.data.image}
+								alt={c.data.name}
+								class="char-thumb"
+								loading="lazy"
+								decoding="async"
+							/>
+						)}
 						<div class="card-meta">
 							{c.data.rarity && (
 								<span class:list={['badge', `rarity-${c.data.rarity.toLowerCase()}`]}>{c.data.rarity}</span>
@@ -251,8 +291,53 @@ const websiteJsonLd = {
 	.card-meta {
 		margin-bottom: 0.5em;
 	}
+	.update-list {
+		display: grid;
+		gap: 0.8em;
+	}
+	.update-card {
+		display: flex;
+		align-items: center;
+		gap: 1em;
+		flex-wrap: wrap;
+		padding: 0.9em 1.1em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 10px;
+		background: #fff;
+		text-decoration: none;
+		color: inherit;
+		transition: border-color 0.2s;
+	}
+	.update-card:hover {
+		border-color: var(--accent);
+	}
+	.update-date {
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+		min-width: 90px;
+	}
+	.update-type {
+		font-size: 0.75em;
+		padding: 0.15em 0.5em;
+		border-radius: 4px;
+		background: #eef2ff;
+		color: var(--accent-dark);
+	}
+	.char-card {
+		overflow: hidden;
+	}
+	.char-thumb {
+		width: 100%;
+		height: 180px;
+		object-fit: cover;
+		object-position: top center;
+		border-radius: 8px;
+		margin-bottom: 0.6em;
+		background: rgb(var(--gray-light));
+	}
 	@media (max-width: 720px) {
 		.hero-title { font-size: 2em; }
 		.hero { padding: 2em 1em; }
+		.char-thumb { height: 220px; }
 	}
 </style>

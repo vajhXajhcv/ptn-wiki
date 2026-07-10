@@ -8,6 +8,10 @@ faction: 无厌
 description: 高机动诡秘禁闭者，必杀可连续位移并触发破核，是处理精英怪与快速破核的核心角色。
 tags: ['诡秘', '破核', '爆发', '位移']
 image: /characters/baiyi.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「白逸」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1662
 ---
 
 ## 基础信息
@@ -48,7 +52,6 @@ image: /characters/baiyi.jpg
 ### 被动2：热身运动
 
 暴击率提升20%。白逸造成暴击时会获得1点能量，该效果触发后有4秒冷却时间。
-
 
 ## 使用建议
 

@@ -8,6 +8,10 @@ faction: ''
 description: 爱缇是S级异能禁闭者，擅长造成法术伤害的禁闭者。爱缇进行普攻时，有{{禁闭者数值
 tags: ['法伤辅助', '技能辅助', '攻速辅助']
 image: /characters/aitee.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「爱缇」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1953
 ---
 
 ## 基础信息
@@ -46,7 +50,6 @@ image: /characters/aitee.jpg
 ### 被动2：游戏规则
 
 敌人死亡后，爱缇有5%概率生成1颗【宝石】。
-
 
 ## 使用建议
 

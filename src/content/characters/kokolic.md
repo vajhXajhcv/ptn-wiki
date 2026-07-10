@@ -8,6 +8,10 @@ faction: ''
 description: 可可莉克是S级启迪禁闭者，擅长造成真实伤害的禁闭者。进入战斗时，能量充盈。
 tags: ['治疗辅助']
 image: /characters/kokolic.jpg
+imageSource:
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-053「可可莉克」
+  url: https://wqmt.aisnogames.com/#/news/122
 ---
 
 ## 基础信息
@@ -46,7 +50,6 @@ image: /characters/kokolic.jpg
 ### 被动2：不朽流年
 
 攻击提升6%。被动【绯花剑落】触发的特殊攻击每造成1次伤害，可可莉克获得1点能量。
-
 
 ## 使用建议
 

@@ -8,6 +8,10 @@ faction: ''
 description: 瑟琳是S级精准禁闭者，擅长造成法术伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['进攻增幅', '普攻伤害增幅']
 image: /characters/seren.jpg
+imageSource:
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-017「瑟琳」
+  url: https://wqmt.aisnogames.com/#/news/123
 ---
 
 ## 基础信息
@@ -49,7 +53,6 @@ image: /characters/seren.jpg
 ### 被动2：偏误修正
 
 攻击提升6%。必杀造成伤害时，瑟琳额外对该敌人触发一次普攻效果，必杀每段攻击最多触发1次。
-
 
 ## 使用建议
 

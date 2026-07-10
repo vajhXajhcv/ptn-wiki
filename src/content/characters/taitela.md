@@ -8,6 +8,10 @@ faction: ''
 description: 泰特拉是一名A级诡秘禁闭者，主要负责破核与切入后排。在队伍中常担任暴击辅助位置。
 tags: ['暴击辅助', '暴击增幅', '眩晕']
 image: /characters/taitela.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「泰特拉」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1493
 ---
 
 ## 基础信息
@@ -45,7 +49,6 @@ image: /characters/taitela.jpg
 ### 被动2：狐之影
 
 普攻造成暴击时，泰特拉使敌人【眩晕】，持续2秒，该效果触发后有20秒冷却时间。
-
 
 ## 使用建议
 

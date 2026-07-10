@@ -13,6 +13,13 @@ const characters = defineCollection({
 		danger: z.enum(['异能', '精准', '狂暴', '诡秘', '启迪', '坚韧']).optional(),
 		description: z.string(),
 		image: z.string().optional(),
+		imageSource: z
+			.object({
+				category: z.string(),
+				title: z.string(),
+				url: z.string().url(),
+			})
+			.optional(),
 		tags: z.array(z.string()).optional(),
 	}),
 });
@@ -26,6 +33,30 @@ const stages = defineCollection({
 		recommendedLevel: z.number().optional(),
 		difficulty: z.enum(['普通', '困难', '绝境']).optional(),
 		description: z.string(),
+		cost: z.number().optional(),
+		sanity: z.number().optional(),
+		moves: z.number().optional(),
+		enemySummary: z
+			.object({
+				minions: z.number().optional(),
+				elites: z.number().optional(),
+			})
+			.optional(),
+		enemies: z
+			.array(
+				z.object({
+					name: z.string(),
+					count: z.number().optional(),
+					elite: z.boolean().default(false),
+				})
+			)
+			.optional(),
+		objectives: z.array(z.string()).optional(),
+		firstClearReward: z.string().optional(),
+		sRankReward: z.string().optional(),
+		stageReward: z.string().optional(),
+		mechanics: z.array(z.string()).optional(),
+		strategy: z.array(z.string()).optional(),
 		tags: z.array(z.string()).optional(),
 	}),
 });
@@ -43,4 +74,18 @@ const gameModes = defineCollection({
 	}),
 });
 
-export const collections = { characters, stages, gameModes };
+const updates = defineCollection({
+	loader: glob({ base: './src/content/updates', pattern: '**/*.{md,mdx}' }),
+	schema: z.object({
+		title: z.string(),
+		date: z.string(),
+		type: z.enum(['版本更新', '活动', '维护公告', '站点公告', '其他']).default('其他'),
+		description: z.string(),
+		endDate: z.string().optional(),
+		source: z.string().url().optional(),
+		cover: z.string().url().optional(),
+		tags: z.array(z.string()).optional(),
+	}),
+});
+
+export const collections = { characters, stages, gameModes, updates };

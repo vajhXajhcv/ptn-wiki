@@ -8,6 +8,10 @@ faction: ''
 description: 赫罗是一名A级狂暴禁闭者，主要负责近战物理输出与清理敌人。在队伍中常担任防守增幅位置。
 tags: ['防守增幅', '自我治疗']
 image: /characters/heluo.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「赫罗」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1801
 ---
 
 ## 基础信息
@@ -45,7 +49,6 @@ image: /characters/heluo.jpg
 ### 被动2：英勇
 
 【横扫】每对1个敌人造成伤害，赫罗恢复2%生命值，每次最多恢复12%生命值。
-
 
 ## 使用建议
 

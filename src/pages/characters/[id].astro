@@ -103,6 +103,16 @@ const articleJsonLd = {
 
 		<p class="data-source">
 			角色图片素材来自《无期迷途》官方网站；技能名称、效果等客观数据参考无期迷途 BWiki 整理。
+			{character.data.imageSource && (
+				<>
+					<br />
+					当前图片源自
+					<a href={character.data.imageSource.url} target="_blank" rel="noopener noreferrer">
+						「{character.data.imageSource.title}」
+					</a>
+					（{character.data.imageSource.category}）
+				</>
+			)}
 		</p>
 	</main>
 </BaseLayout>

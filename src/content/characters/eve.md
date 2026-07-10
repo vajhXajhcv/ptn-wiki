@@ -8,6 +8,10 @@ faction: ''
 description: 伊芙是S级启迪禁闭者，擅长召唤的禁闭者。进入战斗时，能量充盈。
 tags: ['召唤物辅助', '进攻辅助', '恐惧']
 image: /characters/eve.jpg
+imageSource:
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-314「伊芙」
+  url: https://wqmt.aisnogames.com/#/news/315
 ---
 
 ## 基础信息
@@ -44,7 +48,6 @@ image: /characters/eve.jpg
 ### 被动2：家庭工坊
 
 伊芙在场期间生效，每存在1个友方召唤物，所有友方召唤物攻击和攻击速度提升1.5%，最多叠加8层。
-
 
 ## 使用建议
 

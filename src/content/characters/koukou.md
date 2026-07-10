@@ -3,11 +3,15 @@ name: 蔻蔻
 title: 皮包公司“白记实业”成员
 rarity: B
 danger: 坚韧
-role: 防守增幅<!-- 多个TAG用
+role: 防守增幅
 faction: ''
 description: 蔻蔻是一名B级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任防守增幅<!-- 多个TAG用位置。
 tags: ['防守增幅']
 image: /characters/koukou.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「蔻蔻」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1537
 ---
 
 ## 基础信息
@@ -43,7 +47,6 @@ image: /characters/koukou.jpg
 ### 被动2：坚实防线
 
 每阻挡1名敌人，蔻蔻防御提升3%，最多叠加5层。
-
 
 ## 使用建议
 

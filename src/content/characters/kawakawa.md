@@ -8,6 +8,10 @@ faction: ''
 description: 卡瓦卡瓦是一名A级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任防守增幅位置。
 tags: ['防守增幅', '治疗辅助']
 image: /characters/kawakawa.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「卡瓦卡瓦」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1867
 ---
 
 ## 基础信息
@@ -45,7 +49,6 @@ image: /characters/kawakawa.jpg
 ### 被动2：防风脉冲
 
 每存在1个【守护信标】，卡瓦卡瓦法抗提升2%，最多叠加6层。
-
 
 ## 使用建议
 

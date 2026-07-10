@@ -13,6 +13,14 @@ const characters = (await getCollection('characters')).sort((a, b) => {
 
 const dangers = ['坚韧', '狂暴', '诡秘', '精准', '异能', '启迪'];
 const rarities = ['S', 'A', 'B'];
+const roles = [
+	...new Set(
+		characters
+			.map((c) => c.data.role)
+			.filter(Boolean)
+			.map((r) => r!.trim())
+	),
+].sort((a, b) => a.localeCompare(b, 'zh-CN'));
 ---
 
 <BaseLayout title={`角色图鉴 - ${SITE_TITLE}`} description="无期迷途全角色图鉴、定位与基础资料。">
@@ -21,19 +29,22 @@ const rarities = ['S', 'A', 'B'];
 		<p class="page-desc">共 {characters.length} 名角色</p>
 
 		<div class="filters">
-			<div class="filter-group">
-				<label>搜索</label>
+			<div class="filter-row">
 				<input type="text" id="char-search" placeholder="输入角色名、定位或标签..." />
+				<select id="role-filter">
+					<option value="">全部定位</option>
+					{roles.map((r) => <option value={r}>{r}</option>)}
+				</select>
 			</div>
-			<div class="filter-group">
-				<label>稀有度</label>
+			<div class="filter-row filter-buttons-row">
+				<span class="filter-label">稀有度</span>
 				<div class="filter-buttons" data-filter="rarity">
 					<button class="active" data-value="all">全部</button>
 					{rarities.map((r) => <button data-value={r}>{r}级</button>)}
 				</div>
 			</div>
-			<div class="filter-group">
-				<label>职业</label>
+			<div class="filter-row filter-buttons-row">
+				<span class="filter-label">职业</span>
 				<div class="filter-buttons" data-filter="danger">
 					<button class="active" data-value="all">全部</button>
 					{dangers.map((d) => <button data-value={d}>{d}</button>)}
@@ -44,59 +55,75 @@ const rarities = ['S', 'A', 'B'];
 		<p id="result-count" class="page-desc" style="margin-top: 0;"></p>
 
 		<div class="card-grid" id="char-grid">
-			{characters.map((c) => (
-				<a
-					href={`/characters/${c.id}/`}
-					class="card"
-					data-rarity={c.data.rarity || 'B'}
-					data-danger={c.data.danger || ''}
-					data-search={`${c.data.name} ${c.data.title || ''} ${c.data.role || ''} ${(c.data.tags || []).join(' ')}`}
-				>
-					<div style="margin-bottom: 0.5em;">
-						{c.data.rarity && (
-							<span class:list={['badge', `rarity-${c.data.rarity.toLowerCase()}`]}>{c.data.rarity}级</span>
+			{
+				characters.map((c) => (
+					<a
+						href={`/characters/${c.id}/`}
+						class="card char-card"
+						data-rarity={c.data.rarity || 'B'}
+						data-danger={c.data.danger || ''}
+						data-role={c.data.role || ''}
+						data-search={`${c.data.name} ${c.data.title || ''} ${c.data.role || ''} ${(c.data.tags || []).join(' ')}`}
+					>
+						{c.data.image && (
+							<img
+								src={c.data.image}
+								alt={c.data.name}
+								class="char-thumb"
+								loading="lazy"
+								decoding="async"
+							/>
 						)}
-						{c.data.danger && <span class="badge">{c.data.danger}</span>}
-						{c.data.role && <span class="badge">{c.data.role}</span>}
-					</div>
-					<h3>{c.data.name}</h3>
-					{c.data.title && <p class="card-subtitle">{c.data.title}</p>}
-					<p>{c.data.description.slice(0, 60)}...</p>
-					{c.data.tags && c.data.tags.length > 0 && (
-						<div class="card-tags">
-							{c.data.tags.slice(0, 4).map((tag) => (
-								<span class="badge badge-tag">{tag}</span>
-							))}
+						<div style="margin-bottom: 0.5em;">
+							{c.data.rarity && (
+								<span class:list={['badge', `rarity-${c.data.rarity.toLowerCase()}`]}>{c.data.rarity}级</span>
+							)}
+							{c.data.danger && <span class="badge">{c.data.danger}</span>}
+							{c.data.role && <span class="badge">{c.data.role}</span>}
 						</div>
-					)}
-				</a>
-			))}
+						<h3>{c.data.name}</h3>
+						{c.data.title && <p class="card-subtitle">{c.data.title}</p>}
+						<p>{c.data.description.slice(0, 60)}...</p>
+						{c.data.tags && c.data.tags.length > 0 && (
+							<div class="card-tags">
+								{c.data.tags.slice(0, 4).map((tag) => (
+									<span class="badge badge-tag">{tag}</span>
+								))}
+							</div>
+						)}
+					</a>
+				))
+			}
 		</div>
 	</main>
 </BaseLayout>
 
 <script>
 	const searchInput = document.getElementById('char-search') as HTMLInputElement;
+	const roleFilter = document.getElementById('role-filter') as HTMLSelectElement;
 	const resultCount = document.getElementById('result-count') as HTMLParagraphElement;
-	const cards = Array.from(document.querySelectorAll<HTMLElement>('#char-grid .card'));
+	const cards = Array.from(document.querySelectorAll<HTMLElement>('#char-grid .char-card'));
 
 	let activeRarity = 'all';
 	let activeDanger = 'all';
 
 	function update() {
 		const query = searchInput.value.trim().toLowerCase();
+		const activeRole = roleFilter.value;
 		let visible = 0;
 
 		cards.forEach((card) => {
 			const rarity = card.dataset.rarity || '';
 			const danger = card.dataset.danger || '';
+			const role = card.dataset.role || '';
 			const searchText = (card.dataset.search || '').toLowerCase();
 
 			const matchesRarity = activeRarity === 'all' || rarity === activeRarity;
 			const matchesDanger = activeDanger === 'all' || danger === activeDanger;
+			const matchesRole = !activeRole || role === activeRole;
 			const matchesSearch = !query || searchText.includes(query);
 
-			const show = matchesRarity && matchesDanger && matchesSearch;
+			const show = matchesRarity && matchesDanger && matchesRole && matchesSearch;
 			card.style.display = show ? '' : 'none';
 			if (show) visible++;
 		});
@@ -122,6 +149,7 @@ const rarities = ['S', 'A', 'B'];
 		});
 	});
 
+	roleFilter.addEventListener('change', update);
 	searchInput.addEventListener('input', update);
 	update();
 </script>
@@ -134,25 +162,38 @@ const rarities = ['S', 'A', 'B'];
 		border-radius: 12px;
 		background: var(--bg-card);
 	}
-	.filter-group {
-		margin-bottom: 1em;
+	.filter-row {
+		display: flex;
+		gap: 0.75em;
+		align-items: center;
+		margin-bottom: 0.8em;
+		flex-wrap: wrap;
 	}
-	.filter-group:last-child {
+	.filter-row:last-child {
 		margin-bottom: 0;
 	}
-	.filter-group label {
-		display: block;
-		font-weight: 600;
-		margin-bottom: 0.4em;
-		color: rgb(var(--black));
-	}
-	.filter-group input {
-		width: 100%;
+	.filter-row input {
+		flex: 1 1 220px;
 		padding: 0.5em 0.75em;
 		border: 1px solid rgb(var(--gray-light));
 		border-radius: 8px;
 		font-size: 1em;
 		font-family: inherit;
+	}
+	.filter-row select {
+		padding: 0.5em 0.75em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 8px;
+		font-size: 1em;
+		font-family: inherit;
+		background: #fff;
+		min-width: 140px;
+	}
+	.filter-label {
+		font-weight: 600;
+		color: rgb(var(--black));
+		font-size: 0.9em;
+		min-width: 3em;
 	}
 	.filter-buttons {
 		display: flex;
@@ -174,6 +215,18 @@ const rarities = ['S', 'A', 'B'];
 		color: #fff;
 		border-color: var(--accent);
 	}
+	.char-card {
+		overflow: hidden;
+	}
+	.char-thumb {
+		width: 100%;
+		height: 180px;
+		object-fit: cover;
+		object-position: top center;
+		border-radius: 8px;
+		margin-bottom: 0.6em;
+		background: rgb(var(--gray-light));
+	}
 	.card-subtitle {
 		margin: -0.2em 0 0.5em;
 		font-size: 0.85em;
@@ -186,5 +239,17 @@ const rarities = ['S', 'A', 'B'];
 		font-size: 0.7em;
 		background: #eef2ff;
 		color: var(--accent-dark);
+	}
+	@media (max-width: 720px) {
+		.filter-row {
+			align-items: stretch;
+		}
+		.filter-row input,
+		.filter-row select {
+			flex: 1 1 100%;
+		}
+		.char-thumb {
+			height: 220px;
+		}
 	}
 </style>

@@ -8,6 +8,10 @@ faction: ''
 description: 安是一名A级启迪禁闭者，主要负责治疗与增益辅助。在队伍中常担任治疗辅助位置。
 tags: ['治疗辅助', '致死免疫']
 image: /characters/an.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「安」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1750
 ---
 
 ## 基础信息
@@ -46,7 +50,6 @@ image: /characters/an.jpg
 ### 被动2：严慈
 
 友方单位生命每降低10%，安对该单位治疗效果提升2%，该效果在友方禁闭者生命降低至10%时达到最大，最多叠加9层。
-
 
 ## 使用建议
 

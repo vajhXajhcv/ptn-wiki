@@ -45,6 +45,13 @@ function cleanTagsLine(line) {
   return `tags: [${cleaned.map(t => `'${t.replace(/'/g, "\\'")}'`).join(', ')}]`;
 }
 
+function cleanRoleLine(line) {
+  const match = line.match(/^role:\s*(.+)$/);
+  if (!match) return line;
+  const cleaned = cleanTag(match[1]);
+  return cleaned ? `role: ${cleaned}` : 'role: \'\'';
+}
+
 const files = readdirSync(CHAR_DIR).filter(f => f.endsWith('.md'));
 let changedCount = 0;
 for (const file of files) {
@@ -53,10 +60,12 @@ for (const file of files) {
   const fmMatch = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
   if (!fmMatch) continue;
   const [, frontmatter, body] = fmMatch;
-  const newFrontmatter = frontmatter.replace(/^tags:\s*.+$/gm, cleanTagsLine);
-  if (newFrontmatter === frontmatter) continue;
-  writeFileSync(path, `---\n${newFrontmatter}\n---\n${body}`);
+  let newFrontmatter = frontmatter.replace(/^tags:\s*.+$/gm, cleanTagsLine);
+  newFrontmatter = newFrontmatter.replace(/^role:\s*.+$/gm, cleanRoleLine);
+  const newBody = body.replace(/<!--[\s\S]*?-->/g, '').replace(/\n{3,}/g, '\n\n');
+  if (newFrontmatter === frontmatter && newBody === body) continue;
+  writeFileSync(path, `---\n${newFrontmatter}\n---\n${newBody}`);
   changedCount++;
-  console.log('Cleaned tags in', file);
+  console.log('Cleaned', file);
 }
 console.log(`Done. Cleaned ${changedCount} files.`);

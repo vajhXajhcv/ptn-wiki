@@ -8,6 +8,10 @@ faction: ''
 description: 安吉尔是S级诡秘禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['进攻增幅', '特殊增幅']
 image: /characters/angell.jpg
+imageSource:
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-047「安吉尔」
+  url: https://wqmt.aisnogames.com/#/news/632
 ---
 
 ## 基础信息
@@ -48,7 +52,6 @@ image: /characters/angell.jpg
 ### 被动2：隐匿
 
 受到伤害时，安吉尔有20%概率免疫该伤害。
-
 
 ## 使用建议
 

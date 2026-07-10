@@ -8,6 +8,10 @@ faction: ''
 description: 堇是一名A级诡秘禁闭者，主要负责破核与切入后排。在队伍中常担任进攻增幅位置。
 tags: ['进攻增幅', '特殊辅助']
 image: /characters/jin.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「堇」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1794
 ---
 
 ## 基础信息
@@ -45,7 +49,6 @@ image: /characters/jin.jpg
 ### 被动2：花中潜影
 
 若堇身前地格存在友方单位，则伤害提升10%。
-
 
 ## 使用建议
 

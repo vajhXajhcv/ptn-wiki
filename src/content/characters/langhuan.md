@@ -8,6 +8,10 @@ faction: ''
 description: 狼獾是一名A级精准禁闭者，主要负责远程物理输出与打击关键目标。在队伍中常担任物伤辅助位置。
 tags: ['物伤辅助', '眩晕', '普攻伤害增幅', '进攻增幅']
 image: /characters/langhuan.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「狼獾」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1581
 ---
 
 ## 基础信息
@@ -45,7 +49,6 @@ image: /characters/langhuan.jpg
 ### 被动2：孤嗥
 
 若技能范围内不存在敌人，则狼獾攻击提升10%。
-
 
 ## 使用建议
 

@@ -1,0 +1,254 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../../consts';
+import '../../styles/global.css';
+
+const characters = await getCollection('characters');
+const stages = await getCollection('stages');
+const gameModes = await getCollection('gameModes');
+const updates = await getCollection('updates');
+
+type SearchItem = {
+	category: string;
+	title: string;
+	desc: string;
+	href: string;
+	extras: string;
+};
+
+const items: SearchItem[] = [
+	...characters.map((c) => ({
+		category: '角色',
+		title: c.data.name + (c.data.title ? ` · ${c.data.title}` : ''),
+		desc:
+			c.data.description.slice(0, 90) + (c.data.description.length > 90 ? '…' : ''),
+		href: `/characters/${c.id}/`,
+		extras: [c.data.rarity, c.data.danger, c.data.role, c.data.faction, ...(c.data.tags || [])]
+			.filter(Boolean)
+			.join(' '),
+	})),
+	...stages.map((s) => ({
+		category: '关卡',
+		title: `${s.data.chapter}-${s.data.stageNumber} ${s.data.name}`,
+		desc: s.data.description.slice(0, 90) + '…',
+		href: `/stages/${s.id}/`,
+		extras: [
+			s.data.difficulty,
+			s.data.recommendedLevel ? `推荐 ${s.data.recommendedLevel}` : '',
+			...(s.data.tags || []),
+		]
+			.filter(Boolean)
+			.join(' '),
+	})),
+	...gameModes.map((g) => ({
+		category: '玩法',
+		title: g.data.name,
+		desc: g.data.description.slice(0, 90) + '…',
+		href: `/game-modes/${g.id}/`,
+		extras: [g.data.type, ...(g.data.tags || [])].filter(Boolean).join(' '),
+	})),
+	...updates.map((u) => ({
+		category: '更新',
+		title: u.data.title,
+		desc: u.data.description.slice(0, 90) + '…',
+		href: `/updates/${u.id}/`,
+		extras: [u.data.type, u.data.date, u.data.endDate ? `至 ${u.data.endDate}` : '']
+			.filter(Boolean)
+			.join(' '),
+	})),
+];
+
+const categories = ['全部', '角色', '关卡', '玩法', '更新'];
+---
+
+<BaseLayout
+	title={`全站搜索 - ${SITE_TITLE}`}
+	description="搜索无期迷途 Wiki 的角色、关卡、玩法与更新内容。"
+>
+	<main>
+		<h1 class="page-title">全站搜索</h1>
+		<p class="page-desc">在 {items.length} 条内容中查找角色、关卡、玩法与更新</p>
+
+		<div class="search-box">
+			<input
+				type="search"
+				id="search-input"
+				placeholder="输入关键词，如角色名、关卡、玩法…"
+				autocomplete="off"
+			/>
+			<div class="category-tabs" id="category-tabs">
+				{
+					categories.map((cat, idx) => (
+						<button class={`tab${idx === 0 ? ' active' : ''}`} data-category={cat === '全部' ? '' : cat}>
+							{cat}
+						</button>
+					))
+				}
+			</div>
+			<span id="result-count">共 {items.length} 条结果</span>
+		</div>
+
+		<div class="result-list" id="result-list">
+			{
+				items.map((item) => (
+					<a
+						href={item.href}
+						class="result-item"
+						data-category={item.category}
+						data-title={item.title}
+						data-desc={item.desc}
+						data-extras={item.extras}
+					>
+						<div class="result-meta">
+							<span class="badge result-category">{item.category}</span>
+							<span class="result-extras">{item.extras}</span>
+						</div>
+						<h3>{item.title}</h3>
+						<p>{item.desc}</p>
+					</a>
+				))
+			}
+		</div>
+		<p class="empty-tip" id="empty-tip" style="display: none;">
+			未找到匹配内容，试试其他关键词或分类。
+		</p>
+	</main>
+</BaseLayout>
+
+<script is:inline>
+	(function () {
+		const input = document.getElementById('search-input');
+		const tabs = document.querySelectorAll('#category-tabs .tab');
+		const list = document.getElementById('result-list');
+		const countEl = document.getElementById('result-count');
+		const emptyTip = document.getElementById('empty-tip');
+		const results = Array.from(list.querySelectorAll('.result-item'));
+
+		let currentCategory = '';
+
+		function filter() {
+			const term = input.value.trim().toLowerCase();
+			let visible = 0;
+
+			results.forEach((item) => {
+				const categoryMatch = !currentCategory || item.dataset.category === currentCategory;
+				const textMatch =
+					!term ||
+					item.dataset.title.toLowerCase().includes(term) ||
+					item.dataset.desc.toLowerCase().includes(term) ||
+					(item.dataset.extras && item.dataset.extras.toLowerCase().includes(term));
+
+				const show = categoryMatch && textMatch;
+				item.style.display = show ? '' : 'none';
+				if (show) visible++;
+			});
+
+			countEl.textContent = `共 ${visible} 条结果`;
+			emptyTip.style.display = visible === 0 ? '' : 'none';
+		}
+
+		tabs.forEach((tab) => {
+			tab.addEventListener('click', () => {
+				tabs.forEach((t) => t.classList.remove('active'));
+				tab.classList.add('active');
+				currentCategory = tab.dataset.category || '';
+				filter();
+			});
+		});
+
+		input.addEventListener('input', filter);
+
+		const q = new URLSearchParams(window.location.search).get('q');
+		if (q) {
+			input.value = q;
+			filter();
+		}
+	})();
+</script>
+
+<style>
+	.search-box {
+		margin-bottom: 1.5em;
+	}
+	.search-box input {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0.75em 1em;
+		font-size: 1em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 10px;
+		margin-bottom: 0.8em;
+	}
+	.category-tabs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		margin-bottom: 0.8em;
+	}
+	.tab {
+		padding: 0.4em 0.9em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 999px;
+		background: #fff;
+		cursor: pointer;
+		font-size: 0.9em;
+		color: rgb(var(--gray-dark));
+	}
+	.tab.active {
+		background: var(--accent);
+		color: #fff;
+		border-color: var(--accent);
+	}
+	#result-count {
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+	}
+	.result-list {
+		display: grid;
+		gap: 0.8em;
+	}
+	.result-item {
+		display: block;
+		padding: 1em 1.2em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 12px;
+		background: #fff;
+		text-decoration: none;
+		color: inherit;
+		transition: border-color 0.2s, box-shadow 0.2s;
+	}
+	.result-item:hover {
+		border-color: var(--accent);
+		box-shadow: 0 4px 12px rgba(var(--gray), 10%);
+	}
+	.result-meta {
+		display: flex;
+		gap: 0.5em;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 0.4em;
+	}
+	.result-category {
+		background: var(--accent);
+		color: #fff;
+	}
+	.result-extras {
+		font-size: 0.8em;
+		color: rgb(var(--gray));
+	}
+	.result-item h3 {
+		margin: 0 0 0.2em;
+		font-size: 1.1em;
+	}
+	.result-item p {
+		margin: 0;
+		font-size: 0.9em;
+		color: rgb(var(--gray));
+	}
+	.empty-tip {
+		text-align: center;
+		color: rgb(var(--gray));
+		margin-top: 2em;
+	}
+</style>

@@ -1,0 +1,44 @@
+name: Sync official resources
+
+on:
+  schedule:
+    # 每周一、周四 UTC 00:00 运行一次
+    - cron: '0 0 * * 1,4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync character image sources
+        # 不下载图片，只更新 frontmatter 中的 image / imageSource
+        run: node scripts/fetch-official-resources.mjs --no-download
+
+      - name: Sync official news
+        run: node scripts/fetch-official-news.mjs
+
+      - name: Commit and push changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add src/content/characters src/content/updates
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'chore: sync official image sources and news'
+          git push

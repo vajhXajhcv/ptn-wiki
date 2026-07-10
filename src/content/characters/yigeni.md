@@ -3,11 +3,15 @@ name: 伊格尼
 title: 火焰操控者
 rarity: A
 danger: 异能
-role: <!-- 多个TAG用
+role: ''
 faction: ''
 description: 伊格尼是一名A级异能禁闭者，主要负责法术伤害与控场。在队伍中常担任<!-- 多个TAG用位置。
 tags: []
 image: /characters/yigeni.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「伊格尼」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1374
 ---
 
 ## 基础信息
@@ -19,7 +23,7 @@ image: /characters/yigeni.jpg
 - **特性**：擅长造成法术伤害的禁闭者。伤害提升5%，对破核敌人伤害提升5%。
 - **狂厄深化 · 强袭**：攻击提升10%。
 - **梦魇天赋**：全体友方单位获得15%的法术穿透。
-- **破碎防线加成**：<!-- 【天坠焰雨】变为每次攻击都会额外召唤陨石，【过载火花】能量消耗-20。 -->
+- **破碎防线加成**：
 
 ## 技能
 
@@ -47,7 +51,6 @@ image: /characters/yigeni.jpg
 ### 被动2：失控烈焰
 
 【陨石】造成伤害时，对敌人附加【燃烧-伊格尼】标记。
-
 
 ## 使用建议
 

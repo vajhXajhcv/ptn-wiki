@@ -8,6 +8,10 @@ faction: ''
 description: 艾恩是一名A级诡秘禁闭者，主要负责破核与切入后排。在队伍中常担任物伤辅助位置。
 tags: ['物伤辅助', '物伤增幅']
 image: /characters/aien.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「艾恩」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1521
 ---
 
 ## 基础信息
@@ -45,7 +49,6 @@ image: /characters/aien.jpg
 ### 被动2：神经反射
 
 艾恩普攻改为优先选择【感电】标记携带者。对【感电】标记携带者进行普攻时，改为造成2次伤害，每段造成自身攻击68%的物理伤害。
-
 
 ## 使用建议
 

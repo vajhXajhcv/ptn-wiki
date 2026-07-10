@@ -8,6 +8,10 @@ faction: ''
 description: 阿黛拉是S级诡秘禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['暴击增幅']
 image: /characters/adela.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「阿黛拉」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1963
 ---
 
 ## 基础信息
@@ -46,7 +50,6 @@ image: /characters/adela.jpg
 ### 被动2：了却前忧
 
 阿黛拉每消耗3层【疯剪子】，暴击伤害提升5%，持续至【疯剪子】清空，最多叠加8层。
-
 
 ## 使用建议
 

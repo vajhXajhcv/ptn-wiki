@@ -3,11 +3,15 @@ name: 维多利亚
 title: 彼岸诊所特殊病患
 rarity: A
 danger: 异能
-role: <!-- 多个TAG用
+role: ''
 faction: ''
 description: 维多利亚是一名A级异能禁闭者，主要负责法术伤害与控场。在队伍中常担任<!-- 多个TAG用位置。
 tags: []
 image: /characters/weiduoliya.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「维多利亚」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1555
 ---
 
 ## 基础信息
@@ -19,7 +23,7 @@ image: /characters/weiduoliya.jpg
 - **特性**：擅长造成法术伤害的禁闭者，伤害提升5%，对破核敌人伤害提升5%。
 - **狂厄深化 · 克敌制胜**：伤害提升10%，对破核敌人伤害提升10%。
 - **梦魇天赋**：全体友方单位获得12%的法术伤害提升。
-- **破碎防线加成**：<!-- 【荆棘】每次提升的攻击力额外增加2点，上限额外提升360点。 -->
+- **破碎防线加成**：
 
 ## 技能
 
@@ -46,7 +50,6 @@ image: /characters/weiduoliya.jpg
 ### 被动2：荆棘
 
 每累计损失50点生命值，维多利亚攻击提升1点，最多提升100点。
-
 
 ## 使用建议
 

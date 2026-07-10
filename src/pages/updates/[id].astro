@@ -1,0 +1,131 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { SITE_TITLE } from '../../consts';
+import '../../styles/global.css';
+
+export async function getStaticPaths() {
+	const updates = await getCollection('updates');
+	return updates.map((update) => ({
+		params: { id: update.id },
+		props: { update },
+	}));
+}
+
+const { update } = Astro.props;
+const { Content } = await render(update);
+const title = `${update.data.title} - ${SITE_TITLE}`;
+
+const breadcrumbItems = [
+	{ label: '首页', href: '/' },
+	{ label: '更新日志', href: '/updates' },
+	{ label: update.data.title },
+];
+
+const breadcrumbJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: breadcrumbItems.map((item, index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		name: item.label,
+		item: item.href ? new URL(item.href, Astro.site).toString() : undefined,
+	})),
+};
+
+const articleJsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'Article',
+	headline: title,
+	description: update.data.description,
+	datePublished: update.data.date,
+	url: new URL(Astro.url.pathname, Astro.site).toString(),
+	mainEntityOfPage: {
+		'@type': 'WebPage',
+		'@id': new URL(Astro.url.pathname, Astro.site).toString(),
+	},
+	publisher: {
+		'@type': 'Organization',
+		name: SITE_TITLE,
+		url: Astro.site?.toString(),
+	},
+};
+---
+
+<BaseLayout title={title} description={update.data.description}>
+	<main>
+		<Breadcrumbs items={breadcrumbItems} />
+
+		<article class="update-header">
+			<h1 class="page-title">{update.data.title}</h1>
+			<div class="info-badges">
+				<span class="badge">{update.data.type}</span>
+				<span class="badge">{update.data.date}</span>
+				{update.data.endDate && <span class="badge">至 {update.data.endDate}</span>}
+			</div>
+			{update.data.cover && (
+				<img
+					src={update.data.cover}
+					alt={update.data.title}
+					class="update-cover"
+					loading="eager"
+					decoding="async"
+				/>
+			)}
+			<p class="page-desc">{update.data.description}</p>
+		</article>
+
+		<div class="prose update-body">
+			<Content />
+		</div>
+
+		{update.data.source && (
+			<p class="data-source">
+				本文来自《无期迷途》官方网站：
+				<a href={update.data.source} target="_blank" rel="noopener noreferrer">
+					{update.data.source}
+				</a>
+			</p>
+		)}
+	</main>
+</BaseLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+<script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+
+<style>
+	.update-header {
+		margin-bottom: 1.5em;
+		padding-bottom: 1em;
+		border-bottom: 2px solid rgb(var(--gray-light));
+	}
+	.update-header h1 {
+		margin-bottom: 0.4em;
+	}
+	.info-badges {
+		margin: 0.8em 0;
+	}
+	.update-body h2 {
+		margin-top: 1.5em;
+	}
+	.update-body h3 {
+		margin-top: 1.2em;
+		color: var(--accent-dark);
+	}
+	.update-cover {
+		width: 100%;
+		max-width: 640px;
+		border-radius: 12px;
+		margin: 1em 0 0.5em;
+		object-fit: cover;
+	}
+	.data-source {
+		margin-top: 2em;
+		padding-top: 1em;
+		border-top: 1px solid rgb(var(--gray-light));
+		color: rgb(var(--gray));
+		font-size: 0.8em;
+		word-break: break-all;
+	}
+</style>
