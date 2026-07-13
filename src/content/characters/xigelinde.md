@@ -7,6 +7,11 @@ role: 特殊能量恢复
 faction: ''
 description: 希格林德是A级坚韧禁闭者，擅长防守的禁闭者，可以阻挡{{禁闭者数值
 tags: ['特殊能量恢复', '特殊辅助', '防守增幅']
+image: /characters/xigelinde.jpg
+imageSource:
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「希格林德」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1984
 ---
 
 ## 基础信息

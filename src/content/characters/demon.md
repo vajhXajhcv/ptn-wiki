@@ -12,7 +12,7 @@ image: /characters/demon.jpg
 imageSource:
   category: MBCC生日会
   title: 【MBCC生日会】丨「迪蒙」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1369
+  url: https://wqmt.aisnogames.com/#/news/1983
 ---
 
 ## 基础信息
