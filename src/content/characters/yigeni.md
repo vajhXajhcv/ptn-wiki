@@ -11,7 +11,7 @@ image: /characters/yigeni.jpg
 imageSource:
   category: MBCC生日会
   title: 【MBCC生日会】丨「伊格尼」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1374
+  url: https://wqmt.aisnogames.com/#/news/1990
 ---
 
 ## 基础信息
