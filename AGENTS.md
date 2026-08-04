@@ -103,6 +103,7 @@ node scripts/fetch-bwiki.mjs              # 角色
 node scripts/fetch-bwiki-stages.mjs       # 关卡
 node scripts/fetch-bwiki-stories.mjs      # 剧情（默认跳过已存在）
 node scripts/fetch-bwiki-stories.mjs --force
+node scripts/fetch-bwiki-reviews.mjs      # 角色审查剧情（intitle:审查 枚举，约 10 篇）
 node scripts/backfill-story-chapters.mjs  # 回填剧情篇章/活动名（主线四篇 + 活动归属）
 node scripts/fetch-bwiki-lore.mjs         # 世界观（零镜系统）
 node scripts/backfill-factions.mjs        # 角色阵营回填

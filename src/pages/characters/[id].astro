@@ -23,6 +23,9 @@ const ogImage = character.data.image || undefined;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const d = character.data;
 
+// 关联的角色审查剧情（如已收录）
+const reviewStory = (await getCollection('stories')).find((s) => s.id === `审查-${character.id}`);
+
 const breadcrumbItems = [
 	{ label: '首页', href: '/' },
 	{ label: '角色图鉴', href: '/characters' },
@@ -59,6 +62,12 @@ const tags = (d.tags || []).map((tag) => ({ label: tag, variant: 'tag' as const 
 
 		{d.description && <p class="character-description">{d.description}</p>}
 
+		{reviewStory && (
+			<p class="review-link">
+				<a href={`/stories/${reviewStory.id}/`}>📖 查看「{d.name}」的角色审查剧情 →</a>
+			</p>
+		)}
+
 		<div class="prose character-body">
 			<Content />
 		</div>
@@ -93,6 +102,17 @@ const tags = (d.tags || []).map((tag) => ({ label: tag, variant: 'tag' as const 
 		color: rgb(var(--gray-dark));
 		font-size: 1.05em;
 		line-height: 1.7;
+	}
+	.review-link {
+		margin: -0.5em 0 1.5em;
+	}
+	.review-link a {
+		color: var(--accent);
+		text-decoration: none;
+		font-weight: 600;
+	}
+	.review-link a:hover {
+		text-decoration: underline;
 	}
 	.character-body {
 		margin-top: 1.5em;

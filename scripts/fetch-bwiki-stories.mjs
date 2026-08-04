@@ -81,7 +81,7 @@ export function cleanWikiMarkup(text) {
 		.trim();
 }
 
-function findOuterTemplate(text, templateName) {
+export function findOuterTemplate(text, templateName) {
 	const start = text.indexOf(`{{${templateName}|`);
 	if (start === -1) return null;
 	let depth = 0;
@@ -104,7 +104,7 @@ function findOuterTemplate(text, templateName) {
 }
 
 // 按分隔符拆分，但忽略嵌套在 {{...}} 中的分隔符
-function splitTopLevel(text, separator) {
+export function splitTopLevel(text, separator) {
 	const parts = [];
 	let depth = 0;
 	let current = '';
