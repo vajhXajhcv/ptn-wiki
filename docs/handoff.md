@@ -1,7 +1,7 @@
 # 无期迷途 Wiki 接力文档
 
 > 本文档用于记录项目当前状态、未竟事项与下一步方向，方便后续继续推进。
-> 最近更新：2026-07-10
+> 最近更新：2026-08-04
 
 ---
 
@@ -14,8 +14,8 @@
 - **联系邮箱**：ptnwiki@outlook.com
 - **GitHub**：https://github.com/vajhXajhcv/ptn-wiki
 
-当前版本构建产物为 `dist/`，共 **1056 个页面**（2026-07-10 构建）。
-- **最新提交**：`e9108e6` refactor: 统一组件与页面、补全角色别名/更新摘要、新增社区页与 AGENTS.md
+当前版本构建产物为 `dist/`，共 **1139 个页面**（2026-08-04 构建）。
+- **最新提交**：`e9108e6` refactor: 统一组件与页面、补全角色别名/更新摘要、新增社区页与 AGENTS.md（2026-08-04 的变更待提交）
 - **最新部署**：https://220032c0.ptn-wiki.pages.dev（Git 自动部署，状态 success，已绑定 5732.wiki）
 
 ---
@@ -26,12 +26,14 @@
 
 | 模块 | 路径 | 说明 |
 |------|------|------|
-| 角色图鉴 | `/characters` | 156 名角色，支持稀有度/职业/定位/关键词筛选，卡片展示官方立绘 |
-| 角色详情 | `/characters/[id]` | 左图右信息，面包屑，Article JSON-LD，展示别名 |
+| 角色图鉴 | `/characters` | 159 名角色，支持稀有度/职业/定位/阵营/关键词筛选，卡片展示官方立绘与阵营徽章 |
+| 角色详情 | `/characters/[id]` | 左图右信息，面包屑，Article JSON-LD，展示别名与阵营 |
+| 阵营图鉴 | `/factions` | 十六大狂厄阵营成员总览（数据驱动，2026-08-04 新增） |
+| 世界观 | `/lore` | 零镜系统设定档案 61 条：入夜纪年/狄斯城/狂厄（2026-08-04 新增） |
 | 关卡攻略 | `/stages` | 主线关卡，支持章节/难度/搜索筛选 |
 | 玩法攻略 | `/game-modes` | 暗域、公会战、数据间隙等，支持按类型筛选 |
 | 剧情故事 | `/stories` | 主线/活动/支线/角色审查/其他 |
-| 全站搜索 | `/search` | 覆盖角色、关卡、玩法、更新、剧情，支持角色别名 |
+| 全站搜索 | `/search` | 覆盖角色、关卡、玩法、更新、剧情、世界观，支持角色别名 |
 | 活动日历 | `/calendar` | 按月份分组，支持分类筛选，显示进行中/即将开始/已结束 |
 | 更新日志 | `/updates` | 时间线展示，单个更新详情页，已批量回填摘要 |
 | 社区资源 | `/community` | 无期迷途相关 GitHub 项目、Wiki 与辅助工具整理 |
@@ -78,7 +80,8 @@
 
 ### 4.1 角色数据缺失/不完整
 
-- 143/156 名角色 `faction` 字段为空，已改为 optional/default 避免构建失败，但尚未批量补全。
+- ~~143/156 名角色 `faction` 字段为空~~ **已解决（2026-08-04）**：`scripts/backfill-factions.mjs` 从 BWiki 批量回填，158/159 名角色已确认官方阵营；仅「丽奎安」（四周年预告角色，未实装）暂缺。
+- 8 名角色原先手工填写的是剧情组织（如辛迪加、军团），已按 BWiki 档案统一修正为官方狂厄阵营（破坏/背离/混沌/执迷等）。
 - 少量角色独立资料页仍可能缺失或不完整。
 
 ### 4.2 网络依赖
@@ -99,29 +102,35 @@
    - 根据官方意见更新 `docs/letters/` 与站点声明
    - 如需，调整角色素材使用方式
 
-2. **补全角色阵营数据**
-   - 143 名角色 `faction` 为空，可从 BWiki 角色页批量抓取
+2. **补全「丽奎安」数据**
+   - 四周年预告角色（档案编号 MBCC-S-???），8 月 6 日「绝响」主线活动开启后：
+     `node scripts/fetch-bwiki.mjs`（更新头衔/特性）、`node scripts/backfill-factions.mjs`（阵营）、
+     `node scripts/enrich-character-skills.mjs likuian`（技能）、`node scripts/fetch-official-resources.mjs`（立绘）
+
+3. **四周年后数据巡检**
+   - `node scripts/fetch-official-news.mjs` 同步周年庆活动公告
+   - `node scripts/fetch-bwiki-stories.mjs` 同步「绝响」主线剧情文本
 
 ### 中优先级
 
-3. **集中常量**
-   - 创建 `src/lib/constants.ts`，统一稀有度、职业、API 地址、映射表
-   - 抽取 `scripts/lib/*.mjs` 公共脚本库（BWiki API、HTML 清洗、文件读写）
+4. **集中常量（部分完成）**
+   - `src/lib/constants.ts` 已建立（稀有度、职业、玩法类型、阵营 `FACTIONS` 等），但各脚本仍各自持有映射表，尚未统一到 `scripts/lib/*.mjs` 公共库（BWiki API、HTML 清洗、文件读写）
 
-4. **补充缺失技能数据**
+5. **补充缺失技能数据**
    - 单独为反爬失败角色写手动/慢速抓取脚本
    - 或在 BWiki 手动复制后粘贴到对应 Markdown 文件
 
-5. **完善关卡攻略正文**
+6. **完善关卡攻略正文**
    - 当前关卡正文多为占位
    - 可参照 `scripts/enrich-character-skills.mjs` 思路，从 BWiki 抓取关卡详情
 
 ### 低优先级 / 体验优化
 
-6. 角色详情页增加技能锚点导航
-7. 全站搜索支持拼音/简繁转换
-8. 图片懒加载与 WebP 转换
-9. 增加 PWA / 离线缓存
+7. 角色详情页增加技能锚点导航
+8. 全站搜索支持拼音/简繁转换
+9. 图片懒加载与 WebP 转换
+10. 增加 PWA / 离线缓存
+11. lore 条目间内链（如「狂厄」词条引用「黑环」「禁闭者」时互相跳转）
 
 ---
 
@@ -147,7 +156,14 @@ node scripts/fetch-bwiki.mjs
 # 从 BWiki 批量抓取并填充角色技能正文
 node scripts/enrich-character-skills.mjs
 
+# 从 BWiki 批量回填角色阵营（faction）
+node scripts/backfill-factions.mjs
+
+# 从 BWiki 零镜系统抓取世界观设定（lore 集合）
+node scripts/fetch-bwiki-lore.mjs
+
 # 下载官网角色立绘到 public/characters，并更新 frontmatter image 字段
+# 已存在且已标注来源的自动跳过；--force 强制全量重跑
 node scripts/fetch-official-resources.mjs
 
 # 清洗 tags / role / 正文中的 HTML 注释残留
@@ -189,6 +205,8 @@ public/
 scripts/
   fetch-bwiki.mjs
   enrich-character-skills.mjs
+  backfill-factions.mjs
+  fetch-bwiki-lore.mjs
   fetch-official-resources.mjs
   fetch-official-news.mjs
   clean-tags.mjs

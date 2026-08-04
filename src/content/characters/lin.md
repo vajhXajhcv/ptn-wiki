@@ -4,7 +4,7 @@ title: 新城“独眼恶魔”
 rarity: A
 danger: 诡秘
 role: 暴击辅助
-faction: ''
+faction: 怠惰
 description: 琳是A级诡秘禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['暴击辅助', '暴击增幅']
 image: /characters/lin.jpg

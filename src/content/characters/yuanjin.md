@@ -4,7 +4,7 @@ title: 海洋学家
 rarity: S
 danger: 启迪
 role: 治疗辅助
-faction: ''
+faction: 不朽
 description: 源津是S级启迪禁闭者，被内海高度污染的禁闭者，源津{{术语查看
 tags: ['治疗辅助', '进攻辅助', '普攻伤害辅助', '特殊能量恢复']
 image: /characters/yuanjin.jpg

@@ -43,6 +43,7 @@ docs/            # 项目文档与对外函件
 - `gameModes`：`name`, `type`, `description`, `unlock`, `rewards`, `image`, `tags`
 - `updates`：`title`, `date`, `type`, `description`, `source`, `cover`, `tags`
 - `stories`：`title`, `type`, `chapter`, `section`, `description`, `characters`, `source`, `tags`
+- `lore`：`title`, `chapter` (入夜纪年/狄斯城/狂厄), `section`, `code`, `description`, `source`, `tags`
 
 修改 schema 后，必须同时更新 `scripts/` 中生成对应 Markdown 的脚本。
 
@@ -102,6 +103,8 @@ node scripts/fetch-bwiki.mjs              # 角色
 node scripts/fetch-bwiki-stages.mjs       # 关卡
 node scripts/fetch-bwiki-stories.mjs      # 剧情（默认跳过已存在）
 node scripts/fetch-bwiki-stories.mjs --force
+node scripts/fetch-bwiki-lore.mjs         # 世界观（零镜系统）
+node scripts/backfill-factions.mjs        # 角色阵营回填
 ```
 
 ### 6.3 清洗与补全

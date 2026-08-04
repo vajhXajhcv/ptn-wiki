@@ -4,7 +4,7 @@ title: 发明家
 rarity: A
 danger: 诡秘
 role: 召唤物增幅
-faction: ''
+faction: 混沌
 description: 优利卡是A级诡秘禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['召唤物增幅', '进攻辅助', '进攻增幅']
 image: /characters/youlika.jpg

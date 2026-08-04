@@ -4,7 +4,7 @@ title: 狄斯股神
 rarity: S
 danger: 启迪
 role: 进攻辅助
-faction: ''
+faction: 靡音
 description: 芭·菲是S级启迪禁闭者，擅长支援的禁闭者。进入战斗时，每存在{{禁闭者数值
 tags: ['进攻辅助', '治疗辅助', '特殊辅助']
 image: /characters/bafei.jpg

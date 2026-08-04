@@ -4,7 +4,7 @@ title: 玄修士
 rarity: S
 danger: 坚韧
 role: 技能伤害辅助
-faction: ''
+faction: 不朽
 description: 离尘是S级坚韧禁闭者，擅长防守的禁闭者，可以阻挡{{禁闭者数值
 tags: ['技能伤害辅助', '致死免疫']
 image: /characters/lichen.jpg

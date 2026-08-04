@@ -4,7 +4,7 @@ title: 黑环研究院院长
 rarity: S
 danger: 异能
 role: 攻速增幅
-faction: ''
+faction: 靡音
 description: 艾瑟默尔是S级异能禁闭者，擅长造成法术伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['攻速增幅', '进攻增幅']
 image: /characters/aisemoer.jpg

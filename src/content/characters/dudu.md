@@ -4,7 +4,7 @@ title: 辛迪加“乐手”
 rarity: A
 danger: 启迪
 role: 治疗辅助
-faction: ''
+faction: 怠惰
 description: 嘟嘟是A级启迪禁闭者，擅长支援的禁闭者，进入战斗时，能量充盈。
 tags: ['治疗辅助', '防守辅助', '进攻辅助']
 image: /characters/dudu.jpg

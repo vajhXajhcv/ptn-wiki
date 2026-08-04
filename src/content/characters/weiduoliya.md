@@ -4,7 +4,7 @@ title: 彼岸诊所特殊病患
 rarity: A
 danger: 异能
 role: ''
-faction: ''
+faction: 混沌
 description: 维多利亚是一名A级异能禁闭者，主要负责法术伤害与控场。在队伍中常担任<!-- 多个TAG用位置。
 tags: []
 image: /characters/weiduoliya.jpg

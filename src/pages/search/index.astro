@@ -9,6 +9,7 @@ const stages = await getCollection('stages');
 const gameModes = await getCollection('gameModes');
 const updates = await getCollection('updates');
 const stories = await getCollection('stories');
+const lore = await getCollection('lore');
 
 type SearchItem = {
 	category: string;
@@ -65,9 +66,16 @@ const items: SearchItem[] = [
 		href: `/stories/${s.id}/`,
 		extras: [s.data.type, s.data.chapter, ...(s.data.tags || [])].filter(Boolean).join(' '),
 	})),
+	...lore.map((l) => ({
+		category: '世界观',
+		title: l.data.title,
+		desc: l.data.description.slice(0, 90) + '…',
+		href: `/lore/${l.id}/`,
+		extras: [l.data.chapter, l.data.section, l.data.code, ...(l.data.tags || [])].filter(Boolean).join(' '),
+	})),
 ];
 
-const categories = ['全部', '角色', '关卡', '玩法', '更新', '剧情'];
+const categories = ['全部', '角色', '关卡', '玩法', '更新', '剧情', '世界观'];
 ---
 
 <BaseLayout
@@ -76,7 +84,7 @@ const categories = ['全部', '角色', '关卡', '玩法', '更新', '剧情'];
 >
 	<main>
 		<h1 class="page-title">全站搜索</h1>
-		<p class="page-desc">在 {items.length} 条内容中查找角色、关卡、玩法、更新与剧情</p>
+		<p class="page-desc">在 {items.length} 条内容中查找角色、关卡、玩法、更新、剧情与世界观</p>
 
 		<div class="search-box">
 			<input

@@ -4,7 +4,7 @@ title: 替身使者
 rarity: S
 danger: 诡秘
 role: 特殊控制
-faction: ''
+faction: 无界
 description: 空条徐伦是S级诡秘禁闭者，来自异世界的替身使者，必杀可以造成{{伤害文本
 tags: ['特殊控制']
 image: /characters/kongtiaoxulun.jpg

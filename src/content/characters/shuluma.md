@@ -4,7 +4,7 @@ title: “毒蘑菇”
 rarity: A
 danger: 诡秘
 role: 召唤物增幅
-faction: ''
+faction: 暗潮
 description: 舒鲁玛是A级诡秘禁闭者，擅长召唤的禁闭者，必杀可以造成{{伤害文本
 tags: ['召唤物增幅']
 image: /characters/shuluma.jpg

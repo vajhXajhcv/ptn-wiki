@@ -4,7 +4,7 @@ title: 传奇导演
 rarity: S
 danger: 狂暴
 role: 物理输出
-faction: ''
+faction: 谵妄
 description: 黛伦是一名S级狂暴禁闭者，主要负责近战物理输出与清理敌人。在队伍中常担任物理输出位置。
 tags: ['狂暴', '物理输出', '爆发', '群攻']
 image: /characters/dailun.jpg

@@ -8,7 +8,7 @@
 // 合规提示：这些图片版权归自意网络所有。本脚本只作本地化预览/归档，正式上线前请取得官方授权
 // 或改用官网 CDN 直链 + 显著署名。
 
-import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import Jimp from 'jimp';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -185,12 +185,19 @@ async function main() {
 	for (const { item } of matched) dist[item.category] = (dist[item.category] || 0) + 1;
 	for (const [cat, n] of Object.entries(dist)) console.log(`     ${cat}: ${n}`);
 
-	console.log(NO_DOWNLOAD ? '2. 同步角色图片来源标注（不下载图片）...' : '2. 下载匹配角色的立绘...');
+	console.log(NO_DOWNLOAD ? '2. 同步角色图片来源标注（不下载图片）...' : '2. 下载匹配角色的立绘（已存在且已标注来源的自动跳过，--force 强制重跑）...');
+	const FORCE = process.argv.includes('--force');
 	const report = [];
 	await runInChunks(
 		matched,
 		async ({ char, item }) => {
 			try {
+				// 幂等跳过：本地图片已存在且 frontmatter 已标注来源时，不重复抓取
+				const localFile = join(PUBLIC_CHAR_DIR, `${char.slug}.jpg`);
+				if (!FORCE && !NO_DOWNLOAD && existsSync(localFile) && char.content.includes('imageSource:') && char.content.includes('url:')) {
+					report.push({ slug: char.slug, name: char.name, status: 'skipped', category: item.category, title: item.title });
+					return;
+				}
 				const detail = await api(`/news/${item.id}`);
 				const html = detail[0]?.content_html || '';
 				const imageUrl = chooseStaticImage(html);
@@ -229,8 +236,8 @@ async function main() {
 					newContent = newContent.replace(oldImageLine, `image: ${newImage}`);
 				}
 
-				// 更新或追加 imageSource 字段
-				const oldSourceBlock = char.content.match(/^imageSource:\n(?:[ \t]+[^\n]*\n)+/m)?.[0];
+				// 更新或追加 imageSource 字段（兼容 CRLF 行尾）
+				const oldSourceBlock = char.content.match(/^imageSource:[ \t]*\r?\n(?:[ \t]+[^\n]*\r?\n?)+/m)?.[0];
 				if (oldSourceBlock) {
 					newContent = newContent.replace(oldSourceBlock, sourceYaml + '\n');
 				} else if (oldImageLine) {

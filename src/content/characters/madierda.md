@@ -4,7 +4,7 @@ title: 执委会成员
 rarity: A
 danger: 精准
 role: 远程物理
-faction: ''
+faction: 怠惰
 description: 玛蒂尔达是A级精准禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
 tags: []
 image: /characters/madierda.jpg

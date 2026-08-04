@@ -4,7 +4,7 @@ title: 前锈火领袖
 rarity: S
 danger: 狂暴
 role: 进攻增幅
-faction: ''
+faction: 背离
 description: 唐是S级狂暴禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['进攻增幅', '攻速增幅', '特殊辅助']
 image: /characters/tang.jpg

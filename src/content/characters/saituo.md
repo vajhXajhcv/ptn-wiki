@@ -4,7 +4,7 @@ title: 守塔人
 rarity: S
 danger: 诡秘
 role: 真伤辅助
-faction: ''
+faction: 戾刃
 description: 赛托是S级诡秘禁闭者，擅长造成真实伤害的禁闭者。赛托无法自动恢复能量，而是普攻造成伤害后获得{{禁闭者数值
 tags: ['真伤辅助', '真伤增幅']
 image: /characters/saituo.jpg

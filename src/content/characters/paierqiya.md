@@ -4,7 +4,7 @@ title: 深海潜水员
 rarity: S
 danger: 狂暴
 role: 物理输出
-faction: ''
+faction: 不朽
 description: 派尔琪雅是S级狂暴禁闭者，被内海高度污染的禁闭者，必杀可以造成{{伤害文本
 tags: []
 image: /characters/paierqiya.jpg

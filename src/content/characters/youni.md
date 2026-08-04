@@ -4,7 +4,7 @@ title: 新城整容师
 rarity: A
 danger: 坚韧
 role: 防守增幅
-faction: ''
+faction: 执迷
 description: 尤尼是A级坚韧禁闭者，擅长防守的禁闭者，可以阻挡{{禁闭者数值
 tags: ['防守增幅', '防守辅助']
 image: /characters/youni.jpg

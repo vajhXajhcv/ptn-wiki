@@ -4,7 +4,7 @@ title: 推理小说家
 rarity: S
 danger: 精准
 role: 物伤辅助
-faction: ''
+faction: 靡音
 description: 克莱门汀是S级精准禁闭者，擅长造成物理伤害的禁闭者。伤害提升{{禁闭者数值
 tags: ['物伤辅助']
 image: /characters/kelaimenting.jpg

@@ -1,0 +1,84 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import DetailHeader from '../../components/DetailHeader.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { SITE_TITLE } from '../../consts';
+import { breadcrumbJsonLd, articleJsonLd } from '../../lib/seo';
+import '../../styles/global.css';
+
+export async function getStaticPaths() {
+	const lore = await getCollection('lore');
+	return lore.map((entry) => ({
+		params: { id: entry.id },
+		props: { entry },
+	}));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const title = `${entry.data.title} - 世界观 - ${SITE_TITLE}`;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const d = entry.data;
+
+const breadcrumbItems = [
+	{ label: '首页', href: '/' },
+	{ label: '世界观', href: '/lore' },
+	{ label: d.title },
+];
+
+const badges = [
+	{ label: d.chapter },
+	d.section && { label: d.section },
+	d.code && { label: d.code },
+].filter(Boolean) as { label: string }[];
+---
+
+<BaseLayout title={title} description={d.description}>
+	<main>
+		<Breadcrumbs items={breadcrumbItems} />
+
+		<DetailHeader title={d.title} description={d.description} badges={badges} />
+
+		{
+			d.source && (
+				<p class="data-source">
+					来源：
+					<a href={d.source} target="_blank" rel="noopener noreferrer">
+						无期迷途 BWiki · 零镜系统
+					</a>
+				</p>
+			)
+		}
+
+		<section class="lore-content card">
+			<Content />
+		</section>
+	</main>
+
+	<JsonLd data={breadcrumbJsonLd(breadcrumbItems, Astro.site)} />
+	<JsonLd data={articleJsonLd({ title, description: d.description, url: canonicalUrl, site: Astro.site })} />
+</BaseLayout>
+
+<style>
+	.data-source {
+		font-size: 0.9em;
+		color: rgb(var(--gray));
+		margin: -0.5em 0 1em;
+	}
+	.lore-content {
+		padding: 1.5em;
+	}
+	.lore-content :global(h3) {
+		margin: 1.2em 0 0.4em;
+		font-size: 1.05em;
+	}
+	.lore-content :global(h3:first-child) {
+		margin-top: 0;
+	}
+	.lore-content :global(p) {
+		line-height: 1.9;
+		margin: 0.4em 0;
+	}
+</style>

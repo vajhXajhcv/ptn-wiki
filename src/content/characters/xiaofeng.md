@@ -4,7 +4,7 @@ title: 白虎山君
 rarity: S
 danger: 狂暴
 role: 物理输出
-faction: ''
+faction: 无厌
 description: 啸风是S级狂暴禁闭者，擅长造成物理伤害的禁闭者。伤害提升{{禁闭者数值
 tags: []
 image: /characters/xiaofeng.jpg

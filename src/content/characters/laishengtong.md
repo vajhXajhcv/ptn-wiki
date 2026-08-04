@@ -4,7 +4,7 @@ title: 猫眼三姐妹
 rarity: S
 danger: 诡秘
 role: 进攻增幅
-faction: ''
+faction: 无界
 description: 来生瞳是S级诡秘禁闭者，来自异世界的怪盗，必杀可以造成{{伤害文本
 tags: ['进攻增幅', '刷新充能', '暴击增幅']
 ---

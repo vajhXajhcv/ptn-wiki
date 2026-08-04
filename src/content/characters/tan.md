@@ -4,7 +4,7 @@ title: 花园杀手
 rarity: B
 danger: 诡秘
 role: 攻速增幅
-faction: ''
+faction: 执迷
 description: 昙是一名B级诡秘禁闭者，主要负责破核与切入后排。在队伍中常担任攻速增幅<!-- 多个TAG用位置。
 tags: ['攻速增幅']
 image: /characters/tan.jpg

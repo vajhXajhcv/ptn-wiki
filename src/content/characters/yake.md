@@ -4,7 +4,7 @@ title: 砂船船长
 rarity: A
 danger: 狂暴
 role: 眩晕
-faction: ''
+faction: 执迷
 description: 雅可是A级狂暴禁闭者，擅长造成真实伤害的禁闭者。伤害提升{{禁闭者数值
 tags: ['眩晕']
 image: /characters/yake.jpg

@@ -4,7 +4,7 @@ title: “狐兔”侠盗成员
 rarity: A
 danger: 精准
 role: ''
-faction: ''
+faction: 无厌
 description: 普希拉是一名A级精准禁闭者，主要负责远程物理输出与打击关键目标。在队伍中常担任<!-- 多个TAG用位置。
 tags: []
 image: /characters/puxila.jpg

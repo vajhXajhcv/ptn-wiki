@@ -4,7 +4,7 @@ title: 游轮明珠
 rarity: S
 danger: 异能
 role: 法伤辅助
-faction: ''
+faction: 靡音
 description: 蜜莉是S级异能禁闭者，擅长法术输出的禁闭者。释放必杀时，蜜莉对指定范围内单个敌人附加{{术语查看
 tags: ['法伤辅助']
 image: /characters/mili.jpg

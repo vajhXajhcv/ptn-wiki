@@ -4,7 +4,7 @@ title: 古墓猎人
 rarity: A
 danger: 狂暴
 role: 治疗辅助
-faction: ''
+faction: 破坏
 description: 黎莎洛是A级狂暴禁闭者，擅长支援的禁闭者。攻击提升{{禁闭者数值
 tags: ['治疗辅助', '召唤物辅助']
 image: /characters/lisuoluo.jpg

@@ -4,7 +4,7 @@ title: 火焰操控者
 rarity: A
 danger: 异能
 role: ''
-faction: ''
+faction: 异质
 description: 伊格尼是一名A级异能禁闭者，主要负责法术伤害与控场。在队伍中常担任<!-- 多个TAG用位置。
 tags: []
 image: /characters/yigeni.jpg

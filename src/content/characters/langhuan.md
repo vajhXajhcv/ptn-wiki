@@ -4,7 +4,7 @@ title: 锈河围猎者
 rarity: A
 danger: 精准
 role: 物伤辅助
-faction: ''
+faction: 破坏
 description: 狼獾是一名A级精准禁闭者，主要负责远程物理输出与打击关键目标。在队伍中常担任物伤辅助位置。
 tags: ['物伤辅助', '眩晕', '普攻伤害增幅', '进攻增幅']
 image: /characters/langhuan.jpg

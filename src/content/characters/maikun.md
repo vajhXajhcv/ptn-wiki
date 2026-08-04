@@ -4,7 +4,7 @@ title: 新城艺术中介
 rarity: A
 danger: 诡秘
 role: 进攻增幅
-faction: ''
+faction: 背离
 description: 麦昆是A级诡秘禁闭者，擅长召唤的禁闭者，必杀可以造成{{伤害文本
 tags: ['进攻增幅', '召唤物增幅', '特殊增幅']
 image: /characters/maikun.jpg

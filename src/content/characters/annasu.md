@@ -4,7 +4,7 @@ title: 替身使者
 rarity: A
 danger: 坚韧
 role: 防守增幅
-faction: ''
+faction: 无界
 description: 安那苏是A级坚韧禁闭者，来自异世界的替身使者，可以阻挡{{禁闭者数值
 tags: ['防守增幅', '进攻辅助', '物伤辅助', '防守辅助']
 image: /characters/annasu.jpg

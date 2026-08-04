@@ -4,7 +4,7 @@ title: 军团骨干
 rarity: A
 danger: 狂暴
 role: 防守增幅
-faction: ''
+faction: 愤怒
 description: 赫罗是一名A级狂暴禁闭者，主要负责近战物理输出与清理敌人。在队伍中常担任防守增幅位置。
 tags: ['防守增幅', '自我治疗']
 image: /characters/heluo.jpg

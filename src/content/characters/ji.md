@@ -4,7 +4,7 @@ title: 花园杀手
 rarity: A
 danger: 诡秘
 role: 法伤辅助
-faction: ''
+faction: 执迷
 description: 蓟是A级诡秘禁闭者，擅长造成法术伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['法伤辅助', '进攻辅助']
 image: /characters/ji.jpg

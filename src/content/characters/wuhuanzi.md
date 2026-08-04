@@ -4,7 +4,7 @@ title: 东洲游医
 rarity: A
 danger: 异能
 role: 法术输出
-faction: ''
+faction: 怠惰
 description: 无患子是A级异能禁闭者，擅长造成法术伤害的禁闭者，必杀可以造成{{伤害文本
 aliases: ['Wuhuanzi']
 tags: []

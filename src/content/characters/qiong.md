@@ -4,7 +4,7 @@ title: 摇滚乐手
 rarity: B
 danger: 异能
 role: 眩晕
-faction: ''
+faction: 愤怒
 description: 琼是B级异能禁闭者，擅长造成法术伤害的禁闭者。琼有多种方式对敌人附加{{术语查看
 tags: ['眩晕', '法伤辅助']
 image: /characters/qiong.jpg

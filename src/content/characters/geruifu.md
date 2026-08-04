@@ -4,7 +4,7 @@ title: 鬼新娘
 rarity: S
 danger: 诡秘
 role: 进攻辅助
-faction: ''
+faction: 靡音
 description: 格芮芙是S级诡秘禁闭者，擅长物理输出的禁闭者，必杀可以造成{{伤害文本
 tags: ['进攻辅助', '特殊辅助']
 image: /characters/geruifu.jpg

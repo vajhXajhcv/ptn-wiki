@@ -4,7 +4,7 @@ title: “轮回魔女”
 rarity: S
 danger: 启迪
 role: 召唤物辅助
-faction: ''
+faction: 谵妄
 description: 伊蕾娅是S级启迪禁闭者，擅长召唤的禁闭者。进入战斗时，伊蕾娅在距离最近的友方可行进地格召唤{{术语查看
 tags: ['召唤物辅助', '普攻伤害辅助', '法伤辅助', '净化']
 image: /characters/yileiya.jpg

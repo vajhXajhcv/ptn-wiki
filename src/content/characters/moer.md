@@ -4,7 +4,7 @@ title: 网络安全专家
 rarity: S
 danger: 坚韧
 role: 物伤辅助
-faction: ''
+faction: 暗潮
 description: 摩尔是S级坚韧禁闭者，擅长防守的禁闭者，可以同时阻挡{{禁闭者数值
 tags: ['物伤辅助', '护盾辅助', '控制免疫']
 image: /characters/moer.jpg

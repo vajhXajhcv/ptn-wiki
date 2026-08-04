@@ -4,7 +4,7 @@ title: 萨克斯手
 rarity: A
 danger: 异能
 role: 法伤辅助
-faction: ''
+faction: 谵妄
 description: 艾可是A级异能禁闭者，擅长造成法术伤害的禁闭者，若艾可不进行普攻，则每{{禁闭者数值
 tags: ['法伤辅助', '减速']
 image: /characters/aike.jpg

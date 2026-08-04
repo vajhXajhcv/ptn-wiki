@@ -4,7 +4,7 @@ title: 四叶草帮主 / 天生赢家
 rarity: A
 danger: 精准
 role: ''
-faction: ''
+faction: 愤怒
 description: 露莉艾卡是一名A级精准禁闭者，主要负责远程物理输出与打击关键目标。在队伍中常担任<!-- 多个TAG用位置。
 tags: []
 image: /characters/luliaika.jpg

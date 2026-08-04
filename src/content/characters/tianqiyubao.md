@@ -4,7 +4,7 @@ title: 替身使者
 rarity: A
 danger: 异能
 role: 减速
-faction: ''
+faction: 无界
 description: 天气预报是A级异能禁闭者，来自异世界的替身使者，必杀可以造成{{伤害文本
 tags: ['减速', '眩晕']
 image: /characters/tianqiyubao.jpg

@@ -4,7 +4,7 @@ title: 智能女仆
 rarity: B
 danger: 诡秘
 role: 刷新充能
-faction: ''
+faction: 愤怒
 description: 雷比尼斯是一名B级诡秘禁闭者，主要负责破核与切入后排。在队伍中常担任刷新充能位置。
 tags: ['刷新充能', '进攻增幅']
 image: /characters/leibinisi.jpg

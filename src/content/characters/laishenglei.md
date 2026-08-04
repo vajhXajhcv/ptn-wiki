@@ -4,7 +4,7 @@ title: 猫眼三姐妹
 rarity: S
 danger: 异能
 role: 进攻辅助
-faction: ''
+faction: 无界
 description: 来生泪是S级异能禁闭者，来自异世界的怪盗，必杀可以造成{{伤害文本
 tags: ['进攻辅助', '眩晕', '减速', '法伤辅助']
 ---

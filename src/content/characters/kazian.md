@@ -4,7 +4,7 @@ title: 游轮调酒师
 rarity: A
 danger: 启迪
 role: 伤害分摊
-faction: ''
+faction: 怠惰
 description: 卡兹安是A级启迪禁闭者，擅长支援的禁闭者。进入战斗时，卡兹安获得{{术语查看
 tags: ['伤害分摊', '进攻辅助', '复活']
 image: /characters/kazian.jpg

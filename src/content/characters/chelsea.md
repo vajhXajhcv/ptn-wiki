@@ -4,7 +4,7 @@ title: 新城富豪
 rarity: A
 danger: 坚韧
 role: 防守增幅
-faction: ''
+faction: 无厌
 description: 切尔西伯爵是一名A级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任防守增幅位置。
 tags: ['防守增幅', '石化']
 image: /characters/chelsea.jpg

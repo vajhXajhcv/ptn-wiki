@@ -4,7 +4,7 @@ title: 凶宅中介
 rarity: A
 danger: 坚韧
 role: 防守增幅
-faction: ''
+faction: 怠惰
 description: 卢米尼塔是A级坚韧禁闭者，擅长防守的禁闭者，可以阻挡{{禁闭者数值
 tags: ['防守增幅', '眩晕', '特殊辅助', '特殊控制']
 image: /characters/luminita.jpg

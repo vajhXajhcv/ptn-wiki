@@ -4,7 +4,7 @@ title: 厨师
 rarity: B
 danger: 异能
 role: 冰冻
-faction: ''
+faction: 背离
 description: 开尔文是B级异能禁闭者，擅长干扰的禁闭者。开尔文普攻对同一敌人造成{{禁闭者数值
 tags: ['冰冻', '减速', '防守辅助']
 image: /characters/kaierwen.jpg

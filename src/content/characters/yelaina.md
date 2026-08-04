@@ -4,7 +4,7 @@ title: 贴身管家
 rarity: S
 danger: 启迪
 role: 进攻辅助
-faction: ''
+faction: 荒竭
 description: 耶莱娜是S级启迪禁闭者，擅长支援的禁闭者。{{术语查看
 tags: ['进攻辅助', '暴击辅助']
 image: /characters/yelaina.jpg

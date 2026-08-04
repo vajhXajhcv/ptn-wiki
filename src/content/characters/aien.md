@@ -4,7 +4,7 @@ title: 彼岸诊所创始人 / 天才医师
 rarity: A
 danger: 诡秘
 role: 物伤辅助
-faction: ''
+faction: 愤怒
 description: 艾恩是一名A级诡秘禁闭者，主要负责破核与切入后排。在队伍中常担任物伤辅助位置。
 tags: ['物伤辅助', '物伤增幅']
 image: /characters/aien.jpg

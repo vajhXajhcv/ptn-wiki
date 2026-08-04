@@ -4,7 +4,7 @@ title: 卫星城农民
 rarity: B
 danger: 狂暴
 role: 攻速增幅
-faction: ''
+faction: 无厌
 description: 胡椒是B级狂暴禁闭者，擅长造成物理伤害的禁闭者，伤害提升{{禁闭者数值
 tags: ['攻速增幅', '进攻增幅', '物伤辅助']
 image: /characters/hujiao.jpg

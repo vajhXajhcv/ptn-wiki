@@ -4,7 +4,7 @@ title: 鉴证科分析员
 rarity: A
 danger: 诡秘
 role: 物伤辅助
-faction: ''
+faction: 执迷
 description: 诺玛是A级诡秘禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['物伤辅助', '解除隐匿', '减速', '眩晕']
 image: /characters/nuoma.jpg

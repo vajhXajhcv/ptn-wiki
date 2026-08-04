@@ -1,0 +1,136 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Card from '../../components/Card.astro';
+import CardGrid from '../../components/CardGrid.astro';
+import Badge from '../../components/Badge.astro';
+import { SITE_TITLE } from '../../consts';
+import { FACTIONS, RARITY_ORDER } from '../../lib/constants';
+import '../../styles/global.css';
+
+const characters = await getCollection('characters');
+
+const byFaction = new Map<string, typeof characters>();
+for (const c of characters) {
+	const f = c.data.faction || '';
+	if (!f) continue;
+	if (!byFaction.has(f)) byFaction.set(f, []);
+	byFaction.get(f)!.push(c);
+}
+for (const list of byFaction.values()) {
+	list.sort((a, b) => {
+		const diff = (RARITY_ORDER[a.data.rarity || 'B'] ?? 2) - (RARITY_ORDER[b.data.rarity || 'B'] ?? 2);
+		if (diff !== 0) return diff;
+		return a.data.name.localeCompare(b.data.name, 'zh-CN');
+	});
+}
+
+const orderedFactions = FACTIONS.filter((f) => byFaction.has(f));
+const unfactioned = characters.filter((c) => !c.data.faction);
+---
+
+<BaseLayout
+	title={`阵营图鉴 - ${SITE_TITLE}`}
+	description="无期迷途禁闭者阵营总览：破坏、执迷、无厌、背离、混沌等十六大狂厄阵营及其成员一览。"
+>
+	<main>
+		<h1 class="page-title">阵营图鉴</h1>
+		<p class="page-desc">
+			禁闭者按狂厄阵营划分，共 {orderedFactions.length} 个阵营、{characters.length - unfactioned.length} 名已确认成员。
+			阵营设定的世界观背景可参阅<a href="/lore">世界观档案</a>。
+		</p>
+
+		<nav class="faction-nav">
+			{orderedFactions.map((f) => <a href={`#${f}`}>{f}<span>{byFaction.get(f)!.length}</span></a>)}
+		</nav>
+
+		{orderedFactions.map((faction) => (
+			<section class="faction-section" id={faction}>
+				<h2 class="faction-title">
+					{ faction }
+					<Badge variant="tag">{byFaction.get(faction)!.length} 名</Badge>
+				</h2>
+				<CardGrid>
+					{byFaction.get(faction)!.map((c) => (
+						<Card
+							href={`/characters/${c.id}/`}
+							title={c.data.name}
+							subtitle={c.data.title}
+							image={c.data.image}
+							imageAlt={c.data.name}
+							badges={[
+								c.data.rarity && { label: `${c.data.rarity}级`, variant: `rarity-${c.data.rarity.toLowerCase()}` as const },
+								c.data.danger && { label: c.data.danger },
+							].filter(Boolean) as { label: string; variant?: string }[]}
+						/>
+					))}
+				</CardGrid>
+			</section>
+		))}
+
+		{unfactioned.length > 0 && (
+			<section class="faction-section" id="未确认">
+				<h2 class="faction-title">
+					待确认
+					<Badge variant="tag">{unfactioned.length} 名</Badge>
+				</h2>
+				<p class="page-desc">以下角色的阵营信息官方尚未公布，实装后补全。</p>
+				<CardGrid>
+					{unfactioned.map((c) => (
+						<Card
+							href={`/characters/${c.id}/`}
+							title={c.data.name}
+							subtitle={c.data.title}
+							image={c.data.image}
+							imageAlt={c.data.name}
+							badges={[
+								c.data.rarity && { label: `${c.data.rarity}级`, variant: `rarity-${c.data.rarity.toLowerCase()}` as const },
+								c.data.danger && { label: c.data.danger },
+							].filter(Boolean) as { label: string; variant?: string }[]}
+						/>
+					))}
+				</CardGrid>
+			</section>
+		)}
+	</main>
+</BaseLayout>
+
+<style>
+	.faction-nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		margin-bottom: 2em;
+	}
+	.faction-nav a {
+		padding: 0.35em 0.8em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 999px;
+		background: var(--bg-card);
+		font-size: 0.9em;
+		text-decoration: none;
+		color: rgb(var(--black));
+	}
+	.faction-nav a:hover {
+		border-color: var(--accent);
+		color: var(--accent);
+	}
+	.faction-nav a span {
+		margin-left: 0.4em;
+		font-size: 0.8em;
+		color: rgb(var(--gray));
+	}
+	.faction-section {
+		margin-bottom: 2.5em;
+		scroll-margin-top: 80px;
+	}
+	.faction-title {
+		display: flex;
+		align-items: center;
+		gap: 0.6em;
+		font-size: 1.4em;
+		margin: 0 0 0.8em;
+		padding-bottom: 0.4em;
+		border-bottom: 2px solid var(--accent);
+	}
+</style>

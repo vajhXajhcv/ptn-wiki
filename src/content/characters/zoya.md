@@ -4,7 +4,7 @@ title: 军团领袖
 rarity: S
 danger: 狂暴
 role: 物理输出
-faction: 军团
+faction: 破坏
 description: 近战物理输出，必杀提供范围伤害与攻速提升，被动可叠加攻速并触发真实伤害，是推图与破碎防线的稳定主C。
 aliases: ['Zoya']
 tags: ['狂暴', '物理输出', '群攻', '真实伤害']

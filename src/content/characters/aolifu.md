@@ -4,7 +4,7 @@ title: 玩偶之家
 rarity: A
 danger: 异能
 role: 进攻辅助
-faction: ''
+faction: 背离
 description: 奥利弗是A级异能禁闭者，擅长造成法术伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['进攻辅助']
 image: /characters/aolifu.jpg

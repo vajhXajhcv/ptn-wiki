@@ -4,7 +4,7 @@ title: 替身使者
 rarity: A
 danger: 精准
 role: 治疗辅助
-faction: ''
+faction: 无界
 description: F.F.是A级精准禁闭者，来自异世界的替身使者。攻击提升{{禁闭者数值
 tags: ['治疗辅助']
 image: /characters/ff.jpg

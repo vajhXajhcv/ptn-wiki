@@ -87,7 +87,7 @@ function cleanTags(tagText) {
 		.slice(0, 4);
 }
 
-function buildContent(name, title, rarity, danger, roleTag, feature) {
+function buildContent(name, title, rarity, danger, roleTag, feature, slug) {
 	const dangerDesc = {
 		坚韧: '前排承伤，利用阻挡与护盾保护队友',
 		狂暴: '近战物理输出，负责清理敌人与站桩输出',
@@ -103,7 +103,11 @@ function buildContent(name, title, rarity, danger, roleTag, feature) {
 		? `${name}是${rarity}级${danger}禁闭者，${cleanFeature}`
 		: `${name}是${rarity}级${danger}禁闭者，${dangerDesc}。`;
 
-	return `---\nname: ${name}\ntitle: ${title}\nrarity: ${rarity}\ndanger: ${danger}\nrole: ${tags[0] || ''}\nfaction: ''\ndescription: ${description}\ntags: [${tags.map((t) => `'${t}'`).join(', ')}]\nimage: /characters/${slugify(name)}.jpg\n---\n\n## 基础信息\n\n${name}是一名${rarity}级${danger}禁闭者，${dangerDesc}。${cleanFeature ? `其核心机制可以概括为：${cleanFeature}` : ''}\n\n## 技能要点\n\n- **必杀**：提供${danger === '启迪' ? '治疗或增益效果' : danger === '坚韧' ? '护盾或减伤效果' : '关键伤害或控制效果'}。\n- **被动**：增强自身${danger === '启迪' ? '治疗能力或提供额外辅助' : '输出或生存能力'}。\n- **特性**：${cleanFeature || dangerDesc}。\n\n## 使用建议\n\n1. 根据关卡需求安排站位，充分发挥${danger}职业的优势。\n2. 优先提升与核心机制相关的技能等级。\n3. 搭配合适的队友与烙印，能在主线与破碎防线中稳定发挥。\n\n## 烙印推荐\n\n- 通用向：亡者之河 + 重逢之日\n- 功能向：回廊空响 + 辛迪加·荣耀\n`;
+	const optionalLines = [title ? `title: ${title}` : null, tags[0] ? `role: ${tags[0]}` : null]
+		.filter(Boolean)
+		.join('\n');
+
+	return `---\nname: ${name}\n${optionalLines ? optionalLines + '\n' : ''}rarity: ${rarity}\ndanger: ${danger}\nfaction: ''\ndescription: ${description}\ntags: [${tags.map((t) => `'${t}'`).join(', ')}]\nimage: /characters/${slug}.jpg\n---\n\n## 基础信息\n\n${name}是一名${rarity}级${danger}禁闭者，${dangerDesc}。${cleanFeature ? `其核心机制可以概括为：${cleanFeature}` : ''}\n\n## 技能要点\n\n- **必杀**：提供${danger === '启迪' ? '治疗或增益效果' : danger === '坚韧' ? '护盾或减伤效果' : '关键伤害或控制效果'}。\n- **被动**：增强自身${danger === '启迪' ? '治疗能力或提供额外辅助' : '输出或生存能力'}。\n- **特性**：${cleanFeature || dangerDesc}。\n\n## 使用建议\n\n1. 根据关卡需求安排站位，充分发挥${danger}职业的优势。\n2. 优先提升与核心机制相关的技能等级。\n3. 搭配合适的队友与烙印，能在主线与破碎防线中稳定发挥。\n\n## 烙印推荐\n\n- 通用向：亡者之河 + 重逢之日\n- 功能向：回廊空响 + 辛迪加·荣耀\n`;
 }
 
 async function fetchRaw(page, attempt = 1) {
@@ -195,7 +199,7 @@ async function main() {
 			const title = cleanTitle(params['头衔']);
 			const roleTag = params['角色TAG'] || params['伤害类型'] || '';
 			const feature = params['特性'] || '';
-			const md = buildContent(name, title, rarity, danger, roleTag, feature);
+			const md = buildContent(name, title, rarity, danger, roleTag, feature, slug);
 			writeFileSync(outPath, md, 'utf8');
 			created++;
 			console.log(`✓ ${name} (${rarity} ${danger}) -> ${slug}`);

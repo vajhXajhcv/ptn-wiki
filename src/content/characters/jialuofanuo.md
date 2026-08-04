@@ -4,7 +4,7 @@ title: 孀居裁缝
 rarity: A
 danger: 诡秘
 role: 进攻增幅
-faction: ''
+faction: 怠惰
 description: 加洛法诺是A级诡秘禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['进攻增幅']
 image: /characters/jialuofanuo.jpg

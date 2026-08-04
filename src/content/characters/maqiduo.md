@@ -4,7 +4,7 @@ title: 银行经理
 rarity: B
 danger: 启迪
 role: 治疗辅助
-faction: ''
+faction: 异质
 description: 玛奇朵是B级启迪禁闭者，擅长支援的禁闭者。能量恢复速度提升{{禁闭者数值
 tags: ['治疗辅助', '防守辅助']
 image: /characters/maqiduo.jpg

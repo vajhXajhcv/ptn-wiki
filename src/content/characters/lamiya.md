@@ -4,7 +4,7 @@ title: “海洋圣女”
 rarity: A
 danger: 异能
 role: 进攻辅助
-faction: ''
+faction: 异质
 description: 拉弥亚是A级异能禁闭者，擅长造成法术伤害的禁闭者。伤害提升{{禁闭者数值
 tags: ['进攻辅助', '减速']
 image: /characters/lamiya.jpg

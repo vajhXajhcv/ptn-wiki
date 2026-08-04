@@ -4,7 +4,7 @@ title: 神话学者
 rarity: S
 danger: 启迪
 role: 治疗辅助
-faction: ''
+faction: 谵妄
 description: 杜若是S级启迪禁闭者，擅长支援的禁闭者。进入战斗时，能量充盈。
 aliases: ['Duru']
 tags: ['治疗辅助', '复活']

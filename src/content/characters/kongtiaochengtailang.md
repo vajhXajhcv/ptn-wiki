@@ -4,7 +4,7 @@ title: 替身使者
 rarity: S
 danger: 狂暴
 role: 刷新充能
-faction: ''
+faction: 无界
 description: 空条承太郎是S级狂暴禁闭者，来自异世界的替身使者，必杀可以造成核心伤害。伤害提升{{禁闭者数值
 tags: ['刷新充能', '物伤辅助', '时间暂停']
 image: /characters/kongtiaochengtailang.jpg

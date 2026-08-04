@@ -4,7 +4,7 @@ title: 狡诈之刃
 rarity: B
 danger: 诡秘
 role: 破核/辅助
-faction: 辛迪加
+faction: 混沌
 description: 普级破核能手，必杀可造成范围破核并降低敌人防御，是性价比极高的功能位。
 tags: ['诡秘', '破核', '减防', '性价比']
 image: /characters/che.jpg

@@ -4,7 +4,7 @@ title: 神秘调香师
 rarity: A
 danger: 启迪
 role: 治疗辅助
-faction: ''
+faction: 执迷
 description: 卡西娅是A级启迪禁闭者，擅长支援的禁闭者，能量恢复速度提升{{禁闭者数值
 tags: ['治疗辅助', '攻速辅助']
 image: /characters/kaxiya.jpg

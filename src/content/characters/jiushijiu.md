@@ -4,7 +4,7 @@ title: 九十九号实验体 / 战斗狂热分子
 rarity: A
 danger: 狂暴
 role: 吸血
-faction: ''
+faction: 破坏
 description: 九十九是一名A级狂暴禁闭者，主要负责近战物理输出与清理敌人。在队伍中常担任吸血位置。
 tags: ['吸血', '攻速增幅', '进攻增幅', '致死免疫']
 image: /characters/jiushijiu.jpg

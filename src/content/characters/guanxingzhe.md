@@ -4,7 +4,7 @@ title: 探寻之人
 rarity: S
 danger: 异能
 role: 召唤物辅助
-faction: ''
+faction: 异质
 description: 观星者是一名S级异能禁闭者，主要负责法术伤害与控场。在队伍中常担任召唤物辅助<!-- 多个TAG用位置。
 aliases: ['Stargazer']
 tags: ['召唤物辅助']

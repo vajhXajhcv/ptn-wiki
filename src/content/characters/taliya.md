@@ -4,7 +4,7 @@ title: 带货博主
 rarity: A
 danger: 精准
 role: 减速
-faction: ''
+faction: 无厌
 description: 塔利娅是A级精准禁闭者，擅长造成物理伤害的禁闭者。塔利娅对{{术语查看
 tags: ['减速', '攻速增幅', '物伤辅助']
 image: /characters/taliya.jpg

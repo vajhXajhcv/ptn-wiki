@@ -4,7 +4,7 @@ title: 坎贝尔暗卫
 rarity: S
 danger: 狂暴
 role: 进攻辅助
-faction: ''
+faction: 荒竭
 description: 西涅克斯是S级狂暴禁闭者，擅长造成真实伤害的禁闭者。伤害提升{{禁闭者数值
 tags: ['进攻辅助', '真伤辅助']
 ---

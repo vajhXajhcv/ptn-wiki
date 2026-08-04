@@ -4,7 +4,7 @@ title: 幻影舞者
 rarity: S
 danger: 启迪
 role: 治疗辅助
-faction: 嘉年华剧团
+faction: 执迷
 description: 强力的群体治疗禁闭者，必杀可为范围内友方持续回复生命值，是高压关卡中的核心生存保障。
 aliases: ['Hamel']
 tags: ['启迪', '治疗', '辅助']

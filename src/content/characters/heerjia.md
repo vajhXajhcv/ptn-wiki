@@ -4,7 +4,7 @@ title: “鬣狗”
 rarity: A
 danger: 精准
 role: 远程物理
-faction: ''
+faction: 荒竭
 description: 荷尔加是A级精准禁闭者，擅长造成真实伤害的禁闭者。伤害提升{{禁闭者数值
 tags: []
 ---

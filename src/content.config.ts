@@ -116,4 +116,17 @@ const stories = defineCollection({
 	}),
 });
 
-export const collections = { characters, stages, gameModes, updates, stories };
+const lore = defineCollection({
+	loader: glob({ base: './src/content/lore', pattern: '**/*.{md,mdx}' }),
+	schema: z.object({
+		title: z.string(),
+		chapter: z.enum(['入夜纪年', '狄斯城', '狂厄']),
+		section: z.string().optional(),
+		code: z.string().optional(),
+		description: z.string(),
+		source: z.string().url().optional(),
+		tags: z.array(z.string()).optional(),
+	}),
+});
+
+export const collections = { characters, stages, gameModes, updates, stories, lore };

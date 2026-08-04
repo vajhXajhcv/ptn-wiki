@@ -4,7 +4,7 @@ title: 涅槃集团实习生
 rarity: A
 danger: 狂暴
 role: 进攻增幅
-faction: ''
+faction: 暗潮
 description: 瑞思是A级狂暴禁闭者，擅长造成物理伤害的禁闭者，伤害提升{{禁闭者数值
 tags: ['进攻增幅', '普攻增幅']
 image: /characters/ruisi.jpg

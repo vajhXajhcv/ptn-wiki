@@ -4,7 +4,7 @@ title: 桌游设计师
 rarity: S
 danger: 异能
 role: 法伤辅助
-faction: ''
+faction: 谵妄
 description: 爱缇是S级异能禁闭者，擅长造成法术伤害的禁闭者。爱缇进行普攻时，有{{禁闭者数值
 aliases: ['Ariel']
 tags: ['法伤辅助', '技能辅助', '攻速辅助']

@@ -4,7 +4,7 @@ title: 新城演员 / 双重人格
 rarity: A
 danger: 异能
 role: ''
-faction: ''
+faction: 混沌
 description: 露薇娅·蕾是一名A级异能禁闭者，主要负责法术伤害与控场。在队伍中常担任<!-- 多个TAG用位置。
 aliases: ['露薇娅']
 tags: []

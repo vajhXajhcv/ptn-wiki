@@ -4,7 +4,7 @@ title: 旧狄斯军上将
 rarity: S
 danger: 精准
 role: 进攻增幅
-faction: ''
+faction: 戾刃
 description: 奥古斯特是S级精准禁闭者，擅长造成真实伤害的禁闭者。奥古斯特无法自动恢复能量，而是每隔2秒获得{{禁闭者数值
 tags: ['进攻增幅', '真伤辅助']
 image: /characters/aogusite.jpg

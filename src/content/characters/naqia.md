@@ -4,7 +4,7 @@ title: 蛇语者
 rarity: S
 danger: 异能
 role: 法术输出
-faction: ''
+faction: 执迷
 description: 娜恰是一名S级异能禁闭者，主要负责法术伤害与控场。在队伍中常担任法术输出位置。
 aliases: ['Nacha']
 tags: ['异能', '法术输出', '群攻', '破核']

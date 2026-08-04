@@ -1,0 +1,92 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Card from '../../components/Card.astro';
+import CardGrid from '../../components/CardGrid.astro';
+import FilterBar from '../../components/FilterBar.astro';
+import { SITE_TITLE } from '../../consts';
+import '../../styles/global.css';
+
+const CHAPTER_ORDER = ['入夜纪年', '狄斯城', '狂厄'];
+
+const lore = (await getCollection('lore')).sort((a, b) => {
+	const chapterDiff = CHAPTER_ORDER.indexOf(a.data.chapter) - CHAPTER_ORDER.indexOf(b.data.chapter);
+	if (chapterDiff !== 0) return chapterDiff;
+	return (a.data.code || '').localeCompare(b.data.code || '', undefined, { numeric: true });
+});
+
+const totalCount = lore.length;
+---
+
+<BaseLayout
+	title={`世界观 - ${SITE_TITLE}`}
+	description="无期迷途世界观设定集：入夜纪年时间线、狄斯城地理与势力、狂厄与禁闭者研究档案，来源自游戏内零镜系统。"
+>
+	<main>
+		<h1 class="page-title">世界观</h1>
+		<p class="page-desc">
+			共 {totalCount} 条设定档案，整理自游戏内「零镜系统」，文本来源无期迷途 BWiki。
+		</p>
+
+		<FilterBar>
+			<input type="text" id="search" placeholder="搜索标题、编号或关键词..." />
+			<div class="filter-group" data-filter="chapter">
+				<button class="active" data-value="all">全部</button>
+				{CHAPTER_ORDER.map((c) => <button data-value={c}>{c}</button>)}
+			</div>
+			<span id="count" class="filter-count">显示 {totalCount} 个</span>
+		</FilterBar>
+
+		<CardGrid id="lore-grid">
+			{lore.map((entry) => (
+				<Card
+					href={`/lore/${entry.id}/`}
+					title={entry.data.title}
+					subtitle={entry.data.code}
+					description={`${entry.data.description.slice(0, 60)}...`}
+					badges={[
+						{ label: entry.data.chapter },
+						entry.data.section && { label: entry.data.section },
+					].filter(Boolean) as { label: string }[]}
+					data-chapter={entry.data.chapter}
+					data-search={`${entry.data.title} ${entry.data.code || ''} ${entry.data.section || ''} ${entry.data.description}`}
+				/>
+			))}
+		</CardGrid>
+	</main>
+</BaseLayout>
+
+<script is:inline>
+	(function () {
+		const search = document.getElementById('search');
+		const count = document.getElementById('count');
+		const cards = Array.from(document.querySelectorAll('#lore-grid .card'));
+		let activeChapter = 'all';
+
+		function filter() {
+			const term = search.value.trim().toLowerCase();
+			let visible = 0;
+
+			cards.forEach((card) => {
+				const chapterMatch = activeChapter === 'all' || card.dataset.chapter === activeChapter;
+				const textMatch = !term || (card.dataset.search || '').toLowerCase().includes(term);
+				const show = chapterMatch && textMatch;
+				card.style.display = show ? '' : 'none';
+				if (show) visible++;
+			});
+
+			count.textContent = `显示 ${visible} 个`;
+		}
+
+		document.querySelectorAll('[data-filter="chapter"] button').forEach((btn) => {
+			btn.addEventListener('click', () => {
+				document.querySelectorAll('[data-filter="chapter"] button').forEach((b) => b.classList.remove('active'));
+				btn.classList.add('active');
+				activeChapter = btn.dataset.value || 'all';
+				filter();
+			});
+		});
+
+		search.addEventListener('input', filter);
+	})();
+</script>

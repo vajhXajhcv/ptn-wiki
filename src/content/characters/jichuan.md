@@ -4,7 +4,7 @@ title: 朔雪山庄庄主
 rarity: S
 danger: 启迪
 role: 进攻辅助
-faction: ''
+faction: 谵妄
 description: 霁川是S级启迪禁闭者，战斗开始时，霁川调动力量开启{{术语查看
 tags: ['进攻辅助', '物伤辅助', '能量恢复', '防守辅助']
 image: /characters/jichuan.jpg

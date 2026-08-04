@@ -4,14 +4,14 @@ title: 舞狮传人
 rarity: S
 danger: 坚韧
 role: 进攻辅助
-faction: ''
+faction: 怠惰
 description: 嗷呜是一名S级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任进攻辅助位置。
 tags: ['进攻辅助', '暴击辅助', '防守增幅']
 image: /characters/aowu.jpg
 imageSource:
   category: MBCC生日会
   title: 【MBCC生日会】丨「嗷呜」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/850
+  url: https://wqmt.aisnogames.com/#/news/2011
 ---
 
 ## 基础信息

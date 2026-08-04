@@ -62,7 +62,7 @@ async function main() {
 	for (const file of files) {
 		const filePath = join(UPDATES_DIR, file);
 		const content = readFileSync(filePath, 'utf8');
-		const descMatch = content.match(/^description:\s*(.*)$/m);
+		const descMatch = content.match(/^description:[ \t]*(.*)$/m);
 		const currentDesc = descMatch ? descMatch[1].trim() : '';
 
 		if (currentDesc && currentDesc !== "''") {

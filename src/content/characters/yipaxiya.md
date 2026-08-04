@@ -4,7 +4,7 @@ title: 费沙研究员
 rarity: S
 danger: 精准
 role: 召唤物辅助
-faction: ''
+faction: 荒竭
 description: 伊帕希娅是S级精准禁闭者，擅长召唤的禁闭者。战斗开始时，伊帕希娅在自身周围九宫地格内友方可行进地格召唤{{术语查看
 tags: ['召唤物辅助']
 image: /characters/yipaxiya.jpg

@@ -4,7 +4,7 @@ title: 未知渴求者
 rarity: S
 danger: 精准
 role: 特殊增幅
-faction: ''
+faction: 不朽
 description: 德雷雅是S级精准禁闭者，被内海高度污染的禁闭者，必杀可以造成{{伤害文本
 tags: ['特殊增幅', '特殊辅助']
 image: /characters/deleiya.jpg

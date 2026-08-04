@@ -4,7 +4,7 @@ title: 猫眼三姐妹
 rarity: A
 danger: 启迪
 role: 治疗辅助
-faction: ''
+faction: 无界
 description: 来生爱是A级启迪禁闭者，来自异世界的怪盗。进入战斗时，来生爱操作自己制作的{{术语查看
 tags: ['治疗辅助', '进攻辅助']
 ---

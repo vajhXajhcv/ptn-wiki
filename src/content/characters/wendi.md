@@ -4,7 +4,7 @@ title: 锈河沿岸电锯狂人
 rarity: A
 danger: 狂暴
 role: 进攻增幅
-faction: ''
+faction: 破坏
 description: 温蒂是一名A级狂暴禁闭者，主要负责近战物理输出与清理敌人。在队伍中常担任进攻增幅<!-- 多个TAG用位置。
 tags: ['进攻增幅']
 image: /characters/wendi.jpg

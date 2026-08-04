@@ -6,6 +6,26 @@ export const RARITY_ORDER: Record<string, number> = { S: 0, A: 1, B: 2 };
 
 export const DANGER_TYPES = ['坚韧', '狂暴', '诡秘', '精准', '异能', '启迪'] as const;
 
+// 官方阵营列表（依 BWiki 禁闭者档案模板注释的顺序）
+export const FACTIONS = [
+	'破坏',
+	'执迷',
+	'无厌',
+	'背离',
+	'混沌',
+	'愤怒',
+	'异质',
+	'怠惰',
+	'谵妄',
+	'不朽',
+	'暗潮',
+	'荒竭',
+	'戾刃',
+	'靡音',
+	'禁域',
+	'无界',
+] as const;
+
 export const GAME_MODE_TYPES = [
 	'暗域',
 	'公会战',

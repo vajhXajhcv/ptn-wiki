@@ -4,7 +4,7 @@ title: “温泉馆招待”
 rarity: A
 danger: 坚韧
 role: 防守增幅
-faction: ''
+faction: 执迷
 description: 露米娜是A级坚韧禁闭者，擅长召唤的禁闭者。生命提升{{禁闭者数值
 tags: ['防守增幅', '召唤物辅助']
 image: /characters/loumina.jpg

@@ -4,7 +4,7 @@ title: 家里蹲法医
 rarity: A
 danger: 启迪
 role: 治疗辅助
-faction: ''
+faction: 执迷
 description: 福伦辛卡是A级启迪禁闭者，擅长支援的禁闭者。进入战斗时，能量充盈。
 tags: ['治疗辅助', '防守辅助']
 image: /characters/fulunxinka.jpg

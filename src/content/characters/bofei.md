@@ -4,7 +4,7 @@ title: 吃播达人
 rarity: A
 danger: 诡秘
 role: 特殊能量恢复
-faction: ''
+faction: 怠惰
 description: 啵啡是A级诡秘禁闭者，擅长召唤的禁闭者，必杀可以造成{{伤害文本
 tags: ['特殊能量恢复', '攻速辅助', '物伤辅助']
 image: /characters/bofei.jpg

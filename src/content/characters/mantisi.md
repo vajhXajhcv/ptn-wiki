@@ -4,7 +4,7 @@ title: 前博物学者
 rarity: S
 danger: 诡秘
 role: 暴击增幅
-faction: ''
+faction: 不朽
 description: 曼缇斯是S级诡秘禁闭者，被内海高度污染的禁闭者，必杀可以造成{{伤害文本
 tags: ['暴击增幅', '吸血']
 image: /characters/mantisi.jpg

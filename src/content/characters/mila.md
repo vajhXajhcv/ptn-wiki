@@ -4,7 +4,7 @@ title: 旅店老板娘
 rarity: A
 danger: 狂暴
 role: 特殊辅助
-faction: ''
+faction: 荒竭
 description: 米拉是A级狂暴禁闭者，擅长防守的禁闭者。受到伤害降低{{禁闭者数值
 tags: ['特殊辅助']
 image: /characters/mila.jpg

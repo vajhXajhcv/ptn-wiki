@@ -4,7 +4,7 @@ title: 和平大使
 rarity: S
 danger: 启迪
 role: 暴击辅助
-faction: ''
+faction: 靡音
 description: 玛格丽塔是S级启迪禁闭者，进入战斗时，玛格丽塔使身前地格内的友方禁闭者进入{{术语查看
 tags: ['暴击辅助', '物伤辅助']
 image: /characters/magelita.jpg

@@ -4,7 +4,7 @@ title: 艺术评论家
 rarity: B
 danger: 启迪
 role: 减速
-faction: ''
+faction: 异质
 description: 丽莎是B级启迪禁闭者，擅长干扰的禁闭者。普攻造成伤害后，丽莎使敌人移动速度降低{{禁闭者数值
 tags: ['减速', '进攻辅助']
 image: /characters/lisuo.jpg

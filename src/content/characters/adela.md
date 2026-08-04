@@ -4,7 +4,7 @@ title: 雾巷理发师
 rarity: S
 danger: 诡秘
 role: 暴击增幅
-faction: ''
+faction: 怠惰
 description: 阿黛拉是S级诡秘禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['暴击增幅']
 image: /characters/adela.jpg

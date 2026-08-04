@@ -4,7 +4,7 @@ title: “罗马内斯克会堂”主理人
 rarity: S
 danger: 精准
 role: 物理输出
-faction: ''
+faction: 怠惰
 description: 橡木匣是S级精准禁闭者，擅长造成物理伤害的禁闭者。进入战斗时，能量充盈。
 tags: []
 image: /characters/oakcasket.jpg

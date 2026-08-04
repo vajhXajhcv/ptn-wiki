@@ -4,7 +4,7 @@ title: 不败战绩的辩护天才
 rarity: A
 danger: 启迪
 role: 防守辅助
-faction: ''
+faction: 无厌
 description: 福克斯先生是一名A级启迪禁闭者，主要负责治疗与增益辅助。在队伍中常担任防守辅助位置。
 tags: ['防守辅助', '控制免疫', '进攻辅助', '特殊辅助']
 image: /characters/fox.jpg

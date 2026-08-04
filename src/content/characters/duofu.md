@@ -4,7 +4,7 @@ title: 小镇邮差
 rarity: A
 danger: 坚韧
 role: 防守增幅
-faction: ''
+faction: 荒竭
 description: 多芙是A级坚韧禁闭者，擅长防守的禁闭者，可以阻挡{{禁闭者数值
 tags: ['防守增幅', '法伤辅助', '护盾辅助']
 image: /characters/duofu.jpg

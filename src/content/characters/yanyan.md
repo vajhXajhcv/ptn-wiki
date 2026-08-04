@@ -4,7 +4,7 @@ title: 追神者
 rarity: A
 danger: 精准
 role: 进攻增幅
-faction: ''
+faction: 异质
 description: 烟烟是A级精准禁闭者，擅长造成法术伤害的禁闭者，伤害提升{{禁闭者数值
 tags: ['进攻增幅', '攻速增幅']
 image: /characters/yanyan.jpg

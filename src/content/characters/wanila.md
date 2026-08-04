@@ -4,7 +4,7 @@ title: 前机械师
 rarity: S
 danger: 坚韧
 role: 防守增幅
-faction: ''
+faction: 不朽
 description: 瓦尼菈是S级坚韧禁闭者，被内海高度污染的禁闭者，可以阻挡{{禁闭者数值
 tags: ['防守增幅', '自我治疗', '特殊增幅']
 image: /characters/wanila.jpg

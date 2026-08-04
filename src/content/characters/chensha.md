@@ -4,7 +4,7 @@ title: 前雇佣兵
 rarity: A
 danger: 坚韧
 role: 护盾辅助
-faction: ''
+faction: 背离
 description: 辰砂是一名A级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任护盾辅助位置。
 tags: ['护盾辅助', '防守辅助']
 image: /characters/chensha.jpg

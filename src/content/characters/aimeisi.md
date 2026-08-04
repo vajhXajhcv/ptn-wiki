@@ -4,7 +4,7 @@ title: 替身使者
 rarity: A
 danger: 狂暴
 role: 进攻增幅
-faction: ''
+faction: 无界
 description: 艾梅斯是A级狂暴禁闭者，来自异世界的替身使者。攻击提升{{禁闭者数值
 tags: ['进攻增幅', '眩晕']
 image: /characters/aimeisi.jpg

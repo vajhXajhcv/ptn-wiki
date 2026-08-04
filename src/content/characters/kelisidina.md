@@ -4,7 +4,7 @@ title: 代理探长
 rarity: A
 danger: 狂暴
 role: 进攻增幅
-faction: ''
+faction: 愤怒
 description: 克里斯蒂娜是A级狂暴禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['进攻增幅', '自我治疗']
 image: /characters/kelisidina.jpg

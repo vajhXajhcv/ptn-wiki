@@ -4,7 +4,7 @@ title: 玄学研究者
 rarity: S
 danger: 精准
 role: 眩晕
-faction: ''
+faction: 不朽
 description: 承霄是S级精准禁闭者，擅长造成物理伤害的禁闭者。承霄{{术语查看
 tags: ['眩晕', '进攻辅助', '暴击增幅']
 image: /characters/chengxiao.jpg

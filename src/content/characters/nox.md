@@ -4,7 +4,7 @@ title: 黑环之主
 rarity: S
 danger: 狂暴
 role: 物理输出
-faction: 彼岸诊所
+faction: 混沌
 description: 擅长范围物理伤害的狂级禁闭者，技能可以对多个敌人造成持续伤害，是推图和破碎防线中的常用输出。
 tags: ['狂暴', '物理输出', '群攻']
 image: /characters/nox.jpg

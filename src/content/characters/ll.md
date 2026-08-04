@@ -4,7 +4,7 @@ title: 极乐岛岛主
 rarity: S
 danger: 启迪
 role: 进攻辅助
-faction: ''
+faction: 暗潮
 description: L.L.是S级启迪禁闭者，擅长支援的禁闭者。进入战斗时，L.L.携带{{术语查看
 tags: ['进攻辅助', '能量恢复', '技能伤害辅助']
 ---

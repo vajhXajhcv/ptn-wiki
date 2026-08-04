@@ -4,7 +4,7 @@ title: 控制梦境的心理医师
 rarity: A
 danger: 启迪
 role: 攻速辅助
-faction: ''
+faction: 异质
 description: 卡米利安是一名A级启迪禁闭者，主要负责治疗与增益辅助。在队伍中常担任攻速辅助位置。
 tags: ['攻速辅助', '普攻辅助']
 image: /characters/kamilian.jpg

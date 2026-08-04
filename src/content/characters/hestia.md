@@ -4,7 +4,7 @@ title: “内海圣女”
 rarity: S
 danger: 异能
 role: 法伤辅助
-faction: ''
+faction: 不朽
 description: 赫斯提亚是S级异能禁闭者，被内海高度污染的禁闭者。赫斯提亚{{术语查看
 tags: ['法伤辅助']
 image: /characters/hestia.jpg

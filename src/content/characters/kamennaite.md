@@ -4,7 +4,7 @@ title: 美食品鉴师
 rarity: S
 danger: 启迪
 role: 治疗辅助
-faction: ''
+faction: 怠惰
 description: 卡门奈特是S级启迪禁闭者，擅长支援的禁闭者。每{{禁闭者数值
 tags: ['治疗辅助', '驱散', '进攻辅助']
 image: /characters/kamennaite.jpg

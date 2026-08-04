@@ -4,7 +4,7 @@ title: 亡灵使者
 rarity: S
 danger: 诡秘
 role: 自我治疗
-faction: ''
+faction: 荒竭
 description: 幽冕·海拉是S级诡秘禁闭者，自愈能力与深层狂厄污染在幽冕·海拉体内维持着微妙的平衡，也为她带来了额外的能力。<br>幽冕·海拉同时拥有{{术语查看
 tags: ['自我治疗', '进攻增幅', '特殊增幅']
 image: /characters/youmianhaila.jpg

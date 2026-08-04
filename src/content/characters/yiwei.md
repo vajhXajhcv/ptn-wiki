@@ -4,7 +4,7 @@ title: 工装追星族
 rarity: A
 danger: 异能
 role: 进攻辅助
-faction: ''
+faction: 执迷
 description: 依唯是A级异能禁闭者，擅长造成{{伤害文本
 tags: ['进攻辅助']
 image: /characters/yiwei.jpg

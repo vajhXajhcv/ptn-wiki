@@ -4,7 +4,7 @@ title: 天使偶像
 rarity: S
 danger: 诡秘
 role: 进攻辅助
-faction: ''
+faction: 靡音
 description: 法露儿是S级诡秘禁闭者，擅长造成{{伤害文本
 tags: ['进攻辅助', '减速']
 image: /characters/falouer.jpg

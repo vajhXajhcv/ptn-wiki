@@ -4,7 +4,7 @@ title: 游戏主播
 rarity: A
 danger: 坚韧
 role: 防守增幅
-faction: ''
+faction: 混沌
 description: 妮诺是A级坚韧禁闭者，擅长防守的禁闭者，可以阻挡{{禁闭者数值
 tags: ['防守增幅', '眩晕']
 image: /characters/ninuo.jpg

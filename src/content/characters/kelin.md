@@ -4,7 +4,7 @@ title: 赏金猎人
 rarity: S
 danger: 精准
 role: 进攻增幅
-faction: ''
+faction: 荒竭
 description: 柯琳是S级精准禁闭者，擅长造成物理伤害的禁闭者。伤害提升{{禁闭者数值
 tags: ['进攻增幅', '物伤增幅']
 image: /characters/kelin.jpg

@@ -4,7 +4,7 @@ title: 新城武器锻造师
 rarity: A
 danger: 狂暴
 role: 进攻增幅
-faction: ''
+faction: 异质
 description: 莓丝是A级狂暴禁闭者，擅长造成物理伤害的禁闭者，伤害提升{{禁闭者数值
 tags: ['进攻增幅', '攻速增幅', '进攻辅助']
 image: /characters/meisi.jpg

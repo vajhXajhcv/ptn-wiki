@@ -4,7 +4,7 @@ title: 时事评论家
 rarity: A
 danger: 精准
 role: 暴击增幅
-faction: ''
+faction: 暗潮
 description: 派因是A级精准禁闭者，擅长造成物理伤害的禁闭者，无法阻挡敌人，无法被敌人选为目标，必杀可以造成{{伤害文本
 tags: ['暴击增幅', '解除隐匿']
 image: /characters/paiyin.jpg

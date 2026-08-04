@@ -4,7 +4,7 @@ title: 中央图书馆馆长
 rarity: S
 danger: 启迪
 role: 攻速辅助
-faction: ''
+faction: 暗潮
 description: 席宁是S级启迪禁闭者，擅长支援的禁闭者。席宁无法自动恢复能量。进入战斗时，席宁获得{{禁闭者数值
 tags: ['攻速辅助', '进攻辅助']
 image: /characters/xining.jpg

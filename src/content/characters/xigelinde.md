@@ -4,7 +4,7 @@ title: 旧狄斯军联络官
 rarity: A
 danger: 坚韧
 role: 特殊能量恢复
-faction: ''
+faction: 戾刃
 description: 希格林德是A级坚韧禁闭者，擅长防守的禁闭者，可以阻挡{{禁闭者数值
 tags: ['特殊能量恢复', '特殊辅助', '防守增幅']
 image: /characters/xigelinde.jpg

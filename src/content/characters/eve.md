@@ -4,7 +4,7 @@ title: “轮椅幽灵”
 rarity: S
 danger: 启迪
 role: 召唤物辅助
-faction: ''
+faction: 执迷
 description: 伊芙是S级启迪禁闭者，擅长召唤的禁闭者。进入战斗时，能量充盈。
 tags: ['召唤物辅助', '进攻辅助', '恐惧']
 image: /characters/eve.jpg

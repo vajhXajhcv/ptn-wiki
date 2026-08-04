@@ -4,7 +4,7 @@ title: 花园杀手
 rarity: A
 danger: 诡秘
 role: 进攻增幅
-faction: ''
+faction: 执迷
 description: 堇是一名A级诡秘禁闭者，主要负责破核与切入后排。在队伍中常担任进攻增幅位置。
 tags: ['进攻增幅', '特殊辅助']
 image: /characters/jin.jpg

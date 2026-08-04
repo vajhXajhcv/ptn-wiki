@@ -4,7 +4,7 @@ title: 新城二世祖
 rarity: A
 danger: 坚韧
 role: 防守增幅
-faction: ''
+faction: 无厌
 description: 李维是A级坚韧禁闭者，擅长防守的禁闭者，可以阻挡{{禁闭者数值
 tags: ['防守增幅', '自我治疗', '进攻辅助', '特殊辅助']
 image: /characters/liwei.jpg

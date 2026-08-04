@@ -4,7 +4,7 @@ title: 金蛛婆婆
 rarity: A
 danger: 坚韧
 role: 进攻辅助
-faction: ''
+faction: 异质
 description: 阿依果是A级坚韧禁闭者，擅长防守的禁闭者，可以阻挡{{禁闭者数值
 tags: ['进攻辅助', '法伤辅助', '防守辅助']
 image: /characters/ayiguo.jpg

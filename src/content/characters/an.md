@@ -4,7 +4,7 @@ title: 彼岸诊所护理长
 rarity: A
 danger: 启迪
 role: 治疗辅助
-faction: ''
+faction: 执迷
 description: 安是一名A级启迪禁闭者，主要负责治疗与增益辅助。在队伍中常担任治疗辅助位置。
 tags: ['治疗辅助', '致死免疫']
 image: /characters/an.jpg

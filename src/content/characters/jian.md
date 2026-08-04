@@ -4,7 +4,7 @@ title: 前银行劫匪
 rarity: A
 danger: 精准
 role: 远程物理
-faction: ''
+faction: 破坏
 description: 简是A级精准禁闭者，擅长造成物理伤害的禁闭者。伤害提升{{禁闭者数值
 tags: []
 image: /characters/jian.jpg

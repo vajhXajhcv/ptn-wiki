@@ -4,7 +4,7 @@ title: 学术地下服务供应商
 rarity: A
 danger: 精准
 role: 物伤辅助
-faction: ''
+faction: 暗潮
 description: 皮克赛尔是A级精准禁闭者，擅长造成物理伤害的禁闭者。伤害提升{{禁闭者数值
 tags: ['物伤辅助']
 image: /characters/pikesaier.jpg

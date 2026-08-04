@@ -4,7 +4,7 @@ title: 地下角斗士
 rarity: A
 danger: 狂暴
 role: 进攻增幅
-faction: ''
+faction: 破坏
 description: 卡斯洛是A级狂暴禁闭者，擅长造成物理伤害的禁闭者，伤害提升{{禁闭者数值
 tags: ['进攻增幅', '普攻伤害增幅', '眩晕']
 image: /characters/kasiluo.jpg

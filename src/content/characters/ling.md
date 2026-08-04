@@ -4,7 +4,7 @@ title: 代码幽灵
 rarity: S
 danger: 诡秘
 role: 攻速增幅
-faction: ''
+faction: 暗潮
 description: 000是S级诡秘禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['攻速增幅', '特殊增幅', '进攻增幅', '进攻辅助']
 image: /characters/ling.jpg

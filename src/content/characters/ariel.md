@@ -4,7 +4,7 @@ title: 圣光侍者
 rarity: A
 danger: 启迪
 role: 治疗
-faction: 圣堂
+faction: 执迷
 description: 危级治疗禁闭者，必杀可提供范围持续治疗，是哈梅尔的优秀下位替代。
 tags: ['启迪', '治疗', '群奶', '持续恢复']
 image: /characters/ariel.jpg

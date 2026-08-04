@@ -4,7 +4,7 @@ title: 边境蛇头
 rarity: S
 danger: 异能
 role: 技能辅助
-faction: ''
+faction: 荒竭
 description: 蓝鹫是S级异能禁闭者，擅长造成法术伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['技能辅助']
 image: /characters/lanjiu.jpg

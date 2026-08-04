@@ -4,7 +4,7 @@ title: 狄斯特工
 rarity: S
 danger: 坚韧
 role: 局长能量恢复
-faction: ''
+faction: 背离
 description: 锈是S级坚韧禁闭者，擅长防守的禁闭者，可以阻挡{{禁闭者数值
 tags: ['局长能量恢复', '进攻辅助', '致死免疫']
 image: /characters/xiu.jpg

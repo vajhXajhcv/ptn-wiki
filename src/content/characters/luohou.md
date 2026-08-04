@@ -4,7 +4,7 @@ title: 前FAC精锐
 rarity: S
 danger: 坚韧
 role: 防守增幅
-faction: ''
+faction: 愤怒
 description: 罗睺是一名S级坚韧禁闭者，主要负责前排承伤与保护队友。在队伍中常担任防守增幅位置。
 tags: ['防守增幅', '自我治疗', '物伤辅助', '致死免疫']
 image: /characters/luohou.jpg

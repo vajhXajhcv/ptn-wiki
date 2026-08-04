@@ -4,7 +4,7 @@ title: 退役飞行员
 rarity: A
 danger: 启迪
 role: 防守辅助
-faction: ''
+faction: 执迷
 description: 泽斐尔是A级启迪禁闭者，擅长干扰的禁闭者。能量恢复速度提升{{禁闭者数值
 tags: ['防守辅助', '特殊辅助']
 image: /characters/zefeier.jpg

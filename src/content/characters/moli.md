@@ -4,7 +4,7 @@ title: 异邦舞娘
 rarity: S
 danger: 狂暴
 role: 进攻增幅
-faction: ''
+faction: 戾刃
 description: 茉莉是S级狂暴禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
 tags: ['进攻增幅', '特殊辅助', '物伤增幅', '物伤辅助']
 image: /characters/moli.jpg

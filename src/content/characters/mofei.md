@@ -4,7 +4,7 @@ title: “霉运神”
 rarity: S
 danger: 狂暴
 role: 普攻伤害辅助
-faction: ''
+faction: 混沌
 description: 墨菲是S级狂暴禁闭者，擅长造成真实伤害的禁闭者。普攻造成伤害后，墨菲获得{{禁闭者数值
 tags: ['普攻伤害辅助', '进攻辅助', '特殊辅助']
 image: /characters/mofei.jpg

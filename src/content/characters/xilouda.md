@@ -4,7 +4,7 @@ title: 密码学家
 rarity: S
 danger: 异能
 role: 召唤物辅助
-faction: ''
+faction: 禁域
 description: 希露妲是S级异能禁闭者，擅长召唤的禁闭者。进入战斗时，希露妲在距离最近的友方可行进地格召唤{{术语查看
 tags: ['召唤物辅助', '能量恢复']
 image: /characters/xilouda.jpg

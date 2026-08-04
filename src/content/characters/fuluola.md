@@ -4,7 +4,7 @@ title: 消防员
 rarity: B
 danger: 精准
 role: 眩晕
-faction: ''
+faction: 背离
 description: 芙洛拉是一名B级精准禁闭者，主要负责远程物理输出与打击关键目标。在队伍中常担任眩晕<!-- 多个TAG用位置。
 tags: ['眩晕']
 image: /characters/fuluola.jpg

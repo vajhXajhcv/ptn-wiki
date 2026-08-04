@@ -4,7 +4,7 @@ title: 雾巷引路者
 rarity: A
 danger: 启迪
 role: 治疗辅助
-faction: ''
+faction: 谵妄
 description: 莱塔是A级启迪禁闭者，擅长支援的禁闭者。进入战斗时，莱塔携带{{术语查看
 tags: ['治疗辅助', '护盾辅助']
 image: /characters/laita.jpg

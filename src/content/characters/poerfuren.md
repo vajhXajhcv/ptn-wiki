@@ -4,7 +4,7 @@ title: 剧院老板娘
 rarity: S
 danger: 精准
 role: 普攻伤害辅助
-faction: ''
+faction: 怠惰
 description: 珀尔夫人是S级精准禁闭者，擅长造成物理伤害的禁闭者。珀尔夫人普攻可以发射多颗子弹，单次普攻命中同一敌人的非首颗子弹只造成{{禁闭者数值
 aliases: ['Lady Pearl']
 tags: ['普攻伤害辅助', '攻速辅助']

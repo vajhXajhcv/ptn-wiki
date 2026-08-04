@@ -6,7 +6,7 @@ import Card from '../../components/Card.astro';
 import CardGrid from '../../components/CardGrid.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import { SITE_TITLE } from '../../consts';
-import { DANGER_TYPES, RARITIES } from '../../lib/constants';
+import { DANGER_TYPES, RARITIES, FACTIONS } from '../../lib/constants';
 import '../../styles/global.css';
 
 const characters = (await getCollection('characters')).sort((a, b) => {
@@ -18,6 +18,8 @@ const characters = (await getCollection('characters')).sort((a, b) => {
 
 const dangers = DANGER_TYPES;
 const rarities = RARITIES;
+const presentFactions = new Set(characters.map((c) => c.data.faction).filter(Boolean));
+const factions = FACTIONS.filter((f) => presentFactions.has(f));
 const roles = [
 	...new Set(
 		characters
@@ -40,6 +42,11 @@ const roles = [
 					<option value="">全部定位</option>
 					{roles.map((r) => <option value={r}>{r}</option>)}
 				</select>
+				<select id="faction-filter">
+					<option value="">全部阵营</option>
+					{factions.map((f) => <option value={f}>{f}</option>)}
+				</select>
+				<a href="/factions" class="faction-link">阵营图鉴 →</a>
 			</div>
 			<div class="filter-row filter-buttons-row">
 				<span class="filter-label">稀有度</span>
@@ -71,12 +78,14 @@ const roles = [
 					badges={[
 						c.data.rarity && { label: `${c.data.rarity}级`, variant: `rarity-${c.data.rarity.toLowerCase()}` as const },
 						c.data.danger && { label: c.data.danger },
+						c.data.faction && { label: c.data.faction },
 						c.data.role && { label: c.data.role },
 					].filter(Boolean) as { label: string; variant?: string }[]}
 					footer={c.data.tags && c.data.tags.length > 0 ? c.data.tags.slice(0, 4).join(' · ') : undefined}
 					data-rarity={c.data.rarity || 'B'}
 					data-danger={c.data.danger || ''}
 					data-role={c.data.role || ''}
+					data-faction={c.data.faction || ''}
 					data-search={`${c.data.name} ${c.data.title || ''} ${c.data.role || ''} ${(c.data.tags || []).join(' ')} ${(c.data.aliases || []).join(' ')}`}
 				/>
 			))}
@@ -87,6 +96,7 @@ const roles = [
 <script>
 	const searchInput = document.getElementById('char-search') as HTMLInputElement;
 	const roleFilter = document.getElementById('role-filter') as HTMLSelectElement;
+	const factionFilter = document.getElementById('faction-filter') as HTMLSelectElement;
 	const resultCount = document.getElementById('result-count') as HTMLParagraphElement;
 	const cards = Array.from(document.querySelectorAll<HTMLElement>('#char-grid .card'));
 
@@ -96,20 +106,23 @@ const roles = [
 	function update() {
 		const query = searchInput.value.trim().toLowerCase();
 		const activeRole = roleFilter.value;
+		const activeFaction = factionFilter.value;
 		let visible = 0;
 
 		cards.forEach((card) => {
 			const rarity = card.dataset.rarity || '';
 			const danger = card.dataset.danger || '';
 			const role = card.dataset.role || '';
+			const faction = card.dataset.faction || '';
 			const searchText = (card.dataset.search || '').toLowerCase();
 
 			const matchesRarity = activeRarity === 'all' || rarity === activeRarity;
 			const matchesDanger = activeDanger === 'all' || danger === activeDanger;
 			const matchesRole = !activeRole || role === activeRole;
+			const matchesFaction = !activeFaction || faction === activeFaction;
 			const matchesSearch = !query || searchText.includes(query);
 
-			const show = matchesRarity && matchesDanger && matchesRole && matchesSearch;
+			const show = matchesRarity && matchesDanger && matchesRole && matchesFaction && matchesSearch;
 			card.style.display = show ? '' : 'none';
 			if (show) visible++;
 		});
@@ -136,6 +149,7 @@ const roles = [
 	});
 
 	roleFilter.addEventListener('change', update);
+	factionFilter.addEventListener('change', update);
 	searchInput.addEventListener('input', update);
 	update();
 </script>
@@ -180,6 +194,15 @@ const roles = [
 		color: rgb(var(--black));
 		font-size: 0.9em;
 		min-width: 3em;
+	}
+	.faction-link {
+		font-size: 0.9em;
+		color: var(--accent);
+		text-decoration: none;
+		white-space: nowrap;
+	}
+	.faction-link:hover {
+		text-decoration: underline;
 	}
 	.filter-buttons {
 		display: flex;
