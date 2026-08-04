@@ -1,6 +1,7 @@
 ---
 title: 同伴与……
 type: 活动
+chapter: 幽零风暴
 characters: ['赫卡蒂', '艾米潘', '雷比尼斯', '瑞思', '摩尔', '局长', '000', '代码嘎']
 description: 同伴与……剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ERR2-4%E5%89%A7%E6%83%85'

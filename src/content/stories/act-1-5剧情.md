@@ -1,6 +1,7 @@
 ---
 title: 冲破牢笼
 type: 活动
+chapter: 浮世剧院
 characters: ['露薇娅·蕾', '局长', '罪人A', '？？？', '记者', '罪人B', '罪人C', '珀尔夫人']
 description: 冲破牢笼剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ACT-1-5%E5%89%A7%E6%83%85'

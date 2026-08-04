@@ -1,6 +1,7 @@
 ---
 title: 宁静的清晨
 type: 活动
+chapter: 刹雨
 characters: ['裁缝店女主人', '罗睺', '裁缝店女主人?']
 description: 宁静的清晨剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-301%E5%89%A7%E6%83%85'

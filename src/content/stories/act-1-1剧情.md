@@ -1,6 +1,7 @@
 ---
 title: 徐徐开场
 type: 活动
+chapter: 浮世剧院
 characters: ['？？？', '珀尔夫人', '局长', '关押者A', '关押者B', '伊格尼']
 description: 徐徐开场剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ACT-1-1%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 摇滚朋友
 type: 活动
+chapter: 浮世剧院
 characters: ['琼', '音乐家']
 description: 摇滚朋友剧情文本。
 source: 'https://wiki.biligame.com/wqmt/DRAMA-104%E5%89%A7%E6%83%85'

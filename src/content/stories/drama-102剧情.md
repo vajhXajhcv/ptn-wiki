@@ -1,6 +1,7 @@
 ---
 title: 砂海邂逅
 type: 活动
+chapter: 浮世剧院
 characters: ['局长', '卡瓦卡瓦']
 description: 砂海邂逅剧情文本。
 source: 'https://wiki.biligame.com/wqmt/DRAMA-102%E5%89%A7%E6%83%85'

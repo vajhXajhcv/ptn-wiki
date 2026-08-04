@@ -1,6 +1,7 @@
 ---
 title: 莫维斯堡
 type: 活动
+chapter: 溺夜誓约
 characters: ['局长', '格芮芙', '十五号', '杜拉罕', '卢米尼塔', '女孩', '男青年A', '男青年B', '男孩', '青年', '女人', '怪物们', '游客们', '赫卡蒂', '艾米潘', '雷比尼斯', '神秘人']
 description: 莫维斯堡剧情文本。
 source: 'https://wiki.biligame.com/wqmt/GHOST%203-4%E5%89%A7%E6%83%85'

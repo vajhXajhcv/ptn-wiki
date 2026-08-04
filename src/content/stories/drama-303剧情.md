@@ -1,6 +1,7 @@
 ---
 title: 悠闲的树
 type: 活动
+chapter: 浮世剧院
 characters: ['玛奇朵', '局长']
 description: 悠闲的树剧情文本。
 source: 'https://wiki.biligame.com/wqmt/DRAMA-303%E5%89%A7%E6%83%85'

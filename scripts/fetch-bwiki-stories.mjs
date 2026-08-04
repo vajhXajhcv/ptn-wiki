@@ -195,28 +195,54 @@ export function parseStory(content, pageName, displayTitle) {
 	};
 }
 
-function inferType(pageName) {
-	if (/^\d+-\d+剧情$/.test(pageName) || /^序章\d+剧情$/.test(pageName) || /^Re\d+/.test(pageName) || /^Sd-/.test(pageName) || /^Mz-/.test(pageName)) {
+export function inferType(pageName) {
+	if (
+		/^\d+-\d+剧情$/.test(pageName) ||
+		/^序章\d+剧情$/.test(pageName) ||
+		/^re\d+/i.test(pageName) ||
+		/^sd-/i.test(pageName) ||
+		/^mz-/i.test(pageName) ||
+		/^(sdn|ren|n)\d/i.test(pageName)
+	) {
 		return '主线';
 	}
 	return '活动';
 }
 
-function inferChapter(pageName) {
-	const mainMatch = pageName.match(/^(\d+|序章)\d*剧情$/);
-	if (mainMatch) {
-		const prefix = mainMatch[1];
-		if (prefix === '序章') return '序章·混沌彼岸';
-		const num = parseInt(prefix, 10);
-		if (num <= 2) return '狄斯西区·混沌彼岸';
-		if (num <= 4) return '狄斯西区·无主地窟';
-		if (num <= 6) return '狄斯城·奇兰广场';
-		if (num <= 8) return '狄斯城·嘉年华';
-		if (num <= 10) return '锈河·流民寨';
-		if (num <= 12) return '内海·BR-004';
-		if (num <= 14) return '上庭·地底';
-		return `第${num}章`;
+// 主线篇章分组（与 BWiki「主线剧情」索引的篇章结构一致）
+function arcByChapter(num) {
+	if (num <= 8) return '狄斯西区·铁血篇';
+	if (num <= 13) return '里湾·锈火篇';
+	return '';
+}
+
+export function inferChapter(pageName) {
+	// 悬城篇：N1-N4（含 SdN/ReN 支线）；覆海篇：N9 起
+	const nMatch = pageName.match(/^(?:sdn|ren|n)(\d+)/i);
+	if (nMatch) {
+		const n = parseInt(nMatch[1], 10);
+		return n >= 9 ? '新城·覆海篇' : '新城·悬城篇';
 	}
+	// Sd-101 / Sd-1301：编号前几位即章号
+	const sdMatch = pageName.match(/^sd-(\d+)/i);
+	if (sdMatch) {
+		const raw = parseInt(sdMatch[1], 10);
+		return arcByChapter(raw <= 99 ? raw : Math.floor(raw / 100));
+	}
+	// Mz-01~08 直接为章号；Mz-1301 为 章号*100+序号
+	const mzMatch = pageName.match(/^mz-(\d+)/i);
+	if (mzMatch) {
+		const raw = parseInt(mzMatch[1], 10);
+		return arcByChapter(raw <= 99 ? raw : Math.floor(raw / 100));
+	}
+	// Re1-9 / Re13-2
+	const reMatch = pageName.match(/^re(\d+)/i);
+	if (reMatch) return arcByChapter(parseInt(reMatch[1], 10));
+	// 1-1剧情 ~ 13-18剧情
+	const mainMatch = pageName.match(/^(\d+)-\d+剧情$/);
+	if (mainMatch) return arcByChapter(parseInt(mainMatch[1], 10));
+	// 序章01剧情 等：归入第一篇
+	if (/^序章/.test(pageName)) return arcByChapter(1);
 	return '';
 }
 

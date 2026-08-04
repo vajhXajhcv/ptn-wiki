@@ -1,6 +1,7 @@
 ---
 title: 砂海来客
 type: 活动
+chapter: 如蜜夜
 characters: ['医师', '铁面', '旧军成员']
 description: 砂海来客剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-S1%E5%89%A7%E6%83%85'

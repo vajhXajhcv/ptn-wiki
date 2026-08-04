@@ -1,6 +1,7 @@
 ---
 title: 荣光
 type: 活动
+chapter: 恒沙的箴言
 characters: ['伊帕希娅', '海拉', '？？？', '灰烬使徒', '海拉(砂海)', '赫罗', '黎莎洛', '弗洛尔人', '凄惨的尖啸', '小扎德', '西涅克斯', '海拉&伊帕希娅', '阿德莱德']
 description: 荣光剧情文本。
 source: 'https://wiki.biligame.com/wqmt/CAVE-303%E5%89%A7%E6%83%85'

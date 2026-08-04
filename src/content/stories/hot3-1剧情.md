@@ -1,6 +1,7 @@
 ---
 title: 最后的仪式
 type: 活动
+chapter: 无餍之宴
 characters: ['局长', '？？？', '麦格拉', '诡异的人鱼']
 description: 最后的仪式剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT3-1%E5%89%A7%E6%83%85'

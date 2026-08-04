@@ -1,6 +1,7 @@
 ---
 title: 格芮芙
 type: 活动
+chapter: 溺夜誓约
 characters: ['局长', '卢米尼塔', '修女', '格芮芙', '孩子', '新郎', '格芮芙?']
 description: 格芮芙剧情文本。
 source: 'https://wiki.biligame.com/wqmt/GHOST%203-2%E5%89%A7%E6%83%85'

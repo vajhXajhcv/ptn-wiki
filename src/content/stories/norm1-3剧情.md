@@ -1,6 +1,7 @@
 ---
 title: 幽灵空间
 type: 活动
+chapter: 幽零风暴
 characters: ['报告', '瑞思', '局长', '少女', '？？？', '技术员A', '技术员B', '柔和的女声']
 description: 幽灵空间剧情文本。
 source: 'https://wiki.biligame.com/wqmt/NORM1-3%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 轮回
 type: 活动
+chapter: 浮生夜话
 characters: ['萦萦', '局长', '萦萦&庙会所有人', '玉骨']
 description: 轮回剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-403%E5%89%A7%E6%83%85'

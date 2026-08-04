@@ -1,6 +1,7 @@
 ---
 title: 藤萝
 type: 活动
+chapter: 浮生夜话
 characters: ['局长', '？？？', '清丽女子', '豪放女子', '萦萦?', '护士', '夜莺', '玉骨']
 description: 藤萝剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-103%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 妖龙布雨
 type: 活动
+chapter: 祀日赋
 characters: ['烟烟', 'FAC士兵B', 'FAC士兵A', '拾荒者A', '拾荒者B']
 description: 妖龙布雨剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MYTH-05%E5%89%A7%E6%83%85'

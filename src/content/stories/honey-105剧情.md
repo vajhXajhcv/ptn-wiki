@@ -1,6 +1,7 @@
 ---
 title: 帷幕落下后
 type: 活动
+chapter: 如蜜夜
 characters: ['莎莉']
 description: 帷幕落下后剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-105%E5%89%A7%E6%83%85'

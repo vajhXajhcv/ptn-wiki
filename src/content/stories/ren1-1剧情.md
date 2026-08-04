@@ -1,6 +1,7 @@
 ---
 title: 冬月惊奇
-type: 活动
+type: 主线
+chapter: 新城·悬城篇
 characters: ['女主播', '玛蒂尔达', '局长', '夜莺', '9th']
 description: 冬月惊奇剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ReN1-1%E5%89%A7%E6%83%85'

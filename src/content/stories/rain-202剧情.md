@@ -1,6 +1,7 @@
 ---
 title: 蓝雨
 type: 活动
+chapter: 刹雨
 characters: ['罗睺', '女佣', '安全负责人', '？？', '瑟琳', '警卫']
 description: 蓝雨剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-202%E5%89%A7%E6%83%85'

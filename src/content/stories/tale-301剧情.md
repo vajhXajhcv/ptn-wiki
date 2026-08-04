@@ -1,6 +1,7 @@
 ---
 title: 撕书
 type: 活动
+chapter: 浮生夜话
 characters: ['萦萦', '局长']
 description: 撕书剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-301%E5%89%A7%E6%83%85'

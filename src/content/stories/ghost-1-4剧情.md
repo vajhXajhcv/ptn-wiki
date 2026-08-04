@@ -1,6 +1,7 @@
 ---
 title: “怪物”
 type: 活动
+chapter: 溺夜誓约
 characters: ['格芮芙', '格芮芙?', '局长', '十五号', '杜拉罕', '艾米潘', '雷比尼斯', '赫卡蒂']
 description: “怪物”剧情文本。
 source: 'https://wiki.biligame.com/wqmt/GHOST%201-4%E5%89%A7%E6%83%85'

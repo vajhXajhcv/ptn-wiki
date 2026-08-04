@@ -1,6 +1,7 @@
 ---
 title: 梦别
 type: 活动
+chapter: 浮生夜话
 characters: ['局长', '？？？', '小文', '护士', 'FAC负责人', '尤金', '夜莺', '杜若']
 description: 梦别剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-303%E5%89%A7%E6%83%85'

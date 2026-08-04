@@ -1,6 +1,7 @@
 ---
 title: 触手可及
 type: 活动
+chapter: 浮世剧院
 characters: ['年轻女孩', '伊格尼']
 description: 触手可及剧情文本。
 source: 'https://wiki.biligame.com/wqmt/IGNIS-2%E5%89%A7%E6%83%85'

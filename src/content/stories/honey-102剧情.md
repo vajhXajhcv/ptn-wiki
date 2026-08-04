@@ -1,6 +1,7 @@
 ---
 title: “极乐”中的明珠
 type: 活动
+chapter: 如蜜夜
 characters: ['E先生', '莎莉', '蜜莉', '卡兹安']
 description: “极乐”中的明珠剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-102%E5%89%A7%E6%83%85'

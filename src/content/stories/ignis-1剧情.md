@@ -1,6 +1,7 @@
 ---
 title: 不安涌动
 type: 活动
+chapter: 浮世剧院
 characters: ['年轻女孩', '伊格尼']
 description: 不安涌动剧情文本。
 source: 'https://wiki.biligame.com/wqmt/IGNIS-1%E5%89%A7%E6%83%85'

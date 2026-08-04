@@ -1,6 +1,7 @@
 ---
 title: 执掌正义
 type: 活动
+chapter: 浮世剧院
 characters: ['记者A', '记者B', '工作人员', '？？', '福克斯先生', '局长']
 description: 执掌正义剧情文本。
 source: 'https://wiki.biligame.com/wqmt/DRAMA-202%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: “萦萦”
 type: 活动
+chapter: 浮生夜话
 characters: ['局长', '？？？', '萦萦']
 description: “萦萦”剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-102%E5%89%A7%E6%83%85'

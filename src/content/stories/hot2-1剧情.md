@@ -1,6 +1,7 @@
 ---
 title: 与高尚同行
 type: 活动
+chapter: 无餍之宴
 characters: ['宾客A', '宾客B', '宾客C', '宾客D', '神秘少女', '局长', '麦格拉', '卡门奈特']
 description: 与高尚同行剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT2-1%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 交易
 type: 活动
+chapter: 如蜜夜
 characters: ['莎莉', '蜜莉', '卡兹安']
 description: 交易剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-C1%E5%89%A7%E6%83%85'

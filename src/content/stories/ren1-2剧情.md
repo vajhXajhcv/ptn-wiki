@@ -1,6 +1,7 @@
 ---
 title: 邀请函
-type: 活动
+type: 主线
+chapter: 新城·悬城篇
 characters: ['局长', '贝纳戴特', '玛蒂尔达', '黑石英']
 description: 邀请函剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ReN1-2%E5%89%A7%E6%83%85'

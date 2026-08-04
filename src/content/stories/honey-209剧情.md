@@ -1,6 +1,7 @@
 ---
 title: 追踪者与监视者
 type: 活动
+chapter: 如蜜夜
 characters: ['旧军成员', '黑影', '铁面', '？？？', '铁面&医师', '医师', '局长', 'E先生', '虚弱的声音']
 description: 追踪者与监视者剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-209%E5%89%A7%E6%83%85'

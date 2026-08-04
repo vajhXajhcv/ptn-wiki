@@ -1,6 +1,7 @@
 ---
 title: 第一次搜查
 type: 活动
+chapter: 刹雨
 characters: ['罗睺']
 description: 第一次搜查剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-101%E5%89%A7%E6%83%85'

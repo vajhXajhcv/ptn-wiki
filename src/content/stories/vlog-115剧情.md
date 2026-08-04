@@ -1,6 +1,7 @@
 ---
 title: VLOG-115
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['时空警察', '啦宝', '局长', '嗷呜', '“导演”D', '？？', '琳', '洛芙', '黛丝', '紫色凝胶怪物', '灰烬使徒S.T.', '星仔', '灰烬使徒?', 'FAC作战专员', '小文']
 description: VLOG-115剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-115%E5%89%A7%E6%83%85'

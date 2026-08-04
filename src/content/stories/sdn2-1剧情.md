@@ -1,6 +1,7 @@
 ---
 title: 谁的选票？
-type: 活动
+type: 主线
+chapter: 新城·悬城篇
 characters: ['贝纳戴特', '迈克斯·金', '局长', '韦尔']
 description: 谁的选票？剧情文本。
 source: 'https://wiki.biligame.com/wqmt/SdN2-1%E5%89%A7%E6%83%85'

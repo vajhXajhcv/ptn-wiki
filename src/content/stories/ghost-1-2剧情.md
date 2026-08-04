@@ -1,6 +1,7 @@
 ---
 title: 盛大开幕
 type: 活动
+chapter: 溺夜誓约
 characters: ['局长', '格芮芙']
 description: 盛大开幕剧情文本。
 source: 'https://wiki.biligame.com/wqmt/GHOST%201-2%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 火场救援
 type: 活动
+chapter: 浮世剧院
 characters: ['焦急的母亲', '芙洛拉', '局长', '路人']
 description: 火场救援剧情文本。
 source: 'https://wiki.biligame.com/wqmt/DRAMA-101%E5%89%A7%E6%83%85'

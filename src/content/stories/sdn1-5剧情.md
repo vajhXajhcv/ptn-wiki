@@ -1,6 +1,7 @@
 ---
 title: 砂海突袭
-type: 活动
+type: 主线
+chapter: 新城·悬城篇
 characters: ['涅槃商队', '？？？？']
 description: 砂海突袭剧情文本。
 source: 'https://wiki.biligame.com/wqmt/SdN1-5%E5%89%A7%E6%83%85'

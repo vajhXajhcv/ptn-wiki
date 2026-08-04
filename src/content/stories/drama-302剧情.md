@@ -1,6 +1,7 @@
 ---
 title: 龙与勇者
 type: 活动
+chapter: 浮世剧院
 characters: ['玫瑰花', '莓丝', '局长']
 description: 龙与勇者剧情文本。
 source: 'https://wiki.biligame.com/wqmt/DRAMA-302%E5%89%A7%E6%83%85'

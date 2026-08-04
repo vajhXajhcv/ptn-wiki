@@ -1,6 +1,7 @@
 ---
 title: 任情盛筵
 type: 活动
+chapter: 无餍之宴
 characters: ['开尔文', '玛奇朵', '局长']
 description: 任情盛筵剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT1-1%E5%89%A7%E6%83%85'

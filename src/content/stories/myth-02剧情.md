@@ -1,6 +1,7 @@
 ---
 title: 逐日而歌
 type: 活动
+chapter: 祀日赋
 characters: ['烟烟', '局长', 'FAC&局长', 'FAC士兵A']
 description: 逐日而歌剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MYTH-02%E5%89%A7%E6%83%85'

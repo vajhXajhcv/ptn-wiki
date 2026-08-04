@@ -1,6 +1,7 @@
 ---
 title: 无梦
 type: 活动
+chapter: 刹雨
 characters: ['瑟琳', '罗睺']
 description: 无梦剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-401%E5%89%A7%E6%83%85'

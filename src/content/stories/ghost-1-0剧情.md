@@ -1,6 +1,7 @@
 ---
 title: 画与梦
 type: 活动
+chapter: 溺夜誓约
 characters: ['？？', '局长', '？？？']
 description: 画与梦剧情文本。
 source: 'https://wiki.biligame.com/wqmt/GHOST%201-0%E5%89%A7%E6%83%85'

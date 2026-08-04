@@ -1,6 +1,7 @@
 ---
 title: 魔藤
 type: 活动
+chapter: 浮生夜话
 characters: ['FAC负责人', '局长', '夜莺', '玉骨']
 description: 魔藤剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-401%E5%89%A7%E6%83%85'

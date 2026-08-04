@@ -1,6 +1,7 @@
 ---
 title: 欲觅神种
 type: 活动
+chapter: 祀日赋
 characters: ['烟烟', '局长', 'FAC士兵A', '摊主', '？？', '葛利达']
 description: 欲觅神种剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MYTH-03%E5%89%A7%E6%83%85'

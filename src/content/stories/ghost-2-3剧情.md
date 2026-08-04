@@ -1,6 +1,7 @@
 ---
 title: 月光般短暂
 type: 活动
+chapter: 溺夜誓约
 characters: ['局长', '赫卡蒂', '卢米尼塔', '格芮芙']
 description: 月光般短暂剧情文本。
 source: 'https://wiki.biligame.com/wqmt/GHOST%202-3%E5%89%A7%E6%83%85'

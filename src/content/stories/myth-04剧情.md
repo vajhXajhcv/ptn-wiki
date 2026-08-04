@@ -1,6 +1,7 @@
 ---
 title: 若木扶桑
 type: 活动
+chapter: 祀日赋
 characters: ['烟烟', '局长', 'FAC士兵A', '葛利达', '人群', '路人A', '路人B', '路人C']
 description: 若木扶桑剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MYTH-04%E5%89%A7%E6%83%85'

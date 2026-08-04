@@ -1,6 +1,7 @@
 ---
 title: 神君何在
 type: 活动
+chapter: 祀日赋
 characters: ['烟烟', '局长', 'FAC士兵A', 'FAC士兵B']
 description: 神君何在剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MYTH-08%E5%89%A7%E6%83%85'

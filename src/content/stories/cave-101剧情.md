@@ -1,6 +1,7 @@
 ---
 title: “亡命徒”与“阶下囚”
 type: 活动
+chapter: 恒沙的箴言
 characters: ['军团成员', '海拉(砂海)', '赫罗', '赫罗(青年)', '风中的呢喃', '海拉', '赫罗&黑袍人', '打头的少年', '？？？']
 description: “亡命徒”与“阶下囚”剧情文本。
 source: 'https://wiki.biligame.com/wqmt/CAVE-101%E5%89%A7%E6%83%85'

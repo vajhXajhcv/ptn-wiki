@@ -1,6 +1,7 @@
 ---
 title: “她”的故事
 type: 活动
+chapter: 溺夜誓约
 characters: ['局长', '格芮芙', '格芮芙?', '杜拉罕', '卢米尼塔', '局长&格芮芙']
 description: “她”的故事剧情文本。
 source: 'https://wiki.biligame.com/wqmt/GHOST%202-2%E5%89%A7%E6%83%85'

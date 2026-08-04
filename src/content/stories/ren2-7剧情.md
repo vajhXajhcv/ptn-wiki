@@ -1,6 +1,7 @@
 ---
 title: 新时代
-type: 活动
+type: 主线
+chapter: 新城·悬城篇
 characters: ['迈克斯·金', '兰利', '贝纳戴特', '韦尔', 'EDGE-02', 'EDGE-05', '单薄的女声', '优雅的男声', '？？？', '冰冷的机械音', 'FAC总司令', '赫卡蒂', '局长', '艾尔维拉', '耶莱娜', '轻快的女声']
 description: 新时代剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ReN2-7%E5%89%A7%E6%83%85'

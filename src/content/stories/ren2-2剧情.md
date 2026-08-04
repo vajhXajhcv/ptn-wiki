@@ -1,6 +1,7 @@
 ---
 title: 成长
-type: 活动
+type: 主线
+chapter: 新城·悬城篇
 characters: ['局长', '耶莱娜', '艾尔维拉', '？？？', '赫卡蒂', '新闻', '贝纳戴特', '迈克斯·金']
 description: 成长剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ReN2-2%E5%89%A7%E6%83%85'

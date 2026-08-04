@@ -1,6 +1,7 @@
 ---
 title: 完美融入
 type: 活动
+chapter: 无餍之宴
 characters: ['夜莺', '局长', '宾客A', '开尔文', '泳装美女A', '泳装美女B', '泳装美女C', '唱歌的男子', '欢呼声', '玛奇朵', '新城治安官', 'FAC高管', '侍者']
 description: 完美融入剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT0-1%E5%89%A7%E6%83%85'

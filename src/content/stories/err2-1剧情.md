@@ -1,6 +1,7 @@
 ---
 title: 新世界
 type: 活动
+chapter: 幽零风暴
 characters: ['远处的声音', '000', '局长', '混沌的人声', '干扰音', '瑞思', '艾米潘', '赫卡蒂', '摩尔']
 description: 新世界剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ERR2-1%E5%89%A7%E6%83%85'

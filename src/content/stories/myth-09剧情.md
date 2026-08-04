@@ -1,6 +1,7 @@
 ---
 title: 于彼高岗
 type: 活动
+chapter: 祀日赋
 characters: ['？？', '烟烟', '烟烟(通灵)', 'FAC&局长']
 description: 于彼高岗剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MYTH-09%E5%89%A7%E6%83%85'

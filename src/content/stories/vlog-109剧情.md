@@ -1,6 +1,7 @@
 ---
 title: VLOG-109
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['新闻', '嗷呜', '琳', '洛芙', '黛丝']
 description: VLOG-109剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-109%E5%89%A7%E6%83%85'

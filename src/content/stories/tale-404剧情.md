@@ -1,6 +1,7 @@
 ---
 title: 终
 type: 活动
+chapter: 浮生夜话
 characters: ['FAC负责人', '夜莺', '无患子', '局长', '萦萦', '混沌的声音', '紫藤花妖们', '蛤蟆金', '罗刹女', '大貔貅', '癫葫芦', '小魂火', '玉骨', '嗷呜', '嘟嘟', '虚弱的声音', '花庙街回响', '狄斯众人']
 description: 终剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-404%E5%89%A7%E6%83%85'

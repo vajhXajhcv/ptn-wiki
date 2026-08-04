@@ -1,6 +1,7 @@
 ---
 title: 情报
 type: 活动
+chapter: 如蜜夜
 characters: ['蜜莉', '客人A', '客人B', '莎莉', '客人C', '客人D', '客人E', '客人F', '微醺客人', '卡兹安']
 description: 情报剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-C2%E5%89%A7%E6%83%85'

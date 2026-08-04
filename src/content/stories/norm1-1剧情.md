@@ -1,6 +1,7 @@
 ---
 title: 袭击
 type: 活动
+chapter: 幽零风暴
 characters: ['夜莺', '艾米潘', '雷比尼斯', '赫卡蒂', '局长']
 description: 袭击剧情文本。
 source: 'https://wiki.biligame.com/wqmt/NORM1-1%E5%89%A7%E6%83%85'

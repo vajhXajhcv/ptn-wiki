@@ -1,6 +1,7 @@
 ---
 title: 深入舞台
 type: 活动
+chapter: 浮世剧院
 characters: ['局长', '伊格尼', '罪人A']
 description: 深入舞台剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ACT-1-3%E5%89%A7%E6%83%85'

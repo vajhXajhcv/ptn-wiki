@@ -1,6 +1,7 @@
 ---
 title: 黎明时刻
 type: 活动
+chapter: 恒沙的箴言
 characters: ['伊帕希娅', '西涅克斯', '画外的声音']
 description: 黎明时刻剧情文本。
 source: 'https://wiki.biligame.com/wqmt/CAVE-301%E5%89%A7%E6%83%85'

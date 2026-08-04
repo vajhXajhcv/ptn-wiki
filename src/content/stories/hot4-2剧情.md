@@ -1,6 +1,7 @@
 ---
 title: 美食家的守望
 type: 活动
+chapter: 无餍之宴
 characters: ['局长', '？？？', '卡门奈特']
 description: 美食家的守望剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT4-2%E5%89%A7%E6%83%85'

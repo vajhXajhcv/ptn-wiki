@@ -1,6 +1,7 @@
 ---
 title: 黑天鹅
-type: 活动
+type: 主线
+chapter: 新城·悬城篇
 characters: ['记者A', '记者B', '迈克斯·金', '情绪激动的观众', '主持人', '派因', '流民', '韦尔', '闹事者']
 description: 黑天鹅剧情文本。
 source: 'https://wiki.biligame.com/wqmt/SdN2-2%E5%89%A7%E6%83%85'

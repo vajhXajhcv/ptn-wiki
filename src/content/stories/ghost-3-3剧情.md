@@ -1,6 +1,7 @@
 ---
 title: 爱
 type: 活动
+chapter: 溺夜誓约
 characters: ['卢米尼塔', '局长', '格芮芙(魔化)', '格芮芙']
 description: 爱剧情文本。
 source: 'https://wiki.biligame.com/wqmt/GHOST%203-3%E5%89%A7%E6%83%85'

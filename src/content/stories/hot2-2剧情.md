@@ -1,6 +1,7 @@
 ---
 title: 饕餮传说
 type: 活动
+chapter: 无餍之宴
 characters: ['开尔文', '卡门奈特', '奇怪的声音', '宾客们', '局长', '麦格拉', '宾客A', '宾客B', '惊慌的宾客', '公众号小姐']
 description: 饕餮传说剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT2-2%E5%89%A7%E6%83%85'

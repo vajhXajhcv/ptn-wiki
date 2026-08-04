@@ -1,6 +1,7 @@
 ---
 title: 污染
 type: 活动
+chapter: 幽零风暴
 characters: ['瑞思', '局长', '兰利', '友人(玛蒂尔达)', '部下(夜莺)', '身边的人(赫卡蒂)', '？？？', '少女', '远处的声音(夜莺)', '远处的声音(赫卡蒂)']
 description: 污染剧情文本。
 source: 'https://wiki.biligame.com/wqmt/NORM1-2%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: VLOG-112
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['洛芙', '嗷呜', '黛丝', '琳', '“导演”D', '小文', '星仔', '啦宝', '时空警察鸭', '局长', '嘈杂的人群', '兴奋的人群']
 description: VLOG-112剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-112%E5%89%A7%E6%83%85'

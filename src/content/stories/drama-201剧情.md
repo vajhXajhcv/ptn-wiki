@@ -1,6 +1,7 @@
 ---
 title: 仙女教母
 type: 活动
+chapter: 浮世剧院
 characters: ['悲伤的少女', '？？？', '局长', '丽莎']
 description: 仙女教母剧情文本。
 source: 'https://wiki.biligame.com/wqmt/DRAMA-201%E5%89%A7%E6%83%85'

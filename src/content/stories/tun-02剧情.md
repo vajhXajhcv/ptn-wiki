@@ -1,6 +1,7 @@
 ---
 title: 硬币与宝藏
 type: 活动
+chapter: 恒沙的箴言
 characters: ['黎莎洛', '赫罗(青年)', '西涅克斯', '伊帕希娅', '赫罗', '守卫']
 description: 硬币与宝藏剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TUN-02%E5%89%A7%E6%83%85'

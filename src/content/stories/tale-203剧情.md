@@ -1,6 +1,7 @@
 ---
 title: 闭门
 type: 活动
+chapter: 浮生夜话
 characters: ['局长', '妖艳花妖', '清丽花妖', '豪放花妖']
 description: 闭门剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-203%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 注册
 type: 活动
+chapter: 完美投票
 characters: ['暴躁的男人', '？？', '赫卡蒂', '夜莺', '局长', '暗网故人']
 description: 注册剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VOTE-0%E5%89%A7%E6%83%85'

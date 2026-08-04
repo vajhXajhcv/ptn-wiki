@@ -1,6 +1,7 @@
 ---
 title: “胜利”
-type: 活动
+type: 主线
+chapter: 新城·悬城篇
 characters: ['辩论主持人', '迈克斯·金', '韦尔', '局长', '欢呼的人群', '贝纳戴特', '派因', '？？？']
 description: “胜利”剧情文本。
 source: 'https://wiki.biligame.com/wqmt/SdN2-3%E5%89%A7%E6%83%85'

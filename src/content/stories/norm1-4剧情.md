@@ -1,6 +1,7 @@
 ---
 title: 烟花
 type: 活动
+chapter: 幽零风暴
 characters: ['少女', '局长', '000']
 description: 烟花剧情文本。
 source: 'https://wiki.biligame.com/wqmt/NORM1-4%E5%89%A7%E6%83%85'

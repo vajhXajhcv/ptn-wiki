@@ -1,6 +1,7 @@
 ---
 title: 不速之客
 type: 活动
+chapter: 刹雨
 characters: ['罗睺']
 description: 不速之客剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-001%E5%89%A7%E6%83%85'

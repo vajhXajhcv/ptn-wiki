@@ -1,6 +1,7 @@
 ---
 title: 暴走
 type: 活动
+chapter: 溺夜誓约
 characters: ['局长', '格芮芙(魔化)', '格芮芙?', '十五号', '杜拉罕', '熟悉的身影', '又一个熟悉的身影', '卢米尼塔']
 description: 暴走剧情文本。
 source: 'https://wiki.biligame.com/wqmt/GHOST%203-1%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 搜查与逃亡
 type: 活动
+chapter: 如蜜夜
 characters: ['慌乱的宾客', '医师', '局长', '阿德莱德', '雪女', '蜜莉', '莎莉', '卡兹安']
 description: 搜查与逃亡剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-303%E5%89%A7%E6%83%85'

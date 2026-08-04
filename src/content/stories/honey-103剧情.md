@@ -1,6 +1,7 @@
 ---
 title: 猫头鹰先生
 type: 活动
+chapter: 如蜜夜
 characters: ['金面具', '年轻宾客', '矮个宾客', '莎莉', '卡兹安', '蜜莉', '魔术师']
 description: 猫头鹰先生剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-103%E5%89%A7%E6%83%85'

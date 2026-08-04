@@ -1,6 +1,7 @@
 ---
 title: 盛筵·请入席
 type: 活动
+chapter: 无餍之宴
 characters: ['局长', '？？', '卡门奈特']
 description: 盛筵·请入席剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT3-2%E5%89%A7%E6%83%85'

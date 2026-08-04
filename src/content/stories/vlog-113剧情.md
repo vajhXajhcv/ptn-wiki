@@ -1,6 +1,7 @@
 ---
 title: VLOG-113
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['记者A', '记者B', '沸腾的人群', '记者C', '“导演”D', '嗷呜', '记者们', '崩溃的女明星', '路人', '恍惚的人声', '？？', '闯入的女人', '导演助理', '洛芙', '黛丝', '琳', '黛伦']
 description: VLOG-113剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-113%E5%89%A7%E6%83%85'

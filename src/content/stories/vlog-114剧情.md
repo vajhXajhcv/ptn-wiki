@@ -1,6 +1,7 @@
 ---
 title: VLOG-114
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['琳', '洛芙', '黛丝', '嗷呜', '局长', '星仔', '小文']
 description: VLOG-114剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-114%E5%89%A7%E6%83%85'

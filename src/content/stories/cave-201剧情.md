@@ -1,6 +1,7 @@
 ---
 title: 引渡的先知
 type: 活动
+chapter: 恒沙的箴言
 characters: ['伊帕希娅', '海拉(砂海)', '海拉', '西涅克斯', '伊帕希娅?']
 description: 引渡的先知剧情文本。
 source: 'https://wiki.biligame.com/wqmt/CAVE-201%E5%89%A7%E6%83%85'

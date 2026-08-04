@@ -1,6 +1,7 @@
 ---
 title: VLOG-105
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['嗷呜', '洛芙', '黛丝', '琳', '局长', '院长', '小文', '“导演”D']
 description: VLOG-105剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-105%E5%89%A7%E6%83%85'

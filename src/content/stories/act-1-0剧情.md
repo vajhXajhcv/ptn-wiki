@@ -1,6 +1,7 @@
 ---
 title: 序幕
 type: 活动
+chapter: 浮世剧院
 characters: ['？？？', '露薇娅·蕾', '伊格尼', '局长']
 description: 序幕剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ACT-1-0%E5%89%A7%E6%83%85'

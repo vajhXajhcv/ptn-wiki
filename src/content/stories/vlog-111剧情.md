@@ -1,6 +1,7 @@
 ---
 title: VLOG-111
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['记者', '灰烬使徒S.T.', '院长', '？？', '戴红围巾的鸭子', '时空警察鸭', '啦宝', '嗷呜', '“导演”D', '黛丝', '琳', '局长']
 description: VLOG-111剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-111%E5%89%A7%E6%83%85'

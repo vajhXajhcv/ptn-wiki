@@ -1,6 +1,7 @@
 ---
 title: “降妖”
 type: 活动
+chapter: 浮生夜话
 characters: ['妖艳花妖', '清丽花妖', '豪放花妖', '局长', '紫藤花妖们', '萦萦']
 description: “降妖”剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-205%E5%89%A7%E6%83%85'

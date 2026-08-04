@@ -1,6 +1,7 @@
 ---
 title: 入席资格
 type: 活动
+chapter: 无餍之宴
 characters: ['宾客A', '宾客B', '宾客C', '宾客D', '卡门奈特', '开尔文', '局长', '？？？', '麦格拉']
 description: 入席资格剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT1-4%E5%89%A7%E6%83%85'

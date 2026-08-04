@@ -1,6 +1,7 @@
 ---
 title: 所谓爱情
 type: 活动
+chapter: 如蜜夜
 characters: ['卡兹安', '蜜莉', '莎莉', '主持人']
 description: 所谓爱情剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-208%E5%89%A7%E6%83%85'

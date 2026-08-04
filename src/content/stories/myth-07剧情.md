@@ -1,6 +1,7 @@
 ---
 title: 筋骨作簧
 type: 活动
+chapter: 祀日赋
 characters: ['烟烟', 'FAC', '？？', '黑石英']
 description: 筋骨作簧剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MYTH-07%E5%89%A7%E6%83%85'

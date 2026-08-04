@@ -1,6 +1,7 @@
 ---
 title: 等待
 type: 活动
+chapter: 刹雨
 characters: ['怯懦的警卫', '焦躁的警卫', '阴影中的刺客', '罗睺', '？？']
 description: 等待剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-103%E5%89%A7%E6%83%85'

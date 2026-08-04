@@ -1,6 +1,7 @@
 ---
 title: 阻止
 type: 活动
+chapter: 幽零风暴
 characters: ['局长', '摩尔', '代码嘎', '000', '赫卡蒂']
 description: 阻止剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ERR2-3%E5%89%A7%E6%83%85'

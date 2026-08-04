@@ -1,6 +1,7 @@
 ---
 title: 辉煌楼房
 type: 活动
+chapter: 浮世剧院
 characters: ['艾可']
 description: 辉煌楼房剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MUSIC-4%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 暗室
 type: 活动
+chapter: 刹雨
 characters: ['9th特工', '罗睺', '阴影刺客(堇)']
 description: 暗室剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-404%E5%89%A7%E6%83%85'

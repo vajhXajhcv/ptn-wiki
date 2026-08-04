@@ -1,6 +1,7 @@
 ---
 title: 隐匿的真相
 type: 活动
+chapter: 如蜜夜
 characters: ['莎莉', 'E先生', '？？', '蜜莉']
 description: 隐匿的真相剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-104%E5%89%A7%E6%83%85'

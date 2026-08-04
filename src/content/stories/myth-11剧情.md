@@ -1,6 +1,7 @@
 ---
 title: 鸣凤彩凰
 type: 活动
+chapter: 祀日赋
 characters: ['？？', '烟烟', 'FAC', '局长', 'FAC士兵A', 'FAC士兵B']
 description: 鸣凤彩凰剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MYTH-11%E5%89%A7%E6%83%85'

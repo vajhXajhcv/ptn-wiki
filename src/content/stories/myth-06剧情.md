@@ -1,6 +1,7 @@
 ---
 title: 为祸江洋
 type: 活动
+chapter: 祀日赋
 characters: ['烟烟', '拾荒者A', '拾荒者', '怪物']
 description: 为祸江洋剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MYTH-06%E5%89%A7%E6%83%85'

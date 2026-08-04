@@ -1,6 +1,7 @@
 ---
 title: 意外重逢
 type: 活动
+chapter: 如蜜夜
 characters: ['雪女', '魔术师', '月女', '莎莉', '卡兹安']
 description: 意外重逢剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-207%E5%89%A7%E6%83%85'

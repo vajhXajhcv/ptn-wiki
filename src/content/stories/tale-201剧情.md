@@ -1,6 +1,7 @@
 ---
 title: 异树
 type: 活动
+chapter: 浮生夜话
 characters: ['夜莺', 'FAC负责人', '局长', '玉骨', '？？？']
 description: 异树剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-201%E5%89%A7%E6%83%85'

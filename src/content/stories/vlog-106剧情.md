@@ -1,6 +1,7 @@
 ---
 title: VLOG-106
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['洛芙', '黛丝', '琳', '嗷呜', '“导演”D', '局长']
 description: VLOG-106剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-106%E5%89%A7%E6%83%85'

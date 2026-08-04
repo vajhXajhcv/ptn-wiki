@@ -1,6 +1,7 @@
 ---
 title: 重要的事
 type: 活动
+chapter: 刹雨
 characters: ['天气预报', '罗睺(便装)', '瑟琳(便装)', '罗睺', '女仆']
 description: 重要的事剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-402%E5%89%A7%E6%83%85'

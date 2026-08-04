@@ -1,6 +1,7 @@
 ---
 title: 简陋帐篷
 type: 活动
+chapter: 浮世剧院
 characters: ['吟游诗人']
 description: 简陋帐篷剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MUSIC-2%E5%89%A7%E6%83%85'

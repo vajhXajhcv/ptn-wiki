@@ -1,6 +1,7 @@
 ---
 title: 炼狱
 type: 活动
+chapter: 浮生夜话
 characters: ['局长', '居民C', '居民A', '居民B', '紫藤花妖', '“萦萦”', '混沌的声音', '？？']
 description: 炼狱剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-402%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 沉溺入戏
 type: 活动
+chapter: 浮世剧院
 characters: ['厨师', '伊格尼', '？？？', '命运抉择']
 description: 沉溺入戏剧情文本。
 source: 'https://wiki.biligame.com/wqmt/IGNIS-3%E5%89%A7%E6%83%85'

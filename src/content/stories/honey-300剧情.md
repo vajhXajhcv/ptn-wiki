@@ -1,6 +1,7 @@
 ---
 title: 极乐边境
 type: 活动
+chapter: 如蜜夜
 characters: ['医师', '局长', '旧军成员']
 description: 极乐边境剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-300%E5%89%A7%E6%83%85'

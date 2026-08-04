@@ -1,6 +1,7 @@
 ---
 title: VLOG-107
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['“导演”D', '嗷呜', '洛芙', '黛丝', '琳', '星仔']
 description: VLOG-107剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-107%E5%89%A7%E6%83%85'

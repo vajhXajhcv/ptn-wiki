@@ -1,6 +1,7 @@
 ---
 title: 夺冠时刻
 type: 活动
+chapter: 浮世剧院
 characters: ['裁判', '耐克', '记者']
 description: 夺冠时刻剧情文本。
 source: 'https://wiki.biligame.com/wqmt/DRAMA-301%E5%89%A7%E6%83%85'

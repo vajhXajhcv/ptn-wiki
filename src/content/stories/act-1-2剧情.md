@@ -1,6 +1,7 @@
 ---
 title: 展露一角
 type: 活动
+chapter: 浮世剧院
 characters: ['狱警', '局长', '关押者A', '关押者B', '关押者C', '伊格尼', '观众A', '观众B']
 description: 展露一角剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ACT-1-2%E5%89%A7%E6%83%85'

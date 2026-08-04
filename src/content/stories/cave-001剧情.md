@@ -1,6 +1,7 @@
 ---
 title: 研究报告
 type: 活动
+chapter: 恒沙的箴言
 characters: ['？？？', '严肃的声音', '伊帕希娅', '海拉(砂海)']
 description: 研究报告剧情文本。
 source: 'https://wiki.biligame.com/wqmt/CAVE-001%E5%89%A7%E6%83%85'

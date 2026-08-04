@@ -1,6 +1,7 @@
 ---
 title: 戏言
 type: 活动
+chapter: 浮生夜话
 characters: ['玉骨', '妖怪听众', '局长']
 description: 戏言剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-204%E5%89%A7%E6%83%85'

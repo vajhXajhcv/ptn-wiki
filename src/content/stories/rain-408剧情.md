@@ -1,6 +1,7 @@
 ---
 title: 为何而战
 type: 活动
+chapter: 刹雨
 characters: ['安全负责人', '罗睺', '“代理”', '瑟琳']
 description: 为何而战剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-408%E5%89%A7%E6%83%85'

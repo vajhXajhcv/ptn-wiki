@@ -1,6 +1,7 @@
 ---
 title: 代价
 type: 活动
+chapter: 恒沙的箴言
 characters: ['刺耳的尖啸', '伊帕希娅', '风中的低语', '庄严的声音', '青涩的声音', '耳边的低语', '清脆的声音', '灰烬使徒', '西涅克斯', '？？？']
 description: 代价剧情文本。
 source: 'https://wiki.biligame.com/wqmt/CAVE-302%E5%89%A7%E6%83%85'

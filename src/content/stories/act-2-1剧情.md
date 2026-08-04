@@ -1,6 +1,7 @@
 ---
 title: 迷失方向
 type: 活动
+chapter: 浮世剧院
 characters: ['珀尔夫人', '记者', '露薇娅·蕾', '观众A', '观众B', '局长', '伊格尼', '厨师', '报童']
 description: 迷失方向剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ACT-2-1%E5%89%A7%E6%83%85'

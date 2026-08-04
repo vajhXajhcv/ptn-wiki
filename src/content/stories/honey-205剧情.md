@@ -1,6 +1,7 @@
 ---
 title: 好消息与坏消息
 type: 活动
+chapter: 如蜜夜
 characters: ['宾客A', '宾客B', '宾客C', '宾客D', '蜜莉', '莎莉', '卡兹安']
 description: 好消息与坏消息剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-205%E5%89%A7%E6%83%85'

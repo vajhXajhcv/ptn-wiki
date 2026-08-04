@@ -1,6 +1,7 @@
 ---
 title: VLOG-110
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['新闻', '院长', '小文', '琳', '嗷呜', '星仔', '“导演”D', '黛丝']
 description: VLOG-110剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-110%E5%89%A7%E6%83%85'

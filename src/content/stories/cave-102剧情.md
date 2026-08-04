@@ -1,6 +1,7 @@
 ---
 title: 岩隙之城
 type: 活动
+chapter: 恒沙的箴言
 characters: ['海拉(砂海)', '塔里克', '罗斯', '愤怒的居民', '和蔼的居民', '小扎德', '纳莎奶奶', '海拉']
 description: 岩隙之城剧情文本。
 source: 'https://wiki.biligame.com/wqmt/CAVE-102%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 雨夜
 type: 活动
+chapter: 刹雨
 characters: ['安全负责人', '治安官', '？？']
 description: 雨夜剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-000%E5%89%A7%E6%83%85'

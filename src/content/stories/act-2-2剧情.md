@@ -1,6 +1,7 @@
 ---
 title: 意外降临
 type: 活动
+chapter: 浮世剧院
 characters: ['钟声', '局长', '伊格尼', '？？？', '露薇娅·蕾', '珀尔夫人', '罪人A', '罪人B', '罪人C']
 description: 意外降临剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ACT-2-2%E5%89%A7%E6%83%85'

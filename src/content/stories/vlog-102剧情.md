@@ -1,6 +1,7 @@
 ---
 title: VLOG-102
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['嗷呜', '？？', '局长']
 description: VLOG-102剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-102%E5%89%A7%E6%83%85'

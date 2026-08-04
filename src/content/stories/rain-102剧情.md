@@ -1,6 +1,7 @@
 ---
 title: “欢迎光临”
 type: 活动
+chapter: 刹雨
 characters: ['罗睺']
 description: “欢迎光临”剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-102%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 骚乱
 type: 活动
+chapter: 如蜜夜
 characters: ['主持人', '灯光师', '舞女', '卡兹安', '保安', '月女', '莎莉', '？？', 'E先生']
 description: 骚乱剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-301%E5%89%A7%E6%83%85'

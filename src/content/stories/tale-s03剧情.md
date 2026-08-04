@@ -1,6 +1,7 @@
 ---
 title: 功德
 type: 活动
+chapter: 浮生夜话
 characters: ['无患子', '局长']
 description: 功德剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-S03%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 致远方的你Ⅱ
 type: 活动
+chapter: 如蜜夜
 characters: ['蜜莉']
 description: 致远方的你Ⅱ剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-L2%E5%89%A7%E6%83%85'

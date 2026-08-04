@@ -1,6 +1,7 @@
 ---
 title: 暴走
 type: 活动
+chapter: 刹雨
 characters: ['“代理”', '治安官', '加洛法诺?', '？？', '加洛法诺']
 description: 暴走剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-406%E5%89%A7%E6%83%85'

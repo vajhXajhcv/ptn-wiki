@@ -1,6 +1,7 @@
 ---
 title: 婚礼准备
 type: 活动
+chapter: 溺夜誓约
 characters: ['赫卡蒂', '雷比尼斯', '艾米潘', '十五号', '格芮芙?', '局长', '？？']
 description: 婚礼准备剧情文本。
 source: 'https://wiki.biligame.com/wqmt/GHOST%202-1%E5%89%A7%E6%83%85'

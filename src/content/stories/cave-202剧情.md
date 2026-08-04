@@ -1,6 +1,7 @@
 ---
 title: 责任
 type: 活动
+chapter: 恒沙的箴言
 characters: ['海拉(砂海)', '西涅克斯', '伊帕希娅', '伊帕希娅&海拉', '赫罗(青年)']
 description: 责任剧情文本。
 source: 'https://wiki.biligame.com/wqmt/CAVE-202%E5%89%A7%E6%83%85'

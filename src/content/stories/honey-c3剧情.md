@@ -1,6 +1,7 @@
 ---
 title: 复仇
 type: 活动
+chapter: 如蜜夜
 characters: ['贵妇', '卡兹安', '安保A', '安保B', '贵族青年']
 description: 复仇剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-C3%E5%89%A7%E6%83%85'

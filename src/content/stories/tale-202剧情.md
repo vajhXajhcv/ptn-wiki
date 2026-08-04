@@ -1,6 +1,7 @@
 ---
 title: 诡街
 type: 活动
+chapter: 浮生夜话
 characters: ['嘟嘟', '局长', '？？？', '嗷呜']
 description: 诡街剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-202%E5%89%A7%E6%83%85'

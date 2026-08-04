@@ -1,6 +1,7 @@
 ---
 title: 偶遇
 type: 活动
+chapter: 浮生夜话
 characters: ['？？？', '局长', '路人']
 description: 偶遇剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-S01%E5%89%A7%E6%83%85'

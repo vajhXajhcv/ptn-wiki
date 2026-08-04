@@ -1,6 +1,7 @@
 ---
 title: 围墙而唱
 type: 活动
+chapter: 浮世剧院
 characters: ['罪人A', '罪人B', '罪人C', '罪人们', '伊格尼', '局长', '？？？', '露薇娅·蕾']
 description: 围墙而唱剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ACT-1-4%E5%89%A7%E6%83%85'

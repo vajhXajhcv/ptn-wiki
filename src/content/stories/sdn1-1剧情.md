@@ -1,6 +1,7 @@
 ---
 title: 选举季
-type: 活动
+type: 主线
+chapter: 新城·悬城篇
 characters: ['辛迪加工人A', '辛迪加工人B', '辛迪加工人C', '主持人', '派因']
 description: 选举季剧情文本。
 source: 'https://wiki.biligame.com/wqmt/SdN1-1%E5%89%A7%E6%83%85'

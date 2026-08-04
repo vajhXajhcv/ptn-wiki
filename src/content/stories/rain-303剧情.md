@@ -1,6 +1,7 @@
 ---
 title: 过往
 type: 活动
+chapter: 刹雨
 characters: ['冷峻的声音', '猥琐的声音', '冷漠的声音', '怀念的声音', '？？', '“罗睺”', '瓦尔纳', '罗睺', '瑟琳', '安全负责人']
 description: 过往剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-303%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 花下的秘密
 type: 活动
+chapter: 刹雨
 characters: ['罗睺']
 description: 花下的秘密剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-106%E5%89%A7%E6%83%85'

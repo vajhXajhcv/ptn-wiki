@@ -1,6 +1,7 @@
 ---
 title: 心上人
 type: 活动
+chapter: 如蜜夜
 characters: ['莎莉', '蜜莉', '金面具', 'E先生']
 description: 心上人剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-203%E5%89%A7%E6%83%85'

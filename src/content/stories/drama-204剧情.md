@@ -1,6 +1,7 @@
 ---
 title: 玫瑰绽于雪原
 type: 活动
+chapter: 浮世剧院
 characters: ['白衣人A', '白衣人B', '面具男子', '维多利亚']
 description: 玫瑰绽于雪原剧情文本。
 source: 'https://wiki.biligame.com/wqmt/DRAMA-204%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 游医
 type: 活动
+chapter: 浮生夜话
 characters: ['局长', '？？？', '无患子']
 description: 游医剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-S02%E5%89%A7%E6%83%85'

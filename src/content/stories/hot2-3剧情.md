@@ -1,6 +1,7 @@
 ---
 title: 无理的规则
 type: 活动
+chapter: 无餍之宴
 characters: ['开尔文', '局长', '卡门奈特', '宾客死役', '奇怪的声音']
 description: 无理的规则剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT2-3%E5%89%A7%E6%83%85'

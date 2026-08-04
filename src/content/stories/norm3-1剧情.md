@@ -1,6 +1,7 @@
 ---
 title: 结局
 type: 活动
+chapter: 幽零风暴
 characters: ['艾米潘', '雷比尼斯', '赫卡蒂', '小猫', '瑞思', '局长', '摩尔']
 description: 结局剧情文本。
 source: 'https://wiki.biligame.com/wqmt/NORM3-1%E5%89%A7%E6%83%85'

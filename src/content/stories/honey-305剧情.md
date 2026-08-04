@@ -1,6 +1,7 @@
 ---
 title: 爱是唯一的火光
 type: 活动
+chapter: 如蜜夜
 characters: ['旧军成员', '局长', '莎莉', '蜜莉', 'E先生', '医师', '通信员']
 description: 爱是唯一的火光剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-305%E5%89%A7%E6%83%85'

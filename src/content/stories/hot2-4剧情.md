@@ -1,6 +1,7 @@
 ---
 title: 品尝愤怒
 type: 活动
+chapter: 无餍之宴
 characters: ['卡门奈特', '局长', '麦格拉']
 description: 品尝愤怒剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT2-4%E5%89%A7%E6%83%85'

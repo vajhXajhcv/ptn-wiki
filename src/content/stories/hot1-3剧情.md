@@ -1,6 +1,7 @@
 ---
 title: 传说中的食材
 type: 活动
+chapter: 无餍之宴
 characters: ['局长', '卡门奈特', '玛奇朵', '开尔文', '？？', '雷恩', '高大的男人A', '高大的男人B', '高大的男人C', '女仆小姐']
 description: 传说中的食材剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT1-3%E5%89%A7%E6%83%85'

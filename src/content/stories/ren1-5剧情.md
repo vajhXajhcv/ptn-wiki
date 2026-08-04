@@ -1,6 +1,7 @@
 ---
 title: 逃亡之人
-type: 活动
+type: 主线
+chapter: 新城·悬城篇
 characters: ['艾尔维拉', '局长', '？？', '耶莱娜', '迈克斯·金', '主持人', '派因', '？？？']
 description: 逃亡之人剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ReN1-5%E5%89%A7%E6%83%85'

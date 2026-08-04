@@ -1,6 +1,7 @@
 ---
 title: VLOG-108
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['新闻', '嗷呜', '洛芙', '“导演”D']
 description: VLOG-108剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-108%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 历史档案
 type: 活动
+chapter: 残锋
 characters: ['希格林德', '奥古斯特', '“戾刃”']
 description: 历史档案剧情文本。
 source: 'https://wiki.biligame.com/wqmt/W-H-1%E5%89%A7%E6%83%85'

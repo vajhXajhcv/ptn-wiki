@@ -1,6 +1,7 @@
 ---
 title: 爱与罚
 type: 活动
+chapter: 如蜜夜
 characters: ['莎莉', '？？', '金面具', '模糊的人影', '西奥多', '蜜莉', 'E先生']
 description: 爱与罚剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-106%E5%89%A7%E6%83%85'

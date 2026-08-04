@@ -1,6 +1,7 @@
 ---
 title: 既视感
 type: 活动
+chapter: 溺夜誓约
 characters: ['局长', '？？？']
 description: 既视感剧情文本。
 source: 'https://wiki.biligame.com/wqmt/GHOST%201-1%E5%89%A7%E6%83%85'

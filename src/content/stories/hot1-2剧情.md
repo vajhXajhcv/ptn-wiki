@@ -1,6 +1,7 @@
 ---
 title: 派对焦点
 type: 活动
+chapter: 无餍之宴
 characters: ['宾客A', '宾客B', '宾客C', '开尔文', '局长', '玛奇朵', '卡门奈特', '宾客D', '宾客E', '宾客F', '奇怪的声音']
 description: 派对焦点剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT1-2%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 幽冥誓约
 type: 活动
+chapter: 溺夜誓约
 characters: ['格芮芙', '局长', '怪物们', '雷比尼斯', '赫卡蒂', '艾米潘', '格芮芙?']
 description: 幽冥誓约剧情文本。
 source: 'https://wiki.biligame.com/wqmt/GHOST%201-3%E5%89%A7%E6%83%85'

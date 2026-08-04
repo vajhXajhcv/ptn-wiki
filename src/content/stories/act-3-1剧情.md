@@ -1,6 +1,7 @@
 ---
 title: 酣梦难醒
 type: 活动
+chapter: 浮世剧院
 characters: ['珀尔夫人', '局长', '露薇娅', '蕾', '伊格尼', '命运抉择', '众人']
 description: 酣梦难醒剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ACT-3-1%E5%89%A7%E6%83%85'

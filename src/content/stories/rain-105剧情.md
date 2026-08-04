@@ -1,6 +1,7 @@
 ---
 title: 怪物
 type: 活动
+chapter: 刹雨
 characters: ['逐渐溶解的污秽', '罗睺']
 description: 怪物剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-105%E5%89%A7%E6%83%85'

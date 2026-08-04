@@ -1,6 +1,7 @@
 ---
 title: 意外线索
 type: 活动
+chapter: 如蜜夜
 description: 意外线索剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-201%E5%89%A7%E6%83%85'
 tags: ['活动', '剧情']

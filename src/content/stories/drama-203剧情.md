@@ -1,6 +1,7 @@
 ---
 title: 大戏剧家
 type: 活动
+chapter: 浮世剧院
 characters: ['助手', '戏剧家', '局长']
 description: 大戏剧家剧情文本。
 source: 'https://wiki.biligame.com/wqmt/DRAMA-203%E5%89%A7%E6%83%85'

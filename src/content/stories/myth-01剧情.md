@@ -1,6 +1,7 @@
 ---
 title: 世有英杰
 type: 活动
+chapter: 祀日赋
 characters: ['烟烟', '局长']
 description: 世有英杰剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MYTH-01%E5%89%A7%E6%83%85'

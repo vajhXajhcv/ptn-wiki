@@ -1,6 +1,7 @@
 ---
 title: 良药
 type: 活动
+chapter: 浮生夜话
 characters: ['无患子', '局长']
 description: 良药剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-S04%E5%89%A7%E6%83%85'

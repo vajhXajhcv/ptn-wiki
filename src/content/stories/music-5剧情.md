@@ -1,6 +1,7 @@
 ---
 title: 福尔图娜
 type: 活动
+chapter: 浮世剧院
 characters: ['艾可']
 description: 福尔图娜剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MUSIC-5%E5%89%A7%E6%83%85'

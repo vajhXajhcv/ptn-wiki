@@ -1,6 +1,7 @@
 ---
 title: VLOG-101
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['??', '嗷呜', '局长', '星仔', '夜莺', '局长&嗷呜', '海拉', '赫卡蒂']
 description: VLOG-101剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-101%E5%89%A7%E6%83%85'

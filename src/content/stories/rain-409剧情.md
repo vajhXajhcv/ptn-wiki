@@ -1,6 +1,7 @@
 ---
 title: 追索的终点
 type: 活动
+chapter: 刹雨
 characters: ['“代理”', '罗睺', '瑟琳', '？？', '黑石英', '金发少女', '克里斯蒂娜']
 description: 追索的终点剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-409%E5%89%A7%E6%83%85'

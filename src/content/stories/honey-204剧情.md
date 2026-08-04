@@ -1,6 +1,7 @@
 ---
 title: “秘密武器”
 type: 活动
+chapter: 如蜜夜
 characters: ['莎莉', '蜜莉', '多情的宾客']
 description: “秘密武器”剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-204%E5%89%A7%E6%83%85'

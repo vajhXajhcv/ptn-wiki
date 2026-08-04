@@ -1,6 +1,7 @@
 ---
 title: 未完结
 type: 活动
+chapter: 幽零风暴
 characters: ['技术人员A', '技术人员B', '瑞思', '局长', '摩尔', '000', '少女', '记忆中的声音', '讯息', '技术人员']
 description: 未完结剧情文本。
 source: 'https://wiki.biligame.com/wqmt/NORM3-2%E5%89%A7%E6%83%85'

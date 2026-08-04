@@ -1,6 +1,7 @@
 ---
 title: 听书
 type: 活动
+chapter: 浮生夜话
 characters: ['嗷呜', '局长', '叙述者', '玉骨']
 description: 听书剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-000%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 蜜莉的过去
 type: 活动
+chapter: 如蜜夜
 characters: ['莎莉', '卡兹安', '蜜莉']
 description: 蜜莉的过去剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-206%E5%89%A7%E6%83%85'

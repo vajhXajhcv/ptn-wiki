@@ -1,6 +1,7 @@
 ---
 title: 获得的勇气
 type: 活动
+chapter: 浮世剧院
 characters: ['琳', '观众A', '观众B', '？？？', '观众C']
 description: 获得的勇气剧情文本。
 source: 'https://wiki.biligame.com/wqmt/DRAMA-103%E5%89%A7%E6%83%85'

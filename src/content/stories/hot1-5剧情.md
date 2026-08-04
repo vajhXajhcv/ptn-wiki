@@ -1,6 +1,7 @@
 ---
 title: 电梯下行
 type: 活动
+chapter: 无餍之宴
 characters: ['开尔文', '局长', '神秘少女']
 description: 电梯下行剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT1-5%E5%89%A7%E6%83%85'

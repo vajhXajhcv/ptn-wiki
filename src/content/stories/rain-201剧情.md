@@ -1,6 +1,7 @@
 ---
 title: 第二次搜查
 type: 活动
+chapter: 刹雨
 characters: ['女佣', '罗睺']
 description: 第二次搜查剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-201%E5%89%A7%E6%83%85'

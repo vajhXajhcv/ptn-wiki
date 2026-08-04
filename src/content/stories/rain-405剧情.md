@@ -1,6 +1,7 @@
 ---
 title: 异变
 type: 活动
+chapter: 刹雨
 characters: ['瑟琳', '？？', '女仆', '“代理”', '加洛法诺', '加洛法诺？']
 description: 异变剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-405%E5%89%A7%E6%83%85'

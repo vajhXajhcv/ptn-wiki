@@ -1,6 +1,7 @@
 ---
 title: VLOG-103
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['嗷呜', '所有人', '洛芙', '黛丝', '琳', '局长', '小文', '灰烬使徒', '？？']
 description: VLOG-103剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-103%E5%89%A7%E6%83%85'

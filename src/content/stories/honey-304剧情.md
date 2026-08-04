@@ -1,6 +1,7 @@
 ---
 title: 微小的勇气
 type: 活动
+chapter: 如蜜夜
 characters: ['莎莉', '傀儡', '蜜莉', '西奥多', '幻影', '卡兹安', '局长', '伊薇莉恩']
 description: 微小的勇气剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-304%E5%89%A7%E6%83%85'

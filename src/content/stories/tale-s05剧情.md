@@ -1,6 +1,7 @@
 ---
 title: 闲游
 type: 活动
+chapter: 浮生夜话
 characters: ['局长', '无患子', '萦萦']
 description: 闲游剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-S05%E5%89%A7%E6%83%85'

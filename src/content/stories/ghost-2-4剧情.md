@@ -1,6 +1,7 @@
 ---
 title: 代价
 type: 活动
+chapter: 溺夜誓约
 characters: ['局长', '赫卡蒂', '格芮芙', '卢米尼塔', '格芮芙?', '十五号', '格芮芙(魔化)']
 description: 代价剧情文本。
 source: 'https://wiki.biligame.com/wqmt/GHOST%202-4%E5%89%A7%E6%83%85'

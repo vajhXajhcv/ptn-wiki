@@ -1,6 +1,7 @@
 ---
 title: 田野调查
-type: 活动
+type: 主线
+chapter: 新城·覆海篇
 characters: ['Pixel*', 'csiaogjra1*', '''''艾瑟默尔''''', '局长', '席宁', '渡鸦', '科希', '海拉', '玛蒂尔达', '唐', '黑石英', '艾瑟默尔']
 description: 田野调查剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ReN9-4%E5%89%A7%E6%83%85'

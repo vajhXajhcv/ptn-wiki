@@ -1,6 +1,7 @@
 ---
 title: 行动后
 type: 活动
+chapter: 浮世剧院
 characters: ['局长', '艾可']
 description: 行动后剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ACT-2-4%E5%89%A7%E6%83%85'

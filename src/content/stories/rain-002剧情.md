@@ -1,6 +1,7 @@
 ---
 title: 第一夜
 type: 活动
+chapter: 刹雨
 characters: ['安全负责人', '罗睺', 'FAC密电']
 description: 第一夜剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-002%E5%89%A7%E6%83%85'

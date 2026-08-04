@@ -1,6 +1,7 @@
 ---
 title: 日间的阴影
 type: 活动
+chapter: 刹雨
 characters: ['MBCC追踪队长', '威严的男人', '瑟琳(便装)', '“代理”', '罗睺(便装)', '天气预报', 'FAC密电', '罗睺']
 description: 日间的阴影剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-403%E5%89%A7%E6%83%85'

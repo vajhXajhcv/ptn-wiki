@@ -1,6 +1,7 @@
 ---
 title: 无尽邀约
 type: 活动
+chapter: 浮世剧院
 characters: ['局长', '珀尔夫人']
 description: 无尽邀约剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ACT-2-5%E5%89%A7%E6%83%85'

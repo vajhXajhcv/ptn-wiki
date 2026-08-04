@@ -1,6 +1,7 @@
 ---
 title: 美食家的期待
 type: 活动
+chapter: 无餍之宴
 characters: ['开尔文', '衣着华丽的宾客', '玛奇朵', '手拿笔记本的宾客', '侍者', '金发的女人', '皮肤黝黑的拳击手', '治安官', '穿着时尚的小妹', '开尔文&玛奇朵', '局长']
 description: 美食家的期待剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HOT4-1%E5%89%A7%E6%83%85'

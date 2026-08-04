@@ -1,6 +1,7 @@
 ---
 title: 于彼朝阳
 type: 活动
+chapter: 祀日赋
 characters: ['FAC士兵A', 'FAC士兵B', '局长', '烟烟']
 description: 于彼朝阳剧情文本。
 source: 'https://wiki.biligame.com/wqmt/MYTH-10%E5%89%A7%E6%83%85'

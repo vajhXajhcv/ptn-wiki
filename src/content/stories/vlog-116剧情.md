@@ -1,6 +1,7 @@
 ---
 title: VLOG-116
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['嗷呜', '红黑狮子', '红狮子女<br>（洛芙饰）', '？？', '青狮子女<br>（黛丝饰）', '青狮子女(黛丝饰)', '粉狮子女<br>（琳饰）', '局长', '黛伦']
 description: VLOG-116剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-116%E5%89%A7%E6%83%85'

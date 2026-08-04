@@ -1,6 +1,7 @@
 ---
 title: 致远方的你Ⅲ
 type: 活动
+chapter: 如蜜夜
 characters: ['莎莉', '阴影中人', '蜜莉']
 description: 致远方的你Ⅲ剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-L3%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 历史
-type: 活动
+type: 主线
+chapter: 新城·覆海篇
 characters: ['''''黑石英''''', '琳达', '局长', '席宁', '黑石英', 'Pixel*', 'psojfhga*', 'ioghiahi*']
 description: 历史剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ReN9-1%E5%89%A7%E6%83%85'

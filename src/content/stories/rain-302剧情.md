@@ -1,6 +1,7 @@
 ---
 title: “家”
 type: 活动
+chapter: 刹雨
 characters: ['刺客', '罗睺', '加洛法诺', '模糊的声音', '安全负责人']
 description: “家”剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-302%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 你与游戏
 type: 活动
+chapter: 幽零风暴
 characters: ['000', '局长', '000(便装)', '赫卡蒂', '夜莺', '瑞思']
 description: 你与游戏剧情文本。
 source: 'https://wiki.biligame.com/wqmt/NORM1-5%E5%89%A7%E6%83%85'

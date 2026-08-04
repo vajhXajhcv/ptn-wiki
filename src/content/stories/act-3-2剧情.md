@@ -1,6 +1,7 @@
 ---
 title: 盛大落幕
 type: 活动
+chapter: 浮世剧院
 characters: ['局长', '命运抉择', '伊格尼', '露薇娅', '珀尔夫人', '露薇娅·蕾', '？？？', '观众A', '观众B', '“观众”', '宣传单']
 description: 盛大落幕剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ACT-3-2%E5%89%A7%E6%83%85'

@@ -1,6 +1,7 @@
 ---
 title: 路人与看门犬
 type: 活动
+chapter: 恒沙的箴言
 characters: ['隐约的声音', '赫罗(青年)', '？？', '黎莎洛']
 description: 路人与看门犬剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TUN-01%E5%89%A7%E6%83%85'

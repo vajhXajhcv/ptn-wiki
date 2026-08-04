@@ -7,14 +7,34 @@ import FilterBar from '../../components/FilterBar.astro';
 import { SITE_TITLE } from '../../consts';
 import '../../styles/global.css';
 
+const TYPE_ORDER = ['主线', '活动', '支线', '角色审查', '其他'];
+const ARC_ORDER = ['狄斯西区·铁血篇', '里湾·锈火篇', '新城·悬城篇', '新城·覆海篇'];
+
 const stories = (await getCollection('stories')).sort((a, b) => {
-	const typeDiff = (a.data.type || '').localeCompare(b.data.type || '');
+	const typeDiff = TYPE_ORDER.indexOf(a.data.type || '其他') - TYPE_ORDER.indexOf(b.data.type || '其他');
 	if (typeDiff !== 0) return typeDiff;
-	return (a.data.title || a.id).localeCompare(b.data.title || b.id, undefined, { numeric: true });
+	// 主线按篇章顺序，活动按活动名
+	const arcA = ARC_ORDER.indexOf(a.data.chapter || '');
+	const arcB = ARC_ORDER.indexOf(b.data.chapter || '');
+	const arcDiff = (arcA === -1 ? 99 : arcA) - (arcB === -1 ? 99 : arcB);
+	if (arcDiff !== 0) return arcDiff;
+	// 序章排在最前，其余按页面编号自然排序
+	const key = (s: string) => s.replace(/^序章(\d+)剧情$/, '0-0-$1');
+	return key(a.id).localeCompare(key(b.id), 'zh-CN', { numeric: true });
 });
 
-const types = [...new Set(stories.map((s) => s.data.type).filter(Boolean))].sort();
-const chapters = [...new Set(stories.map((s) => s.data.chapter).filter(Boolean))].sort();
+const types = TYPE_ORDER.filter((t) => stories.some((s) => s.data.type === t));
+const eventChapters = [
+	...new Set(
+		stories
+			.map((s) => s.data.chapter)
+			.filter((c): c is string => Boolean(c) && !ARC_ORDER.includes(c!))
+	),
+].sort((a, b) => a.localeCompare(b, 'zh-CN'));
+const chapters = [
+	...ARC_ORDER.filter((arc) => stories.some((s) => s.data.chapter === arc)),
+	...eventChapters,
+];
 const totalCount = stories.length;
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: 灼烧的雨
 type: 活动
+chapter: 刹雨
 characters: ['安全负责人', '？？', '模糊的幻影', '模糊的幻影(堇)', '模糊的幻影(昙)', '模糊的幻影(可可莉克)', '加洛法诺', '罗睺']
 description: 灼烧的雨剧情文本。
 source: 'https://wiki.biligame.com/wqmt/RAIN-407%E5%89%A7%E6%83%85'

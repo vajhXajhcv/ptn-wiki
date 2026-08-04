@@ -1,6 +1,7 @@
 ---
 title: 独自行走
 type: 活动
+chapter: 浮世剧院
 characters: ['“邻家女孩”', '局长', '老年人', '厨师', '？？？', '艾可']
 description: 独自行走剧情文本。
 source: 'https://wiki.biligame.com/wqmt/ACT-2-3%E5%89%A7%E6%83%85'

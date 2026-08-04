@@ -1,6 +1,7 @@
 ---
 title: VLOG-104
 type: 活动
+chapter: 飞跃狄斯卡
 characters: ['琳', '洛芙', '黛丝', '局长', '嗷呜', '？？']
 description: VLOG-104剧情文本。
 source: 'https://wiki.biligame.com/wqmt/VLOG-104%E5%89%A7%E6%83%85'

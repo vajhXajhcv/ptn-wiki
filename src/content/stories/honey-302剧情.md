@@ -1,6 +1,7 @@
 ---
 title: 最后的工作
 type: 活动
+chapter: 如蜜夜
 characters: ['卡兹安', 'E先生', '莎莉', '蜜莉']
 description: 最后的工作剧情文本。
 source: 'https://wiki.biligame.com/wqmt/HONEY-302%E5%89%A7%E6%83%85'

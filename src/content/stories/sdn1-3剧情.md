@@ -1,6 +1,7 @@
 ---
 title: 意外袭击
-type: 活动
+type: 主线
+chapter: 新城·悬城篇
 characters: ['主持人', '派因']
 description: 意外袭击剧情文本。
 source: 'https://wiki.biligame.com/wqmt/SdN1-3%E5%89%A7%E6%83%85'

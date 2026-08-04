@@ -1,6 +1,7 @@
 ---
 title: 庙会
 type: 活动
+chapter: 浮生夜话
 characters: ['局长', '玉骨']
 description: 庙会剧情文本。
 source: 'https://wiki.biligame.com/wqmt/TALE-101%E5%89%A7%E6%83%85'
