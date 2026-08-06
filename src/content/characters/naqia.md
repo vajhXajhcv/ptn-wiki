@@ -12,7 +12,7 @@ image: /characters/naqia.jpg
 imageSource:
   category: MBCC生日会
   title: 【MBCC生日会】丨「娜恰」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1410
+  url: https://wqmt.aisnogames.com/#/news/2023
 ---
 
 ## 基础信息

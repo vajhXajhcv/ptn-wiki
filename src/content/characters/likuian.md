@@ -6,6 +6,10 @@ faction: ''
 description: 丽奎安是S级异能禁闭者，法术伤害输出，通常兼具破核或控场能力。该角色为四周年版本预告角色，详细资料待官方实装后补全。
 tags: []
 image: /characters/likuian.jpg
+imageSource:
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-125「丽奎安」
+  url: https://wqmt.aisnogames.com/#/news/2026
 ---
 
 ## 基础信息
