@@ -12,7 +12,7 @@ image: /characters/zoya.jpg
 imageSource:
   category: MBCC生日会
   title: 【MBCC生日会】丨「卓娅」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/852
+  url: https://wqmt.aisnogames.com/#/news/2036
 ---
 
 ## 基础信息
