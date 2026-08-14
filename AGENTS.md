@@ -94,6 +94,7 @@ node scripts/fetch-official-resources.mjs       # 下载官网角色立绘
 node scripts/fetch-official-resources.mjs --no-download
 node scripts/apply-image-sources.mjs
 node scripts/fetch-official-news.mjs            # 抓取官网资讯
+node scripts/fetch-gamemode-covers.mjs          # 为玩法匹配官网封面/壁纸（CDN 直链）
 ```
 
 ### 6.2 BWiki 数据

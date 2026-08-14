@@ -30,6 +30,7 @@ const types = [...new Set(modes.map((m) => m.data.type).filter(Boolean))].sort()
 				<Card
 					href={`/game-modes/${m.id}/`}
 					title={m.data.name}
+					image={m.data.image}
 					description={`${m.data.description.slice(0, 80)}...`}
 					badges={[
 						m.data.type && { label: m.data.type },

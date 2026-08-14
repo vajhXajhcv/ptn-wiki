@@ -5,6 +5,11 @@ description: 无尽梦魇是 Roguelike 风格的挑战玩法，局长通过选�
 unlock: 随版本活动开放，通常在指定活动期间解锁。
 rewards: 活动代币、异方晶、限定头像框、剧情资料等。
 tags: ['活动', 'Roguelike', '肉鸽']
+image: https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260607/7a81b2f4f0de75f2ec3e5781cf5be212.jpeg
+imageSource:
+  category: 预告
+  title: 【预告】丨「无尽梦魇·追溯」离城难渡·下篇 活动情报
+  url: https://wqmt.aisnogames.com/#/news/1936
 ---
 
 ## 玩法概述

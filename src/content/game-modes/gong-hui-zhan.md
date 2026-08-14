@@ -5,6 +5,11 @@ description: 公会战是联盟成员协力挑战强大敌人的多人玩法，�
 unlock: 加入公会（秘盟）后，在公会战开放期间参与。
 rewards: 公会币、异方晶、稀有养成素材、限定称号等。
 tags: ['多人', '协力', '排名']
+image: https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260306/758851d21317876e5e2deed19c566492.jpeg
+imageSource:
+  category: 预告
+  title: 【预告】丨第13期「灰烬之潮」玩法介绍
+  url: https://wqmt.aisnogames.com/#/news/1762
 ---
 
 ## 玩法概述

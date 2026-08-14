@@ -5,6 +5,11 @@ description: 狄斯暗影是面向中后期的常驻挑战副本，提供高难�
 unlock: 通关指定主线章节后解锁。
 rewards: 异方晶、高级技能素材、烙印材料等。
 tags: ['常驻', '高难', '挑战']
+image: https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20251009/a8284c57924aeff3f18030c3a1b76d54.jpeg
+imageSource:
+  category: 预告
+  title: 【预告】丨「狄斯暗影」全新EX章节开放
+  url: https://wqmt.aisnogames.com/#/news/1491
 ---
 
 ## 玩法概述

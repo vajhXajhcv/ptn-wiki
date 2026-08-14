@@ -50,8 +50,25 @@ imageSource:
 
 详细对应关系见 `scripts/tmp/official-character-matches.json`。
 
-### 2. 官方资讯动态
+### 2. 玩法配图与默认 OG 图
 
+脚本 `scripts/fetch-gamemode-covers.mjs` 为 `src/content/game-modes/` 的玩法匹配官网资讯封面：
+
+1. 按各玩法配置的关键词匹配资讯标题（如「灰烬之潮」→ 公会战、「MBCC监管报告」→ 监管与派遣），取最新一条带封面的资讯。
+2. 无对应资讯的玩法（记忆风暴、帕尔马废墟、新城特训、浊暗之阱）从「影像壁纸 / 壁纸」类资讯依次选官方壁纸兜底。
+3. 封面以**官方 CDN 直链**（`static.aisnogames.com`）写入 frontmatter 的 `image` 字段，并同步 `imageSource` 来源标注——与 updates 的 `cover` 同一模式，图片不下载、不入库。
+
+```yaml
+image: https://static.aisnogames.com/...
+imageSource:
+  category: 预告
+  title: 【预告】丨第13期「灰烬之潮」玩法介绍
+  url: https://wqmt.aisnogames.com/#/news/1762
+```
+
+全站默认 OG 图（`src/components/BaseHead.astro` 的 `DEFAULT_OG_IMAGE`）同样使用官方影像壁纸 CDN 直链（当前为「影像壁纸 Vol.55 承霄」，3840×2160），本地 `public/og-default.png` 仅作兜底保留。
+
+### 3. 官方资讯动态
 脚本 `scripts/fetch-official-news.mjs` 抓取官网非角色类资讯（公告、预告、活动、维护等），生成 `src/content/updates/{id}.md`：
 
 ```yaml

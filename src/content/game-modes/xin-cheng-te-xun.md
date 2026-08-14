@@ -5,6 +5,11 @@ description: 新城特训是面向新局长的引导与挑战玩法，通过完�
 unlock: 新局长期间解锁，限时完成。
 rewards: 异方晶、狄斯币、养成素材、新手禁闭者等。
 tags: ['新手', '引导', '限时']
+image: https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260521/06a2585b9d6d9d42a90ca1c5db3bb715.jpeg
+imageSource:
+  category: 影像壁纸
+  title: 【影像壁纸】丨Vol.54 席宁&艾瑟默尔&皮克赛尔
+  url: https://wqmt.aisnogames.com/#/news/1910
 ---
 
 ## 玩法概述

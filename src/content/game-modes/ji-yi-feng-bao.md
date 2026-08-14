@@ -5,6 +5,11 @@ description: 记忆风暴是获取禁闭者技能升级素材的常驻副本，�
 unlock: 通关主线早期关卡后解锁，每日开放不同关卡。
 rewards: 各职业技能模组、低阶与高阶素材。
 tags: ['日常', '素材', '常驻']
+image: https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260622/fcb31ec10a8383088c5cfedb5b70cfd9.jpeg
+imageSource:
+  category: 影像壁纸
+  title: 【影像壁纸】丨Vol.55 承霄
+  url: https://wqmt.aisnogames.com/#/news/1952
 ---
 
 ## 玩法概述

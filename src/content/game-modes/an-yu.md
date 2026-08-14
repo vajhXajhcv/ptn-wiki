@@ -5,6 +5,11 @@ description: 暗域是无期迷途中的周期性高难度挑战玩法，局长�
 unlock: 通关指定主线关卡后解锁，按周期轮换开放。
 rewards: 异方晶、技能模组、记忆碎片、高危禁闭者养成素材等。
 tags: ['周常', '高难度', '环境效果']
+image: https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260519/639173ead028e4ce5e82fbe7e226812d.jpeg
+imageSource:
+  category: 预告
+  title: 【预告】丨破碎防线·暗域「第31期」即将开启
+  url: https://wqmt.aisnogames.com/#/news/1902
 ---
 
 ## 玩法概述

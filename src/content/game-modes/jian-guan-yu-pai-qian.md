@@ -5,6 +5,11 @@ description: 监管系统让禁闭者在建筑中工作产出资源，派遣则�
 unlock: 主线早期解锁管理局后开放。
 rewards: 狄斯币、体力、经验、烙印材料、角色好感度道具等。
 tags: ['养成', '离线收益', '资源']
+image: https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260622/3dc374ba48dbeedf1c5964c72e5a463d.jpeg
+imageSource:
+  category: MBCC监管报告
+  title: 【MBCC监管报告】丨东洲牌王
+  url: https://wqmt.aisnogames.com/#/news/1958
 ---
 
 ## 玩法概述

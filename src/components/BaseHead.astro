@@ -7,8 +7,14 @@ interface Props {
 	image?: string;
 }
 
+// 默认 OG 图使用官网公开资讯中的官方壁纸（影像壁纸 Vol.55 承霄，3840x2160），
+// 来源：https://wqmt.aisnogames.com/#/news （版权归自意网络所有）
+// 本地兜底：/og-default.png
+const DEFAULT_OG_IMAGE =
+	'https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260622/fcb31ec10a8383088c5cfedb5b70cfd9.jpeg';
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const { title, description, image = '/og-default.png' } = Astro.props;
+const { title, description, image = DEFAULT_OG_IMAGE } = Astro.props;
 ---
 
 <!-- Global Metadata -->

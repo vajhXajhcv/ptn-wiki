@@ -84,6 +84,13 @@ const gameModes = defineCollection({
 		unlock: z.string().optional(),
 		rewards: z.string().optional(),
 		image: z.string().optional(),
+		imageSource: z
+			.object({
+				category: z.string(),
+				title: z.string(),
+				url: z.string().url(),
+			})
+			.optional(),
 		tags: z.array(z.string()).optional(),
 	}),
 });

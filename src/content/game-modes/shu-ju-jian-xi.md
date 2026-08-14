@@ -5,6 +5,11 @@ description: 数据间隙是无期迷途中的特殊挑战副本，通过解析�
 unlock: 随活动或版本更新开放，通常在指定活动期间解锁。
 rewards: 活动代币、异方晶、限定头像框、剧情资料等。
 tags: ['活动', '解谜', '剧情']
+image: https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260811/92076fa83b1059f3cccdaebe3c51a44f.jpeg
+imageSource:
+  category: 预告
+  title: 【预告】丨「数据间隙·时序9」下半赛季即将开启
+  url: https://wqmt.aisnogames.com/#/news/2034
 ---
 
 ## 玩法概述

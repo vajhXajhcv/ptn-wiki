@@ -5,6 +5,11 @@ description: 破碎防线是周期性轮换的高难挑战，局长需要在特�
 unlock: 通关指定主线关卡后解锁，每周按属性轮换。
 rewards: 异方晶、技能模组、记忆碎片、狂厄结晶等。
 tags: ['周常', '高难', '积分']
+image: https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260402/e6c5ca37cd422628c3e7cb7524405b64.jpeg
+imageSource:
+  category: 预告
+  title: 【预告】丨破碎防线·暗域「第30期」即将开启嘎
+  url: https://wqmt.aisnogames.com/#/news/1814
 ---
 
 ## 玩法概述

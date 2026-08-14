@@ -5,6 +5,11 @@ description: 浊暗之阱是获取烙印与烙印强化材料的周常副本，�
 unlock: 通关指定主线关卡后解锁，每周可挑战。
 rewards: 烙印、烙印经验、异方晶、养成素材。
 tags: ['周常', '烙印', '爬塔']
+image: https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260519/f71a7c9cfe87276162eabdbe35639158.jpeg
+imageSource:
+  category: 影像壁纸
+  title: 【影像壁纸】丨「席宁」新增审查
+  url: https://wqmt.aisnogames.com/#/news/1906
 ---
 
 ## 玩法概述

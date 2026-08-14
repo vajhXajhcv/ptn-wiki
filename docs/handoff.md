@@ -47,6 +47,7 @@
 - **更新摘要**：`scripts/backfill-update-descriptions.mjs` 回填 58 条空 description
 - **技能数据**：从 BWiki `scripts/enrich-character-skills.mjs` 批量抓取
 - **官方立绘**：`node scripts/fetch-official-resources.mjs` 下载
+- **玩法配图 / 默认 OG**：`node scripts/fetch-gamemode-covers.mjs` 匹配官网封面，官方 CDN 直链（2026-08-14 新增）
 - **TAG / role 清洗**：`scripts/clean-tags.mjs` 清除了 HTML 注释残留
 - **默认 OG 图**：`public/og-default.png`
 

@@ -5,6 +5,11 @@ description: 帕尔马废墟是获取禁闭者升阶材料的日常副本，不�
 unlock: 通关主线早期关卡后解锁。
 rewards: 禁闭者升阶所需的职业材料、狄斯币等。
 tags: ['日常', '素材', '升阶']
+image: https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260602/db73a92fd1c9b6d45f0d9e4bac3c38a7.jpeg
+imageSource:
+  category: 壁纸
+  title: 【壁纸】丨「六月日历」
+  url: https://wqmt.aisnogames.com/#/news/1928
 ---
 
 ## 玩法概述
