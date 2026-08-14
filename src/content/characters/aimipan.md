@@ -5,7 +5,7 @@ rarity: B
 danger: 精准
 role: 刷新充能
 faction: 背离
-description: 艾米潘是B级精准禁闭者，擅长造成物理伤害的禁闭者，必杀可以造成{{伤害文本
+description: 普级精准禁闭者，拥有极远射程与对单爆发，必杀可造成核心伤害且能量消耗低，是新手期优秀的远程输出与破核手。
 aliases: ['EMP']
 tags: ['刷新充能', '进攻增幅', '暴击增幅']
 image: /characters/aimipan.jpg
