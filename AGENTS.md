@@ -135,11 +135,12 @@ npm run build     # 生成 dist/
 npm run deploy    # build + wrangler pages deploy
 ```
 
-### 已知部署问题
+### 已知部署问题（重要）
 
-- Cloudflare Pages 项目 `ptn-wiki` 的 Git Provider 当前为 `No`，GitHub push 不会自动触发部署。
-- 当前需要手动执行 `npm run deploy` 发布。
-- 如需恢复自动部署，请在 Cloudflare 控制台重新连接 GitHub 仓库。
+- Cloudflare Pages 已连接 GitHub 仓库，push 会自动触发部署（CI 构建命令 `npm run build`）。
+- `public/characters/*.jpg` 在 `.gitignore` 中，CI 检出里没有立绘——曾导致自动部署后线上图片全部 404（2026-08-14）。
+- **已修复（2026-08-14）**：`package.json` 增加 `prebuild` 钩子 `scripts/ensure-character-images.mjs`，构建前自动检查立绘引用、缺失时调用 `fetch-official-resources.mjs` 从官网补齐，一张都下载不到则中止构建。CI 与本地 `npm run build` / `npm run deploy` 都会经过该检查。
+- 如需跳过检查（如官网接口临时故障）：`SKIP_IMAGE_ENSURE=1 npm run build`。
 
 ---
 

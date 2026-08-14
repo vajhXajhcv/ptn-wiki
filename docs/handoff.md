@@ -16,7 +16,8 @@
 
 当前版本构建产物为 `dist/`，共 **1139 个页面**（2026-08-04 构建）。
 - **最新提交**：`e9108e6` refactor: 统一组件与页面、补全角色别名/更新摘要、新增社区页与 AGENTS.md（2026-08-04 的变更待提交）
-- **最新部署**：https://220032c0.ptn-wiki.pages.dev（Git 自动部署，状态 success，已绑定 5732.wiki）
+- **最新部署**：https://e805ef44.ptn-wiki.pages.dev（2026-08-14 本地 `npm run deploy` 手动部署，恢复角色立绘）
+- **注意**：`public/characters/*.jpg` 不提交 Git，CI 构建前由 `prebuild` 钩子（`scripts/ensure-character-images.mjs`）自动从官网补齐立绘，自动部署不再丢图（2026-08-14 修复）。
 
 ---
 
