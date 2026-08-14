@@ -6,6 +6,11 @@ danger: 精准
 role: 远程物理
 faction: 荒竭
 description: 荷尔加是A级精准禁闭者，擅长造成真实伤害的禁闭者。伤害提升{{禁闭者数值
+image: /characters/heerjia.jpg
+imageSource:
+  category: BWiki 升阶装束
+  title: 荷尔加升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%8D%B7%E5%B0%94%E5%8A%A0%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 tags: []
 ---
 

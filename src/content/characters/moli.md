@@ -9,9 +9,9 @@ description: 茉莉是S级狂暴禁闭者，擅长造成物理伤害的禁闭者
 tags: ['进攻增幅', '特殊辅助', '物伤增幅', '物伤辅助']
 image: /characters/moli.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-105「茉莉」
-  url: https://wqmt.aisnogames.com/#/news/1255
+  category: BWiki 升阶装束
+  title: 茉莉升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%8C%89%E8%8E%89%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

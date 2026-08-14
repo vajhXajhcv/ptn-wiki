@@ -10,9 +10,9 @@ aliases: ['Nacha']
 tags: ['异能', '法术输出', '群攻', '破核']
 image: /characters/naqia.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「娜恰」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/2023
+  category: BWiki 升阶装束
+  title: 娜恰升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%A8%9C%E6%81%B0%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

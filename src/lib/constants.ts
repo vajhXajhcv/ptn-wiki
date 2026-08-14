@@ -43,6 +43,40 @@ export const GAME_MODE_TYPES = [
 
 export const UPDATE_TYPES = ['版本更新', '活动', '维护公告', '站点公告', '其他'] as const;
 
+// 常用配队（按机制关键词聚合角色，成员由 /teams 页面从角色技能文本自动匹配）
+export const TEAMS = [
+	{
+		slug: 'pozhan',
+		name: '破绽队',
+		keyword: '破绽',
+		description: '围绕【破绽】标记构建的物理输出体系：由辅助位为敌人附加破绽，核心输出（如毕安卡）触发或移除破绽获得额外伤害与增益。',
+	},
+	{
+		slug: 'canfeng',
+		name: '残锋队',
+		keyword: '残锋',
+		description: '围绕【残锋】层数构建的真实伤害体系：奥古斯特持续积攒残锋并消耗释放涅槃港轰炸，队友配合供给残锋或增益真实伤害。',
+	},
+	{
+		slug: 'fengshi',
+		name: '风蚀队',
+		keyword: '风蚀',
+		description: '围绕【风蚀】标记与风蚀伤害构建的物理体系：攻击附带风蚀标记，对携带标记的敌人造成更高伤害。',
+	},
+	{
+		slug: 'gandian',
+		name: '感电队',
+		keyword: '感电',
+		description: '围绕【感电】标记构建的异能体系：通过高频技能触发感电连锁，造成持续的法术伤害与群体压制。',
+	},
+	{
+		slug: 'ranshao',
+		name: '燃烧队',
+		keyword: '燃烧',
+		description: '围绕【燃烧】持续伤害构建的体系：多名角色叠加燃烧层数，依靠持续伤害磨血并触发与燃烧联动的增伤效果。',
+	},
+] as const;
+
 export const STORY_TYPES = ['主线', '活动', '支线', '角色审查', '其他'] as const;
 
 export const OFFICIAL_API_BASE = 'https://wqmt.aisnogames.com/api';

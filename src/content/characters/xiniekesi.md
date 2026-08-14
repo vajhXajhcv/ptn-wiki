@@ -6,6 +6,11 @@ danger: 狂暴
 role: 进攻辅助
 faction: 荒竭
 description: 西涅克斯是S级狂暴禁闭者，擅长造成真实伤害的禁闭者。伤害提升{{禁闭者数值
+image: /characters/xiniekesi.jpg
+imageSource:
+  category: BWiki 升阶装束
+  title: 西涅克斯升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%A5%BF%E6%B6%85%E5%85%8B%E6%96%AF%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 tags: ['进攻辅助', '真伤辅助']
 ---
 

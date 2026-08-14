@@ -9,9 +9,9 @@ description: 烟烟是A级精准禁闭者，擅长造成法术伤害的禁闭者
 tags: ['进攻增幅', '攻速增幅']
 image: /characters/yanyan.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-307「烟烟」
-  url: https://wqmt.aisnogames.com/#/news/556
+  category: BWiki 升阶装束
+  title: 烟烟升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%83%9F%E7%83%9F%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

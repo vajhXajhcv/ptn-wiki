@@ -9,9 +9,9 @@ description: 黛伦是一名S级狂暴禁闭者，主要负责近战物理输出
 tags: ['狂暴', '物理输出', '爆发', '群攻']
 image: /characters/dailun.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「黛伦」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1835
+  category: BWiki 升阶装束
+  title: 黛伦升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E9%BB%9B%E4%BC%A6%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

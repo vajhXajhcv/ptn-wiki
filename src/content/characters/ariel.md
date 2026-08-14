@@ -9,9 +9,9 @@ description: 危级治疗禁闭者，必杀可提供范围持续治疗，是哈�
 tags: ['启迪', '治疗', '群奶', '持续恢复']
 image: /characters/ariel.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「艾瑞尔」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1767
+  category: BWiki 升阶装束
+  title: 艾瑞尔升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%89%BE%E7%91%9E%E5%B0%94%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

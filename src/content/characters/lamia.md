@@ -10,9 +10,9 @@ aliases: ['Luvia Ray']
 tags: ['恐惧']
 image: /characters/lamia.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-300「雷温」
-  url: https://wqmt.aisnogames.com/#/news/262
+  category: BWiki 升阶装束
+  title: 雷温升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E9%9B%B7%E6%B8%A9%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

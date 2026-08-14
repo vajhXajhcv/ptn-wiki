@@ -45,15 +45,19 @@ function missingImages() {
 let missing = missingImages();
 
 if (missing.length > 0) {
-	console.log(`[ensure-images] 缺失 ${missing.length} 张角色立绘，运行 fetch-official-resources.mjs 补齐...`);
-	const res = spawnSync(process.execPath, [join(__dirname, 'fetch-official-resources.mjs')], {
-		stdio: 'inherit',
-		cwd: ROOT,
-	});
-	if (res.status !== 0) {
-		console.warn(`[ensure-images] 取图脚本退出码 ${res.status}，继续检查剩余缺失`);
+	console.log(`[ensure-images] 缺失 ${missing.length} 张角色立绘，依次尝试 BWiki 三阶立绘与官网资讯补齐...`);
+	// 主图策略为 BWiki 升阶装束（三阶立绘），官网资讯作为兜底
+	for (const script of ['fetch-bwiki-ascended-art.mjs', 'fetch-official-resources.mjs']) {
+		const res = spawnSync(process.execPath, [join(__dirname, script)], {
+			stdio: 'inherit',
+			cwd: ROOT,
+		});
+		if (res.status !== 0) {
+			console.warn(`[ensure-images] ${script} 退出码 ${res.status}，继续检查剩余缺失`);
+		}
+		missing = missingImages();
+		if (missing.length === 0) break;
 	}
-	missing = missingImages();
 }
 
 if (missing.length === 0) {

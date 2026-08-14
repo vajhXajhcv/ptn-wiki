@@ -10,9 +10,9 @@ aliases: ['Zoya']
 tags: ['狂暴', '物理输出', '群攻', '真实伤害']
 image: /characters/zoya.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「卓娅」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/2036
+  category: BWiki 升阶装束
+  title: 卓娅升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%8D%93%E5%A8%85%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

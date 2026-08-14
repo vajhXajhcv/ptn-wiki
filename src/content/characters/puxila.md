@@ -9,9 +9,9 @@ description: 普希拉是一名A级精准禁闭者，主要负责远程物理输
 tags: []
 image: /characters/puxila.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「普希拉」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1603
+  category: BWiki 升阶装束
+  title: 普希拉升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%99%AE%E5%B8%8C%E6%8B%89%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

@@ -9,9 +9,9 @@ description: 000是S级诡秘禁闭者，擅长造成物理伤害的禁闭者，
 tags: ['攻速增幅', '特殊增幅', '进攻增幅', '进攻辅助']
 image: /characters/ling.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-000「000」
-  url: https://wqmt.aisnogames.com/#/news/841
+  category: BWiki 升阶装束
+  title: 000升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:000%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

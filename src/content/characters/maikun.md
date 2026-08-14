@@ -9,9 +9,9 @@ description: 麦昆是A级诡秘禁闭者，擅长召唤的禁闭者，必杀可
 tags: ['进攻增幅', '召唤物增幅', '特殊增幅']
 image: /characters/maikun.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「麦昆」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1602
+  category: BWiki 升阶装束
+  title: 麦昆升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E9%BA%A6%E6%98%86%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

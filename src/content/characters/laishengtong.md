@@ -6,6 +6,11 @@ danger: 诡秘
 role: 进攻增幅
 faction: 无界
 description: 来生瞳是S级诡秘禁闭者，来自异世界的怪盗，必杀可以造成{{伤害文本
+image: /characters/laishengtong.jpg
+imageSource:
+  category: BWiki 升阶装束
+  title: 来生瞳升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%9D%A5%E7%94%9F%E7%9E%B3%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 tags: ['进攻增幅', '刷新充能', '暴击增幅']
 ---
 

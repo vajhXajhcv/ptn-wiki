@@ -6,6 +6,11 @@ danger: 异能
 role: 进攻辅助
 faction: 无界
 description: 来生泪是S级异能禁闭者，来自异世界的怪盗，必杀可以造成{{伤害文本
+image: /characters/laishenglei.jpg
+imageSource:
+  category: BWiki 升阶装束
+  title: 来生泪升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%9D%A5%E7%94%9F%E6%B3%AA%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 tags: ['进攻辅助', '眩晕', '减速', '法伤辅助']
 ---
 

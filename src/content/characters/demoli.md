@@ -9,9 +9,9 @@ description: 德莫莉是一名B级坚韧禁闭者，主要负责前排承伤与
 tags: ['防守增幅']
 image: /characters/demoli.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「德莫莉」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1863
+  category: BWiki 升阶装束
+  title: 德莫莉升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%BE%B7%E8%8E%AB%E8%8E%89%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

@@ -6,6 +6,11 @@ danger: 启迪
 role: 治疗辅助
 faction: 无界
 description: 来生爱是A级启迪禁闭者，来自异世界的怪盗。进入战斗时，来生爱操作自己制作的{{术语查看
+image: /characters/laishengai.jpg
+imageSource:
+  category: BWiki 升阶装束
+  title: 来生爱升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%9D%A5%E7%94%9F%E7%88%B1%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 tags: ['治疗辅助', '进攻辅助']
 ---
 

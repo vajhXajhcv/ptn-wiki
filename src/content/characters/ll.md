@@ -6,6 +6,11 @@ danger: 启迪
 role: 进攻辅助
 faction: 暗潮
 description: L.L.是S级启迪禁闭者，擅长支援的禁闭者。进入战斗时，L.L.携带{{术语查看
+image: /characters/ll.jpg
+imageSource:
+  category: BWiki 升阶装束
+  title: L.L.升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:L.L.%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 tags: ['进攻辅助', '能量恢复', '技能伤害辅助']
 ---
 

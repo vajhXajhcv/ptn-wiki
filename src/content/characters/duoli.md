@@ -9,9 +9,9 @@ description: 多莉是A级狂暴禁闭者，擅长造成物理伤害的禁闭者
 tags: []
 image: /characters/duoli.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「多莉」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1629
+  category: BWiki 升阶装束
+  title: 多莉升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%A4%9A%E8%8E%89%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

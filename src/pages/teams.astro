@@ -1,0 +1,112 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Card from '../components/Card.astro';
+import CardGrid from '../components/CardGrid.astro';
+import Badge from '../components/Badge.astro';
+import { SITE_TITLE } from '../consts';
+import { TEAMS, RARITY_ORDER } from '../lib/constants';
+import '../styles/global.css';
+
+const characters = await getCollection('characters');
+
+// 按机制关键词聚合成员（匹配角色技能正文）
+const byTeam = new Map<string, typeof characters>();
+for (const team of TEAMS) {
+	const members = characters.filter((c) => c.body?.includes(team.keyword));
+	members.sort((a, b) => {
+		const diff = (RARITY_ORDER[a.data.rarity || 'B'] ?? 2) - (RARITY_ORDER[b.data.rarity || 'B'] ?? 2);
+		if (diff !== 0) return diff;
+		return a.data.name.localeCompare(b.data.name, 'zh-CN');
+	});
+	byTeam.set(team.slug, members);
+}
+---
+
+<BaseLayout
+	title={`常用配队 - ${SITE_TITLE}`}
+	description="无期迷途常用机制配队一览：破绽队、残锋队、风蚀队、感电队、燃烧队等，按核心机制聚合相关禁闭者。"
+>
+	<main>
+		<h1 class="page-title">常用配队</h1>
+		<p class="page-desc">
+			按核心机制聚合的常用配队体系，成员根据角色技能正文中对该机制的引用自动归纳，供搭配参考。
+			具体数值与手法请进入角色详情页查看。
+		</p>
+
+		<nav class="team-nav">
+			{TEAMS.map((t) => <a href={`#${t.slug}`}>{t.name}<span>{byTeam.get(t.slug)!.length}</span></a>)}
+		</nav>
+
+		{TEAMS.map((team) => (
+			<section class="team-section" id={team.slug}>
+				<h2 class="team-title">
+					{team.name}
+					<Badge variant="tag">{byTeam.get(team.slug)!.length} 名</Badge>
+				</h2>
+				<p class="team-desc">{team.description}</p>
+				<CardGrid>
+					{byTeam.get(team.slug)!.map((c) => (
+						<Card
+							href={`/characters/${c.id}/`}
+							title={c.data.name}
+							subtitle={c.data.title}
+							image={c.data.image}
+							imageAlt={c.data.name}
+							badges={[
+								c.data.rarity && { label: `${c.data.rarity}级`, variant: `rarity-${c.data.rarity.toLowerCase()}` as const },
+								c.data.danger && { label: c.data.danger },
+							].filter(Boolean) as { label: string; variant?: string }[]}
+						/>
+					))}
+				</CardGrid>
+			</section>
+		))}
+	</main>
+</BaseLayout>
+
+<style>
+	.team-nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		margin-bottom: 2em;
+	}
+	.team-nav a {
+		padding: 0.35em 0.8em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 999px;
+		background: var(--bg-card);
+		font-size: 0.9em;
+		text-decoration: none;
+		color: rgb(var(--black));
+	}
+	.team-nav a:hover {
+		border-color: var(--accent);
+		color: var(--accent);
+	}
+	.team-nav a span {
+		margin-left: 0.4em;
+		font-size: 0.8em;
+		color: rgb(var(--gray));
+	}
+	.team-section {
+		margin-bottom: 2.5em;
+		scroll-margin-top: 80px;
+	}
+	.team-title {
+		display: flex;
+		align-items: center;
+		gap: 0.6em;
+		font-size: 1.4em;
+		margin: 0 0 0.5em;
+		padding-bottom: 0.4em;
+		border-bottom: 2px solid var(--accent);
+	}
+	.team-desc {
+		color: rgb(var(--gray));
+		font-size: 0.95em;
+		line-height: 1.7;
+		margin: 0 0 1.2em;
+	}
+</style>

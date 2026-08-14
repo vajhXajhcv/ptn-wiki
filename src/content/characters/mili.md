@@ -9,9 +9,9 @@ description: 蜜莉是S级异能禁闭者，擅长法术输出的禁闭者。释
 tags: ['法伤辅助']
 image: /characters/mili.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-459「蜜莉」
-  url: https://wqmt.aisnogames.com/#/news/1344
+  category: BWiki 升阶装束
+  title: 蜜莉升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%9C%9C%E8%8E%89%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

@@ -9,9 +9,9 @@ description: 胡椒是B级狂暴禁闭者，擅长造成物理伤害的禁闭者
 tags: ['攻速增幅', '进攻增幅', '物伤辅助']
 image: /characters/hujiao.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「胡椒」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1672
+  category: BWiki 升阶装束
+  title: 胡椒升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%83%A1%E6%A4%92%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

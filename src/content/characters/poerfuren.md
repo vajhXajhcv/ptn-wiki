@@ -10,9 +10,9 @@ aliases: ['Lady Pearl']
 tags: ['普攻伤害辅助', '攻速辅助']
 image: /characters/poerfuren.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-033「珀尔夫人」
-  url: https://wqmt.aisnogames.com/#/news/440
+  category: BWiki 升阶装束
+  title: 珀尔夫人升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%8F%80%E5%B0%94%E5%A4%AB%E4%BA%BA%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

@@ -9,9 +9,9 @@ description: 开尔文是B级异能禁闭者，擅长干扰的禁闭者。开尔
 tags: ['冰冻', '减速', '防守辅助']
 image: /characters/kaierwen.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「开尔文」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1752
+  category: BWiki 升阶装束
+  title: 开尔文升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%BC%80%E5%B0%94%E6%96%87%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

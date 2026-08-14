@@ -9,9 +9,9 @@ description: 塔利娅是A级精准禁闭者，擅长造成物理伤害的禁闭
 tags: ['减速', '攻速增幅', '物伤辅助']
 image: /characters/taliya.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-411「塔利娅」
-  url: https://wqmt.aisnogames.com/#/news/1251
+  category: BWiki 升阶装束
+  title: 塔利娅升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%A1%94%E5%88%A9%E5%A8%85%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

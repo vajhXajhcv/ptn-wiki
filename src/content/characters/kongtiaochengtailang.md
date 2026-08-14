@@ -9,9 +9,9 @@ description: 空条承太郎是S级狂暴禁闭者，来自异世界的替身使
 tags: ['刷新充能', '物伤辅助', '时间暂停']
 image: /characters/kongtiaochengtailang.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨「空条承太郎」
-  url: https://wqmt.aisnogames.com/#/news/1071
+  category: BWiki 升阶装束
+  title: 空条承太郎升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%A9%BA%E6%9D%A1%E6%89%BF%E5%A4%AA%E9%83%8E%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

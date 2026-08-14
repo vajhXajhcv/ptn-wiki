@@ -9,9 +9,9 @@ description: 辰砂是一名A级坚韧禁闭者，主要负责前排承伤与保
 tags: ['护盾辅助', '防守辅助']
 image: /characters/chensha.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「辰砂」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1764
+  category: BWiki 升阶装束
+  title: 辰砂升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%BE%B0%E7%A0%82%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

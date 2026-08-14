@@ -9,9 +9,9 @@ description: 希格林德是A级坚韧禁闭者，擅长防守的禁闭者，可
 tags: ['特殊能量恢复', '特殊辅助', '防守增幅']
 image: /characters/xigelinde.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「希格林德」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1984
+  category: BWiki 升阶装束
+  title: 希格林德升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%B8%8C%E6%A0%BC%E6%9E%97%E5%BE%B7%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

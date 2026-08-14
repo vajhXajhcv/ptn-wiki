@@ -10,9 +10,9 @@ aliases: ['Hella']
 tags: ['狂暴', '近战输出', '新手', '持续伤害']
 image: /characters/hella.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「海拉」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1032
+  category: BWiki 升阶装束
+  title: 海拉升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%B5%B7%E6%8B%89%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

@@ -50,8 +50,13 @@ imageSource:
 
 详细对应关系见 `scripts/tmp/official-character-matches.json`。
 
-### 2. 玩法配图与默认 OG 图
+> **2026-08-14 起角色主图策略调整**：主图统一为 BWiki「升阶装束」（三阶立绘），由 `scripts/fetch-bwiki-ascended-art.mjs` 抓取（159/159 已覆盖），官网资讯图退为缺图兜底与画廊素材。官网只发布初始立绘与贺图，未发布三阶立绘。
 
+### 2. 禁闭者画廊（官网图片 CDN 直链）
+
+脚本 `scripts/build-character-galleries.mjs` 为每个角色聚合官网资讯中的全部相关图片（禁闭者档案/影像捕获/装束/MBCC生日会/壁纸等类别，每条取 `cover` 直链），输出 `src/data/galleries.json`（纯元数据，提交进 git）。角色详情页据此渲染「禁闭者画廊」区块，图片点击跳官网原资讯页。
+
+### 3. 玩法配图与默认 OG 图
 脚本 `scripts/fetch-gamemode-covers.mjs` 为 `src/content/game-modes/` 的玩法匹配官网资讯封面：
 
 1. 按各玩法配置的关键词匹配资讯标题（如「灰烬之潮」→ 公会战、「MBCC监管报告」→ 监管与派遣），取最新一条带封面的资讯。
@@ -68,7 +73,7 @@ imageSource:
 
 全站默认 OG 图（`src/components/BaseHead.astro` 的 `DEFAULT_OG_IMAGE`）同样使用官方影像壁纸 CDN 直链（当前为「影像壁纸 Vol.55 承霄」，3840×2160），本地 `public/og-default.png` 仅作兜底保留。
 
-### 3. 官方资讯动态
+### 4. 官方资讯动态
 脚本 `scripts/fetch-official-news.mjs` 抓取官网非角色类资讯（公告、预告、活动、维护等），生成 `src/content/updates/{id}.md`：
 
 ```yaml

@@ -9,9 +9,9 @@ description: 克莱门汀是S级精准禁闭者，擅长造成物理伤害的禁
 tags: ['物伤辅助']
 image: /characters/kelaimenting.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-172「克莱门汀」
-  url: https://wqmt.aisnogames.com/#/news/1783
+  category: BWiki 升阶装束
+  title: 克莱门汀升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%85%8B%E8%8E%B1%E9%97%A8%E6%B1%80%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

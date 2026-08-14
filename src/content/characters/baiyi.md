@@ -10,9 +10,9 @@ aliases: ['Bai Yi']
 tags: ['诡秘', '破核', '爆发', '位移']
 image: /characters/baiyi.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「白逸」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1662
+  category: BWiki 升阶装束
+  title: 白逸升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%99%BD%E9%80%B8%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

@@ -9,9 +9,9 @@ description: 长手狙击手，对单爆发极高，被动叠加暴击后大招�
 tags: ['精准', '单体爆发', '破核', '暴击']
 image: /characters/koxy.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「科希」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1970
+  category: BWiki 升阶装束
+  title: 科希升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%A7%91%E5%B8%8C%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

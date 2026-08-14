@@ -9,9 +9,9 @@ description: 萨妮是A级异能禁闭者，擅长造成法术伤害的禁闭者
 tags: []
 image: /characters/sani.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「萨妮」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1711
+  category: BWiki 升阶装束
+  title: 萨妮升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%90%A8%E5%A6%AE%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

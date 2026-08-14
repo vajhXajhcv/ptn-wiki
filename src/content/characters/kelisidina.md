@@ -9,9 +9,9 @@ description: 克里斯蒂娜是A级狂暴禁闭者，擅长造成物理伤害的
 tags: ['进攻增幅', '自我治疗']
 image: /characters/kelisidina.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-189「克里斯蒂娜」
-  url: https://wqmt.aisnogames.com/#/news/117
+  category: BWiki 升阶装束
+  title: 克里斯蒂娜升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%85%8B%E9%87%8C%E6%96%AF%E8%92%82%E5%A8%9C%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

@@ -30,6 +30,7 @@
 | 角色图鉴 | `/characters` | 159 名角色，支持稀有度/职业/定位/阵营/关键词筛选，卡片展示官方立绘与阵营徽章 |
 | 角色详情 | `/characters/[id]` | 左图右信息，面包屑，Article JSON-LD，展示别名与阵营 |
 | 阵营图鉴 | `/factions` | 十六大狂厄阵营成员总览（数据驱动，2026-08-04 新增） |
+| 常用配队 | `/teams` | 破绽/残锋/风蚀/感电/燃烧五队，成员按技能机制关键词自动归纳（2026-08-14 新增） |
 | 世界观 | `/lore` | 零镜系统设定档案 61 条：入夜纪年/狄斯城/狂厄（2026-08-04 新增） |
 | 关卡攻略 | `/stages` | 主线关卡，支持章节/难度/搜索筛选 |
 | 玩法攻略 | `/game-modes` | 暗域、公会战、数据间隙等，支持按类型筛选 |
@@ -46,7 +47,9 @@
 - **角色别名**：29 名角色已写入英文/社区别名（`scripts/enrich-characters-from-gchar.mjs`）
 - **更新摘要**：`scripts/backfill-update-descriptions.mjs` 回填 58 条空 description
 - **技能数据**：从 BWiki `scripts/enrich-character-skills.mjs` 批量抓取
-- **官方立绘**：`node scripts/fetch-official-resources.mjs` 下载
+- **角色主图（三阶立绘）**：`node scripts/fetch-bwiki-ascended-art.mjs` 从 BWiki 抓「升阶装束」，159/159 覆盖（2026-08-14 起取代官网图为默认主图）
+- **禁闭者画廊**：`node scripts/build-character-galleries.mjs` 生成 `src/data/galleries.json`，详情页底部展示官网贺图/装束/壁纸（2026-08-14 新增）
+- **官方立绘（兜底）**：`node scripts/fetch-official-resources.mjs` 下载
 - **玩法配图 / 默认 OG**：`node scripts/fetch-gamemode-covers.mjs` 匹配官网封面，官方 CDN 直链（2026-08-14 新增）
 - **TAG / role 清洗**：`scripts/clean-tags.mjs` 清除了 HTML 注释残留
 - **默认 OG 图**：`public/og-default.png`

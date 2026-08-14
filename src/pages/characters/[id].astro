@@ -6,6 +6,7 @@ import DetailHeader from '../../components/DetailHeader.astro';
 import JsonLd from '../../components/JsonLd.astro';
 import { SITE_TITLE } from '../../consts';
 import { breadcrumbJsonLd, articleJsonLd } from '../../lib/seo';
+import galleries from '../../data/galleries.json';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
@@ -40,6 +41,11 @@ const badges = [
 ].filter(Boolean) as { label: string; variant?: string }[];
 
 const tags = (d.tags || []).map((tag) => ({ label: tag, variant: 'tag' as const }));
+
+// 禁闭者画廊：官网公开资讯中该角色的全部图片（生日贺图/装束/壁纸等）
+const gallery = (galleries as Record<string, { cover: string; category: string; title: string; url: string }[]>)[character.id] || [];
+// 主图来源是否为 BWiki 升阶装束（三阶立绘）
+const isAscendedArt = d.imageSource?.category === 'BWiki 升阶装束';
 ---
 
 <BaseLayout title={title} description={d.description} image={ogImage}>
@@ -72,8 +78,27 @@ const tags = (d.tags || []).map((tag) => ({ label: tag, variant: 'tag' as const 
 			<Content />
 		</div>
 
+		{gallery.length > 0 && (
+			<section class="character-gallery">
+				<h2>禁闭者画廊</h2>
+				<p class="gallery-desc">以下图片来自《无期迷途》官方网站公开资讯，版权归自意网络所有，点击图片查看官网原文。</p>
+				<div class="gallery-grid">
+					{gallery.map((item) => (
+						<a href={item.url} target="_blank" rel="noopener noreferrer" class="gallery-item" title={item.title}>
+							<img src={item.cover} alt={item.title} loading="lazy" decoding="async" />
+							<span class="gallery-category">{item.category}</span>
+						</a>
+					))}
+				</div>
+			</section>
+		)}
+
 		<p class="data-source">
-			角色图片素材来自《无期迷途》官方网站；技能名称、效果等客观数据参考无期迷途 BWiki 整理。
+			{isAscendedArt ? (
+				<>主图为升阶装束（三阶立绘），转自无期迷途 BWiki；画廊图片来自《无期迷途》官方网站。素材版权归自意网络所有。技能名称、效果等客观数据参考无期迷途 BWiki 整理。</>
+			) : (
+				<>角色图片素材来自《无期迷途》官方网站；技能名称、效果等客观数据参考无期迷途 BWiki 整理。</>
+			)}
 			{d.imageSource && (
 				<>
 					<br />
@@ -116,5 +141,50 @@ const tags = (d.tags || []).map((tag) => ({ label: tag, variant: 'tag' as const 
 	}
 	.character-body {
 		margin-top: 1.5em;
+	}
+	.character-gallery {
+		margin-top: 2.5em;
+	}
+	.character-gallery h2 {
+		font-size: 1.4em;
+		margin-bottom: 0.3em;
+	}
+	.gallery-desc {
+		color: rgb(var(--gray));
+		font-size: 0.9em;
+		margin: 0 0 1em;
+	}
+	.gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+		gap: 1em;
+	}
+	.gallery-item {
+		position: relative;
+		display: block;
+		border-radius: 8px;
+		overflow: hidden;
+		border: 1px solid rgb(var(--gray-light));
+		transition: transform 0.2s, box-shadow 0.2s;
+	}
+	.gallery-item:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--box-shadow);
+	}
+	.gallery-item img {
+		width: 100%;
+		height: 180px;
+		object-fit: cover;
+		display: block;
+	}
+	.gallery-category {
+		position: absolute;
+		left: 0.5em;
+		bottom: 0.5em;
+		padding: 0.15em 0.6em;
+		border-radius: 999px;
+		background: rgba(0, 0, 0, 0.65);
+		color: #fff;
+		font-size: 0.75em;
 	}
 </style>
