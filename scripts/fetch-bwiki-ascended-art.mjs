@@ -1,15 +1,17 @@
 // 从无期迷途 BWiki 抓取角色「升阶装束」（三阶立绘），统一角色主图风格。
 //
 // 背景：官网资讯只发布初始立绘与生日贺图等，三阶立绘（升阶装束）仅 BWiki 有收录。
-// 流程：
+// 流程（批量模式，CI 友好）：
 //   1. 遍历 src/content/characters/*.md，取 name。
-//   2. 查询 BWiki「禁闭者:{name}」页面的图片列表（prop=images），找标题含「升阶装束」的文件。
-//   3. prop=imageinfo 取 patchwiki 直链，下载后用 Jimp 压成宽 600px、JPEG q85，
-//      覆盖 public/characters/{slug}.jpg（沿用 gitignore 规则，不提交）。
+//   2. MediaWiki API 支持一次查 50 个页面：分块查询「禁闭者:{name}」的图片列表（prop=images），
+//      从中找标题含「升阶装束」且含角色名的文件；再分块批量取 patchwiki 直链（prop=imageinfo）。
+//      全部 API 请求约 8 次（避免逐角色请求触发反爬，也把 CI 构建时间压到几分钟内）。
+//   3. 图片下载并发 5，Jimp 压成宽 600px、JPEG q85，覆盖 public/characters/{slug}.jpg
+//     （沿用 gitignore 规则，不提交）。
 //   4. frontmatter 的 imageSource 标注为 BWiki 来源（含文件页链接，可追溯）。
 //
 // 幂等：imageSource 已标注「BWiki」且本地文件存在则跳过；--force 强制重跑。
-// 限速 2s/角色（对齐 backfill-factions.mjs），失败指数退避重试 3 次。
+// 可只跑单个角色：node scripts/fetch-bwiki-ascended-art.mjs zoya
 // 找不到升阶装束的角色保留现有官网图，输出到报告。
 //
 // 合规提示：图片版权归自意网络所有，BWiki 为社区转载。页面须保留来源标注。
@@ -26,7 +28,12 @@ const PUBLIC_CHAR_DIR = join(ROOT, 'public', 'characters');
 const TMP_DIR = join(__dirname, 'tmp');
 
 const API_BASE = 'https://wiki.biligame.com/wqmt/api.php';
-const SLEEP_MS = 2000;
+// prop=images 批量时每页图片会受响应上限截断（不处理 continuation），故单次只查 10 个页面；
+// imageinfo 每个文件只返回 1 条，可以 50 个一批。
+const IMAGES_BATCH_SIZE = 10;
+const INFO_BATCH_SIZE = 50; // MediaWiki API 单次 titles 上限
+const BATCH_DELAY_MS = 1000;
+const DOWNLOAD_CONCURRENCY = 5;
 const FORCE = process.argv.includes('--force');
 // 可选：只跑单个角色，如 node scripts/fetch-bwiki-ascended-art.mjs zoya
 const ONLY = process.argv.slice(2).find((a) => !a.startsWith('--')) || null;
@@ -48,8 +55,8 @@ async function api(params, attempt = 1) {
 		if (!res.ok) throw new Error(`HTTP ${res.status}`);
 		return await res.json();
 	} catch (e) {
-		if (attempt >= 3) throw e;
-		await sleep(SLEEP_MS * attempt * 2);
+		if (attempt >= 4) throw e;
+		await sleep(2000 * attempt);
 		return api(params, attempt + 1);
 	}
 }
@@ -68,6 +75,19 @@ async function download(url, attempt = 1) {
 	}
 }
 
+async function runInChunks(items, fn, size) {
+	for (let i = 0; i < items.length; i += size) {
+		const chunk = items.slice(i, i + size);
+		await Promise.all(chunk.map(fn));
+	}
+}
+
+// BWiki 页面名与站内角色名不一致时的映射
+const BWIKI_NAME_MAP = {
+	EMP: '艾米潘',
+	'K.K.': '蔻蔻',
+};
+
 function localChars() {
 	const files = readdirSync(CHAR_DIR).filter((f) => f.endsWith('.md') || f.endsWith('.mdx'));
 	return files.map((f) => {
@@ -78,17 +98,12 @@ function localChars() {
 		return {
 			slug: f.replace(/\.(md|mdx)$/, ''),
 			name,
+			wikiName: BWIKI_NAME_MAP[name] || name,
 			content,
 			path: join(CHAR_DIR, f),
 		};
 	});
 }
-
-// BWiki 页面名与站内角色名不一致时的映射
-const BWIKI_NAME_MAP = {
-	EMP: '艾米潘',
-	'K.K.': '蔻蔻',
-};
 
 // 更新 frontmatter 的 image / imageSource（兼容 CRLF）
 function updateFrontmatter(content, slug, fileTitle, filePageUrl) {
@@ -99,7 +114,6 @@ function updateFrontmatter(content, slug, fileTitle, filePageUrl) {
 	if (oldImageLine) {
 		out = out.replace(oldImageLine, `image: /characters/${slug}.jpg`);
 	} else {
-		// 无 image 字段则补在 tags 前
 		out = out.replace(/^tags:.*$/m, `image: /characters/${slug}.jpg\n$&`);
 	}
 
@@ -112,77 +126,125 @@ function updateFrontmatter(content, slug, fileTitle, filePageUrl) {
 	return out;
 }
 
-async function findAscendedArt(name) {
-	const wikiName = BWIKI_NAME_MAP[name] || name;
-	// 1. 角色页图片列表
-	const imgData = await api({
-		action: 'query',
-		prop: 'images',
-		titles: `禁闭者:${wikiName}`,
-		imlimit: '100',
-		redirects: '1',
-	});
-	const pages = imgData?.query?.pages || {};
-	const images = Object.values(pages)[0]?.images || [];
-	// 需同时包含角色名，避免命中「升阶装束bg.png」这类通用模板图
-	const hit = images.find((i) => i.title.includes('升阶装束') && (i.title.includes(name) || i.title.includes(wikiName)));
-	if (!hit) return null;
+// 批量取角色页图片列表：pageTitle -> images[]
+async function batchPageImages(chars) {
+	const result = new Map();
+	for (let i = 0; i < chars.length; i += IMAGES_BATCH_SIZE) {
+		const chunk = chars.slice(i, i + IMAGES_BATCH_SIZE);
+		const data = await api({
+			action: 'query',
+			prop: 'images',
+			titles: chunk.map((c) => `禁闭者:${c.wikiName}`).join('|'),
+			imlimit: '500',
+			redirects: '1',
+		});
+		// redirects 后 title 可能被规范化，按 normalized/redirects 映射回请求的 wikiName
+		const normalizeMap = new Map();
+		for (const n of data?.query?.normalized || []) normalizeMap.set(n.to, n.from);
+		for (const r of data?.query?.redirects || []) normalizeMap.set(r.to, normalizeMap.get(r.from) || r.from);
 
-	// 2. 文件直链
-	const infoData = await api({
-		action: 'query',
-		titles: hit.title,
-		prop: 'imageinfo',
-		iiprop: 'url',
-		redirects: '1',
-	});
-	const infoPages = infoData?.query?.pages || {};
-	const info = Object.values(infoPages)[0]?.imageinfo?.[0];
-	if (!info?.url) return null;
-	return { fileTitle: hit.title.replace(/^文件:/, ''), url: info.url, pageUrl: info.descriptionurl };
+		for (const page of Object.values(data?.query?.pages || {})) {
+			const from = normalizeMap.get(page.title) || page.title.replace(/^禁闭者:/, '');
+			result.set(from, page.images || []);
+		}
+		if (i + IMAGES_BATCH_SIZE < chars.length) await sleep(BATCH_DELAY_MS);
+	}
+	return result;
+}
+
+// 批量取文件直链：fileTitle -> { url, pageUrl }
+async function batchImageInfo(fileTitles) {
+	const result = new Map();
+	for (let i = 0; i < fileTitles.length; i += INFO_BATCH_SIZE) {
+		const chunk = fileTitles.slice(i, i + INFO_BATCH_SIZE);
+		const data = await api({
+			action: 'query',
+			titles: chunk.join('|'),
+			prop: 'imageinfo',
+			iiprop: 'url',
+			redirects: '1',
+		});
+		for (const page of Object.values(data?.query?.pages || {})) {
+			const info = page.imageinfo?.[0];
+			if (info?.url) result.set(page.title, { url: info.url, pageUrl: info.descriptionurl });
+		}
+		if (i + INFO_BATCH_SIZE < fileTitles.length) await sleep(BATCH_DELAY_MS);
+	}
+	return result;
 }
 
 async function main() {
 	const chars = localChars().filter((c) => c.name && (!ONLY || c.slug === ONLY));
-	console.log(`共 ${chars.length} 名角色，限速 ${SLEEP_MS}ms/个${FORCE ? '（--force 全量重跑）' : ''}`);
+	console.log(`共 ${chars.length} 名角色（批量模式）${FORCE ? '（--force 全量重跑）' : ''}`);
 
 	const report = [];
-	let done = 0;
-
+	const pending = [];
 	for (const c of chars) {
 		const localFile = join(PUBLIC_CHAR_DIR, `${c.slug}.jpg`);
-		const alreadyBwiki = c.content.includes('category: BWiki 升阶装束');
-		if (!FORCE && alreadyBwiki && existsSync(localFile)) {
+		if (!FORCE && c.content.includes('category: BWiki 升阶装束') && existsSync(localFile)) {
 			report.push({ slug: c.slug, name: c.name, status: 'skipped' });
-			done++;
-			continue;
+		} else {
+			pending.push(c);
 		}
+	}
+	console.log(`   跳过 ${report.length}，待抓取 ${pending.length}`);
+	if (pending.length === 0) return summary(report);
 
-		try {
-			const art = await findAscendedArt(c.name);
-			if (!art) {
-				report.push({ slug: c.slug, name: c.name, status: 'not-found' });
-				console.log(`   ✗ ${c.name}: BWiki 无升阶装束，保留现有图`);
-			} else {
-				const buf = await download(art.url);
+	console.log('1. 批量查询角色页图片列表...');
+	const pageImages = await batchPageImages(pending);
+
+	// 匹配升阶装束文件（需同时包含角色名，避免命中「升阶装束bg.png」这类通用模板图）
+	// 注意：同一文件可能服务多个条目（如 艾米潘 与 EMP 指向同一角色页），故映射为数组
+	const fileToChars = new Map();
+	for (const c of pending) {
+		const images = pageImages.get(c.wikiName) || [];
+		const hit = images.find((i) => i.title.includes('升阶装束') && (i.title.includes(c.name) || i.title.includes(c.wikiName)));
+		if (hit) {
+			if (!fileToChars.has(hit.title)) fileToChars.set(hit.title, []);
+			fileToChars.get(hit.title).push(c);
+		} else {
+			report.push({ slug: c.slug, name: c.name, status: 'not-found' });
+		}
+	}
+	console.log(`   匹配到升阶装束 ${fileToChars.size} 个`);
+
+	console.log('2. 批量取文件直链...');
+	const infoMap = await batchImageInfo([...fileToChars.keys()]);
+
+	console.log(`3. 下载并压缩（并发 ${DOWNLOAD_CONCURRENCY}）...`);
+	let done = 0;
+	await runInChunks(
+		[...fileToChars.entries()],
+		async ([fileTitle, charsForFile]) => {
+			const info = infoMap.get(fileTitle);
+			if (!info) {
+				for (const c of charsForFile) report.push({ slug: c.slug, name: c.name, status: 'error', error: 'imageinfo 缺失' });
+				return;
+			}
+			try {
+				const buf = await download(info.url);
 				const jimg = await Jimp.read(buf);
 				jimg.resize(600, Jimp.AUTO).quality(85);
-				await jimg.writeAsync(localFile);
-
-				const newContent = updateFrontmatter(c.content, c.slug, art.fileTitle, art.pageUrl);
-				writeFileSync(c.path, newContent);
-				report.push({ slug: c.slug, name: c.name, status: 'ok', file: art.fileTitle });
+				for (const c of charsForFile) {
+					await jimg.writeAsync(join(PUBLIC_CHAR_DIR, `${c.slug}.jpg`));
+					const newContent = updateFrontmatter(c.content, c.slug, fileTitle.replace(/^文件:/, ''), info.pageUrl);
+					writeFileSync(c.path, newContent);
+					report.push({ slug: c.slug, name: c.name, status: 'ok', file: fileTitle });
+				}
+			} catch (e) {
+				for (const c of charsForFile) report.push({ slug: c.slug, name: c.name, status: 'error', error: e.message });
+				console.warn(`   ! ${fileTitle}: ${e.message}`);
 			}
-		} catch (e) {
-			report.push({ slug: c.slug, name: c.name, status: 'error', error: e.message });
-			console.warn(`   ! ${c.name}: ${e.message}`);
-		}
+			done++;
+			if (done % 20 === 0) console.log(`   进度 ${done}/${fileToChars.size}`);
+		},
+		DOWNLOAD_CONCURRENCY
+	);
 
-		done++;
-		if (done % 20 === 0) console.log(`   进度 ${done}/${chars.length}`);
-		await sleep(SLEEP_MS);
-	}
+	summary(report);
+}
 
+function summary(report) {
 	writeFileSync(join(TMP_DIR, 'bwiki-ascended-art.json'), JSON.stringify(report, null, 2));
 	const ok = report.filter((r) => r.status === 'ok').length;
 	const skipped = report.filter((r) => r.status === 'skipped').length;
