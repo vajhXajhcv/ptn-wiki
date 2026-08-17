@@ -10,9 +10,9 @@ aliases: ['Demolition']
 tags: ['坚韧', '护盾', '坦克', '保护']
 image: /characters/demon.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 迪蒙升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%BF%AA%E8%92%99%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「迪蒙」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1983
 ---
 
 ## 基础信息

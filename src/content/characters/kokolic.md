@@ -10,9 +10,9 @@ aliases: ['Coco']
 tags: ['治疗辅助']
 image: /characters/kokolic.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 可可莉克升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%8F%AF%E5%8F%AF%E8%8E%89%E5%85%8B%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-053「可可莉克」
+  url: https://wqmt.aisnogames.com/#/news/122
 ---
 
 ## 基础信息

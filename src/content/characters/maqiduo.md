@@ -9,9 +9,9 @@ description: 玛奇朵是B级启迪禁闭者，擅长支援的禁闭者。能量
 tags: ['治疗辅助', '防守辅助']
 image: /characters/maqiduo.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 玛奇朵升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%8E%9B%E5%A5%87%E6%9C%B5%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「玛奇朵」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1753
 ---
 
 ## 基础信息

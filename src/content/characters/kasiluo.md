@@ -9,9 +9,9 @@ description: 卡斯洛是A级狂暴禁闭者，擅长造成物理伤害的禁闭
 tags: ['进攻增幅', '普攻伤害增幅', '眩晕']
 image: /characters/kasiluo.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 卡斯洛升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%8D%A1%E6%96%AF%E6%B4%9B%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「卡斯洛」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/997
 ---
 
 ## 基础信息

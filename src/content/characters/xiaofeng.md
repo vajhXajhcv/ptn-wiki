@@ -9,9 +9,9 @@ description: 啸风是S级狂暴禁闭者，擅长造成物理伤害的禁闭者
 tags: []
 image: /characters/xiaofeng.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 啸风升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%95%B8%E9%A3%8E%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-108「啸风」
+  url: https://wqmt.aisnogames.com/#/news/1713
 ---
 
 ## 基础信息

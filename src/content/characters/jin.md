@@ -9,9 +9,9 @@ description: 堇是一名A级诡秘禁闭者，主要负责破核与切入后排
 tags: ['进攻增幅', '特殊辅助']
 image: /characters/jin.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 堇升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%A0%87%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「堇」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1794
 ---
 
 ## 基础信息

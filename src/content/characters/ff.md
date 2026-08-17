@@ -9,9 +9,9 @@ description: F.F.是A级精准禁闭者，来自异世界的替身使者。攻�
 tags: ['治疗辅助']
 image: /characters/ff.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: F.F.升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:F.F.%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨FE-39423「F.F.」
+  url: https://wqmt.aisnogames.com/#/news/689
 ---
 
 ## 基础信息

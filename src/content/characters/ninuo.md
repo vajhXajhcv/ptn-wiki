@@ -9,9 +9,9 @@ description: 妮诺是A级坚韧禁闭者，擅长防守的禁闭者，可以阻
 tags: ['防守增幅', '眩晕']
 image: /characters/ninuo.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 妮诺升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%A6%AE%E8%AF%BA%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-729「妮诺」
+  url: https://wqmt.aisnogames.com/#/news/260
 ---
 
 ## 基础信息

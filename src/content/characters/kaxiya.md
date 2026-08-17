@@ -9,9 +9,9 @@ description: 卡西娅是A级启迪禁闭者，擅长支援的禁闭者，能量
 tags: ['治疗辅助', '攻速辅助']
 image: /characters/kaxiya.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 卡西娅升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%8D%A1%E8%A5%BF%E5%A8%85%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-560「卡西娅」
+  url: https://wqmt.aisnogames.com/#/news/216
 ---
 
 ## 基础信息

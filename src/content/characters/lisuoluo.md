@@ -9,9 +9,9 @@ description: 黎莎洛是A级狂暴禁闭者，擅长支援的禁闭者。攻击
 tags: ['治疗辅助', '召唤物辅助']
 image: /characters/lisuoluo.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 黎莎洛升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E9%BB%8E%E8%8E%8E%E6%B4%9B%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-369「黎莎洛」
+  url: https://wqmt.aisnogames.com/#/news/1210
 ---
 
 ## 基础信息

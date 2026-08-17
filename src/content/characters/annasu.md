@@ -9,9 +9,9 @@ description: 安那苏是A级坚韧禁闭者，来自异世界的替身使者，
 tags: ['防守增幅', '进攻辅助', '物伤辅助', '防守辅助']
 image: /characters/annasu.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 安那苏升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%AE%89%E9%82%A3%E8%8B%8F%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MA-28050「安那苏」
+  url: https://wqmt.aisnogames.com/#/news/1060
 ---
 
 ## 基础信息

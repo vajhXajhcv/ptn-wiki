@@ -9,9 +9,9 @@ description: 墨菲是S级狂暴禁闭者，擅长造成真实伤害的禁闭者
 tags: ['普攻伤害辅助', '进攻辅助', '特殊辅助']
 image: /characters/mofei.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 墨菲升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%A2%A8%E8%8F%B2%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-131「墨菲」
+  url: https://wqmt.aisnogames.com/#/news/1833
 ---
 
 ## 基础信息

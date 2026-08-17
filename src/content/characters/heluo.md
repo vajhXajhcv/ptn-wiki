@@ -9,9 +9,9 @@ description: 赫罗是一名A级狂暴禁闭者，主要负责近战物理输出
 tags: ['防守增幅', '自我治疗']
 image: /characters/heluo.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 赫罗升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%B5%AB%E7%BD%97%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「赫罗」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1801
 ---
 
 ## 基础信息

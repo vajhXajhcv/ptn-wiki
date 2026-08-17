@@ -9,9 +9,9 @@ description: 福克斯先生是一名A级启迪禁闭者，主要负责治疗与
 tags: ['防守辅助', '控制免疫', '进攻辅助', '特殊辅助']
 image: /characters/fox.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 福克斯先生升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%A6%8F%E5%85%8B%E6%96%AF%E5%85%88%E7%94%9F%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「福克斯先生」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1515
 ---
 
 ## 基础信息

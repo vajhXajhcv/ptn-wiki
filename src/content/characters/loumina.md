@@ -9,9 +9,9 @@ description: 露米娜是A级坚韧禁闭者，擅长召唤的禁闭者。生命
 tags: ['防守增幅', '召唤物辅助']
 image: /characters/loumina.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 露米娜升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E9%9C%B2%E7%B1%B3%E5%A8%9C%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-639「露米娜」
+  url: https://wqmt.aisnogames.com/#/news/1508
 ---
 
 ## 基础信息

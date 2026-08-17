@@ -9,9 +9,9 @@ description: 天气预报是A级异能禁闭者，来自异世界的替身使者
 tags: ['减速', '眩晕']
 image: /characters/tianqiyubao.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 天气预报升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MA-152403「天气预报」
+  url: https://wqmt.aisnogames.com/#/news/687
 ---
 
 ## 基础信息

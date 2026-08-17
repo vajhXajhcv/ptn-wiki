@@ -10,9 +10,9 @@ aliases: ['Raven']
 tags: ['法伤辅助', '解除隐匿']
 image: /characters/raven.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 渡鸦升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%B8%A1%E9%B8%A6%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「渡鸦」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/933
 ---
 
 ## 基础信息

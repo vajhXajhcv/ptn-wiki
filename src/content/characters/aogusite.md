@@ -9,9 +9,9 @@ description: 奥古斯特是S级精准禁闭者，擅长造成真实伤害的禁
 tags: ['进攻增幅', '真伤辅助']
 image: /characters/aogusite.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 奥古斯特升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%A5%A5%E5%8F%A4%E6%96%AF%E7%89%B9%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「奥古斯特」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1987
 ---
 
 ## 基础信息

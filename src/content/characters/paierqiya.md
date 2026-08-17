@@ -9,9 +9,9 @@ description: 派尔琪雅是S级狂暴禁闭者，被内海高度污染的禁闭
 tags: []
 image: /characters/paierqiya.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 派尔琪雅升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%B4%BE%E5%B0%94%E7%90%AA%E9%9B%85%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-022「派尔琪雅」
+  url: https://wqmt.aisnogames.com/#/news/955
 ---
 
 ## 基础信息

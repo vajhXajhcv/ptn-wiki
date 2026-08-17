@@ -9,9 +9,9 @@ description: 海莉是A级坚韧禁闭者，擅长防守的禁闭者，可以阻
 tags: ['进攻辅助']
 image: /characters/haili.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 海莉升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%B5%B7%E8%8E%89%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-414「海莉」
+  url: https://wqmt.aisnogames.com/#/news/2017
 ---
 
 ## 基础信息

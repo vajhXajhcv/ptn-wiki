@@ -9,9 +9,9 @@ description: 泽斐尔是A级启迪禁闭者，擅长干扰的禁闭者。能量
 tags: ['防守辅助', '特殊辅助']
 image: /characters/zefeier.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 泽斐尔升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%B3%BD%E6%96%90%E5%B0%94%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-747「泽斐尔」
+  url: https://wqmt.aisnogames.com/#/news/953
 ---
 
 ## 基础信息

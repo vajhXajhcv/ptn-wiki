@@ -9,9 +9,9 @@ description: 玛蒂尔达是A级精准禁闭者，擅长造成物理伤害的禁
 tags: []
 image: /characters/madierda.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 玛蒂尔达升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%8E%9B%E8%92%82%E5%B0%94%E8%BE%BE%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-745「玛蒂尔达」
+  url: https://wqmt.aisnogames.com/#/news/386
 ---
 
 ## 基础信息

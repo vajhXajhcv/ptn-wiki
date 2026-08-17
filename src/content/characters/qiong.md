@@ -9,9 +9,9 @@ description: 琼是B级异能禁闭者，擅长造成法术伤害的禁闭者。
 tags: ['眩晕', '法伤辅助']
 image: /characters/qiong.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 琼升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%90%BC%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「琼」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1526
 ---
 
 ## 基础信息

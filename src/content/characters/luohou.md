@@ -9,9 +9,9 @@ description: 罗睺是一名S级坚韧禁闭者，主要负责前排承伤与保
 tags: ['防守增幅', '自我治疗', '物伤辅助', '致死免疫']
 image: /characters/luohou.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 罗睺升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%BD%97%E7%9D%BA%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-048「罗睺」
+  url: https://wqmt.aisnogames.com/#/news/45
 ---
 
 ## 基础信息

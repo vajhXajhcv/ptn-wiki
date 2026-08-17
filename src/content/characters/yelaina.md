@@ -9,9 +9,9 @@ description: 耶莱娜是S级启迪禁闭者，擅长支援的禁闭者。{{术�
 tags: ['进攻辅助', '暴击辅助']
 image: /characters/yelaina.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 耶莱娜升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%80%B6%E8%8E%B1%E5%A8%9C%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「耶莱娜」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1639
 ---
 
 ## 基础信息

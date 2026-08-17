@@ -9,9 +9,9 @@ description: 卡兹安是A级启迪禁闭者，擅长支援的禁闭者。进入
 tags: ['伤害分摊', '进攻辅助', '复活']
 image: /characters/kazian.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 卡兹安升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%8D%A1%E5%85%B9%E5%AE%89%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-310「卡兹安」
+  url: https://wqmt.aisnogames.com/#/news/1354
 ---
 
 ## 基础信息

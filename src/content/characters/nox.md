@@ -9,9 +9,9 @@ description: 擅长范围物理伤害的狂级禁闭者，技能可以对多个�
 tags: ['狂暴', '物理输出', '群攻']
 image: /characters/nox.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 诺克斯升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%AF%BA%E5%85%8B%E6%96%AF%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「诺克斯」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1588
 ---
 
 ## 基础信息

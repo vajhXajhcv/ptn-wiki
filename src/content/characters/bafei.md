@@ -9,9 +9,9 @@ description: 芭·菲是S级启迪禁闭者，擅长支援的禁闭者。进入�
 tags: ['进攻辅助', '治疗辅助', '特殊辅助']
 image: /characters/bafei.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 芭·菲升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%8A%AD%C2%B7%E8%8F%B2%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-094「芭·菲」
+  url: https://wqmt.aisnogames.com/#/news/1258
 ---
 
 ## 基础信息

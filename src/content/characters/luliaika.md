@@ -9,9 +9,9 @@ description: 露莉艾卡是一名A级精准禁闭者，主要负责远程物理
 tags: []
 image: /characters/luliaika.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 露莉艾卡升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E9%9C%B2%E8%8E%89%E8%89%BE%E5%8D%A1%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「露莉艾卡」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1041
 ---
 
 ## 基础信息

@@ -10,9 +10,9 @@ aliases: ['Eirene']
 tags: ['异能', '法术输出', '破核', '能量恢复']
 image: /characters/eirene.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 伊琳娜升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E4%BC%8A%E7%90%B3%E5%A8%9C%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「伊琳娜」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/907
 ---
 
 ## 基础信息

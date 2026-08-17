@@ -9,9 +9,9 @@ description: 蓝鹫是S级异能禁闭者，擅长造成法术伤害的禁闭者
 tags: ['技能辅助']
 image: /characters/lanjiu.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 蓝鹫升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%93%9D%E9%B9%AB%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-145「蓝鹫」
+  url: https://wqmt.aisnogames.com/#/news/917
 ---
 
 ## 基础信息

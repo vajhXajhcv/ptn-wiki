@@ -9,9 +9,9 @@ description: 艾恩是一名A级诡秘禁闭者，主要负责破核与切入后
 tags: ['物伤辅助', '物伤增幅']
 image: /characters/aien.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 艾恩升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%89%BE%E6%81%A9%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「艾恩」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1521
 ---
 
 ## 基础信息

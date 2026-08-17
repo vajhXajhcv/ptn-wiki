@@ -9,9 +9,9 @@ description: 切尔西伯爵是一名A级坚韧禁闭者，主要负责前排承
 tags: ['防守增幅', '石化']
 image: /characters/chelsea.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 切尔西伯爵升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%88%87%E5%B0%94%E8%A5%BF%E4%BC%AF%E7%88%B5%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「切尔西伯爵」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1674
 ---
 
 ## 基础信息

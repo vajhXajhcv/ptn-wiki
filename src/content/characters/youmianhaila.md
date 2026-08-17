@@ -9,9 +9,9 @@ description: 幽冕·海拉是S级诡秘禁闭者，自愈能力与深层狂厄�
 tags: ['自我治疗', '进攻增幅', '特殊增幅']
 image: /characters/youmianhaila.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 幽冕·海拉升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%B9%BD%E5%86%95%C2%B7%E6%B5%B7%E6%8B%89%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「幽冕·海拉」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1594
 ---
 
 ## 基础信息

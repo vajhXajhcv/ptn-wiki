@@ -9,9 +9,9 @@ description: 伊格尼是一名A级异能禁闭者，主要负责法术伤害与
 tags: []
 image: /characters/yigeni.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 伊格尼升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E4%BC%8A%E6%A0%BC%E5%B0%BC%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「伊格尼」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1990
 ---
 
 ## 基础信息

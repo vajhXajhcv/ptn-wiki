@@ -9,9 +9,9 @@ description: 维多利亚是一名A级异能禁闭者，主要负责法术伤害
 tags: []
 image: /characters/weiduoliya.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 维多利亚升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%BB%B4%E5%A4%9A%E5%88%A9%E4%BA%9A%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「维多利亚」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1555
 ---
 
 ## 基础信息

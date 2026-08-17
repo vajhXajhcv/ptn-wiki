@@ -9,9 +9,9 @@ description: 诺玛是A级诡秘禁闭者，擅长造成物理伤害的禁闭者
 tags: ['物伤辅助', '解除隐匿', '减速', '眩晕']
 image: /characters/nuoma.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 诺玛升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%AF%BA%E7%8E%9B%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-256「诺玛」
+  url: https://wqmt.aisnogames.com/#/news/1831
 ---
 
 ## 基础信息

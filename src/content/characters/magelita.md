@@ -9,9 +9,9 @@ description: 玛格丽塔是S级启迪禁闭者，进入战斗时，玛格丽塔
 tags: ['暴击辅助', '物伤辅助']
 image: /characters/magelita.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 玛格丽塔升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%8E%9B%E6%A0%BC%E4%B8%BD%E5%A1%94%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-029「玛格丽塔」
+  url: https://wqmt.aisnogames.com/#/news/1577
 ---
 
 ## 基础信息

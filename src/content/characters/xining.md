@@ -9,9 +9,9 @@ description: 席宁是S级启迪禁闭者，擅长支援的禁闭者。席宁无
 tags: ['攻速辅助', '进攻辅助']
 image: /characters/xining.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 席宁升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%B8%AD%E5%AE%81%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-726「席宁」
+  url: https://wqmt.aisnogames.com/#/news/1895
 ---
 
 ## 基础信息

@@ -9,9 +9,9 @@ description: 九十九是一名A级狂暴禁闭者，主要负责近战物理输
 tags: ['吸血', '攻速增幅', '进攻增幅', '致死免疫']
 image: /characters/jiushijiu.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 九十九升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E4%B9%9D%E5%8D%81%E4%B9%9D%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「九十九」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1824
 ---
 
 ## 基础信息

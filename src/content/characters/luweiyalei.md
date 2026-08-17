@@ -10,9 +10,9 @@ aliases: ['露薇娅']
 tags: []
 image: /characters/luweiyalei.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 露薇娅·蕾升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E9%9C%B2%E8%96%87%E5%A8%85%C2%B7%E8%95%BE%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「露薇娅·蕾」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1327
 ---
 
 ## 基础信息

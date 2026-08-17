@@ -9,9 +9,9 @@ description: 柯琳是S级精准禁闭者，擅长造成物理伤害的禁闭者
 tags: ['进攻增幅', '物伤增幅']
 image: /characters/kelin.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 柯琳升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%9F%AF%E7%90%B3%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-066「柯琳」
+  url: https://wqmt.aisnogames.com/#/news/867
 ---
 
 ## 基础信息

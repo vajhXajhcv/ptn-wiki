@@ -9,9 +9,9 @@ description: 离尘是S级坚韧禁闭者，擅长防守的禁闭者，可以阻
 tags: ['技能伤害辅助', '致死免疫']
 image: /characters/lichen.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 离尘升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%A6%BB%E5%B0%98%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-396「离尘」
+  url: https://wqmt.aisnogames.com/#/news/1663
 ---
 
 ## 基础信息

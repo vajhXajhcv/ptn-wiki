@@ -9,9 +9,9 @@ description: 琳是A级诡秘禁闭者，擅长造成物理伤害的禁闭者，
 tags: ['暴击辅助', '暴击增幅']
 image: /characters/lin.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 琳升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%90%B3%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「琳」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/932
 ---
 
 ## 基础信息

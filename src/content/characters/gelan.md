@@ -10,9 +10,9 @@ aliases: ['Golan']
 tags: ['防守增幅', '自我治疗', '物伤辅助']
 image: /characters/gelan.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 戈蓝升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%88%88%E8%93%9D%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-893「戈蓝」
+  url: https://wqmt.aisnogames.com/#/news/629
 ---
 
 ## 基础信息

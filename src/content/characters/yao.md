@@ -10,9 +10,9 @@ aliases: ['Yao']
 tags: ['进攻增幅', '特殊辅助']
 image: /characters/yao.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 曜升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%9B%9C%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-192「曜」
+  url: https://wqmt.aisnogames.com/#/news/558
 ---
 
 ## 基础信息

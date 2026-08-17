@@ -9,9 +9,9 @@ description: 阿依果是A级坚韧禁闭者，擅长防守的禁闭者，可以
 tags: ['进攻辅助', '法伤辅助', '防守辅助']
 image: /characters/ayiguo.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 阿依果升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E9%98%BF%E4%BE%9D%E6%9E%9C%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-808「阿依果」
+  url: https://wqmt.aisnogames.com/#/news/1709
 ---
 
 ## 基础信息

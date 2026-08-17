@@ -9,9 +9,9 @@ description: 奥利弗是A级异能禁闭者，擅长造成法术伤害的禁闭
 tags: ['进攻辅助']
 image: /characters/aolifu.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 奥利弗升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%A5%A5%E5%88%A9%E5%BC%97%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「奥利弗」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1574
 ---
 
 ## 基础信息

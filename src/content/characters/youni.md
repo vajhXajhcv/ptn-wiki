@@ -9,9 +9,9 @@ description: 尤尼是A级坚韧禁闭者，擅长防守的禁闭者，可以阻
 tags: ['防守增幅', '防守辅助']
 image: /characters/youni.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 尤尼升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%B0%A4%E5%B0%BC%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「尤尼」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1772
 ---
 
 ## 基础信息

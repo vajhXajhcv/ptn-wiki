@@ -10,9 +10,9 @@ aliases: ['Shawn']
 tags: ['治疗辅助', '特殊辅助']
 image: /characters/xiaoen.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 肖恩升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%82%96%E6%81%A9%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-885「肖恩」
+  url: https://wqmt.aisnogames.com/#/news/662
 ---
 
 ## 基础信息

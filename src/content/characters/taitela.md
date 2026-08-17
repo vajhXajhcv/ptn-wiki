@@ -9,9 +9,9 @@ description: 泰特拉是一名A级诡秘禁闭者，主要负责破核与切入
 tags: ['暴击辅助', '暴击增幅', '眩晕']
 image: /characters/taitela.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 泰特拉升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%B3%B0%E7%89%B9%E6%8B%89%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「泰特拉」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1493
 ---
 
 ## 基础信息

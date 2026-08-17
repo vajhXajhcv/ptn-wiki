@@ -9,9 +9,9 @@ description: 舒鲁玛是A级诡秘禁闭者，擅长召唤的禁闭者，必杀
 tags: ['召唤物增幅']
 image: /characters/shuluma.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 舒鲁玛升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%88%92%E9%B2%81%E7%8E%9B%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-231「舒鲁玛」
+  url: https://wqmt.aisnogames.com/#/news/770
 ---
 
 ## 基础信息

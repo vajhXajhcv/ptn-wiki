@@ -9,9 +9,9 @@ description: 嘟嘟是A级启迪禁闭者，擅长支援的禁闭者，进入战
 tags: ['治疗辅助', '防守辅助', '进攻辅助']
 image: /characters/dudu.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 嘟嘟升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%98%9F%E5%98%9F%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「嘟嘟」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1740
 ---
 
 ## 基础信息

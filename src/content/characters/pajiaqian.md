@@ -9,9 +9,9 @@ description: 帕加茜是一名A级狂暴禁闭者，主要负责近战物理输
 tags: ['减速', '进攻增幅']
 image: /characters/pajiaqian.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 帕加茜升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%B8%95%E5%8A%A0%E8%8C%9C%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「帕加茜」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1851
 ---
 
 ## 基础信息

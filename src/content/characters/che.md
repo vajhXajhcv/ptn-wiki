@@ -9,9 +9,9 @@ description: 普级破核能手，必杀可造成范围破核并降低敌人防�
 tags: ['诡秘', '破核', '减防', '性价比']
 image: /characters/che.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 澈升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%BE%88%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「澈」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1553
 ---
 
 ## 基础信息

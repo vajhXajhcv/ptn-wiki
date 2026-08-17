@@ -9,9 +9,9 @@ description: 艾瑟默尔是S级异能禁闭者，擅长造成法术伤害的禁
 tags: ['攻速增幅', '进攻增幅']
 image: /characters/aisemoer.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 艾瑟默尔升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%89%BE%E7%91%9F%E9%BB%98%E5%B0%94%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-930「艾瑟默尔」
+  url: https://wqmt.aisnogames.com/#/news/1892
 ---
 
 ## 基础信息

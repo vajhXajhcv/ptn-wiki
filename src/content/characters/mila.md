@@ -9,9 +9,9 @@ description: 米拉是A级狂暴禁闭者，擅长防守的禁闭者。受到伤
 tags: ['特殊辅助']
 image: /characters/mila.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 米拉升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%B1%B3%E6%8B%89%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-224「米拉」
+  url: https://wqmt.aisnogames.com/#/news/862
 ---
 
 ## 基础信息

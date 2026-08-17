@@ -9,9 +9,9 @@ description: 摩尔是S级坚韧禁闭者，擅长防守的禁闭者，可以同
 tags: ['物伤辅助', '护盾辅助', '控制免疫']
 image: /characters/moer.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 摩尔升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%91%A9%E5%B0%94%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-070「摩尔」
+  url: https://wqmt.aisnogames.com/#/news/837
 ---
 
 ## 基础信息

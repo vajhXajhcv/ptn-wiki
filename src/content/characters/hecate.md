@@ -10,9 +10,9 @@ aliases: ['Hecate']
 tags: ['异能', '法术输出', '召唤', '破核']
 image: /characters/hecate.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 赫卡蒂升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%B5%AB%E5%8D%A1%E8%92%82%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: MBCC生日会
+  title: 【MBCC生日会】丨「赫卡蒂」生日快乐
+  url: https://wqmt.aisnogames.com/#/news/1786
 ---
 
 ## 基础信息

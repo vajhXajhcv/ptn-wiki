@@ -9,9 +9,9 @@ description: 派因是A级精准禁闭者，擅长造成物理伤害的禁闭者
 tags: ['暴击增幅', '解除隐匿']
 image: /characters/paiyin.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 派因升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%B4%BE%E5%9B%A0%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-617「派因」
+  url: https://wqmt.aisnogames.com/#/news/1017
 ---
 
 ## 基础信息

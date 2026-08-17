@@ -9,9 +9,9 @@ description: 艾可是A级异能禁闭者，擅长造成法术伤害的禁闭者
 tags: ['法伤辅助', '减速']
 image: /characters/aike.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 艾可升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%89%BE%E5%8F%AF%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-533「艾可」
+  url: https://wqmt.aisnogames.com/#/news/439
 ---
 
 ## 基础信息

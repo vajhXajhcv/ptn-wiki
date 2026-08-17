@@ -9,9 +9,9 @@ description: 曼缇斯是S级诡秘禁闭者，被内海高度污染的禁闭者
 tags: ['暴击增幅', '吸血']
 image: /characters/mantisi.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 曼缇斯升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%9B%BC%E7%BC%87%E6%96%AF%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-026「曼缇斯」
+  url: https://wqmt.aisnogames.com/#/news/218
 ---
 
 ## 基础信息

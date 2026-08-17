@@ -9,9 +9,9 @@ description: 霁川是S级启迪禁闭者，战斗开始时，霁川调动力量
 tags: ['进攻辅助', '物伤辅助', '能量恢复', '防守辅助']
 image: /characters/jichuan.jpg
 imageSource:
-  category: BWiki 升阶装束
-  title: 霁川升阶装束.png
-  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E9%9C%81%E5%B7%9D%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
+  category: 禁闭者档案
+  title: 【禁闭者档案】丨MBCC-S-124「霁川」
+  url: https://wqmt.aisnogames.com/#/news/1717
 ---
 
 ## 基础信息
