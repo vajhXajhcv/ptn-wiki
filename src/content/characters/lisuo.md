@@ -11,7 +11,7 @@ image: /characters/lisuo.jpg
 imageSource:
   category: MBCC生日会
   title: 【MBCC生日会】丨「丽莎」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1430
+  url: https://wqmt.aisnogames.com/#/news/2042
 ---
 
 ## 基础信息
