@@ -9,9 +9,9 @@ description: 伊帕希娅是S级精准禁闭者，擅长召唤的禁闭者。战
 tags: ['召唤物辅助']
 image: /characters/yipaxiya.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-197「伊帕希娅」
-  url: https://wqmt.aisnogames.com/#/news/1212
+  category: BWiki 升阶装束
+  title: 伊帕希娅升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E4%BC%8A%E5%B8%95%E5%B8%8C%E5%A8%85%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

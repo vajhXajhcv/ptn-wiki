@@ -10,9 +10,9 @@ aliases: ['Yugu']
 tags: ['技能伤害辅助', '暴击辅助', '特殊辅助', '护盾辅助']
 image: /characters/yugu.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-042「玉骨」
-  url: https://wqmt.aisnogames.com/#/news/1119
+  category: BWiki 升阶装束
+  title: 玉骨升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%8E%89%E9%AA%A8%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

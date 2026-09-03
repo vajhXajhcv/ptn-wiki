@@ -9,9 +9,9 @@ description: 承霄是S级精准禁闭者，擅长造成物理伤害的禁闭者
 tags: ['眩晕', '进攻辅助', '暴击增幅']
 image: /characters/chengxiao.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-159「承霄」
-  url: https://wqmt.aisnogames.com/#/news/1944
+  category: BWiki 升阶装束
+  title: 承霄升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%89%BF%E9%9C%84%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

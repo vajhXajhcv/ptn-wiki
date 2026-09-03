@@ -10,9 +10,9 @@ aliases: ['Bianca']
 tags: []
 image: /characters/bianca.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-301「毕安卡」
-  url: https://wqmt.aisnogames.com/#/news/663
+  category: BWiki 升阶装束
+  title: 毕安卡升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%AF%95%E5%AE%89%E5%8D%A1%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

@@ -25,6 +25,7 @@ async function api(path) {
 			'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
 			Accept: 'application/json',
 		},
+		signal: AbortSignal.timeout(30_000),
 	});
 	if (!res.ok) throw new Error(`HTTP ${res.status}: ${url}`);
 	const json = await res.json();
@@ -147,7 +148,8 @@ async function main() {
 		const url = `https://wqmt.aisnogames.com/#/news/${item.id}`;
 		const coverLine = item.cover ? `cover: ${item.cover}` : '';
 
-		const description = await fetchDetailDescription(id);
+		// 详情接口失败时回退为标题：空 description 会被 YAML 解析为 null，导致 Astro 构建直接失败
+		const description = (await fetchDetailDescription(id)) || item.title;
 
 		if (existingIds.has(id)) {
 			// 已存在则仅更新元数据，保留可能的人工编辑内容
@@ -159,7 +161,7 @@ async function main() {
 			newContent = newContent.replace(/^date: .+$/m, `date: '${date}'`);
 			newContent = newContent.replace(/^type: .+$/m, `type: '${type}'`);
 			newContent = newContent.replace(/^source: .+$/m, `source: '${url}'`);
-			newContent = newContent.replace(/^description: .+$/m, `description: ${description.replace(/'/g, "''")}`);
+			newContent = newContent.replace(/^description:.*$/m, `description: ${description.replace(/'/g, "''")}`);
 			if (coverLine) {
 				if (/^cover: .+$/m.test(newContent)) {
 					newContent = newContent.replace(/^cover: .+$/m, coverLine);

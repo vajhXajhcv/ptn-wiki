@@ -9,9 +9,9 @@ description: 雅可是A级狂暴禁闭者，擅长造成真实伤害的禁闭者
 tags: ['眩晕']
 image: /characters/yake.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-557「雅可」
-  url: https://wqmt.aisnogames.com/#/news/1441
+  category: BWiki 升阶装束
+  title: 雅可升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E9%9B%85%E5%8F%AF%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

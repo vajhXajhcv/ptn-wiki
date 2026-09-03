@@ -9,9 +9,9 @@ description: 加洛法诺是A级诡秘禁闭者，擅长造成物理伤害的禁
 tags: ['进攻增幅']
 image: /characters/jialuofanuo.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-514「加洛法诺」
-  url: https://wqmt.aisnogames.com/#/news/42
+  category: BWiki 升阶装束
+  title: 加洛法诺升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%8A%A0%E6%B4%9B%E6%B3%95%E8%AF%BA%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

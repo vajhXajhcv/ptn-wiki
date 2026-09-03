@@ -9,9 +9,9 @@ description: 卢米尼塔是A级坚韧禁闭者，擅长防守的禁闭者，可
 tags: ['防守增幅', '眩晕', '特殊辅助', '特殊控制']
 image: /characters/luminita.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-413「卢米尼塔」
-  url: https://wqmt.aisnogames.com/#/news/1169
+  category: BWiki 升阶装束
+  title: 卢米尼塔升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%8D%A2%E7%B1%B3%E5%B0%BC%E5%A1%94%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

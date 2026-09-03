@@ -9,9 +9,9 @@ description: 空条徐伦是S级诡秘禁闭者，来自异世界的替身使者
 tags: ['特殊控制']
 image: /characters/kongtiaoxulun.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨FE-40536「空条徐伦」
-  url: https://wqmt.aisnogames.com/#/news/691
+  category: BWiki 升阶装束
+  title: 空条徐伦升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%A9%BA%E6%9D%A1%E5%BE%90%E4%BC%A6%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

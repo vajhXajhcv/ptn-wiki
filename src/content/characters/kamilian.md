@@ -9,9 +9,9 @@ description: 卡米利安是一名A级启迪禁闭者，主要负责治疗与增
 tags: ['攻速辅助', '普攻辅助']
 image: /characters/kamilian.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「卡米利安」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1728
+  category: BWiki 升阶装束
+  title: 卡米利安升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%8D%A1%E7%B1%B3%E5%88%A9%E5%AE%89%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

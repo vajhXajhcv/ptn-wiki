@@ -34,6 +34,11 @@ const IMAGES_BATCH_SIZE = 10;
 const INFO_BATCH_SIZE = 50; // MediaWiki API 单次 titles 上限
 const BATCH_DELAY_MS = 1000;
 const DOWNLOAD_CONCURRENCY = 5;
+// 单个请求超时与脚本整体时间预算：防止 CI 构建环境网络受限时请求挂起，
+// 拖过 Cloudflare Pages 的构建时限（2026-09 曾因此连续部署失败）。
+const REQUEST_TIMEOUT_MS = 30_000;
+const TIME_BUDGET_MS = Number(process.env.FETCH_TIME_BUDGET_MS) || 5 * 60 * 1000;
+const deadline = Date.now() + TIME_BUDGET_MS;
 const FORCE = process.argv.includes('--force');
 // 可选：只跑单个角色，如 node scripts/fetch-bwiki-ascended-art.mjs zoya
 const ONLY = process.argv.slice(2).find((a) => !a.startsWith('--')) || null;
@@ -51,6 +56,7 @@ async function api(params, attempt = 1) {
 	try {
 		const res = await fetch(url, {
 			headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' },
+			signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
 		});
 		if (!res.ok) throw new Error(`HTTP ${res.status}`);
 		return await res.json();
@@ -65,6 +71,7 @@ async function download(url, attempt = 1) {
 	try {
 		const res = await fetch(url, {
 			headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' },
+			signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
 		});
 		if (!res.ok) throw new Error(`HTTP ${res.status}`);
 		return Buffer.from(await res.arrayBuffer());
@@ -77,6 +84,10 @@ async function download(url, attempt = 1) {
 
 async function runInChunks(items, fn, size) {
 	for (let i = 0; i < items.length; i += size) {
+		if (Date.now() > deadline) {
+			console.warn(`   ! 超出时间预算（${TIME_BUDGET_MS / 60000} 分钟），剩余 ${items.length - i} 项跳过`);
+			break;
+		}
 		const chunk = items.slice(i, i + size);
 		await Promise.all(chunk.map(fn));
 	}
@@ -130,6 +141,10 @@ function updateFrontmatter(content, slug, fileTitle, filePageUrl) {
 async function batchPageImages(chars) {
 	const result = new Map();
 	for (let i = 0; i < chars.length; i += IMAGES_BATCH_SIZE) {
+		if (Date.now() > deadline) {
+			console.warn('   ! 超出时间预算，剩余角色页图片列表跳过');
+			break;
+		}
 		const chunk = chars.slice(i, i + IMAGES_BATCH_SIZE);
 		const data = await api({
 			action: 'query',
@@ -156,6 +171,10 @@ async function batchPageImages(chars) {
 async function batchImageInfo(fileTitles) {
 	const result = new Map();
 	for (let i = 0; i < fileTitles.length; i += INFO_BATCH_SIZE) {
+		if (Date.now() > deadline) {
+			console.warn('   ! 超出时间预算，剩余文件直链查询跳过');
+			break;
+		}
 		const chunk = fileTitles.slice(i, i + INFO_BATCH_SIZE);
 		const data = await api({
 			action: 'query',

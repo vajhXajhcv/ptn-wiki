@@ -9,9 +9,9 @@ description: 荒噬·伊琳娜是S级启迪禁闭者，擅长干扰的禁闭者�
 tags: ['进攻辅助', '减速', '冰冻']
 image: /characters/huangshiyilinna.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-009「荒噬·伊琳娜」
-  url: https://wqmt.aisnogames.com/#/news/2021
+  category: BWiki 升阶装束
+  title: 荒噬·伊琳娜升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%8D%92%E5%99%AC%C2%B7%E4%BC%8A%E7%90%B3%E5%A8%9C%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

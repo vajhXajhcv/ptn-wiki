@@ -7,9 +7,9 @@ description: 丽奎安是S级异能禁闭者，法术伤害输出，通常兼具
 tags: []
 image: /characters/likuian.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-125「丽奎安」
-  url: https://wqmt.aisnogames.com/#/news/2026
+  category: BWiki 升阶装束
+  title: 丽奎安升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E4%B8%BD%E5%A5%8E%E5%AE%89%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

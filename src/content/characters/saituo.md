@@ -9,9 +9,9 @@ description: 赛托是S级诡秘禁闭者，擅长造成真实伤害的禁闭者
 tags: ['真伤辅助', '真伤增幅']
 image: /characters/saituo.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-118「赛托」
-  url: https://wqmt.aisnogames.com/#/news/1445
+  category: BWiki 升阶装束
+  title: 赛托升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%B5%9B%E6%89%98%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

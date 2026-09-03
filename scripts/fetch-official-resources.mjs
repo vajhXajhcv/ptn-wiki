@@ -21,6 +21,11 @@ const TMP_DIR = join(__dirname, 'tmp');
 
 const API_BASE = 'https://wqmt.aisnogames.com/api';
 const CONCURRENCY = 5;
+// 单个请求超时与脚本整体时间预算：防止 CI 构建环境网络受限时请求挂起，
+// 拖过 Cloudflare Pages 的构建时限（2026-09 曾因此连续部署失败）。
+const REQUEST_TIMEOUT_MS = 30_000;
+const TIME_BUDGET_MS = Number(process.env.FETCH_TIME_BUDGET_MS) || 5 * 60 * 1000;
+const deadline = Date.now() + TIME_BUDGET_MS;
 
 const NO_DOWNLOAD = process.argv.includes('--no-download');
 
@@ -49,6 +54,7 @@ async function api(path) {
 			'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
 			Accept: 'application/json',
 		},
+		signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
 	});
 	if (!res.ok) throw new Error(`HTTP ${res.status}: ${url}`);
 	const json = await res.json();
@@ -99,6 +105,7 @@ async function fetchWithRetry(url, attempts = 3) {
 		try {
 			const res = await fetch(url, {
 				headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' },
+				signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
 			});
 			if (!res.ok) throw new Error(`HTTP ${res.status}`);
 			return Buffer.from(await res.arrayBuffer());
@@ -118,6 +125,10 @@ function chooseStaticImage(html) {
 async function runInChunks(items, fn, size) {
 	const results = [];
 	for (let i = 0; i < items.length; i += size) {
+		if (Date.now() > deadline) {
+			console.warn(`   ! 超出时间预算（${TIME_BUDGET_MS / 60000} 分钟），剩余 ${items.length - i} 项跳过`);
+			break;
+		}
 		const chunk = items.slice(i, i + size);
 		results.push(...(await Promise.all(chunk.map(fn))));
 	}
@@ -132,6 +143,10 @@ async function main() {
 	let offset = 0;
 	const limit = 100;
 	while (true) {
+		if (Date.now() > deadline) {
+			console.warn('   ! 超出时间预算，资讯列表未拉完，使用已获取部分');
+			break;
+		}
 		const data = await api(`/news?section=1&offset=${offset}&limit=${limit}`);
 		list.push(...data.data);
 		if (offset + limit >= data.total) break;

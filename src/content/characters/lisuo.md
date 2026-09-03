@@ -9,9 +9,9 @@ description: 丽莎是B级启迪禁闭者，擅长干扰的禁闭者。普攻造
 tags: ['减速', '进攻辅助']
 image: /characters/lisuo.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「丽莎」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/2042
+  category: BWiki 升阶装束
+  title: 丽莎升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E4%B8%BD%E8%8E%8E%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

@@ -18,6 +18,7 @@
 - **最新提交**：`e9108e6` refactor: 统一组件与页面、补全角色别名/更新摘要、新增社区页与 AGENTS.md（2026-08-04 的变更待提交）
 - **最新部署**：https://e805ef44.ptn-wiki.pages.dev（2026-08-14 本地 `npm run deploy` 手动部署，恢复角色立绘）
 - **注意**：`public/characters/*.jpg` 不提交 Git，CI 构建前由 `prebuild` 钩子（`scripts/ensure-character-images.mjs`）自动从官网补齐立绘，自动部署不再丢图（2026-08-14 修复）。
+- **2026-09-03 修复**：同步工作流曾把 updates 空 description 写成 YAML null，导致 Cloudflare Pages 连续 3 次构建失败、线上冻结在 08-14。已在 `fetch-official-news.mjs` 中用标题兜底并兼容空值回填；同时移除了同步工作流中会把 imageSource 从「BWiki 升阶装束」改写回官网来源的 `fetch-official-resources.mjs --no-download` 步骤；抓取脚本统一加了 30s 请求超时与 5 分钟整体预算（`FETCH_TIME_BUDGET_MS` 可调）。
 
 ---
 

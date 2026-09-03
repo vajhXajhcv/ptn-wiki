@@ -9,9 +9,9 @@ description: 希露妲是S级异能禁闭者，擅长召唤的禁闭者。进入
 tags: ['召唤物辅助', '能量恢复']
 image: /characters/xilouda.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-035「希露妲」
-  url: https://wqmt.aisnogames.com/#/news/1478
+  category: BWiki 升阶装束
+  title: 希露妲升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%B8%8C%E9%9C%B2%E5%A6%B2%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

@@ -10,9 +10,9 @@ aliases: ['EMP']
 tags: ['刷新充能', '进攻增幅', '暴击增幅']
 image: /characters/aimipan.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「艾米潘」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1941
+  category: BWiki 升阶装束
+  title: 艾米潘升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%89%BE%E7%B1%B3%E6%BD%98%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

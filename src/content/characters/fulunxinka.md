@@ -9,9 +9,9 @@ description: 福伦辛卡是A级启迪禁闭者，擅长支援的禁闭者。进
 tags: ['治疗辅助', '防守辅助']
 image: /characters/fulunxinka.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-510「福伦辛卡」
-  url: https://wqmt.aisnogames.com/#/news/1780
+  category: BWiki 升阶装束
+  title: 福伦辛卡升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%A6%8F%E4%BC%A6%E8%BE%9B%E5%8D%A1%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

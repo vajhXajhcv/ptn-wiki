@@ -1,6 +1,4 @@
 ---
-import fs from 'node:fs';
-import path from 'node:path';
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
@@ -8,25 +6,12 @@ import '../styles/global.css';
 
 const characters = await getCollection('characters');
 const stages = await getCollection('stages');
-const gameModes = await getCollection('gameModes');
-const updates = await getCollection('updates');
 const stories = await getCollection('stories');
+const updates = await getCollection('updates');
 
-// 按文件修改时间排序，取最近更新的 6 名角色
-const charactersWithMtime = characters.map((character) => {
-	const filePath = path.join(process.cwd(), 'src', 'content', 'characters', `${character.id}.md`);
-	const { mtimeMs } = fs.statSync(filePath);
-	return { ...character, mtimeMs };
-});
-const recentCharacters = [...charactersWithMtime]
-	.sort((a, b) => b.mtimeMs - a.mtimeMs)
-	.slice(0, 6);
-
-// 随机推荐 6 名 S 级角色
-const recommendedCharacters = characters
-	.filter((c) => c.data.rarity === 'S')
-	.sort(() => 0.5 - Math.random())
-	.slice(0, 6);
+const byDateDesc = (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+const latestUpdates = [...updates].sort(byDateDesc).slice(0, 5);
+const recentActivities = updates.filter((u) => u.data.type === '活动').sort(byDateDesc).slice(0, 3);
 
 const quickLinks = [
 	{
@@ -40,34 +25,14 @@ const quickLinks = [
 		desc: `查看全部 ${stages.length} 个关卡`,
 	},
 	{
-		label: '玩法攻略',
-		href: '/game-modes',
-		desc: `暗域、公会战、数据间隙等玩法`,
-	},
-	{
 		label: '剧情文本',
 		href: '/stories',
 		desc: `查看全部 ${stories.length} 段剧情`,
 	},
 	{
-		label: '世界观档案',
-		href: '/lore',
-		desc: '零镜系统：入夜纪年、狄斯城与狂厄设定',
-	},
-	{
-		label: '阵营图鉴',
-		href: '/factions',
-		desc: '十六大狂厄阵营与成员一览',
-	},
-	{
-		label: '社区工具',
-		href: '/community',
-		desc: '开源项目、Wiki 与实用工具整理',
-	},
-	{
-		label: '参与贡献',
-		href: 'https://github.com/vajhXajhcv/ptn-wiki',
-		desc: '提交 PR、反馈问题或加入讨论',
+		label: '活动日历',
+		href: '/calendar',
+		desc: '版本更新与限时活动时间线',
 	},
 ];
 
@@ -93,14 +58,18 @@ const websiteJsonLd = {
 			<p class="hero-sub">
 				非官方、非营利、玩家共建的《无期迷途》中文资料站
 			</p>
-			<div class="hero-links">
-				<a href="/characters" class="hero-btn">浏览角色</a>
-				<a href="/stages" class="hero-btn hero-btn-secondary">查看关卡</a>
-			</div>
+			<form class="hero-search" action="/search" method="get" role="search">
+				<input
+					type="search"
+					name="q"
+					placeholder="搜索角色、关卡、剧情、玩法…"
+					aria-label="站内搜索"
+				/>
+				<button type="submit">搜索</button>
+			</form>
 		</section>
 
 		<section class="section">
-			<h2 class="section-title">快速入口</h2>
 			<div class="card-grid quick-links">
 				{quickLinks.map((link) => (
 					<a href={link.href} class="card quick-link-card">
@@ -111,119 +80,41 @@ const websiteJsonLd = {
 			</div>
 		</section>
 
-		{updates.length > 0 && (
+		{latestUpdates.length > 0 && (
 			<section class="section">
 				<div class="section-header">
 					<h2 class="section-title">最新动态</h2>
 					<a href="/updates" class="section-more">查看全部 →</a>
 				</div>
 				<div class="update-list">
-					{updates
-						.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
-						.slice(0, 3)
-						.map((u) => (
-							<a href={`/updates/${u.id}/`} class="update-card">
-								<span class="update-date">{u.data.date}</span>
-								<span class="update-type">{u.data.type}</span>
-								<strong>{u.data.title}</strong>
-							</a>
-						))}
+					{latestUpdates.map((u) => (
+						<a href={`/updates/${u.id}/`} class="update-card">
+							<span class="update-date">{u.data.date}</span>
+							<span class="update-type">{u.data.type}</span>
+							<strong>{u.data.title}</strong>
+						</a>
+					))}
 				</div>
 			</section>
 		)}
 
-		<section class="section">
-			<div class="section-header">
-				<h2 class="section-title">最近更新</h2>
-				<a href="/characters" class="section-more">查看全部 →</a>
-			</div>
-			<div class="card-grid">
-				{recentCharacters.map((c) => (
-					<a href={`/characters/${c.id}/`} class="card char-card">
-						{c.data.image && (
-							<img
-								src={c.data.image}
-								alt={c.data.name}
-								class="char-thumb"
-								loading="lazy"
-								decoding="async"
-							/>
-						)}
-						<div class="card-meta">
-							{c.data.rarity && (
-								<span class:list={['badge', `rarity-${c.data.rarity.toLowerCase()}`]}>{c.data.rarity}</span>
-							)}
-							{c.data.danger && <span class="badge">{c.data.danger}</span>}
-						</div>
-						<h3>{c.data.name}</h3>
-						<p>{c.data.description.slice(0, 60)}...</p>
-					</a>
-				))}
-			</div>
-		</section>
-
-		<section class="section">
-			<div class="section-header">
-				<h2 class="section-title">推荐角色</h2>
-				<a href="/characters" class="section-more">查看全部 →</a>
-			</div>
-			<div class="card-grid">
-				{recommendedCharacters.map((c) => (
-					<a href={`/characters/${c.id}/`} class="card char-card">
-						{c.data.image && (
-							<img
-								src={c.data.image}
-								alt={c.data.name}
-								class="char-thumb"
-								loading="lazy"
-								decoding="async"
-							/>
-						)}
-						<div class="card-meta">
-							{c.data.rarity && (
-								<span class:list={['badge', `rarity-${c.data.rarity.toLowerCase()}`]}>{c.data.rarity}</span>
-							)}
-							{c.data.danger && <span class="badge">{c.data.danger}</span>}
-						</div>
-						<h3>{c.data.name}</h3>
-						<p>{c.data.description.slice(0, 60)}...</p>
-					</a>
-				))}
-			</div>
-		</section>
-
-		<section class="section">
-			<div class="section-header">
-				<h2 class="section-title">关卡攻略</h2>
-				<a href="/stages" class="section-more">查看全部 →</a>
-			</div>
-			<div class="card-grid">
-				{stages.slice(0, 6).map((s) => (
-					<a href={`/stages/${s.id}/`} class="card">
-						<h3>{s.data.name}</h3>
-						<p>{s.data.description.slice(0, 60)}...</p>
-					</a>
-				))}
-			</div>
-		</section>
-
-		<section class="section">
-			<div class="section-header">
-				<h2 class="section-title">玩法攻略</h2>
-				<a href="/game-modes" class="section-more">查看全部 →</a>
-			</div>
-			<div class="card-grid">
-				{gameModes.map((m) => (
-					<a href={`/game-modes/${m.id}/`} class="card">
-						<div class="card-meta">
-							{m.data.type && <span class="badge">{m.data.type}</span>}
-						</div>
-						<h3>{m.data.name}</h3>
-						<p>{m.data.description.slice(0, 60)}...</p>
-					</a>
-				))}
-			</div>
-		</section>
+		{recentActivities.length > 0 && (
+			<section class="section">
+				<div class="section-header">
+					<h2 class="section-title">近期活动</h2>
+					<a href="/calendar" class="section-more">活动日历 →</a>
+				</div>
+				<div class="update-list">
+					{recentActivities.map((u) => (
+						<a href={`/updates/${u.id}/`} class="update-card">
+							<span class="update-date">{u.data.date}</span>
+							<span class="update-type">{u.data.type}</span>
+							<strong>{u.data.title}</strong>
+						</a>
+					))}
+				</div>
+			</section>
+		)}
 	</main>
 </BaseLayout>
 
@@ -252,32 +143,36 @@ const websiteJsonLd = {
 		color: rgb(var(--gray));
 		margin-bottom: 1.5em;
 	}
-	.hero-links {
+	.hero-search {
 		display: flex;
 		justify-content: center;
-		gap: 1em;
-		flex-wrap: wrap;
+		gap: 0.5em;
+		max-width: 520px;
+		margin: 0 auto;
 	}
-	.hero-btn {
-		display: inline-block;
-		padding: 0.6em 1.4em;
+	.hero-search input {
+		flex: 1;
+		padding: 0.65em 1em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 8px;
+		font-size: 1em;
+	}
+	.hero-search input:focus {
+		outline: none;
+		border-color: var(--accent);
+	}
+	.hero-search button {
+		padding: 0.65em 1.4em;
+		border: none;
 		border-radius: 8px;
 		background: var(--accent);
 		color: #fff;
-		text-decoration: none;
-		font-weight: 500;
+		font-size: 1em;
+		cursor: pointer;
 		transition: background 0.2s;
 	}
-	.hero-btn:hover {
+	.hero-search button:hover {
 		background: var(--accent-dark);
-	}
-	.hero-btn-secondary {
-		background: #fff;
-		color: var(--accent-dark);
-		border: 1px solid var(--accent);
-	}
-	.hero-btn-secondary:hover {
-		background: #eef2ff;
 	}
 	.section {
 		margin-bottom: 2.5em;
@@ -308,9 +203,6 @@ const websiteJsonLd = {
 	}
 	.quick-link-card h3 {
 		color: var(--accent-dark);
-	}
-	.card-meta {
-		margin-bottom: 0.5em;
 	}
 	.update-list {
 		display: grid;
@@ -344,21 +236,8 @@ const websiteJsonLd = {
 		background: #eef2ff;
 		color: var(--accent-dark);
 	}
-	.char-card {
-		overflow: hidden;
-	}
-	.char-thumb {
-		width: 100%;
-		height: 180px;
-		object-fit: cover;
-		object-position: top center;
-		border-radius: 8px;
-		margin-bottom: 0.6em;
-		background: rgb(var(--gray-light));
-	}
 	@media (max-width: 720px) {
 		.hero-title { font-size: 2em; }
 		.hero { padding: 2em 1em; }
-		.char-thumb { height: 220px; }
 	}
 </style>

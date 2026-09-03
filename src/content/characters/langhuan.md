@@ -9,9 +9,9 @@ description: 狼獾是一名A级精准禁闭者，主要负责远程物理输出
 tags: ['物伤辅助', '眩晕', '普攻伤害增幅', '进攻增幅']
 image: /characters/langhuan.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「狼獾」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1581
+  category: BWiki 升阶装束
+  title: 狼獾升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E7%8B%BC%E7%8D%BE%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

@@ -9,9 +9,9 @@ description: 雷比尼斯是一名B级诡秘禁闭者，主要负责破核与切
 tags: ['刷新充能', '进攻增幅']
 image: /characters/leibinisi.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「雷比尼斯」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/2037
+  category: BWiki 升阶装束
+  title: 雷比尼斯升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E9%9B%B7%E6%AF%94%E5%B0%BC%E6%96%AF%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

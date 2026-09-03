@@ -10,9 +10,9 @@ aliases: ['Langley']
 tags: ['精准', '远程输出', '破核', '范围伤害']
 image: /characters/langley.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「兰利」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1524
+  category: BWiki 升阶装束
+  title: 兰利升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%85%B0%E5%88%A9%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

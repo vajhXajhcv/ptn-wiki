@@ -9,9 +9,9 @@ description: 莓丝是A级狂暴禁闭者，擅长造成物理伤害的禁闭者
 tags: ['进攻增幅', '攻速增幅', '进攻辅助']
 image: /characters/meisi.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「莓丝」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1757
+  category: BWiki 升阶装束
+  title: 莓丝升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%8E%93%E4%B8%9D%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

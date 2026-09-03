@@ -9,9 +9,9 @@ description: 艾梅斯是A级狂暴禁闭者，来自异世界的替身使者。
 tags: ['进攻增幅', '眩晕']
 image: /characters/aimeisi.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨FE-40533「艾梅斯」
-  url: https://wqmt.aisnogames.com/#/news/1059
+  category: BWiki 升阶装束
+  title: 艾梅斯升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E8%89%BE%E6%A2%85%E6%96%AF%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

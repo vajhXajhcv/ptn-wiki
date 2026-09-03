@@ -9,9 +9,9 @@ description: 格芮芙是S级诡秘禁闭者，擅长物理输出的禁闭者，
 tags: ['进攻辅助', '特殊辅助']
 image: /characters/geruifu.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-214「格芮芙」
-  url: https://wqmt.aisnogames.com/#/news/1171
+  category: BWiki 升阶装束
+  title: 格芮芙升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%A0%BC%E8%8A%AE%E8%8A%99%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

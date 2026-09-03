@@ -9,9 +9,9 @@ description: 啵啡是A级诡秘禁闭者，擅长召唤的禁闭者，必杀可
 tags: ['特殊能量恢复', '攻速辅助', '物伤辅助']
 image: /characters/bofei.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-580「啵啡」
-  url: https://wqmt.aisnogames.com/#/news/1307
+  category: BWiki 升阶装束
+  title: 啵啡升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E5%95%B5%E5%95%A1%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

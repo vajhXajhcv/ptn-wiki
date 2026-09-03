@@ -9,9 +9,9 @@ description: 温蒂是一名A级狂暴禁闭者，主要负责近战物理输出
 tags: ['进攻增幅']
 image: /characters/wendi.jpg
 imageSource:
-  category: MBCC生日会
-  title: 【MBCC生日会】丨「温蒂」生日快乐
-  url: https://wqmt.aisnogames.com/#/news/1815
+  category: BWiki 升阶装束
+  title: 温蒂升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%B8%A9%E8%92%82%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

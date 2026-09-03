@@ -9,9 +9,9 @@ description: 锈是S级坚韧禁闭者，擅长防守的禁闭者，可以阻挡
 tags: ['局长能量恢复', '进攻辅助', '致死免疫']
 image: /characters/xiu.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-247「锈」
-  url: https://wqmt.aisnogames.com/#/news/1571
+  category: BWiki 升阶装束
+  title: 锈升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E9%94%88%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息

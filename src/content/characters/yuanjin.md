@@ -9,9 +9,9 @@ description: 源津是S级启迪禁闭者，被内海高度污染的禁闭者，
 tags: ['治疗辅助', '进攻辅助', '普攻伤害辅助', '特殊能量恢复']
 image: /characters/yuanjin.jpg
 imageSource:
-  category: 禁闭者档案
-  title: 【禁闭者档案】丨MBCC-S-021「源津」
-  url: https://wqmt.aisnogames.com/#/news/1310
+  category: BWiki 升阶装束
+  title: 源津升阶装束.png
+  url: https://wiki.biligame.com/wqmt/%E6%96%87%E4%BB%B6:%E6%BA%90%E6%B4%A5%E5%8D%87%E9%98%B6%E8%A3%85%E6%9D%9F.png
 ---
 
 ## 基础信息
