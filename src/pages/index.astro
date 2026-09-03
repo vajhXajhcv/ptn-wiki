@@ -11,7 +11,37 @@ const updates = await getCollection('updates');
 
 const byDateDesc = (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
 const latestUpdates = [...updates].sort(byDateDesc).slice(0, 5);
-const recentActivities = updates.filter((u) => u.data.type === '活动').sort(byDateDesc).slice(0, 3);
+
+const todayStr = new Date().toISOString().slice(0, 10);
+function eventStatus(u) {
+	const start = u.data.startDate || u.data.date;
+	if (u.data.endDate && todayStr >= start && todayStr <= u.data.endDate) {
+		return { label: '进行中', cls: 'status-ongoing' };
+	}
+	if (todayStr < start) {
+		return { label: '即将开始', cls: 'status-upcoming' };
+	}
+	return null;
+}
+// 优先展示进行中/即将开始的活动；都没有时回退到最新的活动类公告
+const activeEvents = updates
+	.map((u) => ({ u, status: eventStatus(u) }))
+	.filter((x) => x.status)
+	.sort((a, b) => {
+		const rank = (x) => (x.status.cls === 'status-ongoing' ? 0 : 1);
+		if (rank(a) !== rank(b)) return rank(a) - rank(b);
+		const keyA = a.u.data.endDate || a.u.data.startDate || a.u.data.date;
+		const keyB = b.u.data.endDate || b.u.data.startDate || b.u.data.date;
+		return keyA.localeCompare(keyB);
+	})
+	.slice(0, 3);
+const featuredEvents = activeEvents.length
+	? activeEvents
+	: updates
+			.filter((u) => u.data.type === '活动')
+			.sort(byDateDesc)
+			.slice(0, 3)
+			.map((u) => ({ u, status: null }));
 
 const quickLinks = [
 	{
@@ -98,17 +128,20 @@ const websiteJsonLd = {
 			</section>
 		)}
 
-		{recentActivities.length > 0 && (
+		{featuredEvents.length > 0 && (
 			<section class="section">
 				<div class="section-header">
 					<h2 class="section-title">近期活动</h2>
 					<a href="/calendar" class="section-more">活动日历 →</a>
 				</div>
 				<div class="update-list">
-					{recentActivities.map((u) => (
+					{featuredEvents.map(({ u, status }) => (
 						<a href={`/updates/${u.id}/`} class="update-card">
-							<span class="update-date">{u.data.date}</span>
-							<span class="update-type">{u.data.type}</span>
+							<span class="update-date">
+								{u.data.startDate || u.data.date}
+								{u.data.endDate ? ` ~ ${u.data.endDate.slice(5)}` : ''}
+							</span>
+							{status && <span class={`event-status ${status.cls}`}>{status.label}</span>}
 							<strong>{u.data.title}</strong>
 						</a>
 					))}
@@ -228,6 +261,20 @@ const websiteJsonLd = {
 		font-size: 0.85em;
 		color: rgb(var(--gray));
 		min-width: 90px;
+	}
+	.event-status {
+		font-size: 0.75em;
+		padding: 0.15em 0.5em;
+		border-radius: 4px;
+		white-space: nowrap;
+	}
+	.status-ongoing {
+		background: #dcfce7;
+		color: #166534;
+	}
+	.status-upcoming {
+		background: #fef3c7;
+		color: #92400e;
 	}
 	.update-type {
 		font-size: 0.75em;

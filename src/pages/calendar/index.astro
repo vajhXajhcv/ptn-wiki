@@ -6,18 +6,19 @@ import { SITE_TITLE } from '../../consts';
 import '../../styles/global.css';
 
 const updates = (await getCollection('updates')).sort((a, b) =>
-	b.data.date.localeCompare(a.data.date)
+	(b.data.startDate || b.data.date).localeCompare(a.data.startDate || a.data.date)
 );
 
 const types = ['全部', '版本更新', '活动', '维护公告', '站点公告', '其他'];
 const todayStr = new Date().toISOString().slice(0, 10);
 
 function getStatus(update: (typeof updates)[number]) {
-	const { date, endDate } = update.data;
-	if (endDate && todayStr >= date && todayStr <= endDate) {
+	const { date, startDate, endDate } = update.data;
+	const start = startDate || date;
+	if (endDate && todayStr >= start && todayStr <= endDate) {
 		return { label: '进行中', cls: 'status-ongoing' };
 	}
-	if (todayStr < date) {
+	if (todayStr < start) {
 		return { label: '即将开始', cls: 'status-upcoming' };
 	}
 	return { label: '已结束', cls: 'status-past' };
@@ -25,7 +26,7 @@ function getStatus(update: (typeof updates)[number]) {
 
 const grouped = new Map<string, typeof updates>();
 updates.forEach((u) => {
-	const month = u.data.date.slice(0, 7);
+	const month = (u.data.startDate || u.data.date).slice(0, 7);
 	if (!grouped.has(month)) grouped.set(month, []);
 	grouped.get(month)!.push(u);
 });
@@ -71,7 +72,7 @@ const breadcrumbItems = [
 										data-type={u.data.type}
 									>
 										<div class="timeline-date">
-											<span>{u.data.date}</span>
+											<span>{u.data.startDate || u.data.date}</span>
 											{u.data.endDate && <span> 至 {u.data.endDate}</span>}
 										</div>
 										<div class="timeline-content">

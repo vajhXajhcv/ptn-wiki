@@ -1,24 +1,44 @@
 ---
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
+
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
+const section = '/' + (pathname.match(/[^\/]+/g)?.[0] || '');
+
+const moreLinks = [
+	{ href: '/factions', label: '阵营' },
+	{ href: '/teams', label: '配队' },
+	{ href: '/lore', label: '世界观' },
+	{ href: '/updates', label: '更新日志' },
+	{ href: '/community', label: '社区' },
+];
+const moreActive = moreLinks.some((l) => l.href === section);
 ---
 
 <header>
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">首页</HeaderLink>
 			<HeaderLink href="/characters">角色</HeaderLink>
-			<HeaderLink href="/factions">阵营</HeaderLink>
-			<HeaderLink href="/teams">配队</HeaderLink>
 			<HeaderLink href="/stages">关卡</HeaderLink>
-			<HeaderLink href="/stories">剧情</HeaderLink>
-			<HeaderLink href="/lore">世界观</HeaderLink>
 			<HeaderLink href="/game-modes">玩法</HeaderLink>
-			<HeaderLink href="/updates">更新</HeaderLink>
+			<HeaderLink href="/stories">剧情</HeaderLink>
 			<HeaderLink href="/calendar">日历</HeaderLink>
-			<HeaderLink href="/community">社区</HeaderLink>
-			<HeaderLink href="/search">搜索</HeaderLink>
+			<div class:list={['nav-more', { active: moreActive }]}>
+				<button type="button" class="more-btn" aria-haspopup="true">
+					更多 <span class="caret">▾</span>
+				</button>
+				<div class="more-menu">
+					{moreLinks.map((l) => <HeaderLink href={l.href}>{l.label}</HeaderLink>)}
+				</div>
+			</div>
+			<HeaderLink href="/search" class="search-link">
+				<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true">
+					<circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6" />
+					<line x1="11" y1="11" x2="15" y2="15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+				</svg>
+				搜索
+			</HeaderLink>
 		</div>
 	</nav>
 </header>
@@ -26,8 +46,10 @@ import HeaderLink from './HeaderLink.astro';
 	header {
 		margin: 0;
 		padding: 0 1em;
-		background: var(--bg-body);
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		background: rgba(255, 255, 255, 0.85);
+		backdrop-filter: saturate(180%) blur(12px);
+		-webkit-backdrop-filter: saturate(180%) blur(12px);
+		border-bottom: 1px solid rgb(var(--gray-light));
 		position: sticky;
 		top: 0;
 		z-index: 100;
@@ -35,6 +57,7 @@ import HeaderLink from './HeaderLink.astro';
 	h2 {
 		margin: 0;
 		font-size: 1em;
+		white-space: nowrap;
 	}
 	h2 a,
 	h2 a.active {
@@ -52,19 +75,109 @@ import HeaderLink from './HeaderLink.astro';
 		align-items: center;
 	}
 	nav a {
-		padding: 1em 0.5em;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3em;
+		padding: 1em 0.6em;
 		color: rgb(var(--black));
-		border-bottom: 4px solid transparent;
+		border-bottom: 3px solid transparent;
 		text-decoration: none;
+		white-space: nowrap;
+		transition: color 0.15s;
+	}
+	nav a:hover {
+		color: var(--accent);
 	}
 	nav a.active {
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
+	.search-link svg {
+		flex-shrink: 0;
+	}
+
+	.nav-more {
+		position: relative;
+		display: flex;
+	}
+	.more-btn {
+		font: inherit;
+		color: rgb(var(--black));
+		background: none;
+		border: none;
+		border-bottom: 3px solid transparent;
+		padding: 1em 0.6em;
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.2em;
+		white-space: nowrap;
+		transition: color 0.15s;
+	}
+	.caret {
+		font-size: 0.75em;
+	}
+	.nav-more:hover .more-btn,
+	.nav-more:focus-within .more-btn {
+		color: var(--accent);
+	}
+	.nav-more.active .more-btn {
+		border-bottom-color: var(--accent);
+		font-weight: bolder;
+	}
+	.more-menu {
+		display: none;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		min-width: 7.5em;
+		background: #fff;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 10px;
+		box-shadow: 0 8px 24px rgba(var(--gray), 25%);
+		padding: 0.4em;
+		z-index: 110;
+	}
+	.nav-more:hover .more-menu,
+	.nav-more:focus-within .more-menu {
+		display: flex;
+		flex-direction: column;
+	}
+	.more-menu a {
+		padding: 0.55em 0.9em;
+		border-bottom: none;
+		border-radius: 6px;
+	}
+	.more-menu a:hover {
+		background: #eef2ff;
+		color: var(--accent-dark);
+	}
+	.more-menu a.active {
+		font-weight: bolder;
+		color: var(--accent-dark);
+		background: #eef2ff;
+	}
+
 	@media (max-width: 720px) {
-		.internal-links a {
-			padding: 1em 0.35em;
+		.internal-links {
+			overflow-x: auto;
+			scrollbar-width: none;
+		}
+		.internal-links::-webkit-scrollbar {
+			display: none;
+		}
+		nav a,
+		.more-btn {
+			padding: 1em 0.4em;
 			font-size: 0.9em;
+		}
+		/* header 的 backdrop-filter 使 fixed 菜单相对 header 定位，避免被横向滚动容器裁切 */
+		.more-menu {
+			position: fixed;
+			top: 100%;
+			left: 0.5em;
+			right: 0.5em;
+			min-width: 0;
 		}
 	}
 </style>

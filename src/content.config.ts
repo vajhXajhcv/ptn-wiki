@@ -102,6 +102,8 @@ const updates = defineCollection({
 		date: z.string(),
 		type: z.enum(['版本更新', '活动', '维护公告', '站点公告', '其他']).default('其他'),
 		description: z.string(),
+		// 活动时间区间：从公告正文解析，用于日历/首页判定「进行中」「即将开始」
+		startDate: z.string().optional(),
 		endDate: z.string().optional(),
 		source: z.string().url().optional(),
 		cover: z.string().url().optional(),

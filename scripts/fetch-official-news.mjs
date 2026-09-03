@@ -5,6 +5,7 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parseEventRange } from './lib/parse-event-dates.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -82,12 +83,10 @@ function truncateDescription(text, maxLength = 120) {
 	return (lastPunct > maxLength * 0.6 ? truncated.slice(0, lastPunct + 1) : truncated) + '……';
 }
 
-async function fetchDetailDescription(id) {
+async function fetchDetailText(id) {
 	try {
 		const detail = await api(`/news/${id}`);
-		const html = detail?.[0]?.content_html || '';
-		const text = stripHtml(html);
-		return truncateDescription(text);
+		return stripHtml(detail?.[0]?.content_html || '');
 	} catch (err) {
 		console.warn(`   获取详情失败 ${id}: ${err.message}`);
 		return '';
@@ -148,8 +147,12 @@ async function main() {
 		const url = `https://wqmt.aisnogames.com/#/news/${item.id}`;
 		const coverLine = item.cover ? `cover: ${item.cover}` : '';
 
+		const detailText = await fetchDetailText(id);
 		// 详情接口失败时回退为标题：空 description 会被 YAML 解析为 null，导致 Astro 构建直接失败
-		const description = (await fetchDetailDescription(id)) || item.title;
+		const description = truncateDescription(detailText) || item.title;
+		// 正文中能解析出明确活动时间区间时写入 startDate / endDate（供日历判定进行中状态）
+		const range = parseEventRange(detailText, item.publish_time);
+		const rangeLines = range ? `\nstartDate: '${range.start}'\nendDate: '${range.end}'` : '';
 
 		if (existingIds.has(id)) {
 			// 已存在则仅更新元数据，保留可能的人工编辑内容
@@ -162,6 +165,11 @@ async function main() {
 			newContent = newContent.replace(/^type: .+$/m, `type: '${type}'`);
 			newContent = newContent.replace(/^source: .+$/m, `source: '${url}'`);
 			newContent = newContent.replace(/^description:.*$/m, `description: ${description.replace(/'/g, "''")}`);
+			// 先移除旧的时间区间行，再按最新解析结果写入（解析不出则不留）
+			newContent = newContent.replace(/^startDate:.*\r?\n?/m, '').replace(/^endDate:.*\r?\n?/m, '');
+			if (range) {
+				newContent = newContent.replace(/^date: .+$/m, `$&\nstartDate: '${range.start}'\nendDate: '${range.end}'`);
+			}
 			if (coverLine) {
 				if (/^cover: .+$/m.test(newContent)) {
 					newContent = newContent.replace(/^cover: .+$/m, coverLine);
@@ -182,7 +190,7 @@ async function main() {
 
 		const frontmatter = `---
 title: ${item.title.replace(/'/g, "''")}
-date: '${date}'
+date: '${date}'${rangeLines}
 type: '${type}'
 description: ${description.replace(/'/g, "''")}
 source: '${url}'${coverLine ? '\n' + coverLine : ''}

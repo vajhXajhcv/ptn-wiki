@@ -41,7 +41,7 @@ docs/            # 项目文档与对外函件
 - `characters`：`name`, `title`, `rarity` (S/A/B), `role`, `faction`, `danger`, `description`, `image`, `imageSource`, `tags`, `aliases`
 - `stages`：`name`, `chapter`, `stageNumber`, `difficulty`, `recommendedLevel`, `description`, `tags`
 - `gameModes`：`name`, `type`, `description`, `unlock`, `rewards`, `image`, `imageSource`, `tags`
-- `updates`：`title`, `date`, `type`, `description`, `source`, `cover`, `tags`
+- `updates`：`title`, `date`, `type`, `description`, `startDate`, `endDate`（活动时间区间，由公告正文解析，可空）, `source`, `cover`, `tags`
 - `stories`：`title`, `type`, `chapter`, `section`, `description`, `characters`, `source`, `tags`
 - `lore`：`title`, `chapter` (入夜纪年/狄斯城/狂厄), `section`, `code`, `description`, `source`, `tags`
 
@@ -124,6 +124,7 @@ node scripts/backfill-factions.mjs        # 角色阵营回填
 ```sh
 node scripts/clean-tags.mjs                       # 清洗 HTML 注释残留
 node scripts/backfill-update-descriptions.mjs     # 回填 updates 空 description
+node scripts/backfill-update-enddates.mjs         # 从公告正文解析活动时间区间（startDate/endDate）
 node scripts/enrich-characters-from-gchar.mjs     # 写入角色别名
 ```
 
