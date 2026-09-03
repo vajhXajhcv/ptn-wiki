@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FilterBar from '../../components/FilterBar.astro';
+import { SITE_TITLE } from '../../consts';
+import officialWps from '../../data/official-wallpapers.json';
+import '../../styles/global.css';
+
+type Wp = { id: number; title: string; landscape: string; portrait: string };
+const data = officialWps as Record<string, Record<string, Wp[]>>;
+
+const CATEGORY_ORDER = ['CG壁纸', '影像壁纸', '审查壁纸'];
+const categories = CATEGORY_ORDER.filter((c) => data[c]);
+
+interface WpRow extends Wp {
+	category: string;
+	tag: string;
+}
+const items: WpRow[] = categories.flatMap((category) =>
+	Object.entries(data[category]).flatMap(([tag, list]) => list.map((w) => ({ ...w, category, tag }))),
+);
+const tags = [...new Set(items.map((w) => w.tag))].sort((a, b) => a.localeCompare(b, 'zh-CN'));
+const totalCount = items.length;
+const thumb = (url: string) => `${url}?x-oss-process=image/resize,w_480`;
+---
+
+<BaseLayout title={`壁纸 - ${SITE_TITLE}`} description="无期迷途官方壁纸收录：剧情 CG、影像壁纸与禁闭者入狱照，来自无期迷途官网影像资料馆。">
+	<main>
+		<h1 class="page-title">壁纸</h1>
+		<p class="page-desc">
+			共 {totalCount} 张官方壁纸，来自<a href="https://wqmt.aisnogames.com/m/archives/gallery" target="_blank" rel="noopener noreferrer">无期迷途官网 · 影像资料馆</a>。点击缩略图查看原图。
+		</p>
+
+		<FilterBar>
+			<input type="text" id="search" placeholder="搜索标题或活动名..." />
+			<select id="category-filter">
+				<option value="">全部分类</option>
+				{categories.map((c) => <option value={c}>{c}</option>)}
+			</select>
+			<select id="tag-filter">
+				<option value="">全部活动/标签</option>
+				{tags.map((t) => <option value={t}>{t}</option>)}
+			</select>
+			<span id="count" class="filter-count">显示 {totalCount} 个</span>
+		</FilterBar>
+
+		<div class="wp-grid" id="wp-grid">
+			{items.map((w) => (
+				<a
+					href={w.landscape}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="wp-item"
+					data-title={w.title}
+					data-category={w.category}
+					data-tag={w.tag}
+					title={`${w.title}（点击查看原图）`}
+				>
+					<img src={thumb(w.landscape)} alt={w.title} loading="lazy" decoding="async" />
+					<span class="wp-label">{w.title}</span>
+					<span class="wp-tag">{w.tag}</span>
+				</a>
+			))}
+		</div>
+	</main>
+</BaseLayout>
+
+<style>
+	.wp-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+		gap: 1em;
+		margin-top: 1.2em;
+	}
+	.wp-item {
+		display: block;
+		border-radius: 12px;
+		overflow: hidden;
+		background: var(--bg-card);
+		border: 1px solid rgb(var(--gray-light));
+		text-decoration: none;
+		color: inherit;
+		transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+	}
+	.wp-item:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--box-shadow);
+		border-color: var(--accent);
+	}
+	.wp-item img {
+		display: block;
+		width: 100%;
+		aspect-ratio: 16 / 10;
+		object-fit: cover;
+	}
+	.wp-label {
+		display: block;
+		padding: 0.5em 0.8em 0.1em;
+		font-size: 0.9em;
+		font-weight: 500;
+	}
+	.wp-tag {
+		display: block;
+		padding: 0 0.8em 0.6em;
+		font-size: 0.8em;
+		color: rgb(var(--gray));
+	}
+</style>
+
+<script is:inline>
+	(function () {
+		const search = document.getElementById('search');
+		const categoryFilter = document.getElementById('category-filter');
+		const tagFilter = document.getElementById('tag-filter');
+		const count = document.getElementById('count');
+		const items = Array.from(document.querySelectorAll('#wp-grid .wp-item'));
+
+		function filter() {
+			const term = search.value.trim().toLowerCase();
+			const category = categoryFilter.value;
+			const tag = tagFilter.value;
+			let visible = 0;
+
+			items.forEach((item) => {
+				const categoryMatch = !category || item.dataset.category === category;
+				const tagMatch = !tag || item.dataset.tag === tag;
+				const textMatch =
+					!term ||
+					item.dataset.title.toLowerCase().includes(term) ||
+					item.dataset.tag.toLowerCase().includes(term);
+				const show = categoryMatch && tagMatch && textMatch;
+				item.style.display = show ? '' : 'none';
+				if (show) visible++;
+			});
+
+			count.textContent = `显示 ${visible} 个`;
+		}
+
+		search.addEventListener('input', filter);
+		categoryFilter.addEventListener('change', filter);
+		tagFilter.addEventListener('change', filter);
+	})();
+</script>

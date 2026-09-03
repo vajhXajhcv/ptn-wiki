@@ -8,6 +8,7 @@ import { SITE_TITLE } from '../../consts';
 import { breadcrumbJsonLd, articleJsonLd } from '../../lib/seo';
 import storyCgs from '../../data/story-cgs.json';
 import officialWps from '../../data/official-wallpapers.json';
+import mainChapterMap from '../../data/main-story-chapters.json';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
@@ -53,17 +54,24 @@ const nextStory = currentIndex >= 0 && currentIndex < peers.length - 1 ? peers[c
 const peerLabel = (s: (typeof peers)[number]) => (/^\d/.test(s.id) ? s.id.replace(/剧情$/, '') : '');
 
 // 活动留影 CG：chapter 与 CG 活动名做归一化匹配（去标点、双向包含，如 刹雨/繁花 ↔ 刹雨·繁花）
+// 主线剧情额外用 build-main-chapter-map 生成的 页→章节名候选（行名优先、海报名兜底）
 type CgItem = { file: string; thumb: string; full: string; width: number; height: number };
 const cgsByEvent = storyCgs as Record<string, CgItem[]>;
 const normName = (s: string) => s.replace(/[^\p{Script=Han}\p{L}\p{N}]/gu, '');
-const chapterNorm = d.chapter ? normName(d.chapter) : '';
-const matchByNorm = (keys: string[]) =>
-	chapterNorm
-		? keys.find((e) => {
-				const n = normName(e);
-				return n === chapterNorm || n.includes(chapterNorm) || chapterNorm.includes(n);
-			})
-		: undefined;
+const chapterCandidates = [d.chapter, ...((mainChapterMap as Record<string, string[]>)[story.id] || [])].filter(
+	Boolean,
+) as string[];
+const matchByNorm = (keys: string[]) => {
+	for (const cand of chapterCandidates) {
+		const nc = normName(cand);
+		const hit = keys.find((e) => {
+			const n = normName(e);
+			return n === nc || n.includes(nc) || nc.includes(n);
+		});
+		if (hit) return hit;
+	}
+	return undefined;
+};
 const cgEvent = matchByNorm(Object.keys(cgsByEvent));
 const cgList: CgItem[] = cgEvent ? cgsByEvent[cgEvent] : [];
 // 图片标注：去掉「留影 {活动}-」前缀与扩展名，保留序号（含男女主差分后缀）
@@ -71,9 +79,14 @@ const cgLabel = (file: string) => file.replace(/^留影 .+?-/, '').replace(/\.[a
 
 // 官网影像资料馆「CG壁纸」：按活动名做同样的归一化匹配
 type OfficialWp = { id: number; title: string; landscape: string; portrait: string };
-const officialCgByTag = (officialWps as Record<string, Record<string, OfficialWp[]>>)['CG壁纸'] || {};
+const officialWpsData = officialWps as Record<string, Record<string, OfficialWp[]>>;
+const officialCgByTag = officialWpsData['CG壁纸'] || {};
 const officialEvent = matchByNorm(Object.keys(officialCgByTag));
-const officialList: OfficialWp[] = officialEvent ? officialCgByTag[officialEvent] : [];
+let officialList: OfficialWp[] = officialEvent ? officialCgByTag[officialEvent] : [];
+// 角色审查页：匹配「审查壁纸」中与角色同名的入狱照
+if (officialList.length === 0 && d.type === '角色审查' && d.chapter) {
+	officialList = (officialWpsData['审查壁纸']?.['入狱照'] || []).filter((w) => normName(w.title) === normName(d.chapter!));
+}
 ---
 
 <BaseLayout title={title} description={d.description}>
@@ -104,7 +117,7 @@ const officialList: OfficialWp[] = officialEvent ? officialCgByTag[officialEvent
 
 		{officialList.length > 0 && (
 			<section class="cg-gallery card">
-				<h2 class="cg-title">官方 CG 壁纸 · {officialEvent}</h2>
+				<h2 class="cg-title">官方壁纸 · {officialEvent || d.chapter}</h2>
 				<div class="cg-grid">
 					{officialList.map((wp) => (
 						<a href={wp.landscape} target="_blank" rel="noopener noreferrer" class="cg-item" title={`${wp.title}（点击查看原图）`}>

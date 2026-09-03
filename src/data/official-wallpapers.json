@@ -3657,5 +3657,122 @@
       }
     ]
   },
-  "审查壁纸": {}
+  "审查壁纸": {
+    "入狱照": [
+      {
+        "id": 573,
+        "title": "依唯",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260714/4ba00ad28da388c7bc93a18f808dab70.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260714/d437a0ff621e7de3118c7dd2964c9509.jpeg"
+      },
+      {
+        "id": 574,
+        "title": "法露儿",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260714/0e19c075c925d84d46bb6dea311f2434.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260714/a41197a089227bd9cafe760320beda5b.jpeg"
+      },
+      {
+        "id": 629,
+        "title": "000",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/f16765d274a2739f8300c4c24a8f59b3.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/b459fe92d3343f26efef1056e53da590.jpeg"
+      },
+      {
+        "id": 630,
+        "title": "哈梅尔",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/e9cbc003276ffe0f129b1929527f0073.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/f023022875f90f441306124eafeda0cd.jpeg"
+      },
+      {
+        "id": 631,
+        "title": "蜜莉",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/37fcb7e04346626283f6b8a032f30799.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/603b68272637db397ad6b3e5e4bfbb5b.jpeg"
+      },
+      {
+        "id": 632,
+        "title": "夏音",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/d5b54b677ec5d48dfe46c9b96f7afd40.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/8e8a839230e109bfa503f4e49a776936.jpeg"
+      },
+      {
+        "id": 633,
+        "title": "海拉",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/c78a6ee46d2930783a51e417f08b282f.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/7087361468ab668757ba06ad162a365e.jpeg"
+      },
+      {
+        "id": 634,
+        "title": "安吉尔",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/158796849e20bb4d8e9e6ecb502663ec.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/b09077cb7c95bb080e900dee098ff161.jpeg"
+      },
+      {
+        "id": 635,
+        "title": "毕安卡",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/32a9d5d01c74f23421b1c143ecd3b8f0.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/6f6a6b5d0e124643eea5ac0993d08439.jpeg"
+      },
+      {
+        "id": 636,
+        "title": "霁川",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/b93302fe3091ae171c2fd87f8e40d481.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/a3715e3ad163524fb8060a6d773dab81.jpeg"
+      },
+      {
+        "id": 637,
+        "title": "昙",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/04ceb671f45fcd2a26e47ce4619d3ee5.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/e0833a337d4832b106ead9e5841a9414.jpeg"
+      },
+      {
+        "id": 594,
+        "title": "四周年快乐",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260811/6176f1a3f9348b281626962e9a939f13.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 125,
+        "title": "cg-无尽梦魇II",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20251017/f74b2d5565c16d6473bb1c4ae4ece83e.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 124,
+        "title": "cg-无尽梦魇II",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20251017/038aafa1a2202cdf4c5a1dda79d519e9.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 123,
+        "title": "cg-无尽梦魇II",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20251017/5d4b85650813669b74fe34de629d8d28.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 122,
+        "title": "cg-无尽梦魇II",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20251017/ef57f6910fda8bd89c46f332474e7e68.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 121,
+        "title": "cg-无尽梦魇II",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20251017/53c6be2f454502e4588c144284371edf.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 2,
+        "title": "q版壁纸-男局",
+        "landscape": null,
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20251013/3ca7193e510f3b417bb89c1b31c059c2.png"
+      },
+      {
+        "id": 1,
+        "title": "q版壁纸-女局",
+        "landscape": null,
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20251013/ed156db48b68caf25940f6e1662f64d6.png"
+      }
+    ]
+  }
 }

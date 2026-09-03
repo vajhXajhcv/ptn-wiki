@@ -74,6 +74,23 @@ async function main() {
 	}
 
 	mkdirSync(dirname(OUT_PATH), { recursive: true });
+	// 审查壁纸无标签：用全量列表减去已归类项，差集即审查壁纸（入狱照等）
+	const taggedIds = new Set(
+		Object.values(out)
+			.flatMap((tags) => Object.values(tags))
+			.flat()
+			.map((w) => w.id),
+	);
+	await sleep(600);
+	const all = (await fetchJson('paperlist')).data;
+	const untagged = all
+		.filter((w) => !taggedIds.has(w.id))
+		.map((w) => ({ id: w.id, title: w.title.trim(), landscape: w.landscape_url, portrait: w.portrait_url }));
+	if (untagged.length > 0) {
+		out['审查壁纸'] = { 入狱照: untagged };
+		console.log(`审查壁纸（无标签差集）：${untagged.length} 张`);
+	}
+
 	writeFileSync(OUT_PATH, JSON.stringify(out, null, 2) + '\n', 'utf8');
 	const total = Object.values(out)
 		.flatMap((tags) => Object.values(tags))

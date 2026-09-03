@@ -49,7 +49,8 @@ docs/            # 项目文档与对外函件
 
 - `src/data/galleries.json`：禁闭者画廊元数据（角色 → 官网资讯图片列表），由 `scripts/build-character-galleries.mjs` 生成，提交进 git。
 - `src/data/story-cgs.json`：剧情留影 CG 元数据（活动/篇章名 → BWiki CDN 直链列表，含 1280 宽缩略图与原图地址），由 `scripts/fetch-story-cgs.mjs` 生成，提交进 git；图片本体不下载。
-- `src/data/official-wallpapers.json`：官网「影像资料馆」壁纸元数据（分类 → 活动标签 → 横/竖版图直链），由 `scripts/fetch-official-wallpapers.mjs` 生成，提交进 git；展示用缩略图加 `?x-oss-process=image/resize,w_640` 缩放参数。
+- `src/data/official-wallpapers.json`：官网「影像资料馆」壁纸元数据（分类 → 活动标签 → 横/竖版图直链），由 `scripts/fetch-official-wallpapers.mjs` 生成，提交进 git；展示用缩略图加 `?x-oss-process=image/resize,w_640` 缩放参数。审查壁纸无标签，脚本用全量列表减已归类项的差集生成。
+- `src/data/main-story-chapters.json`：主线剧情页 → 章节名候选（行名/海报名），由 `scripts/build-main-chapter-map.mjs` 解析 BWiki「主线剧情」索引生成，用于主线剧情页匹配留影 CG 与官方 CG 壁纸。
 - 配队页（`/teams`）为数据驱动页面，队伍定义在 `src/lib/constants.ts` 的 `TEAMS`，成员按关键词从角色技能正文自动匹配，无独立内容集合。
 
 修改 schema 后，必须同时更新 `scripts/` 中生成对应 Markdown 的脚本。
@@ -119,6 +120,7 @@ node scripts/fetch-bwiki-reviews.mjs      # 角色审查剧情（intitle:审查 
 node scripts/fetch-bwiki-ascended-art.mjs # 角色三阶立绘（升阶装束），主图来源
 node scripts/backfill-story-chapters.mjs  # 回填剧情篇章/活动名（主线四篇 + 活动归属）
 node scripts/fetch-story-cgs.mjs          # 剧情留影 CG 元数据（分类:留影 → src/data/story-cgs.json，CDN 直链不下载）
+node scripts/build-main-chapter-map.mjs   # 主线剧情页 → 章节名映射（解析「主线剧情」索引结构）
 node scripts/fetch-bwiki-lore.mjs         # 世界观（零镜系统）
 node scripts/backfill-factions.mjs        # 角色阵营回填
 ```
