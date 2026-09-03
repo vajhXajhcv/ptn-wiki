@@ -37,6 +37,18 @@ const badges = [
 const meta = [
 	d.characters && d.characters.length > 0 && { label: '出场角色', value: d.characters.join('、') },
 ].filter(Boolean) as { label: string; value: string }[];
+
+// 连续阅读：同一篇章/活动内按文件名自然序排序（numeric 保证 2-1 排在 10-1 前）
+const allStories = await getCollection('stories');
+const groupKey = (s: (typeof allStories)[number]) => `${s.data.type}|${s.data.chapter || ''}`;
+const peers = allStories
+	.filter((s) => groupKey(s) === groupKey(story))
+	.sort((a, b) => a.id.localeCompare(b.id, 'zh-Hans-CN', { numeric: true }));
+const currentIndex = peers.findIndex((s) => s.id === story.id);
+const prevStory = currentIndex > 0 ? peers[currentIndex - 1] : null;
+const nextStory = currentIndex >= 0 && currentIndex < peers.length - 1 ? peers[currentIndex + 1] : null;
+// 目录编号：主线取关卡号（去掉「剧情」后缀），活动/审查不显示编号
+const peerLabel = (s: (typeof peers)[number]) => (/^\d/.test(s.id) ? s.id.replace(/剧情$/, '') : '');
 ---
 
 <BaseLayout title={title} description={d.description}>
@@ -64,6 +76,40 @@ const meta = [
 		<section class="story-content card">
 			<Content />
 		</section>
+
+		{(prevStory || nextStory) && (
+			<nav class="story-pager" aria-label="连续阅读">
+				{prevStory ? (
+					<a href={`/stories/${prevStory.id}/`} class="pager-link">
+						<span class="pager-dir">← 上一篇</span>
+						<span class="pager-title">{prevStory.data.title}</span>
+					</a>
+				) : <span class="pager-placeholder" />}
+				{nextStory ? (
+					<a href={`/stories/${nextStory.id}/`} class="pager-link next">
+						<span class="pager-dir">下一篇 →</span>
+						<span class="pager-title">{nextStory.data.title}</span>
+					</a>
+				) : <span class="pager-placeholder" />}
+			</nav>
+		)}
+
+		{peers.length > 1 && (
+			<details class="chapter-toc card">
+				<summary>{d.chapter || d.type} · 全 {peers.length} 篇目录</summary>
+				<ol>
+					{peers.map((s) => (
+						<li class:list={[{ current: s.id === story.id }]}>
+							{s.id === story.id ? (
+								<strong>{peerLabel(s)} {s.data.title}</strong>
+							) : (
+								<a href={`/stories/${s.id}/`}>{peerLabel(s)} {s.data.title}</a>
+							)}
+						</li>
+					))}
+				</ol>
+			</details>
+		)}
 	</main>
 
 	<JsonLd data={breadcrumbJsonLd(breadcrumbItems, Astro.site)} />
@@ -81,5 +127,80 @@ const meta = [
 	}
 	.story-content :global(p) {
 		margin-bottom: 1em;
+	}
+	.story-pager {
+		display: flex;
+		justify-content: space-between;
+		gap: 1em;
+		margin-top: 1.5em;
+	}
+	.pager-link {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 0.2em;
+		padding: 0.9em 1.1em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 10px;
+		background: #fff;
+		text-decoration: none;
+		color: inherit;
+		transition: border-color 0.2s;
+	}
+	.pager-link:hover {
+		border-color: var(--accent);
+	}
+	.pager-link.next {
+		text-align: right;
+	}
+	.pager-dir {
+		font-size: 0.8em;
+		color: var(--accent);
+	}
+	.pager-title {
+		font-weight: 500;
+	}
+	.pager-placeholder {
+		flex: 1;
+	}
+	.chapter-toc {
+		margin-top: 1.5em;
+		padding: 1em 1.5em;
+	}
+	.chapter-toc summary {
+		cursor: pointer;
+		font-weight: 500;
+		color: var(--accent-dark);
+	}
+	.chapter-toc ol {
+		columns: 2;
+		margin: 1em 0 0.5em;
+		padding-left: 1.4em;
+	}
+	.chapter-toc li {
+		margin-bottom: 0.35em;
+		break-inside: avoid;
+	}
+	.chapter-toc li a {
+		color: rgb(var(--gray-dark));
+		text-decoration: none;
+	}
+	.chapter-toc li a:hover {
+		color: var(--accent);
+		text-decoration: underline;
+	}
+	.chapter-toc li.current strong {
+		color: var(--accent-dark);
+	}
+	@media (max-width: 640px) {
+		.chapter-toc ol {
+			columns: 1;
+		}
+		.story-pager {
+			flex-direction: column;
+		}
+		.pager-link.next {
+			text-align: left;
+		}
 	}
 </style>

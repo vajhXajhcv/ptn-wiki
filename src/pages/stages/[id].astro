@@ -123,6 +123,10 @@ const badges = [
 				)
 			}
 
+		<aside class="stage-help">
+			卡关了？参考<a href="/teams">常用配队</a>搭配阵容，或在<a href="/characters">角色图鉴</a>按定位筛选角色。
+		</aside>
+
 		<div class="prose stage-body">
 			<Content />
 		</div>
@@ -200,6 +204,22 @@ const badges = [
 	.count {
 		color: rgb(var(--gray-dark));
 		font-size: 0.9em;
+	}
+	.stage-help {
+		margin-bottom: 1.5em;
+		padding: 0.9em 1.2em;
+		border: 1px dashed rgb(var(--gray-light));
+		border-radius: 10px;
+		font-size: 0.9em;
+		color: rgb(var(--gray));
+	}
+	.stage-help a {
+		color: var(--accent);
+		text-decoration: none;
+		margin: 0 0.2em;
+	}
+	.stage-help a:hover {
+		text-decoration: underline;
 	}
 	.stage-body {
 		margin-top: 1.5em;
