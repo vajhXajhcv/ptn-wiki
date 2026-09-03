@@ -48,6 +48,7 @@ docs/            # 项目文档与对外函件
 其他数据文件：
 
 - `src/data/galleries.json`：禁闭者画廊元数据（角色 → 官网资讯图片列表），由 `scripts/build-character-galleries.mjs` 生成，提交进 git。
+- `src/data/story-cgs.json`：剧情留影 CG 元数据（活动/篇章名 → BWiki CDN 直链列表，含 1280 宽缩略图与原图地址），由 `scripts/fetch-story-cgs.mjs` 生成，提交进 git；图片本体不下载。
 - 配队页（`/teams`）为数据驱动页面，队伍定义在 `src/lib/constants.ts` 的 `TEAMS`，成员按关键词从角色技能正文自动匹配，无独立内容集合。
 
 修改 schema 后，必须同时更新 `scripts/` 中生成对应 Markdown 的脚本。
@@ -115,6 +116,7 @@ node scripts/fetch-bwiki-stories.mjs --force
 node scripts/fetch-bwiki-reviews.mjs      # 角色审查剧情（intitle:审查 枚举，约 10 篇）
 node scripts/fetch-bwiki-ascended-art.mjs # 角色三阶立绘（升阶装束），主图来源
 node scripts/backfill-story-chapters.mjs  # 回填剧情篇章/活动名（主线四篇 + 活动归属）
+node scripts/fetch-story-cgs.mjs          # 剧情留影 CG 元数据（分类:留影 → src/data/story-cgs.json，CDN 直链不下载）
 node scripts/fetch-bwiki-lore.mjs         # 世界观（零镜系统）
 node scripts/backfill-factions.mjs        # 角色阵营回填
 ```

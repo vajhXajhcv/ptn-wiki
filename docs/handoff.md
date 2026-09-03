@@ -20,6 +20,8 @@
 - **注意**：`public/characters/*.jpg` 不提交 Git，CI 构建前由 `prebuild` 钩子（`scripts/ensure-character-images.mjs`）自动从官网补齐立绘，自动部署不再丢图（2026-08-14 修复）。
 - **2026-09-03 修复**：同步工作流曾把 updates 空 description 写成 YAML null，导致 Cloudflare Pages 连续 3 次构建失败、线上冻结在 08-14。已在 `fetch-official-news.mjs` 中用标题兜底并兼容空值回填；同时移除了同步工作流中会把 imageSource 从「BWiki 升阶装束」改写回官网来源的 `fetch-official-resources.mjs --no-download` 步骤；抓取脚本统一加了 30s 请求超时与 5 分钟整体预算（`FETCH_TIME_BUDGET_MS` 可调）。
 - **2026-09-03 新增**：updates 支持 `startDate` / `endDate` 活动时间区间（`scripts/lib/parse-event-dates.mjs` 从正文解析「开始 ~ 结束」，存量由 `scripts/backfill-update-enddates.mjs` 回填，增量由 `fetch-official-news.mjs` 自动写入）；活动日历与首页「近期活动」据此判定进行中/即将开始。首页精简为 搜索 + 4 个快速入口 + 最新动态 + 近期活动；顶部导航收敛为 角色/关卡/玩法/剧情/日历 + 「更多」下拉 + 搜索。
+- **2026-09-03 剧情扩容**：补抓雾巷诡影 6 段（累计 10 段）；`fetch-bwiki-stories.mjs` 增加「空解析重试一次」（BWiki 限流错误也返回 JSON，原逻辑会把临时失败当成空页面跳过）与 `审查-` 前缀的类型识别（修复 backfill-story-chapters 把审查剧情误改 type=活动 的问题）。确认 BWiki 红链（无文本）：龙与天空岛、沉溺无忧海、绿窗窥景、完美投票（除 1 段）、瑰异奇妙夜及新主线 N9-N12 大部分页面——这些活动的文本 BWiki 未收录，微博/语雀有玩家手工整理（更新至第 25 章绝响），如需补录需另写语雀抓取。
+- **2026-09-03 留影 CG**：新增 `scripts/fetch-story-cgs.mjs` 枚举 BWiki「分类：留影」，生成 `src/data/story-cgs.json`（55 个活动/篇章、596 张剧情 CG 的 CDN 直链元数据，不下载图片）。剧情详情页按 chapter 名归一化匹配（去标点、双向包含，如 刹雨/繁花 ↔ 刹雨·繁花、新城·悬城篇 ↔ 悬城）展示「活动留影」画廊，455 个剧情页有图。待办：主线早期章节（混沌彼岸/无主地窟/奇兰广场等）CG key 是章节名而非篇章名，需建立章节号→章节名映射后才能匹配。
 
 ---
 

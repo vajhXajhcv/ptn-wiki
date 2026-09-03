@@ -196,6 +196,8 @@ export function parseStory(content, pageName, displayTitle) {
 }
 
 export function inferType(pageName) {
+	// 角色审查剧情（审查-xxx.md，由 fetch-bwiki-reviews.mjs 生成）
+	if (/^审查-/.test(pageName)) return '角色审查';
 	if (
 		/^\d+-\d+剧情$/.test(pageName) ||
 		/^序章\d+剧情$/.test(pageName) ||
@@ -337,8 +339,14 @@ async function main() {
 		}
 
 		try {
-			const content = await fetchPage(page);
-			const story = parseStory(content, page, title);
+			let content = await fetchPage(page);
+			let story = parseStory(content, page, title);
+			if (story.dialogues.length === 0) {
+				// 空解析可能是限流导致的空响应（BWiki 错误也返回 JSON），重试一次再判定
+				await sleep(3000);
+				content = await fetchPage(page);
+				story = parseStory(content, page, title);
+			}
 			if (story.dialogues.length === 0) {
 				console.log(`○ ${page} -> ${slug}（无剧情文本，跳过）`);
 				if (exists && force) {

@@ -6,6 +6,7 @@ import DetailHeader from '../../components/DetailHeader.astro';
 import JsonLd from '../../components/JsonLd.astro';
 import { SITE_TITLE } from '../../consts';
 import { breadcrumbJsonLd, articleJsonLd } from '../../lib/seo';
+import storyCgs from '../../data/story-cgs.json';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
@@ -49,6 +50,21 @@ const prevStory = currentIndex > 0 ? peers[currentIndex - 1] : null;
 const nextStory = currentIndex >= 0 && currentIndex < peers.length - 1 ? peers[currentIndex + 1] : null;
 // 目录编号：主线取关卡号（去掉「剧情」后缀），活动/审查不显示编号
 const peerLabel = (s: (typeof peers)[number]) => (/^\d/.test(s.id) ? s.id.replace(/剧情$/, '') : '');
+
+// 活动留影 CG：chapter 与 CG 活动名做归一化匹配（去标点、双向包含，如 刹雨/繁花 ↔ 刹雨·繁花）
+type CgItem = { file: string; thumb: string; full: string; width: number; height: number };
+const cgsByEvent = storyCgs as Record<string, CgItem[]>;
+const normName = (s: string) => s.replace(/[^\p{Script=Han}\p{L}\p{N}]/gu, '');
+const chapterNorm = d.chapter ? normName(d.chapter) : '';
+const cgEvent = chapterNorm
+	? Object.keys(cgsByEvent).find((e) => {
+			const n = normName(e);
+			return n === chapterNorm || n.includes(chapterNorm) || chapterNorm.includes(n);
+		})
+	: undefined;
+const cgList: CgItem[] = cgEvent ? cgsByEvent[cgEvent] : [];
+// 图片标注：去掉「留影 {活动}-」前缀与扩展名，保留序号（含男女主差分后缀）
+const cgLabel = (file: string) => file.replace(/^留影 .+?-/, '').replace(/\.[a-z]+$/i, '');
 ---
 
 <BaseLayout title={title} description={d.description}>
@@ -76,6 +92,23 @@ const peerLabel = (s: (typeof peers)[number]) => (/^\d/.test(s.id) ? s.id.replac
 		<section class="story-content card">
 			<Content />
 		</section>
+
+		{cgList.length > 0 && (
+			<section class="cg-gallery card">
+				<h2 class="cg-title">活动留影 · {cgEvent}</h2>
+				<div class="cg-grid">
+					{cgList.map((cg) => (
+						<a href={cg.full} target="_blank" rel="noopener noreferrer" class="cg-item" title={`${cg.file}（点击查看原图）`}>
+							<img src={cg.thumb} alt={cg.file} loading="lazy" decoding="async" />
+							<span class="cg-label">{cgLabel(cg.file)}</span>
+						</a>
+					))}
+				</div>
+				<p class="cg-source">
+					留影 CG 来自<a href="https://wiki.biligame.com/wqmt/要务留影" target="_blank" rel="noopener noreferrer">无期迷途 BWiki</a>
+				</p>
+			</section>
+		)}
 
 		{(prevStory || nextStory) && (
 			<nav class="story-pager" aria-label="连续阅读">
@@ -127,6 +160,49 @@ const peerLabel = (s: (typeof peers)[number]) => (/^\d/.test(s.id) ? s.id.replac
 	}
 	.story-content :global(p) {
 		margin-bottom: 1em;
+	}
+	.cg-gallery {
+		margin-top: 1.5em;
+		padding: 1.2em 1.5em;
+	}
+	.cg-title {
+		margin: 0 0 0.8em;
+		font-size: 1.05em;
+		color: var(--accent-dark);
+	}
+	.cg-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+		gap: 0.8em;
+	}
+	.cg-item {
+		display: block;
+		border-radius: 8px;
+		overflow: hidden;
+		border: 1px solid rgb(var(--gray-light));
+		transition: border-color 0.2s, transform 0.2s;
+	}
+	.cg-item:hover {
+		border-color: var(--accent);
+		transform: translateY(-2px);
+	}
+	.cg-item img {
+		display: block;
+		width: 100%;
+		aspect-ratio: 16 / 10;
+		object-fit: cover;
+	}
+	.cg-label {
+		display: block;
+		padding: 0.3em 0.5em;
+		font-size: 0.8em;
+		color: rgb(var(--gray));
+		text-align: center;
+	}
+	.cg-source {
+		margin: 0.9em 0 0;
+		font-size: 0.85em;
+		color: rgb(var(--gray));
 	}
 	.story-pager {
 		display: flex;
