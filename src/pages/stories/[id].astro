@@ -7,6 +7,7 @@ import JsonLd from '../../components/JsonLd.astro';
 import { SITE_TITLE } from '../../consts';
 import { breadcrumbJsonLd, articleJsonLd } from '../../lib/seo';
 import storyCgs from '../../data/story-cgs.json';
+import officialWps from '../../data/official-wallpapers.json';
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
@@ -56,15 +57,23 @@ type CgItem = { file: string; thumb: string; full: string; width: number; height
 const cgsByEvent = storyCgs as Record<string, CgItem[]>;
 const normName = (s: string) => s.replace(/[^\p{Script=Han}\p{L}\p{N}]/gu, '');
 const chapterNorm = d.chapter ? normName(d.chapter) : '';
-const cgEvent = chapterNorm
-	? Object.keys(cgsByEvent).find((e) => {
-			const n = normName(e);
-			return n === chapterNorm || n.includes(chapterNorm) || chapterNorm.includes(n);
-		})
-	: undefined;
+const matchByNorm = (keys: string[]) =>
+	chapterNorm
+		? keys.find((e) => {
+				const n = normName(e);
+				return n === chapterNorm || n.includes(chapterNorm) || chapterNorm.includes(n);
+			})
+		: undefined;
+const cgEvent = matchByNorm(Object.keys(cgsByEvent));
 const cgList: CgItem[] = cgEvent ? cgsByEvent[cgEvent] : [];
 // 图片标注：去掉「留影 {活动}-」前缀与扩展名，保留序号（含男女主差分后缀）
 const cgLabel = (file: string) => file.replace(/^留影 .+?-/, '').replace(/\.[a-z]+$/i, '');
+
+// 官网影像资料馆「CG壁纸」：按活动名做同样的归一化匹配
+type OfficialWp = { id: number; title: string; landscape: string; portrait: string };
+const officialCgByTag = (officialWps as Record<string, Record<string, OfficialWp[]>>)['CG壁纸'] || {};
+const officialEvent = matchByNorm(Object.keys(officialCgByTag));
+const officialList: OfficialWp[] = officialEvent ? officialCgByTag[officialEvent] : [];
 ---
 
 <BaseLayout title={title} description={d.description}>
@@ -92,6 +101,23 @@ const cgLabel = (file: string) => file.replace(/^留影 .+?-/, '').replace(/\.[a
 		<section class="story-content card">
 			<Content />
 		</section>
+
+		{officialList.length > 0 && (
+			<section class="cg-gallery card">
+				<h2 class="cg-title">官方 CG 壁纸 · {officialEvent}</h2>
+				<div class="cg-grid">
+					{officialList.map((wp) => (
+						<a href={wp.landscape} target="_blank" rel="noopener noreferrer" class="cg-item" title={`${wp.title}（点击查看原图）`}>
+							<img src={`${wp.landscape}?x-oss-process=image/resize,w_640`} alt={wp.title} loading="lazy" decoding="async" />
+							<span class="cg-label">{wp.title}</span>
+						</a>
+					))}
+				</div>
+				<p class="cg-source">
+					图片来自<a href="https://wqmt.aisnogames.com/m/archives/gallery" target="_blank" rel="noopener noreferrer">无期迷途官网 · 影像资料馆</a>
+				</p>
+			</section>
+		)}
 
 		{cgList.length > 0 && (
 			<section class="cg-gallery card">

@@ -49,6 +49,7 @@ docs/            # 项目文档与对外函件
 
 - `src/data/galleries.json`：禁闭者画廊元数据（角色 → 官网资讯图片列表），由 `scripts/build-character-galleries.mjs` 生成，提交进 git。
 - `src/data/story-cgs.json`：剧情留影 CG 元数据（活动/篇章名 → BWiki CDN 直链列表，含 1280 宽缩略图与原图地址），由 `scripts/fetch-story-cgs.mjs` 生成，提交进 git；图片本体不下载。
+- `src/data/official-wallpapers.json`：官网「影像资料馆」壁纸元数据（分类 → 活动标签 → 横/竖版图直链），由 `scripts/fetch-official-wallpapers.mjs` 生成，提交进 git；展示用缩略图加 `?x-oss-process=image/resize,w_640` 缩放参数。
 - 配队页（`/teams`）为数据驱动页面，队伍定义在 `src/lib/constants.ts` 的 `TEAMS`，成员按关键词从角色技能正文自动匹配，无独立内容集合。
 
 修改 schema 后，必须同时更新 `scripts/` 中生成对应 Markdown 的脚本。
@@ -101,6 +102,7 @@ node scripts/fetch-official-resources.mjs --no-download
 node scripts/apply-image-sources.mjs
 node scripts/fetch-official-news.mjs            # 抓取官网资讯
 node scripts/fetch-gamemode-covers.mjs          # 为玩法匹配官网封面/壁纸（CDN 直链）
+node scripts/fetch-official-wallpapers.mjs      # 官网影像资料馆壁纸元数据（CG壁纸/影像壁纸）→ src/data/official-wallpapers.json
 node scripts/build-character-galleries.mjs      # 生成禁闭者画廊元数据 src/data/galleries.json
 ```
 
