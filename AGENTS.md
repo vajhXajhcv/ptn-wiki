@@ -174,6 +174,7 @@ npm run deploy    # build + wrangler pages deploy
 ## 10. 推荐阅读
 
 - `docs/handoff.md` — 当前状态、TODO、接力说明
+- `docs/technical-notes.md` — 图片数据源（官网壁纸 API / BWiki 留影）与构建稳定性技术说明
 - `docs/official-assets.md` — 官方素材合规说明
 - `docs/letters/to-official.md` — 致官方沟通函模板
 - `docs/letters/to-bwiki.md` — 致 BWiki 维护团队协作函
