@@ -8,6 +8,7 @@ import { SITE_TITLE } from '../../consts';
 import { breadcrumbJsonLd, articleJsonLd } from '../../lib/seo';
 import storyCgs from '../../data/story-cgs.json';
 import officialWps from '../../data/official-wallpapers.json';
+import officialCgDups from '../../data/official-cg-duplicates.json';
 import mainChapterMap from '../../data/main-story-chapters.json';
 import '../../styles/global.css';
 
@@ -83,6 +84,13 @@ const officialWpsData = officialWps as Record<string, Record<string, OfficialWp[
 const officialCgByTag = officialWpsData['CG壁纸'] || {};
 const officialEvent = matchByNorm(Object.keys(officialCgByTag));
 let officialList: OfficialWp[] = officialEvent ? officialCgByTag[officialEvent] : [];
+// 官方 CG 壁纸与活动留影大量同图：按 dedupe-official-cgs 生成的感知哈希结果过滤当前剧情下的重复项
+if (officialEvent && cgEvent) {
+	const dupIds = new Set(
+		(officialCgDups as Record<string, Record<string, number[]>>)[officialEvent]?.[cgEvent] || [],
+	);
+	if (dupIds.size > 0) officialList = officialList.filter((w) => !dupIds.has(w.id));
+}
 // 角色审查页：匹配「审查壁纸」中与角色同名的入狱照
 if (officialList.length === 0 && d.type === '角色审查' && d.chapter) {
 	officialList = (officialWpsData['审查壁纸']?.['入狱照'] || []).filter((w) => normName(w.title) === normName(d.chapter!));
