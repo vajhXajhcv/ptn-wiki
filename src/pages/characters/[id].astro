@@ -44,6 +44,8 @@ const tags = (d.tags || []).map((tag) => ({ label: tag, variant: 'tag' as const 
 
 // 禁闭者画廊：官网公开资讯中该角色的全部图片（生日贺图/装束/壁纸等）
 const gallery = (galleries as Record<string, { cover: string; category: string; title: string; url: string }[]>)[character.id] || [];
+// 画廊缩略图：CDN 原图可达数 MB，列表展示用 OSS 缩放参数压到 480 宽（与壁纸页一致）
+const galleryThumb = (url: string) => `${url}?x-oss-process=image/resize,w_480`;
 // 主图来源是否为 BWiki 升阶装束（三阶立绘）
 const isAscendedArt = d.imageSource?.category === 'BWiki 升阶装束';
 ---
@@ -85,7 +87,7 @@ const isAscendedArt = d.imageSource?.category === 'BWiki 升阶装束';
 				<div class="gallery-grid">
 					{gallery.map((item) => (
 						<a href={item.url} target="_blank" rel="noopener noreferrer" class="gallery-item" title={item.title}>
-							<img src={item.cover} alt={item.title} loading="lazy" decoding="async" />
+							<img src={galleryThumb(item.cover)} alt={item.title} loading="lazy" decoding="async" />
 							<span class="gallery-category">{item.category}</span>
 						</a>
 					))}
