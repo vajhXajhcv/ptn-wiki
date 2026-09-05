@@ -146,7 +146,14 @@ if (officialList.length === 0 && d.type === '角色审查' && d.chapter) {
 				<div class="cg-grid">
 					{cgList.map((cg) => (
 						<a href={cg.full} target="_blank" rel="noopener noreferrer" class="cg-item" title={`${cg.file}（点击查看原图）`}>
-							<img src={cg.thumb} alt={cg.file} loading="lazy" decoding="async" />
+							<img
+								src={cg.thumb.replace('/1280px-', '/800px-')}
+								data-fallback={cg.thumb}
+								onerror="this.onerror=null;this.src=this.dataset.fallback"
+								alt={cg.file}
+								loading="lazy"
+								decoding="async"
+							/>
 							<span class="cg-label">{cgLabel(cg.file)}</span>
 						</a>
 					))}

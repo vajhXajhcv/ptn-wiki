@@ -2,7 +2,22 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import officialWps from '../data/official-wallpapers.json';
 import '../styles/global.css';
+
+// 壁纸欣赏：构建时从官方壁纸（不含审查入狱照）洗牌取 48 张作候选池，前端每次访问再随机抽 6 张
+type HomeWp = { title: string; tag: string; url: string };
+const wpPool: HomeWp[] = Object.entries(
+	officialWps as Record<string, Record<string, { title: string; landscape: string | null }[]>>,
+)
+	.filter(([cat]) => cat !== '审查壁纸')
+	.flatMap(([, tags]) =>
+		Object.entries(tags).flatMap(([tag, list]) =>
+			list.filter((w) => w.landscape).map((w) => ({ title: w.title, tag, url: w.landscape! })),
+		),
+	);
+const wpCandidates = [...wpPool].sort(() => Math.random() - 0.5).slice(0, 48);
+const initialWps = wpCandidates.slice(0, 6);
 
 const characters = await getCollection('characters');
 const stages = await getCollection('stages');
@@ -110,6 +125,21 @@ const websiteJsonLd = {
 			</div>
 		</section>
 
+		<section class="section">
+			<div class="section-header">
+				<h2 class="section-title">壁纸欣赏</h2>
+				<a href="/wallpapers" class="section-more">全部壁纸 →</a>
+			</div>
+			<div class="wp-strip" id="wp-strip">
+				{initialWps.map((w) => (
+					<a href={w.url} target="_blank" rel="noopener noreferrer" class="wp-card" title={`${w.title}（点击查看原图）`}>
+						<img src={`${w.url}?x-oss-process=image/resize,w_480`} alt={w.title} loading="lazy" decoding="async" />
+						<span class="wp-card-label">{w.tag}</span>
+					</a>
+				))}
+			</div>
+		</section>
+
 		{latestUpdates.length > 0 && (
 			<section class="section">
 				<div class="section-header">
@@ -152,6 +182,25 @@ const websiteJsonLd = {
 </BaseLayout>
 
 <script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
+
+<script define:vars={{ pool: wpCandidates }}>
+	// 每次访问从候选池随机抽 6 张替换构建时的默认选择
+	const strip = document.getElementById('wp-strip');
+	if (strip) {
+		const cards = Array.from(strip.querySelectorAll('.wp-card'));
+		const picks = [...pool].sort(() => Math.random() - 0.5).slice(0, cards.length);
+		cards.forEach((card, i) => {
+			const w = picks[i];
+			if (!w) return;
+			card.href = w.url;
+			card.title = `${w.title}（点击查看原图）`;
+			const img = card.querySelector('img');
+			img.src = `${w.url}?x-oss-process=image/resize,w_480`;
+			img.alt = w.title;
+			card.querySelector('.wp-card-label').textContent = w.tag;
+		});
+	}
+</script>
 
 <style>
 	.hero {
@@ -283,8 +332,43 @@ const websiteJsonLd = {
 		background: #eef2ff;
 		color: var(--accent-dark);
 	}
+	.wp-strip {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1em;
+	}
+	.wp-card {
+		position: relative;
+		display: block;
+		border-radius: 10px;
+		overflow: hidden;
+		border: 1px solid rgb(var(--gray-light));
+		transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+	}
+	.wp-card:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--box-shadow);
+		border-color: var(--accent);
+	}
+	.wp-card img {
+		display: block;
+		width: 100%;
+		aspect-ratio: 16 / 10;
+		object-fit: cover;
+	}
+	.wp-card-label {
+		position: absolute;
+		left: 0.5em;
+		bottom: 0.5em;
+		padding: 0.15em 0.6em;
+		border-radius: 999px;
+		background: rgba(0, 0, 0, 0.65);
+		color: #fff;
+		font-size: 0.75em;
+	}
 	@media (max-width: 720px) {
 		.hero-title { font-size: 2em; }
 		.hero { padding: 2em 1em; }
+		.wp-strip { grid-template-columns: repeat(2, 1fr); }
 	}
 </style>

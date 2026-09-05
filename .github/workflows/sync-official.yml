@@ -31,14 +31,27 @@ jobs:
       - name: Sync official news
         run: node scripts/fetch-official-news.mjs
 
+      - name: Sync official wallpapers
+        run: node scripts/fetch-official-wallpapers.mjs
+
+      - name: Sync story CG metadata (BWiki)
+        run: node scripts/fetch-story-cgs.mjs
+
+      - name: Sync character galleries
+        run: node scripts/build-character-galleries.mjs
+
+      # 必须在壁纸与留影数据更新后重跑，否则新 CG 会在剧情页重复展示
+      - name: Dedupe official CGs vs story CGs
+        run: node scripts/dedupe-official-cgs.mjs
+
       - name: Commit and push changes
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add src/content/updates
+          git add src/content/updates src/data/official-wallpapers.json src/data/story-cgs.json src/data/official-cg-duplicates.json src/data/galleries.json
           if git diff --cached --quiet; then
             echo 'No changes to commit.'
             exit 0
           fi
-          git commit -m 'chore: sync official image sources and news'
+          git commit -m 'chore: sync official news, wallpapers, story CGs and galleries'
           git push

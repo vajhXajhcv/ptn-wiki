@@ -48,7 +48,7 @@ docs/            # 项目文档与对外函件
 其他数据文件：
 
 - `src/data/galleries.json`：禁闭者画廊元数据（角色 → 官网资讯图片列表），由 `scripts/build-character-galleries.mjs` 生成，提交进 git。
-- `src/data/story-cgs.json`：剧情留影 CG 元数据（活动/篇章名 → BWiki CDN 直链列表，含 1280 宽缩略图与原图地址），由 `scripts/fetch-story-cgs.mjs` 生成，提交进 git；图片本体不下载。
+- `src/data/story-cgs.json`：剧情留影 CG 元数据（活动/篇章名 → BWiki CDN 直链列表，含 1280 宽缩略图与原图地址），由 `scripts/fetch-story-cgs.mjs` 生成，提交进 git；图片本体不下载。BWiki 缩略图仅 800/1280 两档，剧情页展示用 800px 档并带 onerror 回退 1280px。
 - `src/data/official-wallpapers.json`：官网「影像资料馆」壁纸元数据（分类 → 活动标签 → 横/竖版图直链），由 `scripts/fetch-official-wallpapers.mjs` 生成，提交进 git；展示用缩略图加 `?x-oss-process=image/resize,w_640` 缩放参数。审查壁纸无标签，脚本用全量列表减已归类项的差集生成。
 - `src/data/main-story-chapters.json`：主线剧情页 → 章节名候选（行名/海报名），由 `scripts/build-main-chapter-map.mjs` 解析 BWiki「主线剧情」索引生成，用于主线剧情页匹配留影 CG 与官方 CG 壁纸。
 - `src/data/official-cg-duplicates.json`：剧情页「官方壁纸」×「活动留影」跨区块去重表（官方标签 → 留影事件 → 重复的官方壁纸 id），由 `scripts/dedupe-official-cgs.mjs` 用感知哈希（aHash）比对生成，提交进 git；感知哈希缓存在 `scripts/tmp/phash-cache.json`（不提交）。
@@ -157,6 +157,7 @@ npm run deploy    # build + wrangler pages deploy
 ### 已知部署问题（重要）
 
 - Cloudflare Pages 已连接 GitHub 仓库，push 会自动触发部署（CI 构建命令 `npm run build`）。
+- `.github/workflows/sync-official.yml` 每周一/周四定时同步：官网资讯（updates）、官网壁纸、BWiki 留影 CG、角色画廊，最后重跑 `dedupe-official-cgs.mjs` 更新去重表并自动提交。
 - `public/characters/*.jpg` 在 `.gitignore` 中，CI 检出里没有立绘——曾导致自动部署后线上图片全部 404（2026-08-14）。
 - **已修复（2026-08-14）**：`package.json` 增加 `prebuild` 钩子 `scripts/ensure-character-images.mjs`，构建前自动检查立绘引用、缺失时调用 `fetch-official-resources.mjs` 从官网补齐，一张都下载不到则中止构建。CI 与本地 `npm run build` / `npm run deploy` 都会经过该检查。
 - 如需跳过检查（如官网接口临时故障）：`SKIP_IMAGE_ENSURE=1 npm run build`。
