@@ -3710,6 +3710,14 @@
     ]
   },
   "影像壁纸": {
+    "瓷骨生花": [
+      {
+        "id": 651,
+        "title": "达芙蒂尔",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/9ace4ca6d0dd82ae2ce5b5f1b315dccb.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/1dd60e2055e5c0bf741bda524eeeaffa.jpeg"
+      }
+    ],
     "绝响": [
       {
         "id": 627,
@@ -3729,10 +3737,60 @@
         "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/f9a1587986ab7e5d76cee64de486c1db.jpeg",
         "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260814/a8d567081d7f305d8cec370925c05e1e.jpeg"
       }
+    ],
+    "怦怦电波放送中": [
+      {
+        "id": 652,
+        "title": "法露儿",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/b8c3021006ecb4a2d8e8f18bd25c2944.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/5cef6bc81448ac3aab4ac5b5dd1968f4.jpeg"
+      },
+      {
+        "id": 653,
+        "title": "依唯",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/f6f6872bd1b76425a64cac1c7c178192.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/0860eb013e3b4310991c353e6f394676.jpeg"
+      }
     ]
   },
   "审查壁纸": {
     "入狱照": [
+      {
+        "id": 658,
+        "title": "墨菲",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/464e87eae0e7d2c8d4ceb71c1215f64c.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/88f1ad11fb982c26894ef51393cfb299.jpeg"
+      },
+      {
+        "id": 659,
+        "title": "诺玛",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/b1d137179ba796cea18b7b558af07b41.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/43d9142b2ae9d2f15633d7d3e6b4bdc6.jpeg"
+      },
+      {
+        "id": 656,
+        "title": "艾瑟默尔",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/131e574e03d52a694e9b95d001af1524.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/d6047d385002c9215365983ba60c66ba.jpeg"
+      },
+      {
+        "id": 655,
+        "title": "席宁",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/06a2585b9d6d9d42a90ca1c5db3bb715.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/3ebc5a63ab033344b7cd19f3d2cdaff8.jpeg"
+      },
+      {
+        "id": 657,
+        "title": "皮克赛尔",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/62d1f0033b91978c7b8bff1e6717551c.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/ed8e850569f05cf86615dc97454a42d5.jpeg"
+      },
+      {
+        "id": 654,
+        "title": "承霄",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/fcb31ec10a8383088c5cfedb5b70cfd9.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260914/6b460a87ebee054e8f0f0c5660dacdfc.jpeg"
+      },
       {
         "id": 573,
         "title": "依唯",
@@ -3846,6 +3904,32 @@
         "title": "q版壁纸-女局",
         "landscape": null,
         "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20251013/ed156db48b68caf25940f6e1662f64d6.png"
+      }
+    ]
+  },
+  "装束壁纸": {
+    "穹映星华": [
+      {
+        "id": 660,
+        "title": "耶莱娜·密荫之下",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260915/5d433999d9cba8b78f64d60d1f13688f.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260915/f336a213a91bb7a639c6b32e933dd9e8.jpeg"
+      }
+    ],
+    "幻造空想": [
+      {
+        "id": 661,
+        "title": "希格林德·余晖候令",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260915/a7127a1b3e6124d7f5335d069e8cbef5.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260915/93462bbcb9d8747c9291fd779e40c216.jpeg"
+      }
+    ],
+    "流光绘映": [
+      {
+        "id": 662,
+        "title": "恩菲尔·诡梦回廊",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260915/d94ce5b442ded176ddcd708e23e4421e.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260915/0656f482fd3e5e54a338ae12684007ce.jpeg"
       }
     ]
   }
