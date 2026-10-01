@@ -3710,6 +3710,14 @@
     ]
   },
   "影像壁纸": {
+    "枪火、铅灰与玫瑰": [
+      {
+        "id": 698,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/6f7e877038bee828ae1c62b49155e33b.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/8b97deb2e902119fe3cfcc70cab6ab96.jpeg"
+      }
+    ],
     "瓷骨生花": [
       {
         "id": 651,
@@ -3912,6 +3920,108 @@
         "title": "皮克赛尔",
         "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260922/b6bbe601a1da6445fa8c37ddda5ec720.jpeg",
         "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260922/140ce8a4663c56df29eb1c883a1c6d53.jpeg"
+      },
+      {
+        "id": 699,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/3ec4d259610c063b0cc32a6b6a8e9c2c.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 700,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/d3f0ac9ed8446de9f2d4672f4896bc4e.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 701,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/ad77ca7f4b7de3d0f0db7e8332859551.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 702,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/b49708e35349718018b2d4e7ba1da076.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 703,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/14ec7183299ccc49a2d1068130ac2560.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 704,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/b05321748697ce385dd2c3f47825fa50.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 705,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/cb1a6f2b7dd25712d6810d0937181900.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 706,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/ecb2f1f0e7b64ed75ed89de447ffcadc.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 707,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/47fd9b97904b7b8b6de42a6bb4b52dcb.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 708,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/602231adeb6e57ac341313935b571c59.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 709,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/a1b4eaa2351145bbb4b2a35d56a95a31.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 710,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/44e0602656269b9114b4a9862780ec7d.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 711,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/56def2e296c5fc6a37808da6577c529b.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 712,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/e6cfa9c21a92c344bfeb9fdfc6d1a552.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 713,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/cf63306380e45df06fcc9ecb9a7f4185.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 714,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/c5d9922cb84fb39f48d58574dfec4370.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 715,
+        "title": "阿兰恰",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260930/5f79cb6feeb54c4929613286b45849d0.jpeg",
+        "portrait": null
       },
       {
         "id": 697,
