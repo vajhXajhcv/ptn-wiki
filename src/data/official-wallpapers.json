@@ -4290,28 +4290,8 @@
         "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261014/218a409da9564157ee5240c215562817.jpeg",
         "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261014/c2909730e798696e2090ec7895bad4c5.jpeg"
       }
-    ]
-  },
-  "审查壁纸": {
-    "入狱照": [
-      {
-        "id": 783,
-        "title": "卡西娅",
-        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261009/f077b45b951a1db8721e68cb9a618584.jpeg",
-        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261009/08d38679b3c47177ea783060392eb2b8.jpeg"
-      },
-      {
-        "id": 831,
-        "title": "安吉尔",
-        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261014/1c31fd85e15bdd990ff826eeacb20727.jpeg",
-        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261014/c2ca50842cd06819ab2bbfe4d9ea604b.jpeg"
-      },
-      {
-        "id": 830,
-        "title": "戈蓝",
-        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261014/130d1d7a15f1b1da2ddf1bcd7283f15d.jpeg",
-        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261014/01b950a01bcec6206642907576369aab.jpeg"
-      },
+    ],
+    "完美投票": [
       {
         "id": 829,
         "title": "毕安卡",
@@ -4323,6 +4303,240 @@
         "title": "肖恩",
         "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261014/372bb96adfac17ac7f34a7dddb53329d.jpeg",
         "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261014/8c26b176ff2b14dcbfa8d7d4b25ca8a9.jpeg"
+      }
+    ],
+    "宵色夜曲": [
+      {
+        "id": 831,
+        "title": "安吉尔",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261014/1c31fd85e15bdd990ff826eeacb20727.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261014/c2ca50842cd06819ab2bbfe4d9ea604b.jpeg"
+      },
+      {
+        "id": 830,
+        "title": "戈蓝",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261014/130d1d7a15f1b1da2ddf1bcd7283f15d.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261014/01b950a01bcec6206642907576369aab.jpeg"
+      }
+    ],
+    "祀日赋": [
+      {
+        "id": 832,
+        "title": "曜",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/a50269121aec33d9cdaa809bcda5c3ee.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/678a7ef064d091cfb8ced2d9ebec772d.jpeg"
+      },
+      {
+        "id": 833,
+        "title": "杜若",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/7cc3eaad34bdf637c3f91536f4b3e104.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/dc168415d15fa318a67cdeff2fc4ffff.jpeg"
+      },
+      {
+        "id": 834,
+        "title": "烟烟",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/1461606377651b158ce6826f3cae1c1b.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/2faaec4a98b0fbaa2141450a270aa4c1.jpeg"
+      }
+    ],
+    "永恒之心": [
+      {
+        "id": 835,
+        "title": "瓦尼菈",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/31dcc65ff1b405c9ff5bc4f93dd2458a.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/a90d7850a419f7419b6220ab940a8e81.jpeg"
+      },
+      {
+        "id": 836,
+        "title": "蓟",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/e320fea98c8634b532b018c2e911e112.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/cd94d2845b0a70c90014cbf81a43faeb.jpeg"
+      }
+    ],
+    "浮世剧院": [
+      {
+        "id": 837,
+        "title": "珀尔夫人",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/b136eea333d35b92e650fffc635fe863.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/3c307e43e1fc307b8e638b04d2c6468d.jpeg"
+      },
+      {
+        "id": 838,
+        "title": "艾可",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/8913a4302f61d3d65e557a1834cb3575.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/e3ed1fc6b5c9ce9919098ecb3fd9aaec.jpeg"
+      }
+    ],
+    "弱者": [
+      {
+        "id": 839,
+        "title": "唐",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/72b59a4f7e5b2e4b1c944cbdfe20aa35.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/a06372273963f32e5e1d1625972da803.jpeg"
+      },
+      {
+        "id": 840,
+        "title": "玛蒂尔达",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/cc7686748c0eac378538147568ebc7ed.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/884685fc513d99e0db8634bcb780a85b.jpeg"
+      }
+    ],
+    "噩玩惊魂": [
+      {
+        "id": 841,
+        "title": "伊芙",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/c79e15052d5aa68688fb30d0318c7840.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/e96ea0476b892e4b3bdad129015104b7.jpeg"
+      },
+      {
+        "id": 842,
+        "title": "优利卡",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/cf9aef36818fc0a6a83f4d9b55485c43.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/d6f7238226c47a88294bc0fb6f74e393.jpeg"
+      }
+    ],
+    "幽夜私语": [
+      {
+        "id": 843,
+        "title": "雷温",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/a40182325239190f6dcf6fd16713916d.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/a295b5f3ab7760905eaf476a78ae355b.jpeg"
+      },
+      {
+        "id": 844,
+        "title": "妮诺",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/d00635961d685d485167562db0380625.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/a9e5503bdd5bf53630864159ba606de5.jpeg"
+      }
+    ],
+    "无尽梦魇": [
+      {
+        "id": 846,
+        "title": "曼缇斯",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/adb4f66758f0e1954b5070521471bf48.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/c17eb2d46508e2f1992753044a63767d.jpeg"
+      },
+      {
+        "id": 845,
+        "title": "卡西娅",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/7db19c545fece9432d3608f298cc2e5d.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/88fb6b8306bf407aa9047a0806c7d55c.jpeg"
+      }
+    ],
+    "刹雨": [
+      {
+        "id": 847,
+        "title": "罗睺",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/def5f1284db2b32a2b33deab18677533.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/89220eebc06b071117a91a5789961be7.jpeg"
+      },
+      {
+        "id": 848,
+        "title": "加洛法诺",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/53aedb4431768154c426c838048e3292.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/f245057c9d2fa8466bf9c238d4153e96.jpeg"
+      }
+    ],
+    "无餍之宴": [
+      {
+        "id": 849,
+        "title": "卡门奈特",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/d3ef9c541d5adb786390fa266310f5f8.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/b474cd9b1228b873ce9c545d296ebbd8.jpeg"
+      },
+      {
+        "id": 850,
+        "title": "拉弥亚",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/9d4c956513fb870306932538a6c08603.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/7f4176df54b93ef3f5593e9c2ad1c958.jpeg"
+      }
+    ]
+  },
+  "审查壁纸": {
+    "入狱照": [
+      {
+        "id": 783,
+        "title": "卡西娅",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261009/f077b45b951a1db8721e68cb9a618584.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261009/08d38679b3c47177ea783060392eb2b8.jpeg"
+      },
+      {
+        "id": 868,
+        "title": "可可莉克",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/88b04712175e04b7605173a803446629.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/7aa058ca5e87f37bf1944883f36de87e.jpeg"
+      },
+      {
+        "id": 867,
+        "title": "可可莉克「绯夜初醒」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/0c675cb5d6f2ce64eaa67a35dc95c9a6.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/1ae7f8eec2540ce6893467f5ce697fa3.jpeg"
+      },
+      {
+        "id": 864,
+        "title": "离尘「离人归梦」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/32f9a105db86513e0b16ada2097ad7be.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/5fdc32c8c1ab818811a97ee18086b106.jpeg"
+      },
+      {
+        "id": 863,
+        "title": "卡兹安「醺然海风」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/213371c5f65f17561bacda0486f18504.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/a9baa680038e85770f070f3724421ad2.jpeg"
+      },
+      {
+        "id": 862,
+        "title": "嗷呜「狮跃浪花」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/f122b5182a066d1c37ddded8d9dba216.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/27e11724135e6c4008804a9352be9df7.jpeg"
+      },
+      {
+        "id": 861,
+        "title": "啸风「烈日晴阳」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/2069a81d945b426b047f7268a316ae4d.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/741fd416d0bcf032cb5e4ced86bfc698.jpeg"
+      },
+      {
+        "id": 860,
+        "title": "萦萦「清涧照影」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/6af2ef2440ac555520273fbb78a0ad57.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/835cc10ce26af3edea652a78470f0ced.jpeg"
+      },
+      {
+        "id": 859,
+        "title": "夏音「夏夜狂响」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/d5b54b677ec5d48dfe46c9b96f7afd40.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/8e8a839230e109bfa503f4e49a776936.jpeg"
+      },
+      {
+        "id": 858,
+        "title": "蜜莉「蜜色恋歌」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/37fcb7e04346626283f6b8a032f30799.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/603b68272637db397ad6b3e5e4bfbb5b.jpeg"
+      },
+      {
+        "id": 857,
+        "title": "幽冕·海拉「星驰破空」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/c78a6ee46d2930783a51e417f08b282f.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/7087361468ab668757ba06ad162a365e.jpeg"
+      },
+      {
+        "id": 856,
+        "title": "哈梅尔「星穹幻响」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/e9cbc003276ffe0f129b1929527f0073.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/f023022875f90f441306124eafeda0cd.jpeg"
+      },
+      {
+        "id": 855,
+        "title": "昙「悠闲晴空」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/04ceb671f45fcd2a26e47ce4619d3ee5.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/e0833a337d4832b106ead9e5841a9414.jpeg"
+      },
+      {
+        "id": 853,
+        "title": "000「模拟心动」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/f16765d274a2739f8300c4c24a8f59b3.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/b459fe92d3343f26efef1056e53da590.jpeg"
       },
       {
         "id": 697,
@@ -4435,7 +4649,14 @@
     ]
   },
   "装束壁纸": {
-    "异格神祇": [],
+    "异格神祇": [
+      {
+        "id": 784,
+        "title": "派尔琪雅「锈刻海墟」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/ae8e0b4c6fa6b0d3b389f020404e3645.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/b9936fa464eb7a44fd6d6b0d4662a80a.jpeg"
+      }
+    ],
     "沉幕浮生": [
       {
         "id": 717,
@@ -4456,6 +4677,18 @@
         "title": "耶莱娜·密荫之下",
         "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260915/5d433999d9cba8b78f64d60d1f13688f.jpeg",
         "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260915/f336a213a91bb7a639c6b32e933dd9e8.jpeg"
+      },
+      {
+        "id": 866,
+        "title": "芭·菲「新世界黎明」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/f45a408328cc2b7ec6f16d6af36fc093.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/657126b315c4a6b5d4adfaff33df6e83.jpeg"
+      },
+      {
+        "id": 851,
+        "title": "毕安卡「于天穹坠落处」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/32a9d5d01c74f23421b1c143ecd3b8f0.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/6f6a6b5d0e124643eea5ac0993d08439.jpeg"
       }
     ],
     "幻造空想": [
@@ -4478,6 +4711,12 @@
         "title": "恩菲尔·诡梦回廊",
         "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260915/d94ce5b442ded176ddcd708e23e4421e.jpeg",
         "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20260915/0656f482fd3e5e54a338ae12684007ce.jpeg"
+      },
+      {
+        "id": 854,
+        "title": "安吉尔「夜色温柔」",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/158796849e20bb4d8e9e6ecb502663ec.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/b09077cb7c95bb080e900dee098ff161.jpeg"
       }
     ]
   },
