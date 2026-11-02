@@ -5303,18 +5303,6 @@
     ],
     "异格神祇": [
       {
-        "id": 1046,
-        "title": "切尔西伯爵 遗落心湖",
-        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261028/868447b114b55c3f0cf264c973d224d2.jpeg",
-        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261028/c516d90e220dbeb6746e74bf109bb8cd.jpeg"
-      },
-      {
-        "id": 1051,
-        "title": "杜若静夜常羲",
-        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261027/ed3e5d9027f431760ef01ec2cfb2f8b1.jpeg",
-        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261027/26a8ee19d9c8d814f4ba098c61dd848e.jpeg"
-      },
-      {
         "id": 784,
         "title": "派尔琪雅「锈刻海墟」",
         "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/ae8e0b4c6fa6b0d3b389f020404e3645.jpeg",
@@ -5363,10 +5351,22 @@
         "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261023/22ce535bd5af7b15ffafb4d66508d3e3.jpeg"
       },
       {
+        "id": 1051,
+        "title": "杜若 静夜常羲",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261027/ed3e5d9027f431760ef01ec2cfb2f8b1.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261027/26a8ee19d9c8d814f4ba098c61dd848e.jpeg"
+      },
+      {
         "id": 1045,
         "title": "卡门奈特 酩酊诱梦",
         "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261026/e42116a41e828ae403c1bfe59ab16719.jpeg",
         "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261026/f22d07d70007cc2f23f6c26e13e21066.jpeg"
+      },
+      {
+        "id": 1046,
+        "title": "切尔西伯爵 遗落心湖",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261028/868447b114b55c3f0cf264c973d224d2.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261028/c516d90e220dbeb6746e74bf109bb8cd.jpeg"
       },
       {
         "id": 1005,
@@ -5927,7 +5927,81 @@
     ]
   },
   "节日贺图": {
+    "2022": [
+      {
+        "id": 1076,
+        "title": "圣诞贺图",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/01a196da7c5ea911586e8d93ccdbe630.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 1075,
+        "title": "万圣贺图",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/75e0dc448d3561bae43056db43b40514.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 1074,
+        "title": "上任百日贺图",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/5339ff8bf088ce7a839e0c7e6b83dd7b.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 1073,
+        "title": "中秋贺图",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/eb9df20cfc3765c2cb172d4ccc35cb64.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 1072,
+        "title": "端午贺图",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/62ad490355e63dd5fa5554d82d48f5ec.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 1071,
+        "title": "春节贺图",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/855bc553e444f54fa66268312e15d059.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 1070,
+        "title": "元旦贺图",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/5c81e21df8a22f338b4e913c2939cc54.jpeg",
+        "portrait": null
+      }
+    ],
     "2023": [
+      {
+        "id": 1084,
+        "title": "一周年",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/520bdad4e8100a0ea6cdc046b44cde9d.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 1083,
+        "title": "中秋贺图",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/5c917ab2fdb0aae5e70d27bd85eb2f64.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 1082,
+        "title": "半周年",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/bfbd0bfae2e856e06ff2b0d1554db12f.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 1081,
+        "title": "元宵贺图",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/ce020fa64151325288c4b80f33e1a8cb.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 1080,
+        "title": "春节贺图",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/2d8a6649ea2e3ebf164474dc72c4d36d.jpeg",
+        "portrait": null
+      },
       {
         "id": 1069,
         "title": "元旦贺图",
@@ -6016,6 +6090,24 @@
         "id": 775,
         "title": "暑期贺图",
         "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261009/97a5c052f554a24392b1e93a4d206e7f.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 1079,
+        "title": "端午贺图",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/3b015681ef0712f2cc82481ab9ca6710.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 1077,
+        "title": "劳动节贺图",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/d0503fd95f04f7ba15daead1be2f1199.jpeg",
+        "portrait": null
+      },
+      {
+        "id": 1078,
+        "title": "元宵贺图",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261029/601f8c8984b208286a9ea3566f01d7e4.jpeg",
         "portrait": null
       },
       {
