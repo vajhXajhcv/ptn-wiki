@@ -4032,6 +4032,26 @@
     ]
   },
   "影像壁纸": {
+    "恩慈余光": [
+      {
+        "id": 1123,
+        "title": "莎缇拉",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261116/def9df5fcc5aa5c349702db1152b3f84.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261116/2c31d9118635191c2ae9de20994b621c.jpeg"
+      },
+      {
+        "id": 1122,
+        "title": "凯因",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261116/6c923db8b1021398aaf2cfb7feb94d01.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261116/bd385320de4f3bc9ce3848a7e07034be.jpeg"
+      },
+      {
+        "id": 1121,
+        "title": "梅露辛",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261116/524484405162aa1d01e81578017e99a7.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261116/7d64ee848765b526cd3d0919ce2a6608.jpeg"
+      }
+    ],
     "枪火、铅灰与玫瑰": [
       {
         "id": 698,
@@ -4791,6 +4811,18 @@
   "装束壁纸": {
     "珍奇瑰影": [
       {
+        "id": 1126,
+        "title": "瑟琳 微明止息",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261117/096ad1d8d083c2f10a2586593b884857.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261117/271731ff54893199fc05e6c50c87dc21.jpeg"
+      },
+      {
+        "id": 1127,
+        "title": "瑟琳 微明止息",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261117/cebeb19cf1664e32acc603d6e3dc679b.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261117/8e90df22da1c1344f3db15c0eda4538a.jpeg"
+      },
+      {
         "id": 868,
         "title": "可可莉克 绯夜初醒",
         "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261015/88b04712175e04b7605173a803446629.jpeg",
@@ -4974,6 +5006,12 @@
       }
     ],
     "闲居煦风": [
+      {
+        "id": 1130,
+        "title": "萨妮 心语时光",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261117/0471a7a0c525cda1dbce489c9f4c47c8.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261117/bd3cf424ae8f8dcc47686c5b91990e09.jpeg"
+      },
       {
         "id": 853,
         "title": "000 模拟心动",
@@ -5411,6 +5449,12 @@
     ],
     "节庆盛典": [
       {
+        "id": 1129,
+        "title": "艾可 绯雪藏珍",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261117/705e8e7557357f418be213522ae8e2e5.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261117/6f9640ca3626562792a1df18e8539e4f.jpeg"
+      },
+      {
         "id": 983,
         "title": "赫斯提亚 千灯引愿",
         "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261023/006bf3da831e0d727bab6ab97c62f223.jpeg",
@@ -5668,6 +5712,12 @@
       }
     ],
     "幻造空想": [
+      {
+        "id": 1128,
+        "title": "席宁 临梦拾章",
+        "landscape": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261117/17c86a0fc957f6c6ac73a27aff950a8c.jpeg",
+        "portrait": "https://static.aisnogames.com/aisnoweb/aisno/wqmtcn/material/20261117/f182bf35c1d8211383af5ce30541e370.jpeg"
+      },
       {
         "id": 718,
         "title": "墨菲 逃窜系冒险者",
